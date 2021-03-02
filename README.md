@@ -1,5 +1,5 @@
 # image-processing-class
-image processing class - 991
+image processing class - 992
 
 ## Information
 * ##### Teacher: Dr. Farzin Yaghmaee - [Contact](f_yaghmaee@semnan.ac.ir)
@@ -17,3 +17,5 @@ image processing class - 991
 * Homayon Toosy - [Github Profile](https://github.com/Homayontoosy)
 * javad kahnouji - [Github Profile](https://github.com/kahnoujavad)
 * maryam safaiyan - [Github Profile](https://github.com/safaiyan)
+* sahar feizabadi - [Github Profile](https://github.com/ssaharrf1375)
+* Zahra Mosleh - [Github Profile](https://github.com/zmosleh83)
