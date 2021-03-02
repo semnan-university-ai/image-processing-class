@@ -20,3 +20,5 @@ image processing class - 992
 * sahar feizabadi - [Github Profile](https://github.com/ssaharrf1375)
 * Zahra Mosleh - [Github Profile](https://github.com/zmosleh83)
 * Mohammad Taheranpour - [Github Profile](https://github.com/Mohammad-t-t)
+* Ehsan Majidigi - [Github Profile](https://github.com/EhsanMajidigithub)
+* hossein ommati - [Github Profile](https://github.com/ho88)
