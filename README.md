@@ -22,3 +22,4 @@ image processing class - 992
 * Mohammad Taheranpour - [Github Profile](https://github.com/Mohammad-t-t)
 * Ehsan Majidigi - [Github Profile](https://github.com/EhsanMajidigithub)
 * hossein ommati - [Github Profile](https://github.com/ho88)
+* Mahdie Moradi - [Github Profile](https://github.com/mahdiyemoradi)
