@@ -23,3 +23,4 @@ image processing class - 992
 * Ehsan Majidigi - [Github Profile](https://github.com/EhsanMajidigithub)
 * hossein ommati - [Github Profile](https://github.com/ho88)
 * Mahdie Moradi - [Github Profile](https://github.com/mahdiyemoradi)
+* Alireza Chaji - [Github Profile](https://github.com/alirezachaji)
