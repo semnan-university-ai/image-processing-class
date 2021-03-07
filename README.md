@@ -27,3 +27,4 @@ image processing class - 992
 * faezeh Fereydonian - [Github Profile](https://github.com/faeze75)
 * mohammadhosein azad del - [Github Profile](https://github.com/mohammadhoseinazad)
 * alireza karam - [Github Profile](https://github.com/alireza-k74)
+* sajad edalatimajd - [Github Profile](https://github.com/sajad-beep)
