@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name : nastaran
+* github id : malekpour
+* Email : nastaran.malekpour69@gmail.com
+* Type : shabane
