@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name: Zahra Mosleh
+* github id : zmosleh83
+* Email : zzmosleh83@gmail.com
+* Type : majazi
