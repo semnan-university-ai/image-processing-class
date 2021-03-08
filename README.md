@@ -30,3 +30,5 @@ image processing class - 992
 * sajad edalatimajd - [Github Profile](https://github.com/sajad-beep)
 * Elias Nazeriye - [Github Profile](https://github.com/elias-nazeriye)
 * Parsa Mokhtari - [Github Profile](https://github.com/ParsaMokhtariHessar)
+* Mahsa Falahati - [Github Profile](https://github.com/mahsa3399)
+* dalile rashidi - [Github Profile](https://github.com/dalile512)
