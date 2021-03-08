@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name : seyedeh sahar feizabadi
+* github id : ssaharrf1375
+* Email : ssaharr.f1375@gmail.com
+* Type : shabaneh
