@@ -29,3 +29,4 @@ image processing class - 992
 * alireza karam - [Github Profile](https://github.com/alireza-k74)
 * sajad edalatimajd - [Github Profile](https://github.com/sajad-beep)
 * Elias Nazeriye - [Github Profile](https://github.com/elias-nazeriye)
+* Parsa Mokhtari - [Github Profile](https://github.com/ParsaMokhtariHessar)
