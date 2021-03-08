@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name : Maryam Safaiyan
+* github id : Safaiyan
+* Email : safaiyan94.itsu@yahoo.com
+* Type : majazi
