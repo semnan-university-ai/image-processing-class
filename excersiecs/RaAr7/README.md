@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name : Reza Azizvand Nezamabad
+* github id : RaAr7
+* Email : azizvandreza7@gmail.com
+* Type : roozaneh
