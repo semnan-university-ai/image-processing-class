@@ -33,3 +33,5 @@ image processing class - 992
 * Mahsa Falahati - [Github Profile](https://github.com/mahsa3399)
 * dalile rashidi - [Github Profile](https://github.com/dalile512)
 * Fatemeh Seyfi - [Github Profile](https://github.com/FatemehSeyfi)
+* Hadi Arokh - [Github Profile](https://github.com/hadiadokh)
+* arman ariamehr - [Github Profile](https://github.com/arman-ariamehr)
