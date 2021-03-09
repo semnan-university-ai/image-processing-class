@@ -38,3 +38,4 @@ end
  <div dir="rtl">
 ####خروجی کد به صورت زیر است : 
 </div>
+![02472](https://user-images.githubusercontent.com/79742080/110442779-6ae6de00-80d0-11eb-831d-cc17a4805201.jpg)
