@@ -19,11 +19,12 @@ if i > 1
   img = img(:, :, 2); 
 end
 imshow(img);
+
  ```
  
- ![ image_1](../benchmark/pool.png)
+ ![image_old](https://user-images.githubusercontent.com/79828266/110443083-c9ac5780-80d0-11eb-870b-f3f96c12d611.png)
  
  **==========================================**
 
 
-![image](https://user-images.githubusercontent.com/79828266/110442602-3d9a3000-80d0-11eb-97da-9a9191f81495.png)
+![image_new](https://user-images.githubusercontent.com/79828266/110442602-3d9a3000-80d0-11eb-97da-9a9191f81495.png)
