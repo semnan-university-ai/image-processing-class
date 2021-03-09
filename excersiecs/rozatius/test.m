@@ -4,11 +4,13 @@ clear all;
 image = imread("../../benchmark/airplane.png");
 image = imresize(image, [150 150]);
 imagegray = rgb2gray(image);
-
+imagebw = im2bw(image,  0.2);
 figure;
 imshow(image);
 figure;
 imshow(imagegray);
+figure;
+imshow(imagebw)
 
 for i = 1 : 10
     if (mod(i,2) == 0)
