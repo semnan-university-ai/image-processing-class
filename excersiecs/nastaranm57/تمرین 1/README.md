@@ -21,7 +21,7 @@ for i=1:1:m
         
     end
    
-    * if rem(j+1,2)==1
+    * if rem(j,2)==0
             if a==0
             a=1;
             else
