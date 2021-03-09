@@ -3,8 +3,8 @@
 </div>
 
 ```
-m= input('tedade satr ra vared konid=');
-n= input('tedade sotun ra vared konid=');
+m= input('arz ra vared konid=');
+n= input('tul ra vared konid=');
 a=1;
 
 for i=1:1:m
