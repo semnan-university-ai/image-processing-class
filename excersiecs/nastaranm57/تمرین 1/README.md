@@ -38,4 +38,3 @@ end
  <div dir="rtl">
 ####خروجی کد به صورت زیر است : 
 </div>
-(https://raw.githubusercontent.com/semnan-university-ai/image-processing-class/main/excersiecs/nastaranm57/%D8%AA%D9%85%D8%B1%DB%8C%D9%86%201/02472.jpg)
