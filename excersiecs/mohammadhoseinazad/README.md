@@ -7,6 +7,6 @@ image processing class - 991
 
 ### Student Info :
 * Full name : Mohammad Hosein Azaddel 
-* github id : https://github.com/mohammadhoseinazad
+* github id : mohammadhoseinazad
 * Email : nmzistg@gmail.com
 * Type : majazi
