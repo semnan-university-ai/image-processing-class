@@ -1,5 +1,5 @@
 > # Exercise 4
-> 4. Write a program that creates a chessboard by getting a length and width as the value of the length and width of the image.
+> 4. Create a 500 x 500 square image that includes the bottom right corner of the benchmark images; Separate a 100 x 100 square from each image.
 ***
 >CODE
 
