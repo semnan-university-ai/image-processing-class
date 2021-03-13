@@ -1,5 +1,5 @@
 > # Exercise 5
-> 5. Draw a picture of an incomplete jar on paper and complete the picture with the help of MATLAB software; In fact, paste the symmetry of the image into the > >    original image and create a complete jar.
+> 5. Draw a picture of an incomplete jar on paper and complete the picture with the help of MATLAB software; In fact, paste the symmetry of the image into the    original image and create a complete jar.
 ***
 >CODE
 
