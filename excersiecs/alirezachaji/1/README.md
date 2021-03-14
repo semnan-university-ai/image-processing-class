@@ -37,6 +37,4 @@ imshow(chess)
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/19edc3c81c43fb7c551e120de823663981e77cb0/excersiecs/alirezachaji/1/Exce01.png)
 
-<div dir="rtl">
-نمونه متن فارسی
-</div>
+
