@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name :javad nezhad kahnouji
+* github id : kahnoujavad
+* Email : matin.sh4545@gmail.com
+* Type : majazi
