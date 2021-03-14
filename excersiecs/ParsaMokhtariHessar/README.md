@@ -6,7 +6,7 @@ image processing class - 991
 * ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+* Full name : Parsa Mokhtari Hessar
+* github id : @ParsaMokhtariHessar
+* Email : parsamokhtarihessar@gmail.com
+* Type : Roozane
