@@ -3,7 +3,7 @@
 ***
 >CODE
 
-```
+```ruby
 clear all
 clc
 clear;
