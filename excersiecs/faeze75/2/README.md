@@ -9,7 +9,7 @@ clc
 clear;
 
 ***
->get Circle Radius  ,(X , Y) position of Circle Center from user
+>>>get Circle Radius  ,(X , Y) position of Circle Center from user
 ***
 R=0;
 R=input('Please Enter Circle Radius   :');
@@ -21,7 +21,7 @@ y0=input('Please Enter Y-Pos of Circle Center  :');
 img=zeros(1,2);
 
 ***
->Create a black image
+>>>Create a black image
 ***
 for i=1:1:1000
     for j=1:1:1000
@@ -34,7 +34,7 @@ imshow(img)
 
 hold on
 ***
->Create a white circle
+>>>Create a white circle
 ***
 Theta = 0:0.01:2*pi;
 x = x0 + cos(Theta)' * R;
