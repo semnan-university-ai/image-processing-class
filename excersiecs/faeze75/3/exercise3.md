@@ -1,4 +1,4 @@
-> # Exercise 2
+> # Exercise 3
 
 ***
 >CODE
@@ -14,7 +14,7 @@ imshow(image)
 figure;
 imshow(grayimage)
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/scatter.png)
+![alt text]
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
