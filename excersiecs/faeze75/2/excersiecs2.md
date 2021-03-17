@@ -43,7 +43,7 @@ plot(x0,y0,'w*')
 plot(x,y,'w','LineWidth',3)
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/scatter.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/2/scatter.png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
