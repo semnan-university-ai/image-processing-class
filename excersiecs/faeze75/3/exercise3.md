@@ -14,7 +14,7 @@ imshow(image)
 figure;
 imshow(grayimage)
 ```
-![alt text]
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/3/Untitled3.png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
