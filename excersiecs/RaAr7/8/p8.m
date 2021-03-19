@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-imagepad = imread("img/baboon.png");
+imagepad = imread("baboon.png");
 [nrows ncols nslices] = size(imagepad);
 midx=ceil((ncols+1)/2);
 midy=ceil((nrows+1)/2);
