@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("img/peppers.png");
+image = imread("peppers.png");
 imagesize = size(image);
 
 R = image(:,:,1);
