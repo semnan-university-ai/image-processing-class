@@ -284,7 +284,7 @@ imshow(a(i,j));
 تصویر اصلی به صورت زیر است:
 </div>
 
-![khorooji](9.jpg)
+![voroodi](9.jpg)
 
 ```
 keanu=imread('C:\Users\PC\Desktop\9.jpg');
