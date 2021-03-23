@@ -1,12 +1,4 @@
-# image-processing-class
-image processing class - 991
 
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+### question Info :
 
-### Student Info :
-* Full name : Mohammad Hosein Azaddel 
-* github id : mohammadhoseinazad
-* Email : nmzistg@gmail.com
-* Type : majazi
+###### 1. برنامه ای بنویسید که با دریافت یک طول و عرض به عنوان مقدار طول و عرض تصویر یک صفحه ی شطرنج ایجاد کنید.
