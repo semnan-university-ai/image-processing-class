@@ -8,4 +8,4 @@ enter the number of rows and columns
 
 you can change the resolution too with changing `M` `N` in the code
 
-![img](C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\excersiecs\mohammadhoseinazad\exercises\1\ex1.png)
+![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/exercises/1/ex1.png)
