@@ -10,4 +10,4 @@ you can change the resolution too with changing `plate` in the code
 
 contributed from (https://www.mathworks.com/matlabcentral/answers/12090-create-a-white-circle-or-sphere-inside-a-black-box)
 
-![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/exercises/2/ex2.png)
+![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/2/ex2.png)
