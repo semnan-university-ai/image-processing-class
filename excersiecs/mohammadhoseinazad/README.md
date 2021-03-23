@@ -2,7 +2,7 @@
 image processing class - 991
 
 ## تمرینات در پوشه 
-   execisec
+##   exercisec
    
 ## Information
 * ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
