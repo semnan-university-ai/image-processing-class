@@ -23,7 +23,7 @@ Y=[10 12 10 8 10];
 line(X,Y)
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/5/Screenshot%20(8).png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/7/Screenshot%20(10).png)
 
 ***
 
