@@ -13,9 +13,9 @@ A=imread('lena.png');
 x1=zeros([size(A,1)*size(A,2) 1]);
 x2=zeros([size(A,2)*size(A,1) 1]);
 
-%Specify the degree
+%%%Specify the degree
 deg=45;
-%Change the image size
+%%%Change the image size
 C=uint8(zeros([size(A,1) size(A,2) 3 ]));
 
 m=1;
@@ -26,7 +26,7 @@ midy=ceil((size(C,2)+1)/2);
 for i=1:size(A,1)
     i1=i-midx;
     for j=1:size(A,2)
-        %convert from cartesian to polar
+        %%%convert from cartesian to polar
         [t,r]=cart2pol(i1,j-midy);
         %Convert from radians to degree and add the degree value
         t1=radtodeg(t)+deg;
@@ -45,7 +45,7 @@ for i=1:size(A,1)
     end
    
 end
-%check whether the values are within the image size.
+%%%check whether the values are within the image size.
 x1(find(x1 < 1))=1;
 x2(find(x2 < 1))=1;
 
