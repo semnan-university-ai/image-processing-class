@@ -64,9 +64,5 @@ imshow(C);
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/6/Screenshot%20(9).png)
 
-<div dir="rtl">
-توضیحات برنامه <br />
-یک ماتریس به ابعاد512*512 میسازیم و سپسس سطرهای ماتریس را به 32 لایه تقسیم میکنیم و مقدار دهی میکنیم  
-</div>
 
 
