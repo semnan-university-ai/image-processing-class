@@ -22,7 +22,7 @@ imshow(image)
 
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/5/Screenshot%20(8).png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/6/Screenshot%20(9).png)
 
 <div dir="rtl">
 توضیحات برنامه <br />
