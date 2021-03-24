@@ -62,7 +62,11 @@ imshow(C);
 
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/6/Screenshot%20(9).png)
-
-
-
+180'
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/8/Screenshot%20(11).png)
+90'
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/8/Screenshot%20(12).png)
+120'
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/8/Screenshot%20(13).png)
+45'
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/8/Screenshot%20(14).png)
