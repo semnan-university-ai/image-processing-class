@@ -32,7 +32,7 @@ imshow(finalImage)
 
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/2/scatter.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/4/Screenshot%20(6).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
