@@ -25,7 +25,7 @@ figure,
 imshow(Icrop);
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/5/Screenshot%20(16).png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/9/Screenshot%20(16).png)
 
 ***
 <div dir="rtl">
