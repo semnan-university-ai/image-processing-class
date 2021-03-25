@@ -9,14 +9,15 @@ when this quete'enter degree of rotation=' appeared type the degree that you wan
 
 contributed from (https://www.imageeprocessing.com/2011/06/image-rotation.html)
 		 (https://stackoverflow.com/questions/19684617/image-rotation-by-matlab-without-using-imrotate)
-####45 degree
+
+#### 45 degree
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/8/45.png)
 
-####90 degree
+#### 90 degree
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/8/90.png)
 
-####120 degree
+#### 120 degree
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/8/120.png)
 
-####180 degree
+#### 180 degree
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/8/180.png)
