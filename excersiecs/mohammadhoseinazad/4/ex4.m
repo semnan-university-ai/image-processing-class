@@ -1,13 +1,20 @@
 
 images = dir('C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\*.png');
-for i = 1:numel(images)
-  filename = images(i).name;
-  image = imread(filename); 
-  croppedImage = imcrop(image, [80, 80, 500, 500]);
-  %imshow(filename);
-  % apply processing to the loaded image
-  % save the image to an array or back to the folder using 
+filename = {};
+new={};
+for i=1:20
+  filename{i} = images(i).name; 
+  imagecr=imread(filename{i});
+  croppedImage = imcrop(imagecr, [80, 80, 500, 500]);
+  croppedImage{i}=croppedImage;
 end
+ for i=1:20
+    image=[croppedImage{i}];
+    new{i}=image;
+ end
+ 
+merrged=cat(new{1},new{2},new{3},new{4},new{5});
+imshow(merrged)
 
 %N = length(images) ;
 %croppedImage= imread(images(1).name) ;
