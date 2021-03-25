@@ -1,10 +1,12 @@
-
+img_path = 'C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\*.png';
 images = dir('C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\*.png');
 filename = {};
 new={};
-for i=1:20
-  filename{i} = images(i).name; 
-  imagecr=imread(filename{i});
+
+for i=1:length(images)
+  %filename{i} = images(i).name; 
+  %imagecr=imread(filename{i});
+  filename(i).data = imread( fullfile(img_path, images(i).name));
   croppedImage = imcrop(imagecr, [80, 80, 500, 500]);
   croppedImage{i}=croppedImage;
 end
