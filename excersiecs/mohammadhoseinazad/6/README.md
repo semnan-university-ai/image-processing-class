@@ -10,7 +10,7 @@ open the code ex6.m with mathlab press **run** button :rocket:
 و نسبت به اندازه هرعدد بر 255 به آن عددی اختصاص میدهد
 </div>
 
-```
+```matlab
 a=255;
 plate=zeros(a);
 for i = 1:a
