@@ -2,7 +2,7 @@ close all
 how_many = input('how many number does your captha want = ');
 list=[];
 for i=1:how_many 
-    number=randi(5);
+    number=randi(9);
     m=imread("C:\Users\nmzis\OneDrive\Desktop\adad\"+int2str(number)+".png");
     m1=imbinarize(m,0.0001);
     m2=imresize(m1,[200,200]);
