@@ -5,7 +5,7 @@
 
 open the code ex10.m with mathlab press **run** button :rocket: 
 
-type 1 2 or 3 in the input box
+type `1,2,..9` in the input box
 
 <div dir = "rtl">
 در ابتدا تعیین می کنید کپچا چند رقمی می خواهید
@@ -20,22 +20,22 @@ how_many = input('how many number does your captha want = ');
 list=[];
 for i=1:how_many 
     number=randi(9);
-    m=imread("C:\Users\nmzis\OneDrive\Desktop\adad\"+int2str(number)+".png");
+%     m=imread("C:\Users\nmzis\OneDrive\Desktop\t\"+int2str(number)+".png");
+    path=strcat('C:\Users\nmzis\OneDrive\Desktop\adad\',int2str(number-1),'.png');
+    m=imread(path);
     m1=imbinarize(m,0.0001);
     m2=imresize(m1,[200,200]);
     list = [list; m2]; 
+
 
 end
 imshow(list)
 
 ```
 
-
-<div dir = "rtl">
-ایرادات
-فقط با 1 2 3 کار میکرد ایرادو نفهمیدم یا از لیست و اضافه کردن اعداد بهشه یا متلب چیزی داره که نمیدونم 
-</div>
-
+با تشکر از 
+@ https://github.com/omidgholami74
+برای کمک برای رفع ایراد
 
 
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/10/ex10.png)
