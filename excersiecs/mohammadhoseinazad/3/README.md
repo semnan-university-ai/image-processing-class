@@ -29,16 +29,10 @@ end
 ```
 
 
-<div dir = "rtl">
 با تشکر از
 
-@ nastaranm57 
 
-</div>
-
-@ nastaranm57 
-
-@nastaranm57 
+@https://github.com/nastaranm57
 
 
 
