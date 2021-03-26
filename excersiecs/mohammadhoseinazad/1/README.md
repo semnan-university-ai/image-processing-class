@@ -11,22 +11,27 @@ you can change the resolution too with changing `M` `N` in the code
 <div dir = "rtl">
 ابعاد تصویر
 <div>
+
 ```
 M = 7680;
 N = 4320;
 ```
+
 <div dir = "rtl">
 تعداد سطر و ستون و مشخص کردن صفحه شطرنچ
 <div>
+
 ```
 C = input('number of rows=');
 F = input('number of columns=');
 I = chessboard3(N,M,C,F);
 ```
+
 <div dir = "rtl">
 تابعmakeboard 
 ابعاد تقسیمی ضفحه رو بدست آورده و با استقاده از حلقه صفحه را می سازد
 <div>
+
 ```
 function [makeboard] = chessboard3(N,M,C,F)
 L1 = floor(M/C);
@@ -40,4 +45,5 @@ for m=1:L1:M
     k=k+1;
 end
 ```
+
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/1/ex1.png)
