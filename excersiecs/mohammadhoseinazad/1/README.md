@@ -12,7 +12,7 @@ you can change the resolution too with changing `M` `N` in the code
 ابعاد تصویر
 </div>
 
-```
+```matlab
 M = 7680;
 N = 4320;
 ```
@@ -21,7 +21,7 @@ N = 4320;
 تعداد سطر و ستون و مشخص کردن صفحه شطرنچ
 </div>
 
-```
+```matlab
 C = input('number of rows=');
 F = input('number of columns=');
 I = chessboard3(N,M,C,F);
@@ -32,7 +32,7 @@ I = chessboard3(N,M,C,F);
 ابعاد تقسیمی ضفحه رو بدست آورده و با استقاده از حلقه صفحه را می سازد
 </div>
 
-```
+```matlab
 function [makeboard] = chessboard3(N,M,C,F)
 L1 = floor(M/C);
 L2 = floor(N/F);

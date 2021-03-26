@@ -15,7 +15,7 @@ int2str
 در انتها لوپ یک لیست از اعداد داده برای کپچا و نمایش داده میشود
 </div>
 
-```
+```matlab
 how_many = input('how many number does your captha want = ');
 list=[];
 for i=1:how_many 

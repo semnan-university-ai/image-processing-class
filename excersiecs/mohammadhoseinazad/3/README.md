@@ -9,7 +9,7 @@ open the code ex3.m with mathlab press **run** button :rocket:
 عکس را وارد کرده  آن را در سایز ریخته و دو پلات برای رسم تصویر ایجاد می کند
 </div>
 
-```
+```matlab
 input=imread('C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\lena.png');
 subplot(2,2,1), imshow(input), title('RGB Scale image');
 subplot(1,2,2), imshow(output), title('Gray Scale  image')
@@ -20,7 +20,7 @@ subplot(1,2,2), imshow(output), title('Gray Scale  image')
 آن را طبق عدد قبل از اینپوت درصد روشنایی می دهد (در اینجا 90 است)
 </div>
 
-```
+```matlab
 for i = 1:1:x
    for j = 1:1:y
       output(i,j) = 0.90*input(i,j);

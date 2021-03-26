@@ -12,7 +12,7 @@ you can change the resolution too with changing `plate` in the code
 تعیین ابعاد صفحه وشعاع و مرکز دایره
 </div>
 
-```
+```matlab
 r = input('enter radius=');
 x=input('enter x value for centre of sphere=');
 y=input('enter y value for centre of sphere=');
@@ -24,7 +24,7 @@ plate(m{:})=1;
 این تابع  یک دیسک با شعاع آر را در صفحه محاط  میکند 
 </div>
 
-```
+```matlab
 B = imdilate(plate,strel('disk', r,0) );
 imshow(B)
 ```

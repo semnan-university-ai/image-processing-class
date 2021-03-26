@@ -11,7 +11,7 @@ horzcat/
 دو تصویر را ادغام کرده و 3 تصویر را نمایش می دهد
 </div>
 
-```
+```matlab
 I = imread('C:\Users\nmzis\OneDrive\Desktop\4197843.jpg'); 
 subplot(2,2,1) 
 imshow(I)

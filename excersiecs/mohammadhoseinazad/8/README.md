@@ -11,7 +11,7 @@ when this quete'enter degree of rotation=' appeared type the degree that you wan
 با استفاده از کدهای موجود در دو سایت زیر نوشته شده
 </div>
 
-```
+```matlab
 (https://www.imageeprocessing.com/2011/06/image-rotation.html)
 (https://stackoverflow.com/questions/19684617/image-rotation-by-matlab-without-using-imrotate)
 ```
@@ -20,7 +20,7 @@ when this quete'enter degree of rotation=' appeared type the degree that you wan
 درجه چرخش را می گیرد
 </div>
 
-```
+```matlab
 deg=input('enter degree of rotation=');
 ```
 
@@ -28,7 +28,7 @@ deg=input('enter degree of rotation=');
 نقطه میانه را می یابد
 </div>
 
-```
+```matlab
 midx=ceil((size(C,1)+1)/2);
 midy=ceil((size(C,2)+1)/2);
 ```
@@ -37,7 +37,7 @@ midy=ceil((size(C,2)+1)/2);
 انجام تبدیلات برای محاسبه درست چرخش
 </div>
 
-```
+```matlab
         %convert from cartesian to polar
         [t,r]=cart2pol(i1,j-midy);
         %Convert from radians to degree and add the degree value
@@ -55,7 +55,7 @@ midy=ceil((size(C,2)+1)/2);
 اعمال چرخش ها
 </div>
 
-```
+```matlab
         C(x1(n),x2(n),:)=A(i,j,:);
        
         n=n+1;

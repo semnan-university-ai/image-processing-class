@@ -9,7 +9,7 @@ open the code ex7.m with mathlab press **run** button :rocket:
 به ترتیب با توجه به مختصات مستطیل مربع لوزی مثلث را رسم می کند
 </div>
 
-```
+```matlab
 %Rectangle
 x = [0 1 1 0];
 y = [0 0 2 2];

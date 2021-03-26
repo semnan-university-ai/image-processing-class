@@ -7,7 +7,7 @@
 باز کردن عکس ها
 </div>
 
-```
+```matlab
 img_path = 'C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\*.png';
 images = dir('C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\*.png');
 filename = {};
@@ -18,7 +18,7 @@ new={};
 یکی یکی عکس ها راخوانده و میبرد و در درون صفحه 500*500 قرار میدهد
 </div>
 
-```
+```matlab
   %filename{i} = images(i).name; 
   %imagecr=imread(filename{i});
   filename(i).data = imread( fullfile(img_path, images(i).name));

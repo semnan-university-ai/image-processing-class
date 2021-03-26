@@ -9,7 +9,7 @@ open the code ex9.m with mathlab press **run** button :rocket:
 تعیین طول و عرض
 </div>
 
-```
+```matlab
 x=input('enter x value for cutting=');
 y=input('enter y value for cutting=');
 ```
@@ -18,7 +18,7 @@ y=input('enter y value for cutting=');
 بریدن عکس و نمایش آن
 </div>
 
-```
+```matlab
 croppedImage = imcrop(image, [0, 0, x, y]);
 imshow(croppedImage);
 ```
