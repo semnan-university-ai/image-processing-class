@@ -7,7 +7,7 @@ open the code ex3.m with mathlab press **run** button :rocket:
 
 <div dir = "rtl">
 عکس را وارد کرده  آن را در سایز ریخته و دو پلات برای رسم تصویر ایجاد می کند
-<div>
+</div>
 
 ```
 input=imread('C:\Users\nmzis\OneDrive\Documents\GitHub\image-processing-class\benchmark\lena.png');
@@ -18,7 +18,7 @@ subplot(1,2,2), imshow(output), title('Gray Scale  image')
 
 <div dir = "rtl">
 آن را طبق عدد قبل از اینپوت درصد روشنایی می دهد (در اینجا 90 است)
-<div>
+</div>
 
 ```
 for i = 1:1:x

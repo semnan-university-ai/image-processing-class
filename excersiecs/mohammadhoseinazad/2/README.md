@@ -10,7 +10,7 @@ you can change the resolution too with changing `plate` in the code
 
 <div dir = "rtl">
 تعیین ابعاد صفحه وشعاع و مرکز دایره
-<div>
+</div>
 
 ```
 r = input('enter radius=');
@@ -22,7 +22,7 @@ plate(m{:})=1;
 
 <div dir = "rtl">
 این تابع  یک دیسک با شعاع آر را در صفحه محاط  میکند 
-<div>
+</div>
 
 ```
 B = imdilate(plate,strel('disk', r,0) );
@@ -31,7 +31,7 @@ imshow(B)
 
 <div dir = "rtl">
 از کدهای زیر در سایت متلب استفاده شده است
-<div>
+</div>
 
 contributed from (https://www.mathworks.com/matlabcentral/answers/12090-create-a-white-circle-or-sphere-inside-a-black-box)
 

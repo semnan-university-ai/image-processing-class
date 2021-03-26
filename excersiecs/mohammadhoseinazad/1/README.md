@@ -10,7 +10,7 @@ you can change the resolution too with changing `M` `N` in the code
 
 <div dir = "rtl">
 ابعاد تصویر
-<div>
+</div>
 
 ```
 M = 7680;
@@ -19,7 +19,7 @@ N = 4320;
 
 <div dir = "rtl">
 تعداد سطر و ستون و مشخص کردن صفحه شطرنچ
-<div>
+</div>
 
 ```
 C = input('number of rows=');
@@ -30,7 +30,7 @@ I = chessboard3(N,M,C,F);
 <div dir = "rtl">
 تابعmakeboard 
 ابعاد تقسیمی ضفحه رو بدست آورده و با استقاده از حلقه صفحه را می سازد
-<div>
+</div>
 
 ```
 function [makeboard] = chessboard3(N,M,C,F)
