@@ -30,14 +30,13 @@ imshow(list)
 
 ```
 
-```
 
 <div dir = "rtl">
 ایرادات
 فقط با 1 2 3 کار میکرد ایرادو نفهمیدم یا از لیست و اضافه کردن اعداد بهشه یا متلب چیزی داره که نمیدونم 
 </div>
 
-```
+
 
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/10/ex10.png)
 
