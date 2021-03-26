@@ -11,10 +11,10 @@ when this quete'enter degree of rotation=' appeared type the degree that you wan
 با استفاده از کدهای موجود در دو سایت زیر نوشته شده
 </div>
 
-
+```
 (https://www.imageeprocessing.com/2011/06/image-rotation.html)
 (https://stackoverflow.com/questions/19684617/image-rotation-by-matlab-without-using-imrotate)
-
+```
 
 <div dir = "rtl">
 درجه چرخش را می گیرد
