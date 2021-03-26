@@ -28,10 +28,7 @@ for i = 1:1:x
 end
 ```
 
-
-با تشکر از
-
-
+#### با تشکر از 
 @https://github.com/nastaranm57
 
 
