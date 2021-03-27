@@ -23,7 +23,7 @@ for i= 1:length(images)
 </div>
 
 ```matlab
-    [rows, columns, numberOfColorChannels] = size(image);
+    [rows, columns, numberOfColorChannels] = size(Image);
     if numberOfColorChannels > 1
     % It's a true color RGB image.  We need to convert to gray scale.
         Igray = rgb2gray(Image);
