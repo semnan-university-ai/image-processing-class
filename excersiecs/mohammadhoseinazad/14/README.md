@@ -42,5 +42,8 @@ for i= 1:length(images)
     imhist(Image);
 ```
 
+تهیه دیتاست توسط
+@https://github.com/omidgholami74
+
 ![img](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/mohammadhoseinazad/14/ex14.png)
 
