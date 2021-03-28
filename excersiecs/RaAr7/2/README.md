@@ -73,3 +73,4 @@ A(sub2ind(size(A),X1+X_center,Y1+Y_center)) = 1;
 figure;
 imshow(A);
 ```
+![](p2.png)
