@@ -2,6 +2,7 @@
 جواب سوال 3:
 </div>
 
+```
 input=imread('C:\Users\PC\Desktop\1.jpg');
 subplot(1,2,1), imshow(input), title('RGB Scale image');
 [x,y,~] = size(input);
