@@ -20,4 +20,4 @@ subplot(1,2,2), imshow(output), title('Gray Scale  image')
 خروجی کد برنامه بالا به صورت زیر است:
 </div>
 
-![khorooji](02481.jpg)
+![khorooji](02566.jpg)
