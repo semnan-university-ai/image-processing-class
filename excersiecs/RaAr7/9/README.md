@@ -13,5 +13,9 @@ CropImage = imcrop(image,[a b a b]);
 
 imshow(CropImage);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
 
 ![](p9.png)
