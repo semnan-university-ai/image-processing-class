@@ -41,4 +41,8 @@ for i = 1:1:n
     end
 end
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
 ![](p1.png)
