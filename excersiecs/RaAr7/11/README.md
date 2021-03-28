@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("img/fruits.png");
+image = imread("fruits.png");
 image2 = rgb2gray(image);
 
 percent = 20;
@@ -26,3 +26,4 @@ NoiseImg(Rmatrix > p/2 & Rmatrix < p) = 255;
 
 imshow(NoiseImg);
 ```
+![](p11.png)
