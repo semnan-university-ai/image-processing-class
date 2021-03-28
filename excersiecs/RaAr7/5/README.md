@@ -14,4 +14,9 @@ result = cat(2,flipimage,image);
 
 imshow(result);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
+
 ![](p5.png)
