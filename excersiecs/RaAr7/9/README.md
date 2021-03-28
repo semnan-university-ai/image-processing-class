@@ -13,3 +13,5 @@ CropImage = imcrop(image,[a b a b]);
 
 imshow(CropImage);
 ```
+
+![](p9.png)
