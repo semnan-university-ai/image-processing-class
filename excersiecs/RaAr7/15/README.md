@@ -31,5 +31,9 @@ imshow(image);
 figure
 imshow(image2);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
 
 ![](p15.png)
