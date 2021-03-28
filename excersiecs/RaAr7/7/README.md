@@ -33,3 +33,7 @@ figure
 plot(x,y);
 axis([0 10 0 10])
 ```
+![](p7_square.png)
+![](p7_rectangle.png)
+![](p7_triangle.png)
+![](p7_rhombus.png)
