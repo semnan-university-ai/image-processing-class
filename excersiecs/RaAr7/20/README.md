@@ -93,6 +93,14 @@ for i=240:280
 end
 ```
 <div dir='rtl'>
+  نمایش تصویر
+</div>
+
+```
+imshow(r);
+```
+
+<div dir='rtl'>
   خروجی کد :
 </div>
 </br>
