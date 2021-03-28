@@ -26,4 +26,9 @@ NoiseImg(Rmatrix > p/2 & Rmatrix < p) = 255;
 
 imshow(NoiseImg);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
+
 ![](p11.png)
