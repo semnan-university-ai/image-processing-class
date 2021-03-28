@@ -43,5 +43,9 @@ end
 
 imshow(captcha);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
 
 ![](p19.png)
