@@ -40,5 +40,9 @@ for i=1:4
 end
 imshow(captcha);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
 
 ![](p10.png)
