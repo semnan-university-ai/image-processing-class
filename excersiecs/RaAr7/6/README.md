@@ -24,4 +24,9 @@ function [final_image]= img_grd(l,w,fc,sc)
     imshow(final_image)
 end
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
+
 ![](p6.png)
