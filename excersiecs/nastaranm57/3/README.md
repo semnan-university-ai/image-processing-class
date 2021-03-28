@@ -12,6 +12,7 @@ for i = 1:1:x
       output(i,j) = 0.40*input(i,j,1) + 0.50*input(i,j,2) + 0.30*input(i,j,3);
    end
 end
+subplot(1,2,2), imshow(output), title('Gray Scale  image')
 ```
 
 <div dir="rtl">
