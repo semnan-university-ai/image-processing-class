@@ -33,6 +33,11 @@ figure
 plot(x,y);
 axis([0 10 0 10])
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
+
 ![](p7_square.png)
 ![](p7_rectangle.png)
 ![](p7_triangle.png)
