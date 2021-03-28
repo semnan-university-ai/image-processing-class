@@ -95,6 +95,7 @@ end
 <div dir='rtl'>
   نمایش تصویر
 </div>
+</br>
 
 ```
 imshow(r);
