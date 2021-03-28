@@ -24,3 +24,4 @@ function [final_image]= img_grd(l,w,fc,sc)
     imshow(final_image)
 end
 ```
+![](p6.png)
