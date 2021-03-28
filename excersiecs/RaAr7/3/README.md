@@ -29,3 +29,4 @@ end
 
 imshow(Gray_image);
 ```
+![](p3.png)
