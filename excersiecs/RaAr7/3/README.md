@@ -29,4 +29,9 @@ end
 
 imshow(Gray_image);
 ```
+<div dir='rtl'>
+  خروجی کد :
+</div>
+</br>
+
 ![](p3.png)
