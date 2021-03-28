@@ -14,3 +14,4 @@ result = cat(2,flipimage,image);
 
 imshow(result);
 ```
+![](p5.png)
