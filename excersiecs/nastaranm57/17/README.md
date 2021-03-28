@@ -4,7 +4,6 @@
 </div>
 
 ```
-subplot(1,2,2), imshow(output), title('Gray Scale  image')```
 grayImage = imread('C:\Users\PC\Desktop\mountain.png');
 [rows, columns, numberOfColorChannels] = size(grayImage);
 imshow(grayImage, []);
