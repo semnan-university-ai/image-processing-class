@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("img/airplane.png");
+image = imread("airplane.png");
 [x,y] = size(image);
 
 for i=1:x
