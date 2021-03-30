@@ -1,4 +1,4 @@
-> # Exercise 10
+> # Exercise 19
 
 ***
 >CODE
@@ -26,7 +26,6 @@ for i=1:27
  imageList{i}=imresize( imageList{i},[100,100]);
  imageList{i}=255-imageList{i};  
  x{i}=image;
- 
 end
  R=randi([1 27],1,4);
  finalImage=cat(2,x{R(1)},x{R(2)},x{R(3)},x{R(4)});
