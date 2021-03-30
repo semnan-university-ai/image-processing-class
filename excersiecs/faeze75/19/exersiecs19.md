@@ -31,7 +31,7 @@ end
  R=randi([1 27],1,4);
  finalImage=cat(2,x{R(1)},x{R(2)},x{R(3)},x{R(4)});
 ```
-![alt text]()
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/19/Screenshot%20(18).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
