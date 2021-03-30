@@ -1,13 +1,6 @@
 > # Exercise 19
 
-***
->CODE
 
-```ruby
-clear all
-clc
-clear;
-> # Exercise 10
 
 ***
 >CODE
@@ -26,10 +19,13 @@ for i=1:27
  imageList{i}=imresize( imageList{i},[100,100]);
  imageList{i}=255-imageList{i};  
  x{i}=image;
+ 
 end
  R=randi([1 27],1,4);
  finalImage=cat(2,x{R(1)},x{R(2)},x{R(3)},x{R(4)});
 ```
+
+
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/19/Screenshot%20(18).png)
 ***
 <div dir="rtl">
