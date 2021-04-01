@@ -26,7 +26,7 @@
 
   میانگین تصیویر ها :
   
-  ![image](https://user-images.githubusercontent.com/80279784/113270695-03970500-92ef-11eb-8fb9-a6e3bd51f7cd.png)
+  ![image](https://user-images.githubusercontent.com/80279784/113312238-55578380-931f-11eb-8f22-def53240b550.png)
 
   
 </div>
