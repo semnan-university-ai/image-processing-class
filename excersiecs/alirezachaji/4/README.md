@@ -1,52 +1,51 @@
 > # Exercise 4
-> 4. Create a 500 x 500 square image that includes the bottom right corner of the benchmark images; Separate a 100 x 100 square from each image.
+>یک تصویر مربعی 500*500 ایجاد کنید که شامل بخش گوشه ی سمت راست و پایین تصاویر بنچ مارک ها باشد؛ از هر تصویر یک مربع 100*100 جدا کنید.
 ***
 >CODE
 
 Main Program
 ```ruby
-close all
-clear all
-clc
-pic=zeros(500,500);
-image_file=dir('*.png');
-d=0;
-for i=1:5
-    for j=1:5
-        d=d+1;
-        a=image_cut(image_file(d).name);
-        for ii=1:100
-            for jj=1:100
-                pic(i*100+ii-100,j*100+jj-100)=a(ii,jj);
-            end
-        end    
-    end          
-    
-end 
-pic=uint8(pic);
-imshow(pic)
+files =dir('benchmark/*.png');
+n= size(files);
+blankImage=zeros(500,500);
+blankImage=uint8(blankImage);
+i=1;j=1;
+for k =1:25
+        if j==501
+            i=i+100;
+            j=1;
+        end
+        name =files(k).name;
+        img_cuted=image_cut(name,100);
+        blankImage(i:i+99,j:j+99)=img_cuted;
+        j=j+100;   
+        imshow(blankImage);
+end
 ```
 ****
 Image_cut function
 ```ruby
-function img_out=image_cut(address)
-% this function recieve and image address convert it to gray mode and 
-%return a 100 x 100 peace of that 
-a=imread(address);
-a=uint8(a);
-n=size(size(a));
-if (n(2)==3)
-    a=rgb2gray(a);
-end 
-pic=zeros(100,100);
-imsize=size(a);
-for i=1:100
-    for j=1:100
-        pic(i,j)=a((imsize(1)-101+i),(imsize(2)-101+j));
-    end
+function imageOut = image_cut(imageName,cropSize)
+%E4_FUN_CUT Summary of this function goes here
+%   Detailed explanation goes here
+image=imread(strcat('benchmark/',imageName));
+        n=size(size(image));
+        if n(2) ==3
+            image=rgb2gray(image);
+        end
+        imageSize =size(image);
+        image_cuted =image(imageSize(1,1)-(cropSize-1):imageSize(1,1),imageSize(1,2)-(cropSize-1):imageSize(1,2));
+        imageOut=image_cuted;
 end
-pic=uint8(pic);
-img_out=pic;
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/370abe6ba2ff129fef601d8408a160d581f9f920/excersiecs/alirezachaji/4/Exce04.png)
+![image](https://user-images.githubusercontent.com/48456571/113275402-034d3880-92f4-11eb-92b6-3ef2148adde5.png)
+
+<div dir="rtl">
+<h2>توضیحات برنامه</h2> <br />
+ <b>1</b>.درابندا برنامه عکس را بارگذاری میکند<br />
+<b>2</b>.عکس و سایز  را به تابع بریدن عکس میدهد <br />
+<b>3</b>. عکس را با استفاده از آراایه ها در ابعاد مشخص شده می دهیم.<br />
+<b>4</b>. با استفاده از حلقه ها اکثر را در آرایه ها میگذاریم
+    
+</div>
