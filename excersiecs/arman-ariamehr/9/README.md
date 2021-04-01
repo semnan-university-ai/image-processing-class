@@ -5,9 +5,11 @@
   با حرکت در تصویر اصلی تک تک پیکسل ها در تصویری سیاه رنگ که به اندازه وارد شده است رونوشت گرفته می شود
   
   تصویر ورودی :
+  
   ![baboon](https://user-images.githubusercontent.com/80279784/113265576-8f0d9780-92e9-11eb-94c9-414d6cb16667.png)
   
   خروجی برنامه :
+  
   ![image](https://user-images.githubusercontent.com/80279784/113265700-b06e8380-92e9-11eb-8660-932130b2f833.png)
 
 </div>
