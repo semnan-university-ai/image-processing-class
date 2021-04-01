@@ -1,7 +1,7 @@
 clc;
 clear;
 X=imread("C:\Users\SajadEd\Documents\GitHub\image-processing-class\benchmark\airplane.png");
- indexNum = [512,512];
+ indexNum = size(X);
     grayImage = im2uint8(zeros(indexNum(1), indexNum(2)));
     temp = 0;
     for i = 1:indexNum(1)
