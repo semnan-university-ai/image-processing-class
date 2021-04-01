@@ -48,10 +48,10 @@ for i = 1 : row
 end
 
 %calculate
-mean_im = mean(mean(im));
-mean_noise = mean(mean(noise_im));
-mean_avg = mean(mean(avg_im));
-mean_med = mean(mean(med_im));
+mean_im = round(mean(mean(im)));
+mean_noise = round(mean(mean(noise_im)));
+mean_avg = round(mean(mean(avg_im)));
+mean_med = round(mean(mean(med_im)));
 
 %show
 display(mean_im);
