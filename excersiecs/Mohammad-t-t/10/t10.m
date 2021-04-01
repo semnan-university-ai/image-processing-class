@@ -11,7 +11,7 @@ tempPicList=struct('name',{});
 
 for i=1 : tedad
     x=randi([1,10]);
-tempPicList(i).name = picList(x).name;
+    tempPicList(i).name = picList(x).name;
 end
 
 for i=1 :tedad
@@ -28,7 +28,7 @@ end
 
 %noise
 picSize=size(capchaPic); 
-noise=100;
+noise=90;
 
 x = randi([0,255],picSize(1),picSize(2));
 capchaPic(x <= noise+0) = 0;  
