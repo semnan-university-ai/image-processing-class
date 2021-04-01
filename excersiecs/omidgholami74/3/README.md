@@ -1,1 +1,27 @@
 
+> # Exercise 3
+>برنامه ای بنویسید که بدون استفاده از توابع متلب تصاویر benchmark را به حالت خاکستری ببرد.
+***
+>CODE
+
+```ruby
+close all
+clear all
+clc
+image=imread("benchmark/lena.png");
+imshow(image)
+newimage=0.299*image(:,:,1)+0.587*image(:,:,2)+0.114*image(:,:,3);
+figure;
+imshow(newimage)
+```
+***
+![image](https://user-images.githubusercontent.com/48456571/113271283-9768d100-92ef-11eb-97ea-ad6a98281adf.png)
+
+<div dir="rtl">
+<h2>توضیحات برنامه</h2> <br />
+ <b>1</b>ابتدا نام عکس را از کاربر دریافت میکند و آن عکس را در پوشه بنچ مارک پیدا میکند<br />
+<b>2</b>کانال های رنگی  را از عکس  استخراج میکند<br />
+<b>3</b> <br />با استفاده از فرمول زیر عکس را به عکس خاکستری تبدیل میکند
+  0.2989 * R + 0.5870 * G + 0.1140 * B <br />
+    
+</div>
