@@ -18,7 +18,7 @@ end
 figure,
 imshow(image);
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/new/main/excersiecs/faeze75)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/16/Screenshot%20(25).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
