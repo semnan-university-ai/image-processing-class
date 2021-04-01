@@ -81,11 +81,11 @@ figure;imshow(img);
 ```
 
 
-![alt text]()
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/18/Screenshot%20(21).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
-برنامه فضا داخل ساعت را به چند گریدمستطیل شکل تقسیم میکند  و به آن ها رنگ سفید اختصاص میدهد
+برنامه فضا داخل ساعت را به چند گریدمستطیل شکل تقسیم میکند  و هنگام تخصیص رنگ سفید بررسی میکند که  زمینه تصویر جزو حاشیه دور ساعت نباشد آنوقت به آن رنگ سفید را اختصاص میدهد 
 </div>
 
 
