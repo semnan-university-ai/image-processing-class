@@ -72,13 +72,13 @@ clear all
 clc
 pic = imread('C:\Users\PC\Desktop\watch.png');
 subplot(1,2,1), imshow(pic), title('axe asli');
-k=8;
+k=5;
 for i=300:585
     for j=300:720
         r=pic(i,j,1);
         g=pic(i,j,2);
         b=pic(i,j,3);
-        if(r-g<k)&&(r-b<k)&&(g-b<2)
+        if(r-g<k)&&(r-b<k)&&(g-b<k)
             if(r>10)&&(g>35)&&(b>75)
                 pic(i,j,:)=255;
             end
@@ -87,10 +87,11 @@ for i=300:585
 end    
 
 subplot(1,2,2), imshow(pic), title('khorooji');
+© 2021 GitHub, Inc.
 ```
 
 <div dir="rtl">
 خروجی کد برنامه بالا به صورت زیر است:
 </div>
 
-![khorooji](02583.jpg)
+![khorooji](02586.jpg)
