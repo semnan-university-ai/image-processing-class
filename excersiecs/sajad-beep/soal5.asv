@@ -1,0 +1,9 @@
+clc;
+clear;
+X=imread(".\koozeh.png");
+X=im2gray(X);
+imshow(X);
+sizekoozeh=size(X);
+for i=0:505
+    for j=0:
+559        

@@ -1,3 +1,0 @@
-clc;
-clear
-imread("C:\Users\SajadEd\Documents\GitHub\image-processing-class\benchmark\airplane.png");
