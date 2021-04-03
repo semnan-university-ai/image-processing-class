@@ -7,7 +7,7 @@ for i=0:8
     C=B*110+1;
     D=i*110+1;
     L=randi([0,2]);
-    P=L*120+1
+    P=L*120+1;
     imgcaptcha(1:120,D:D+110) = img(P:P+119, C:C+110);
 end    
 figure;
