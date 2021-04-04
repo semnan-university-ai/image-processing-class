@@ -6,6 +6,9 @@
 ![koozeh](5.png)
 
 ```
+I = imread('C:\Users\PC\Desktop\5.png'); 
+subplot(2,2,1) 
+imshow(I)
 title 'original image' 
 % Flip left/right: 
 Ir = flipdim(I,2); 

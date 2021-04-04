@@ -1,0 +1,14 @@
+clc;clear;close all;
+img=(imread("../../../benchmark/pool.png"));
+imggray=rgb2gray(img);
+figure,imshow(img);
+[sr,sc] = size(imggray);
+for x=1:sr
+   for y=1:sc
+       if ((imggray(x,y) > 50) || (imggray(x,y) < 46)) && (x >230) && (y >355)
+            imggray(x,y) = 49;
+            img(x,y
+       end
+   end
+end
+figure,imshow(imggray);
