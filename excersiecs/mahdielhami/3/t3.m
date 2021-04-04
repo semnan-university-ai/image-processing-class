@@ -1,0 +1,12 @@
+clc;
+clear all;
+close all;
+img=imread('img\peppers.png');
+temp = zeros(512, 512);
+[rows, columns, numberOfColorChannels]=size(img); 
+r= img(:, :, 1);
+g = img(:, :, 2);
+b = img(:, :, 3);
+grayimg = .299*double(r) +  .587*double(g) +  .114*double(b);
+grayimg = uint8(grayimg);
+imshow(grayimg);              
