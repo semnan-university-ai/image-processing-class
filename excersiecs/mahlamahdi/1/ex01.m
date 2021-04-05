@@ -3,8 +3,8 @@ clear all
 clc
 row = input('Number of Row: ');
 colum = input('Number Of Column:');
-for i=1:1:row
-        for j=1:1:colum
+for i=1:row
+        for j=1:colum
             if mod((i+j),2)==0
                 image(i,j)=0;
             else  
