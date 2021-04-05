@@ -1,12 +1,17 @@
-# image-processing-class
-image processing class - 991
+#### tamrin 5 code:
 
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
-### Student Info :
-* Full name : Maryam Safaiyan
-* github id : Safaiyan
-* Email : safaiyan94.itsu@yahoo.com
-* Type : majazi
+```
+img = imread('halfjug.jpg');
+imgSize = size(img);
+fulljug = zeros(imgSize(1,1),imgSize(1,2)*2,'uint8');
+flipimage = flip(img,2);
+
+fulljug = cat(2,flipimage,img);
+
+imshow(fulljug);
+
+```
+
+
+![khorooji](result.jpg)

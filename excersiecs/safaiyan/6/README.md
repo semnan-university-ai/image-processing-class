@@ -1,12 +1,14 @@
-# image-processing-class
-image processing class - 991
+#### tamrin 6 code:
 
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
-### Student Info :
-* Full name : Maryam Safaiyan
-* github id : Safaiyan
-* Email : safaiyan94.itsu@yahoo.com
-* Type : majazi
+```
+img = uint8(repmat([0:255], [256,1]));
+
+img=imrotate(img,270);
+imshow(img) ;
+
+
+```
+
+
+![khorooji](result.jpg)

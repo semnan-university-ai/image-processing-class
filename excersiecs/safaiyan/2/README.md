@@ -1,12 +1,21 @@
-# image-processing-class
-image processing class - 991
 
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+#### tamrin 2 code:
 
-### Student Info :
-* Full name : Maryam Safaiyan
-* github id : Safaiyan
-* Email : safaiyan94.itsu@yahoo.com
-* Type : majazi
+
+```
+img = zeros(1000,1000);
+R = input('radius= ');
+xc = input('x center= ');
+yc = input('y center= ');
+imshow(img)
+hold on
+theta = linspace(0,2*pi);
+x = R*cos(theta) +xc;
+y = R*sin(theta) +yc;
+plot(x,y,'w','LineWidth',5)
+axis equal;
+
+```
+
+
+![khorooji](result.jpg)

@@ -1,6 +1,6 @@
-<div dir="rtl">
+
 #### tamrin 1 code:
-</div>
+
 
 ```
 s1= input('row= ');
