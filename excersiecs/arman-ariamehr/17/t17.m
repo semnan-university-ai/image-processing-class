@@ -4,14 +4,17 @@ image = input_im;
 
 copy_im = image;
 
-row_rec = ceil( size(image , 1) / 3 );
-col_rec = size(image , 2);
+row = size(image , 1);
+col = size(image , 2);
 
-for i = 1 : row_rec
-    for j = 1 : col_rec
+for j = 1 : col
+    for i = 1 : row
         value = image(i,j);
         if value >= 200
             copy_im(i,j) = 0;
+        end
+        if image(i+1 , j) < 200
+            break
         end
     end
 end
