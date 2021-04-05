@@ -1,10 +1,11 @@
 <div dir="rtl">
 
+#### تمرین 3
 #### برنامه ای بنویسید که بدون استفاده از توابع متلب تصاویر benchmark را به حالت خاکستری ببرد.  <br />
 
 
 
-###### کد:
+### کد:
 </div>
 
 ```matlab
@@ -27,6 +28,7 @@ end
 
 subplot(1,2,2),imshow(gryimg),title('rgb2gray');
 ```
+---
 
 <div dir="rtl">
 
@@ -38,6 +40,7 @@ subplot(1,2,2),imshow(gryimg),title('rgb2gray');
 img=imread("../../../benchmark/baboon.png");
 subplot(1,2,1),imshow(img),title('Orginal'); 
 ```
+---
 <div dir="rtl">
 2-جدا کردن 3 کانال رنگ در 3 ماتریس<br />
 </div>
@@ -45,14 +48,15 @@ subplot(1,2,1),imshow(img),title('Orginal');
 ```matlab
 R = img(:, :, 1);G = img(:, :, 2);B = img(:, :, 3);
 ```
-
+---
 <div dir="rtl">
-3-ایجاد تصویر خاکستری به ابعاد تصویر ورودی با ماتریس صفر <br />
+3-ایجاد تصویر خاکستری با ماتریس صفر به ابعاد تصویر ورودی  <br />
 </div>
 
 ```matlab
 gryimg = zeros(sr, sc, 'uint8');
 ```
+---
 <div dir="rtl">
 4-حلقه تو در تو و پیمایش تک تک پیکسلها و محاسبه سطح خاکستری از روی 3 موئلفه RGB در فورمول.<br />
 </div>

@@ -1,6 +1,6 @@
 clc;close all;clear;
 polyline=0;
-img=zeros(400);
+img=zeros(400,'uint8');
 dd=[polyline,50,50,100,50,100,100,50,100,50,50,... %spure
     polyline,50,200,100,250,100,150,50,200,...   %triangle
     polyline,50,300,50,350,150,350,150,300,50,300,... %rectangle
@@ -23,7 +23,7 @@ while (k < l)
     x= x0;y = y0;
  
     while(true)
-        img(x,y)=1; %setPixel
+        img(x,y)=255; %setPixel
         if( x == x1 )&&( y == y1) break; end
         e2 = 2*err;
         if( e2 > -dy ) err = err - dy; x = x + sx; end

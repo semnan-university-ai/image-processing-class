@@ -1,9 +1,12 @@
 clc;clear;close all;
+
 img=(imread("../../../benchmark/watch.png"));
 imggray=rgb2gray(img);
-subplot(1,3,1),imshow(img),title('Orginal');
-R = img(:, :, 1);G = img(:, :, 2);B = img(:, :, 3);
+subplot(1,2,1),imshow(img),title('Orginal');
 [sr,sc,sz] = size(img);
+
+R = img(:, :, 1);G = img(:, :, 2);B = img(:, :, 3);
+
 for x=1:sr
    for y=1:sc
        if (R(x,y)< 100) &&(R(x,y)> 81) && (abs((G(x,y)-B(x,y)))< 2) 
@@ -12,5 +15,6 @@ for x=1:sr
        end
    end
 end
-subplot(1,3,2),imshow(imggray),title('Gray');
-subplot(1,3,3),imshow(img),title('Color');
+
+subplot(2,2,2),imshow(imggray),title('Gray');
+subplot(2,2,4),imshow(img),title('Color');
