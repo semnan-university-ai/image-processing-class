@@ -1,13 +1,13 @@
-clc;
-close all;
-clear;
-
+clc;clear;close all;
+%get name images files in folder benchmark
 imgpath = "../../../benchmark/";
-img = ones(500, 500, 3,'uint8');
 pngfiles = dir(imgpath+'*.png');
 tiffiles = dir(imgpath+'*.tif');
 bmpfiles = dir(imgpath+'*.bmp');
 imagefiles = [pngfiles;tiffiles;bmpfiles];
+
+img = ones(500, 500, 3,'uint8');
+
 for ii=1:25
    currentimg = imread(imgpath+imagefiles(ii).name);
    [sx,sy,sz]=size(currentimg);

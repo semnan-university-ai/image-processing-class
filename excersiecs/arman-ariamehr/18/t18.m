@@ -12,8 +12,8 @@ data = round( [fliplr(center) radius] );
 amount = size(data , 1);
 for k = 1 : amount
     i_cen = data(k , 1);
-    j_cen = data(k , 2);
-    rad = data(k , 3);
+    j_cen = data(k , 2) + 40;
+    rad = data(k , 3) - 20;
     
     for th = 0 : 0.1 : 360
         for r = 0 : rad
