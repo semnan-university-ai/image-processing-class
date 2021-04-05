@@ -5,11 +5,13 @@
   
   تصویر نمونه :
   
-  ![lena](https://user-images.githubusercontent.com/80279784/113271465-d008aa80-92ef-11eb-8d2e-cb390e488457.png)
+  ![WhatsApp Image 2021-04-01 at 22 57 11](https://user-images.githubusercontent.com/80279784/113542947-99d27000-95fa-11eb-911c-7d895cdb7f5c.jpeg)
+
 
   نتیجه با ده بار خراب کردن تصویر :
   
-  ![image](https://user-images.githubusercontent.com/80279784/113271617-f75f7780-92ef-11eb-9d85-1cd885ba3cc8.png)
+  ![image](https://user-images.githubusercontent.com/80279784/113543113-f3d33580-95fa-11eb-8be4-dbe9ee9c6ab6.png)
+
 
 
 </div>
