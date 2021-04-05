@@ -5,7 +5,7 @@
 </br>
 
 ```
-imagepad = imread("baboon.png");
+imagepad = imread("../benchmark/baboon.png");
 [nrows ncols nslices] = size(imagepad);
 midx=ceil((ncols+1)/2);
 midy=ceil((nrows+1)/2);
