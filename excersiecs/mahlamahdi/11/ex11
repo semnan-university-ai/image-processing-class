@@ -1,0 +1,10 @@
+clc;
+clear;
+close all;
+i=imread('airplane.png');  
+i=rgb2gray(i);
+[m,n]=size(i); 
+x = randi([0 ,255] , m ,n);
+i(x<=0+2)=0;
+i(x>=255-2)=255;
+imshow(i);
