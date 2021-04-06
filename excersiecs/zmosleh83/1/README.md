@@ -1,6 +1,9 @@
 <div dir="rtl">
 ##تمرين شماره 1 
   ### کد:
+  </div>
+  
+```matlab
   clear
 clc
  
@@ -28,7 +31,8 @@ for i=3:1:10
      end
      
 end
- 
+ ```
+---
 <div dir="rtl">
   #### برسی کد:
   <div dir="rtl">
