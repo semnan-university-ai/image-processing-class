@@ -2,10 +2,10 @@ clc;clear;close all;
 
 imgwatch=imread("../../../benchmark/watch.png");
 [rw,cw,zw]=size(imgwatch);
-figure;imshow(imgwatch)
+subplot(2,2,1),imshow(imgwatch)
 imgpool=imread("../../../benchmark/pool.png");
 [rp,cp,zp]=size(imgpool);
-figure;imshow(imgpool);
+subplot(2,2,2),imshow(imgpool);
 R_watch = imgwatch(:, :, 1);
 R_pool = imgpool(:, :, 1);
 imgwatch(:, :, 1)=0;
@@ -18,5 +18,5 @@ for r=1:rw
        end
    end
 end
-figure;imshow(imgwatch);
-figure;imshow(imgpool); 
+subplot(2,2,3),imshow(imgwatch);
+subplot(2,2,4),imshow(imgpool); 

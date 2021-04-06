@@ -1,7 +1,7 @@
 clc;clear;close all;
 
 img=imread("../../../benchmark/cat.png");
-figure;imshow(img);
+subplot(1,2,1),imshow(img);
 R = img(:, :, 1);G = img(:, :, 2);B = img(:, :, 3);
 [sr,sc,sz] = size(img);
 imgout = zeros(sr, sc, sz, 'uint8');
@@ -12,4 +12,4 @@ for r=1:sr
        imgout(r,c,3)=R(r,c);
    end
 end
-figure;imshow(imgout);
+subplot(1,2,2),imshow(imgout);
