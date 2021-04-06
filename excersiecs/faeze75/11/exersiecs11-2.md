@@ -24,7 +24,7 @@ end
  imshow(image)
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/11/Screenshot%20(30).png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/11/Screenshot%20(29).png)
 ***
 <div dir="rtl">
 
