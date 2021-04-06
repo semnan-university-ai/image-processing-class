@@ -1,0 +1,39 @@
+<div dir="rtl">
+
+#### تمرین 17
+
+
+### کد:
+</div>
+
+```matlab
+	clc;
+		close all;
+		clear all;
+		
+
+		image=imread("C:\SemnanClass\9902\TA\Benchmark\/mountain.png");
+		for j=1:640 %arze tasvir
+		    for i=1:150
+		     if 165<image(i,j)
+		         image(i,j)=0;
+		     end
+		     if image(i+1,j)<165
+		         break;
+		     end
+		    end
+		end
+		image=uint8(image);
+		figure;
+		imshow(image) 
+
+
+```
+---
+<div dir="rtl">
+
+-   یادگیری و آموزش ازهمکلاسی های گرامی در گيت هاب  
+   
+</div>
+
+<div dir="rtl">
