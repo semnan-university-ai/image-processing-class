@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("fruits.png");
+image = imread("../benchmark/fruits.png");
 image2 = rgb2gray(image);
 
 percent = 20;

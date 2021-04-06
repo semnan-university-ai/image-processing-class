@@ -6,7 +6,7 @@
 </br>
 
 ```
-image = imread("airplane.png");
+image = imread("../benchmark/airplane.png");
 [x,y] = size(image);
 
 ```
