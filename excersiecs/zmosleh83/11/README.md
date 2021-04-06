@@ -37,7 +37,8 @@ title(ax2, 'noisy');
 
 #### برسی کد:
 1. 
--    https://www.mathworks.com/matlabcentral/answers/519835-how-to-make-salt-pepper-noise-own-code<br />
+-   یادگیری و آموزش از سایت : 
+-     https://www.mathworks.com/matlabcentral/answers/519835-how-to-make-salt-pepper-noise-own-code<br />
 </div>
 
 <div dir="rtl">
