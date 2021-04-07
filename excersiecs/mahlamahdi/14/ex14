@@ -1,0 +1,11 @@
+clc
+clear
+close all
+dataset= 0;
+
+for i=1:12
+dataset=imread("dataset/"+int2str(i)+".jpg");
+figure(1);
+subplot(3,4,i),imhist(dataset)
+title(i+" pm");
+end
