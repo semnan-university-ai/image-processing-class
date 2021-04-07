@@ -1,0 +1,40 @@
+clc;
+close all;
+clear;
+
+img=imread('img/airplane.png');
+[x,y,z]= size(img); 
+ angle= input("Enter 45, 90 or 180:");
+
+
+rads=2*pi*angle/360;  
+
+row=ceil(x*abs(cos(rads))+y*abs(sin(rads)));                      
+col=ceil(x*abs(sin(rads))+y*abs(cos(rads)));                     
+
+
+C=uint8(zeros([row col 3 ]));
+
+x_out=ceil(row/2);                                                            
+y_out=ceil(col/2);
+
+midx=ceil((size(C,1))/2);
+midy=ceil((size(C,2))/2);
+
+
+for i=1:size(C,1)
+    for j=1:size(C,2)                                                       
+
+         x= (i-midx)*cos(rads)+(j-midy)*sin(rads);                                       
+         y= -(i-midx)*sin(rads)+(j-midy)*cos(rads);                             
+         x=round(x)+x_out;
+         y=round(y)+y_out;
+
+         if (x>=1 && y>=1 && x<=size(img,1) &&  y<=size(img,2) ) 
+              C(i,j,:)=img(x,y,:);  
+         end
+
+    end
+end
+
+imshow(C);
