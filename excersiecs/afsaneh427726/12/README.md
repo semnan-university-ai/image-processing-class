@@ -1,4 +1,5 @@
 در ابتدا بر روی عکس نویز فلفل نمکی ایجاد می کنیم:
+
 clc;
 clear data;
 clear all;
@@ -16,7 +17,9 @@ for m=1:3000
     j=randi(b);
     image(i,j)=255;
 end
+
 سپس فیلتر میانگین راروی تصویر اعمال می کنیم(mean.jpg)
+
 %filter miangin
  for i=2:a-1
      for j=2:b-1
@@ -39,6 +42,7 @@ end
  imshow(img);
  
 سپس فیلتر میانه راروی تصویر اعمال می کنیم(median.jpg)
+
   for i=2:a-1
      for j=2:b-1
          A(1)=image(i-1,j);
