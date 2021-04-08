@@ -20,6 +20,7 @@ for k = 1 : amount
     j_cen = data(k , 2);
     rad = 2 * data(k , 3);
     if i_cen >= low && i_cen <= hight
+        %draw black circle
         for th = 0 : 0.1 : 360
             for r = 0 : rad
                 i = r * cos(th) + i_cen;

@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("fruits.png");
+image = imread("../benchmark/fruits.png");
 image2 = rgb2gray(image);
 
 percent = 20;
