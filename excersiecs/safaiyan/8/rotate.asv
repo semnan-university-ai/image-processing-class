@@ -1,0 +1,40 @@
+clc;
+close all;
+clear all;
+img=imread('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\benchmark\girl.png');
+img=imresize(img,[200 200]);
+x3=double(img);
+%image padding
+[Rows, Cols] = size(im); 
+Diagonal = sqrt(Rows^2 + Cols^2); 
+RowPad = ceil(Diagonal - Rows) + 2;
+ColPad = ceil(Diagonal - Cols) + 2;
+imagepad = zeros(Rows+RowPad, Cols+ColPad);
+imagepad(ceil(RowPad/2):(ceil(RowPad/2)+Rows-1),ceil(ColPad/2):(ceil(ColPad/2)+Cols-1)) = image;
+
+degree=input('please insert degree');
+
+%midpoints
+midx=ceil((size(imagepad,1)+1)/2);
+midy=ceil((size(imagepad,2)+1)/2);
+
+imagerot=zeros(size(imagepad));
+
+%rotation
+for i=1:size(imagepad,1)
+    for j=1:size(imagepad,2)
+
+         image=(i-midx)*cos(degree)-(j-midy)*sin(degree);
+         y=(i-midx)*sin(degree)+(j-midy)*cos(degree);
+         image=round(image)+midx;
+         y=round(y)+midy;
+
+         if (image>=1 && y>=1)
+              imagerot(image,y)=imagepad(i,j); % k degrees rotated image         
+         end
+
+    end
+end
+
+ figure,imagesc(imagerot);
+ colormap(gray(256));

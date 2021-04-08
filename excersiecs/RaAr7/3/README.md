@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("peppers.png");
+image = imread("../benchmark/peppers.png");
 
 R = image(:,:,1);
 G = image(:,:,2);

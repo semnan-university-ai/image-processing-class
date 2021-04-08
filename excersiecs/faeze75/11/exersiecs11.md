@@ -5,6 +5,10 @@
 
 ```ruby
 im = imread('lena.png');
+Ssize=(size(im));
+if Ssize(3)==3
+    im=rgb2gray(im);
+end
 figure;
 ax1 = axes();
 imshow(im);
@@ -29,7 +33,7 @@ imshow(im);
 title(ax2, 'noisy');
 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/10/Screenshot%20(17).png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/11/Screenshot%20(30).png)
 ***
 <div dir="rtl">
 

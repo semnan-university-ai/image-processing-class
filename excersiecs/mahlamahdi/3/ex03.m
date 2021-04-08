@@ -1,19 +1,12 @@
 clc;
 clear;
 close all;
-img1 = imread("img/lena.png");
-indexNum=size(img1);
- grayImage = im2uint8(zeros(indexNum(1), indexNum(2)));
-    temp = 0;
-    for i = 1:indexNum(1)
-        for j=1:indexNum(2)
-            temp = int32(img1(i, j, 1)) + int32(img1(i, j, 2)) + int32(img1(i, j, 3));
-            if(temp < 0)
-                temp = 0;
-            elseif(temp > 255)
-                temp = 255;
-            end
-            grayImage(i,j) = int8(round(temp * .33));
+img1 = imread("img/airplane.png");
+imagesize=size(img1);
+     for i = 1:imagesize(1)
+        for j=1:imagesize(2)
+            img2(i,j) = 0.33*(img1(i, j, 1)) + 0.33*(img1(i, j, 2)) + 0.33*(img1(i, j, 3));
         end
-    end
-    imshow(grayImage);
+     end
+    subplot(1,2,1),imshow(img1);
+    subplot(1,2,2),imshow(img2);
