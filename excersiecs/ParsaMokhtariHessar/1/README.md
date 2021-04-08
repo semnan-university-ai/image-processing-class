@@ -60,4 +60,8 @@ end
 figure,
 imshow(image);
 ```
+<div dir="rtl" >
+    خروجی بصورت زیر می باشد:
+</div>
+
 ![output](t1.bmp)
