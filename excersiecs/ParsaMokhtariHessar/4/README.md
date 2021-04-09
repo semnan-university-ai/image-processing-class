@@ -13,6 +13,7 @@ clear all;
 <div dir="rtl">
     فولدری که فایل ها در آن قرار دارد را بارگذاری می کند.
 </div>
+
 ```
 % Specify the folder where the files live.
 myFolder = '..\benchmark\';
@@ -136,4 +137,4 @@ figure,
 imshow(uint8(PatchImage));
 %imsave
 ```
-![output](t4.png)
+![output](t4.bmp)
