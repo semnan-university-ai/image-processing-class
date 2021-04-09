@@ -66,4 +66,4 @@ imshow(uint8(image));
 imsave,
 ```
 
-![output](t6.bmp)
+![output](t6-output.bmp)
