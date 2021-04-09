@@ -3,7 +3,7 @@ close all;
 clear all;
 r=8;
 image = zeros(100*r,100*r);
-f=1;
+
 
 for i=1 : r*100
     if floor(mod( i/100 , 2 )) == 0 

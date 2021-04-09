@@ -2,7 +2,7 @@ clc;
 close all;
 clear all;
 r = 200;
-t = 200 % threshhold;
+t = 200 % threshhold
 p = [300 300];
 image = zeros(1000,1000);
 for i=1 : 1000
