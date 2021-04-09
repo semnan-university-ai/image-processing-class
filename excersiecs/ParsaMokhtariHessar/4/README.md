@@ -65,6 +65,7 @@ for k = 1 : length(theFiles)
 <div dir="rtl">
     در حلقه فایل خوانده می شود.
 </div>
+
 ```    
     image = imread(fullFileName);
 ```
