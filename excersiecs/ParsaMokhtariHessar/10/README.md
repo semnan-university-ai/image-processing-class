@@ -1,6 +1,20 @@
+# تمرین 10
+
+<br />
+<div dir="rtl">
+    باعث می شود پس از هر بار اجرای برنامه پنجره ی فرمان ها پاک شود   
+</div>
+
+```
 clc;
 close all;
 clear all;
+```
+<div dir="rtl">
+    تصاویر اعداد را وارد می کنیم
+</div>
+
+```
 img0 = imresize(rgb2gray(imread("numbers/0.png")),[300 300]);
 img1 = imresize(rgb2gray(imread("numbers/1.png")),[300 300]);
 img2 = imresize(rgb2gray(imread("numbers/2.png")),[300 300]);
@@ -11,23 +25,31 @@ img6 = imresize(rgb2gray(imread("numbers/6.png")),[300 300]);
 img7 = imresize(rgb2gray(imread("numbers/7.png")),[300 300]);
 img8 = imresize(rgb2gray(imread("numbers/8.png")),[300 300]);
 img9 = imresize(rgb2gray(imread("numbers/9.png")),[300 300]);
+```
 
-%image = imresize(image, [150 150]);
-% % Specify the folder where the files live.
-% myFolder = 'numbers/';
-% % Get a list of all files in the folder with the desired file name pattern.
-% filePattern1 = fullfile(myFolder,'*.png'); % Change to whatever pattern you need.
-% theFiles = dir(filePattern1);
-PatchArray = zeros(300,300);
-% for k = 1 : length(theFiles)
-%     fullFileName = fullfile(theFiles(k).folder, baseFileName);
-%     size=theFiles(k);
-%     img(k)=zeros(size);
-%     img{k} = imread(fullFileName);
-% end
-x=rand(1,4);
+<div dir="rtl">
+    تعداد کپچای عددی را مشخص می کنیم . می توانیم با تغییر این متغییر هر تعداد کپچا تولید کنیم.  
+</div>
+
+```
+numberOfCaptcha = 4;
+```
+
+<div dir="rtl">
+ به تعداد تعیین شده عدد رندم با توزیع یکسان تولید کرده و آن را ضرب در 10 کرده و منهای 1 می کنیم تا از 10 بدست آمدن جلوگیری شود.
+</div>
+
+```
+x=rand(1,numberOfCaptcha);
 x10=round(x*10-1);
-for i=1 : 4 
+```
+
+<div dir="rtl">
+    با استفاده از دستور switch به ازای هر عدد بدست آمده تصویر متناظر  را به آرایه وصله می چسبانیم.
+</div>
+
+```
+for i=1 : numberOfCaptcha 
     switch x10(1,i);
         case 0 
             [Wid,Hei]= size(img0);
@@ -103,5 +125,18 @@ for i=1 : 4
             disp('other value')
     end
 end
+```
+
+<div dir="rtl">
+ و در نهایت آنها را نمایش می دهیم.
+</div>
+
+```
 figure,
 imshow(uint8(uint8(PatchArray)));
+```
+![output](t10-1.png)
+![output](t10-2.png)
+![output](t10-3.png)
+![output](t10-4.png)
+![output](t10-5.png)
