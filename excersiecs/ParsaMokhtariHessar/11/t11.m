@@ -1,12 +1,15 @@
 clc;
 close all;
 clear all;
-im = rgb2gray(imread('../../../benchmark/airplane.png'));
+im = imread('../../../benchmark/airplane.png');
+if size(im,3) == 3 
+    im=rgb2gray(im);
+end
 figure;
 imshow(im);
 a = 0.05; % 5% pixels altered
 b = 0.5;  % 50% percent white pixels among all altered pixels
-n = numel(im(:,:,1));
+n = numel(im(:,:));
 m = fix(a*n);
 idx = randperm(n, m);
 k = fix(b*m);

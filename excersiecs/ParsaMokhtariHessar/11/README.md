@@ -78,4 +78,10 @@ imshow(im);
 imsave;
 ```
 ![picture](../../../benchmark/airplane.png)
-![output](t11.png)
+![picture](../../../benchmark/zelda.png)
+![picture](../../../benchmark/baboon.png)
+![picture](../../../benchmark/mountain.png)
+![output](t11-1.png)
+![output](t11-2.png)
+![output](t11-3.png)
+![output](t11-4.png)
