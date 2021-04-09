@@ -18,14 +18,13 @@ for i = 1 :  cropW
 end
 for i = 1 :  cropW 
     for j = 1 :  cropH
-        if (i==1) || (j==1)||(i==cropW)||(j==cropH)
-            image(i+cropX,j+cropY)=0;
-        end
+        if (i==1) || (j==1)||(i==cropW)||(j==1)
+        image(i+cropX,j+cropY);
     end
 end
 figure,
 imshow(image);
-%imsave;
+imsave;
 figure,
 imshow(uint8(croppedImage));
-%imsave;
+imsave;

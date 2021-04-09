@@ -2,7 +2,7 @@ clc;
 close all;
 clear all;
 
-img = imread("../benchmark/zelda.png");
+img = imread("../../../benchmark/zelda.png");
 
  
 
