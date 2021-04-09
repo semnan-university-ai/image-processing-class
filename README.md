@@ -35,3 +35,5 @@ image processing class - 992
 * Fatemeh Seyfi - [Github Profile](https://github.com/FatemehSeyfi)
 * Hadi Arokh - [Github Profile](https://github.com/hadiadokh)
 * arman ariamehr - [Github Profile](https://github.com/arman-ariamehr)
+* pedram moniri - [Github Profile](https://github.com/pedrammoniri)
+* mariya toofan - [Github Profile](https://github.com/mariyatoofan)

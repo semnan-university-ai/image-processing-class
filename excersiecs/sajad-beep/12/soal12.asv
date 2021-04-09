@@ -1,0 +1,39 @@
+clc;
+clear;
+X=imread("C:\Users\SajadEd\Documents\GitHub\image-processing-class\benchmark\barbara.png");
+X=im2gray(X);
+figure(1),
+imshow(X);
+J = imnoise(X,'salt & pepper',0.02);
+image_size=size(J);
+image_result=zeros(image_size(1,1),image_size(1,2),"uint8");
+
+
+figure(2),
+imshow(J);
+for i=1:image_size(1,1)
+    for j=1:image_size(1,2)
+        if (i==1 && j==1)
+             result  =[J(i,j) J(i,j+1) J(i+1,j) J(i+1,j+1)];
+        elseif(i==image_size(1,1) && j==1)
+            result  = [J(i,j) J(i-1,j) J(i,j+1) J(i-1,j+1)];
+        elseif(i==1 && j==image_size(1,2))
+            result =[J(i,j) J(i,j-1) J(i+1,j-1) J(i+1,j)];
+        elseif(i==image_size(1,1) && j==image_size(1,2))
+              result =[J(i,j) J(i-1,j-1) J(i-1,j) J(i,j-1)];
+        elseif(i==1)
+              result =[J(i,j) J(i+1,j-1) J(i+1,j) J(i+1,j+1)];
+        elseif(j==1)
+               result=[J(i,j) J(i-1,j+1) J(i,j+1) J(i+1,j+1)];
+        elseif(i==image_size(1,1))
+              result =[J(i,j) J(i-1,j-1) J(i-1,j) J(i-1,j+1)];
+        elseif(j==image_size(1,2))
+              result = [J(i,j) J(i-1,j-1) J(i,j-1) J(i+1,j-1)];
+        else
+           result=[J(i,j) J(i-1,j-1) J(i-1,j) J(i-1,j+1) J(i,j-1) J(i,j+1) J(i+1,j-1) J(i+1,j) J(i+1,j+1)];  
+        end
+        image_result=uintround(mean(result));
+    end 
+end
+figure(3),
+imshow(image_result);
