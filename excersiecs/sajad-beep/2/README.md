@@ -34,5 +34,6 @@ end
  
 figure,
 imshow(imagesquare);
+~~~
 
 ![camelCase](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/sajad-beep/2/%D8%AE%D8%B1%D9%88%D8%AC%DB%8C%20%D8%B3%D9%88%D8%A7%D9%84%20%D8%AF%D9%88.PNG)
