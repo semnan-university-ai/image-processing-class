@@ -93,4 +93,4 @@ imshow(uint8(ImageGrey));
 خروجی  تصویر تبدیل شده بصورت دستی
 </div>
 
-[output](t3.bmp)
+![output](t3.bmp)
