@@ -1,33 +1,24 @@
 clc;
 close all;
 clear all;
-image = imread('../benchmark/airplane.png');
+image = imread('../../../benchmark/airplane.png');
+if size(image,3) == 3 
+    image=rgb2gray(image);
+end
 % create the noise --------------------------------------------------------
 imageNoisy = image;
-figure;
-ax1 = axes();
-imshow(imageNoisy);
-title(ax1, 'original');
 a = 0.05; % 5% pixels altered
 b = 0.5; % 50% percent white pixels among all altered pixels
-n = numel(imageNoisy(:,:,1));
+n = numel(imageNoisy(:,:));
 m = fix(a*n);
 idx = randperm(n, m);
 k = fix(b*m);
 idx1 = idx(1:k);
 idx2 = idx(k+1:end);
-idx1 = idx1' + n.*(0:size(imageNoisy,3)-1);
-idx1 = idx1(:);
-idx2 = idx2' + n.*(0:size(imageNoisy,3)-1);
-idx2 = idx2(:);
 imageNoisy(idx1) = 255;
 imageNoisy(idx2) = 0;
-figure;
-ax2 = axes();
 imshow(imageNoisy);
-title(ax2, 'noisy');
 % the mean(average)filter -------------------------------------------------
-imageNoisy = rgb2gray(imageNoisy);
 imageNoisySize = size(imageNoisy);
 height = imageNoisySize(1,1);
 width = imageNoisySize(1,2);
