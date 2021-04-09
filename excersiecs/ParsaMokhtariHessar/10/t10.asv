@@ -25,7 +25,7 @@ PatchArray = zeros(300,300);
 %     img(k)=zeros(size);
 %     img{k} = imread(fullFileName);
 % end
-numberOfCaptcha = 4;
+numberOfCaptcha = 6
 x=rand(1,numberOfCaptcha);
 x10=round(x*10-1);
 for i=1 : numberOfCaptcha 
