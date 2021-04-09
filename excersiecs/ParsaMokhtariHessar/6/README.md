@@ -10,6 +10,7 @@ clc;
 close all;
 clear all;
 ```
+
 <div dir="rtl">
     تعیین ابعاد پیکسل های این تصویر نسان دهنده طیف خاکستری
 </div>
@@ -17,6 +18,7 @@ clear all;
 ```
 r=10
 ```
+
 <div dir="rtl">
     ساختن ماتریس متغییر تصویر طیفی
 </div>
@@ -24,6 +26,7 @@ r=10
 ```
 image=zeros(256*r,256*r);
 ```
+
 <div dir="rtl">
     گرفتن سایز آن
 </div>
@@ -52,6 +55,7 @@ for i=1:imagesize(1,1)
     p=p+1  
 end
 ```
+
 <div dir="rtl">
     تصویر نمایش  داده می شود و ذخیره می شود. 
 </div>
@@ -61,3 +65,5 @@ figure,
 imshow(uint8(image));
 imsave,
 ```
+
+![output](t6-output.bmp)
