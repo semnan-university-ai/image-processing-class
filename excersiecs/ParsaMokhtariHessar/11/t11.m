@@ -6,7 +6,7 @@ figure;
 imshow(im);
 a = 0.05; % 5% pixels altered
 b = 0.5;  % 50% percent white pixels among all altered pixels
-n = numel(im(:,:,1));
+n = numel(im(:,:));
 m = fix(a*n);
 idx = randperm(n, m);
 k = fix(b*m);
