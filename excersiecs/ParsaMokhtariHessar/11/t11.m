@@ -1,7 +1,10 @@
 clc;
 close all;
 clear all;
-im = rgb2gray(imread('../../../benchmark/airplane.png'));
+im = imread('../../../benchmark/airplane.png');
+if size(im,3) == 3 
+    im=rgb2gray(im);
+end
 figure;
 imshow(im);
 a = 0.05; % 5% pixels altered
