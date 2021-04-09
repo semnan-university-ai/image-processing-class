@@ -105,7 +105,7 @@ end
 imshow(C);
 imsave;
 ```
-[output](t8-output/t8-rotate-45.png)
-[output](t8-output/t8-rotate-90.png)
-[output](t8-output/t8-rotate-120.png)
-[output](t8-output/t8-rotate-180.png)
+![output](t8-output/t8-rotate-45.png)
+![output](t8-output/t8-rotate-90.png)
+![output](t8-output/t8-rotate-120.png)
+![output](t8-output/t8-rotate-180.png)
