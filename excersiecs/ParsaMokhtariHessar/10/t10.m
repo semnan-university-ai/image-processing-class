@@ -105,3 +105,4 @@ for i=1 : 4
 end
 figure,
 imshow(uint8(uint8(PatchArray)));
+imsave;
