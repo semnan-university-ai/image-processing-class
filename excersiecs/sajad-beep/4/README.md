@@ -119,4 +119,4 @@ z=[y1 y2 y3 y4 y5;y2 y1 y4 y3 y5 ;y5 y3 y4 y2 y1;y1 y4 y3 y2 y5;y4 y3 y1 y2 y5;]
 
 imshow(z);
 ~~~
-![camelCase]("https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/sajad-beep/4/%D8%AE%D8%B1%D9%88%D8%AC%DB%8C%20%D8%AC%D9%88%D8%A7%D8%A8%20%D8%AA%D9%85%D8%B1%DB%8C%D9%864.PNG")
+![camelCase](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/sajad-beep/4/%D8%AE%D8%B1%D9%88%D8%AC%DB%8C%20%D8%AC%D9%88%D8%A7%D8%A8%20%D8%AA%D9%85%D8%B1%DB%8C%D9%864.PNG)
