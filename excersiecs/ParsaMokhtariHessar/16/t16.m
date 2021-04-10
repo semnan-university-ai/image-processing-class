@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = imread('../benchmark/zelda.png');
+image = imread('../../../benchmark/zelda.png');
 figure,imshow(image);
 imageSize = size(image);
 height = imageSize(1,1);
@@ -42,4 +42,6 @@ for y=1:scale:height
 end
 
 figure,imshow(imageSec);
+%imsave;
 figure,imshow(imageResult);
+%imsave;
