@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = rgb2gray(imread('../../../benchmark/pool.png'));
+image = rgb2gray(imread('../benchmark/pool.png'));
 figure,imshow(image);
 imageSize = size(image);
 height = imageSize(1,1);
@@ -20,6 +20,13 @@ for i=height:-1:1
     end
    
 end
+sumMean = 0;
+for i=1:height
+    for j=1:width        
+        sumMean=sumMean+imageNoisyResultMean(i,j);           
+    end
+end
+ME = sumMean / numberOfPixels ;
 sx=0;
 sy=0;
 imageResult = image;
@@ -30,7 +37,15 @@ for y=1:scale:height
         if (sx == 9)|| (sx == 10)||(sx == 11)
             for u=1:scale
                 for v=1:scale
-                    imageResult(sy*scale+u,sx*scale+v)=48;
+                    
+                    imageResult(sy*scale+u,sx*scale+v)=;
+                    %66
+                end
+            end
+            for u=1:scale
+                for v=1:scale
+                    
+                    imageResult(sy*scale+u,sx*scale+v)=;
                     %66
                 end
             end
@@ -45,9 +60,7 @@ end
 
 
 figure,imshow(imageSec);
-%imsave;
 figure,imshow(uint8(imageResult));
-%imsave;
 %60to230 YellowBall
 
 
