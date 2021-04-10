@@ -9,63 +9,78 @@
 
 ```matlab
 clc;clear;close all;
-img=im2bw(imread('0-9.jpg'));
-%imshow(img);
+
+img=imread('0-9');
 imgcaptcha=zeros(0,0,'logical');
+ttl=0;
 for i=0:3
-    B=randi([0,9]);
-    C=B*110+1;
-    D=i*110+1;
-    imgcaptcha(1:size(img,1),D:D+110) = img(1:size(img,1), C:C+110, :);
+    B=randi([1,9]);
+    ttl=ttl+B*10^(3-i);
+    p=randi([1,20]);
+    q=randi([1,10]);
+    C=B*100+1;
+    D=i*40+1+q;
+    imgcaptcha(p:60+p, D:D+39) = img(40:100, C+30:C+69);
 end    
+for i=1:3000
+    X=randi([1,size(imgcaptcha,1)]);
+    Y=randi([1,size(imgcaptcha,2)]);
+    imgcaptcha(X,Y)=randi([0,1])*255;
+end
 figure;
-imshow(imgcaptcha);
+imshow(imgcaptcha),title(int2str(ttl));
+
 ```
 
 <div dir="rtl">
 
 #### برسی کد:
-1-پیدا کردن اسامی کلیه تصویر موجود در پوشه بنچ مارک با پسوند های مورد نظر <br />
-دستور dir یک آرایه از فیلد های داده که حاوی مشخصات فایلها بر می گرداند.
-</div>
+1.
+- در خط اول یک ارایه از قبل ایجاد شده اعداد 0-9 را در ماتریس img قرار می دهد.
+- در خط دوم یک آرایه صفر عنصری باینری تعریف میکند. 
+  </div>
 
 ```matlab
-imgpath = "../../../benchmark/";
-pngfiles = dir(imgpath+'*.png');
-tiffiles = dir(imgpath+'*.tif');
-bmpfiles = dir(imgpath+'*.bmp');
+img=imread('0-9');
+imgcaptcha=zeros(0,0,'logical');
 ```
 <div dir="rtl">
-2-سه آرایه با فیلدهای یکسان را با هم در یک آریه ترکیب می کند<br />
+
+2.
+- یک حلقه for وظیفه جدا کردن هر حرف و قرار دادن آن در ماتریس بانری imgcaptcha را بر عهده دارد.
+- متغییر B یک عدد اتفاقی باری درج در کپچا انتخاب میکند.
+- متغییر ttl کل عدد را جهت مقایسه نگه می دارد.
+- متغیر های p و q دو عدد تصادفی جهت جابجایی جزئی مگان قرارگری اعداد در تصویر نهایی استفاده شده است.
+- در نهایت در خط آخر for یک کپی از عدد انتخاب شده در تصویر خروجی قرار گرفته است.
 </div>
 
 ```matlab
-imagefiles = [pngfiles;tiffiles;bmpfiles];
+for i=0:3
+    B=randi([1,9]);
+    ttl=ttl+B*10^(3-i);
+    p=randi([1,20]);
+    q=randi([1,10]);
+    C=B*100+1;
+    D=i*40+1+q;
+    imgcaptcha(p:60+p, D:D+39) = img(40:100, C+30:C+69);
+end    
 ```
 
 <div dir="rtl">
-3-ایجاد تصویر رنگی RGB به ابعاد 500*500*3 با ایجاد ماتریس با درایه یک <br />
+
+3.
+- در حلقه زیر نویز فلفل نمکی به تصویر نهایی اضافه شده تا توسط Bot ها خوانده نشود.
+
 </div>
 
 ```matlab
-img = ones(500, 500, 3,'uint8');
-```
-<div dir="rtl">
-4-به ازای افزایش متغییر حلقه یکی از تصاویر با توجه به ادرس آنها در آرایه بار می شود و در خط چهارم قسمت گوشه پایین سمت راست تصویر جاری جدا می شود در خط پنجم چک می شود که در صورت رنگی نبودن تصویر سه کانال رنگ با مقادیر یکسان تصویر خاکستری پر  می شود در خط هشتم موقعت ردیف و ستون قرار گیری این برش در تصویر نهایی مشخص می شود. و در خط آخر قسمت برش خورده در محل خود کپی می شود.<br />
-</div>
-
-```matlab
-for ii=1:25
-   currentimg = imread(imgpath+imagefiles(ii).name);
-   [sx,sy,sz]=size(currentimg);
-   imgcut=currentimg(sx-100:sx,sy-100:sy,:);
-   if sz==1
-       imgcut=cat(3,imgcut,imgcut,imgcut);
-   end
-   mo=mod(ii-1,5)*100;di=fix((ii-1)/5)*100;
-   img(di+1:di+101,mo+1:mo+101,:)=imgcut(1:101,1:101,:);
+for i=1:3000
+    X=randi([1,size(imgcaptcha,1)]);
+    Y=randi([1,size(imgcaptcha,2)]);
+    imgcaptcha(X,Y)=randi([0,1])*255;
 end
 ```
+
 <div dir="rtl">
 تصویر خروجی:<br />
 </div>
