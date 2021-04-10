@@ -31,9 +31,11 @@ for k = 1 : length(theFiles)
     fullFileName = fullfile(theFiles(k).folder, baseFileName);
     fprintf(1, 'Now reading %s\n', fullFileName);
 ```
+
 <div dir="rtl">
   نمایش عکس ها و تبدیل آنها به عکس های سیاه و سفید و مقایسه نمودار های آنها
 </div>
+
 ```
     % Now do whatever you want with this file name,
     % such as reading it in as an image array with imread()
@@ -48,6 +50,7 @@ for k = 1 : length(theFiles)
     drawnow; % Force display to update immediately.
 end
 ```
+
 ![output](figures/1.png)
 ![output](figures/1fig.png)
 ![output](figures/2.png)
@@ -72,6 +75,7 @@ end
 ![output](figures/11fig.png)
 ![output](figures/12.png)
 ![output](figures/12fig.png)
+
 
 <div dir="rtl">
  همانگونه که مشاهده می شود . هر چه نمودار ها در ساعات تاریک تری گرفته شده باشند تباین نمودار مقادیر آنها کمتر می باشد.
