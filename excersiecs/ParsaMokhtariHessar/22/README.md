@@ -51,8 +51,8 @@ figure,imshow(uint8(imageResult));
 imsave;
 ```
 
-[picture](../../../benchmark/baboon.png)
-[output](t22.png)
+![picture](../../../benchmark/baboon.png)
+![output](t22.png)
 
 
 <div dir="rtl">
