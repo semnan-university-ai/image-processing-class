@@ -117,4 +117,6 @@ end
        
 
 figure,imshow(imageSec);
+imsave;
 figure,imshow(imageResult);
+imsave;
