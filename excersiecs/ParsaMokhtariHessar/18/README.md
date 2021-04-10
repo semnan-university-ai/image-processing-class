@@ -106,7 +106,7 @@ for y=1:scale:height
 end
 figure,imshow(imageResult);
 ```
-[output](t18outputv2.png)
+![output](t18outputv2.png)
 
 <div dir="rtl">
  برای این تمرین تلاش زیادی شده ، لطفا در صورت قابل قبول نبودن بیان فرمایید.
