@@ -29,3 +29,5 @@ for i=1:100
         end
     end
 imshow(X);
+~~~
+![camelCase](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/sajad-beep/6/%D8%AE%D8%B1%D9%88%D8%AC%DB%8C%206.PNG)
