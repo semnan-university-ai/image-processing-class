@@ -1,14 +1,42 @@
-clc;
-close all;
-clear all;
+# تمرین 20 
+
+
+<div dir="rtl">
+ ساختن تصویر بک گراند
+</div>
+
+
+
+```
 image = zeros(500,1000);
-%figure,imshow(image);
-%imsave;
+```
+
+<div dir="rtl">
+ سایز گیری از تصویر و ریختن تصویر در یک متغیر برای گرید بندی
+</div>
+
+
+```
 imageSize = size(image);
 height = imageSize(1,1);
 width = imageSize(1,2);
 imageSec = image;
+```
+
+<div dir="rtl">
+ مقیاس گرید
+</div>
+
+
+```
 scale=10;
+```
+
+<div dir="rtl">
+ گرید بندی
+</div>
+
+```
 for i=1:height
     for j=1:width
         if floor(mod( j , scale )) == 0 
@@ -19,6 +47,14 @@ for i=1:height
         end        
     end  
 end
+```
+
+
+<div dir="rtl">
+ حلقه های تو در تویی که بصورت تجربی برای رسم نمودن اسم نوشته شده . و در رسم آن از تصویر گرید بندی شده استفاده شده.
+</div>
+
+```
 sx=0;
 sy=0;
 imageResult = image;
@@ -119,6 +155,16 @@ for y=1:scale:height
     end
     sy=sy+1;   
 end
+```
+
+<div dir="rtl">
+ تصویر را نمایش می دهد.
+</div>
+
+
+```
 figure,imshow(imageSec);
 figure,imshow(imageResult);
+```
+![output](t20.png)
 
