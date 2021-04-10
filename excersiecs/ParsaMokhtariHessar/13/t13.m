@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = imread('../benchmark/goldhill.png');
+image = imread('../../../benchmark/goldhill.png');
 imageSize = size(image);
 height = imageSize(1,1);
 width = imageSize(1,2);
@@ -22,15 +22,11 @@ idx = randperm(n, m);
 k = fix(b*m);
 idx1 = idx(1:k);
 idx2 = idx(k+1:end);
-idx1 = idx1' + n.*(0:size(imageNegativeNoisy,3)-1);
-idx1 = idx1(:);
-idx2 = idx2' + n.*(0:size(imageNegativeNoisy,3)-1);
-idx2 = idx2(:);
 imageNegativeNoisy(idx1) = 255;
 imageNegativeNoisy(idx2) = 0;
 figure;
-ax2 = axes();
 imshow(uint8(imageNegativeNoisy));
+%imsave;
 sumNoisy = 0;
 for i=1:height
     for j=1:width
