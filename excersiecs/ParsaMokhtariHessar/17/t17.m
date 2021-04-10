@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = imread('../benchmark/mountain.png');
+image = imread('../../../benchmark/mountain.png');
 figure,imshow(image);
 imageSize = size(image);
 height = imageSize(1,1);
