@@ -1,0 +1,26 @@
+# تمرین 23
+
+
+
+
+
+
+
+```
+image = imread("../../../Benchmark/tulips.png");
+```
+```
+imageRed=image(:,:,1);
+imageGreen=image(:,:,2);
+imageBlue=image(:,:,3);
+```
+```
+figure,imhist(imageRed);
+figure,imhist(imageGreen);
+figure,imhist(imageBlue);
+```
+```
+figure,custhist(image,"r");
+figure,custhist(image,"g");
+figure,custhist(image,"b");
+```
