@@ -1,6 +1,12 @@
-clc;
-close all;
-clear all;
+# تمرین 19
+
+
+<div dir="rtl">
+    تصاویر حروف انگلیسی بارگزاری می شود. و برای یکنواخت بودن کپچا تغییر رزولوشن داده می شود.
+</div>
+
+
+```
 imgA = imresize(rgb2gray(imread("Alphabet/A.png")),[300 300]);
 imgB = imresize(rgb2gray(imread("Alphabet/B.png")),[300 300]);
 imgC = imresize(rgb2gray(imread("Alphabet/C.png")),[300 300]);
@@ -27,10 +33,40 @@ imgV = imresize(rgb2gray(imread("Alphabet/W.png")),[300 300]);
 imgX = imresize(rgb2gray(imread("Alphabet/X.png")),[300 300]);
 imgY = imresize(rgb2gray(imread("Alphabet/Y.png")),[300 300]);
 imgZ = imresize(rgb2gray(imread("Alphabet/Z.png")),[300 300]);
+```
+
+<div dir="rtl">
+    یک متغییر وصله برای نگهداری کپچا تعریف می شود.
+</div>
+
+
+```
 PatchArray = zeros(300,300);
-x=rand(1,4);
+```
+
+<div dir="rtl">
+ تعداد حروف کپچا تعیین می شود
+</div>
+
+```
+numberOfCaptcha = 4;
+```
+
+<div dir="rtl">
+ به تعداد عدد تعیین شده عدد رندم بین صفر و یک تولید شده و ضرب در تعداد حروف انگلیسی می شود.
+</div>
+
+```
+x=rand(1,numberOfCaptcha);
 x26=round(x*26-1);
-for i=1 : 4 
+```
+
+<div dir="rtl">
+ با توجه به اعداد بدست آمده حروف های مربوطه به آرایه وصله چسبانده می شود.
+</div>
+
+```
+for i=1 : numberOfCaptcha 
     switch x26(1,i)
         case 0 
         [Wid,Hei]= size(imgA);
@@ -222,7 +258,18 @@ for i=1 : 4
             disp('other value')
     end
 end
+```
+
+<div dir="rtl">
+ و در نهایت تصویر ساخته شده نمایش داده می شود.
+</div>
+
+```
 figure,
 imshow(uint8(uint8(PatchArray)));
-
-
+%imsave;
+```
+![output](t19-1.png)
+![output](t19-2.png)
+![output](t19-3.png)
+![output](t19-4.png)
