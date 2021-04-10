@@ -28,9 +28,10 @@ imgX = imresize(rgb2gray(imread("Alphabet/X.png")),[300 300]);
 imgY = imresize(rgb2gray(imread("Alphabet/Y.png")),[300 300]);
 imgZ = imresize(rgb2gray(imread("Alphabet/Z.png")),[300 300]);
 PatchArray = zeros(300,300);
-x=rand(1,4);
+numberOfCaptcha = 4;
+x=rand(1,numberOfCaptcha);
 x26=round(x*26-1);
-for i=1 : 4 
+for i=1 : numberOfCaptcha 
     switch x26(1,i)
         case 0 
         [Wid,Hei]= size(imgA);
@@ -224,5 +225,6 @@ for i=1 : 4
 end
 figure,
 imshow(uint8(uint8(PatchArray)));
+%imsave;
 
 
