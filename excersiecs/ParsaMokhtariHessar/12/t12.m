@@ -19,7 +19,7 @@ imageNoisy(idx1) = 255;
 imageNoisy(idx2) = 0;
 imshow(imageNoisy);
 %imsave;
-% the mean(average)filter -------------------------------------------------
+% the mean(average)filter and median filter combined-------------------------------------------------
 imageNoisySize = size(imageNoisy);
 height = imageNoisySize(1,1);
 width = imageNoisySize(1,2);
