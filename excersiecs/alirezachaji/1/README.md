@@ -1,7 +1,8 @@
 
 
 > # Exercise 1
->  برنامه ای بنویسید که با دریافت یک طول و عرض به عنوان مقدار طول و عرض تصویر یک صفحه ی شطرنج ایجاد کنید.
+>  Write a program to create a chessboard by taking the length and width of the image. 
+
 ***
 >CODE
 
