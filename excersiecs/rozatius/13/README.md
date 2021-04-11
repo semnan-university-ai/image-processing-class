@@ -1,7 +1,6 @@
 <div dir="rtl">
 
-#### یک تصویر مربعی 500\*500 ایجاد کنید که شامل بخش گوشه ی سمت راست و پایین تصاویر بنچ مارک ها باشد؛ از هر تصویر یک مربع 100\*100 جدا کنید.   <br />
-
+#### روی یک تصویر نگاتیو نویز فلفل نمکی را با اعداد مختلف امتحان کنید و میانگین تمام پیکسل های آن را در یک جدول خروجی دهید.
 
 
 ###### کد:
@@ -9,74 +8,159 @@
 
 ```matlab
 clc;clear;close all;
-%get name images files in folder benchmark
-imgpath = "../../../benchmark/";
-pngfiles = dir(imgpath+'*.png');
-tiffiles = dir(imgpath+'*.tif');
-bmpfiles = dir(imgpath+'*.bmp');
-imagefiles = [pngfiles;tiffiles;bmpfiles];
+dd=[0,20000,20000,20000,20000,20000];
 
-img = ones(500, 500, 3,'uint8');
+img = imread('../../../benchmark/lena.png');
+img = rgb2gray(img);
+[r,c,d] = size(img);
 
-for ii=1:25
-   currentimg = imread(imgpath+imagefiles(ii).name);
-   [sx,sy,sz]=size(currentimg);
-   imgcut=currentimg(sx-100:sx,sy-100:sy,:);
-   if sz==1
-       imgcut=cat(3,imgcut,imgcut,imgcut);
-   end
-   mo=mod(ii-1,5)*100;di=fix((ii-1)/5)*100;
-   img(di+1:di+101,mo+1:mo+101,:)=imgcut(1:101,1:101,:);
+img(:,:,:)=255-img(:,:,:);
+
+num=length(dd);
+dataAvg=zeros(num,1);
+rnames = strings(1,num);
+for n = 1:num
+    sum=0;
+    for i=1:dd(n)
+        X=randi([1,r]);
+        Y=randi([1,c]);
+        img(X,Y,:)=randi([0,1])*255;
+    end
+    
+    %method 1
+    avg=mean(img(:));
+    
+    %method 2
+    for i=1:r
+        for j=1:c
+            sum=sum+double(img(i,j));
+        end
+    end
+    avgm=sum/(r*c);
+    dataAvg(n,1) = avgm;
+    rnames(1,n)=strcat('image',int2str(n));
+    subplot(2,fix((num+1)/2),n),imshow(img),title(rnames(n));
 end
-imshow(img);
+figure;
+cnames = {'average all pixel'};
+
+% Create the uitable
+t = uitable('Data',dataAvg,...
+            'ColumnName',cnames,... 
+            'RowName',rnames,...
+            'ColumnWidth',{150});
 ```
 
 <div dir="rtl">
 
 #### برسی کد:
-1-پیدا کردن اسامی کلیه تصویر موجود در پوشه بنچ مارک با پسوند های مورد نظر <br />
-دستور dir یک آرایه از فیلد های داده که حاوی مشخصات فایلها بر می گرداند.
+
+1.
+- آرایه ای از مقادیر مختلف نویز فلفل نمکی تریف شده اسن هر عدد نشان دهنده تعداد نقاط نویز است.
+
 </div>
 
 ```matlab
-imgpath = "../../../benchmark/";
-pngfiles = dir(imgpath+'*.png');
-tiffiles = dir(imgpath+'*.tif');
-bmpfiles = dir(imgpath+'*.bmp');
+dd=[0,20000,20000,20000,20000,20000];
 ```
 <div dir="rtl">
-2-سه آرایه با فیلدهای یکسان را با هم در یک آریه ترکیب می کند<br />
+
+2.
+- خواندن تصویر از فولدر بنچ مارک و قرار دادن در ماتریس img.
+- در خط دو تبدیل تصویر رنگی به خاکستری با دستور rgb2gray.
+- قرار دادن ابعاد تصویر در متغیر مربوطه.
 </div>
 
 ```matlab
-imagefiles = [pngfiles;tiffiles;bmpfiles];
+img = imread('../../../benchmark/lena.png');
+img = rgb2gray(img);
+[r,c,d] = size(img);
 ```
 
 <div dir="rtl">
-3-ایجاد تصویر رنگی RGB به ابعاد 500*500*3 با ایجاد ماتریس با درایه یک <br />
+
+3.
+- تبدیل تصویر به نگاتیو.
 </div>
 
 ```matlab
-img = ones(500, 500, 3,'uint8');
+img(:,:,:)=255-img(:,:,:);
 ```
 <div dir="rtl">
-4-به ازای افزایش متغییر حلقه یکی از تصاویر با توجه به ادرس آنها در آرایه بار می شود و در خط چهارم قسمت گوشه پایین سمت راست تصویر جاری جدا می شود در خط پنجم چک می شود که در صورت رنگی نبودن تصویر سه کانال رنگ با مقادیر یکسان تصویر خاکستری پر  می شود در خط هشتم موقعت ردیف و ستون قرار گیری این برش در تصویر نهایی مشخص می شود. و در خط آخر قسمت برش خورده در محل خود کپی می شود.<br />
+
+4.
+- طول آرایه که مقادیر مختلف نویز را نگه می دارد در متغییر num قرار میدهد.
+- یک آرایه به طول num ایجاد و آن را با صفر پر میکند.
+- در خط سوم یک رشته کاراکتری به طول num ایجاد می کند.
 </div>
 
 ```matlab
-for ii=1:25
-   currentimg = imread(imgpath+imagefiles(ii).name);
-   [sx,sy,sz]=size(currentimg);
-   imgcut=currentimg(sx-100:sx,sy-100:sy,:);
-   if sz==1
-       imgcut=cat(3,imgcut,imgcut,imgcut);
-   end
-   mo=mod(ii-1,5)*100;di=fix((ii-1)/5)*100;
-   img(di+1:di+101,mo+1:mo+101,:)=imgcut(1:101,1:101,:);
+num=length(dd);
+dataAvg=zeros(num,1);
+rnames = strings(1,num);
+```
+
+
+<div dir="rtl">
+
+5.
+- حلقه for بیرونی به تعداد نویزهای مختافی که قرار است ایجاد شود تکرار می شود.
+- اولین حلقه داخلی با توجه به مقدار نویز ذخیره شده در آرایه dd نویز را روی تصویر با نقاط تصادفی اعمال می کند.
+- سپس ما با دو روش میانگین مقادیر تمام پیکسلهای تصویر را پیدا کرده ایم که کد آن واضح است ونیاز به توضیح ندارد.
+- سه خط آخر به ترتیب مقدارهای میانگین را در آرایه قرار میدهد سپس شماره ردیف را ایجاد می کند و در آخر تصویر مربوطه را نمایش می دهد.
+</div>
+
+```matlab
+for n = 1:num
+    sum=0;
+    for i=1:dd(n)
+        X=randi([1,r]);
+        Y=randi([1,c]);
+        img(X,Y,:)=randi([0,1])*255;
+    end
+    
+    %method 1
+    avg=mean(img(:));
+    
+    %method 2
+    for i=1:r
+        for j=1:c
+            sum=sum+double(img(i,j));
+        end
+    end
+    avgm=sum/(r*c);
+    dataAvg(n,1) = avgm;
+    rnames(1,n)=strcat('image',int2str(n));
+    subplot(2,fix((num+1)/2),n),imshow(img),title(rnames(n));
 end
 ```
 <div dir="rtl">
 تصویر خروجی:<br />
 </div>
 
-![Image of Yaktocat](result.png)
+![Image of Yaktocat](result.jpg)
+
+<div dir="rtl">
+
+6.
+- برای چاپ جدول در خط دوم نام جدول مشخص شده
+- دستورر uitable با توجه به پارامترهای ورودی جدول را ایجاد می کند . پارامتر اول داده ها و پرامتر دوم نام جدولو پارامتر سوم نام ستون و پارامتر چهارم طول ستون به پیکسل را میگیرد.
+</div>
+
+```matlab
+figure;
+cnames = {'average all pixel'};
+
+% Create the uitable
+t = uitable('Data',dataAvg,...
+            'ColumnName',cnames,... 
+            'RowName',rnames,...
+            'ColumnWidth',{150});
+
+```
+
+<div dir="rtl">
+تصویر خروجی:<br />
+</div>
+
+![Image of Yaktocat](table.png)
