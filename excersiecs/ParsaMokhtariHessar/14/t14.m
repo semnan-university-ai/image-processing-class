@@ -27,7 +27,8 @@ for k = 1 : length(theFiles)
     image = rgb2gray(image);    
     %imshow(imageArray);  % Display image.
     figure,imshow(image);
-    figure,imhist(image);
+    imsave;
+    figure,imhist(image);    
     
     drawnow; % Force display to update immediately.
 end

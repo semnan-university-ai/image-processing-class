@@ -1,38 +1,72 @@
+# 1تمرین 2
+
+<br />
+<div dir="rtl">
+    باعث می شود پس از هر بار اجرای برنامه پنجره ی فرمان ها پاک شود   
+</div>
+
+```
 clc;
 close all;
 clear all;
-image = imread('../benchmark/airplane.png');
+```
+<div dir="rtl">
+ خواندن تصویر و تبدیل آن به سیاه و سفید در صورت نیاز
+</div>
+
+```
+image = imread('../../../benchmark/airplane.png');
+if size(image,3) == 3 
+    image=rgb2gray(image);
+end
+```
+
+<div dir="rtl">
+ ساختن نویز با استفاده از اسکریپت تمرین قبلی
+</div>
+
+```
 % create the noise --------------------------------------------------------
 imageNoisy = image;
-figure;
-ax1 = axes();
-imshow(imageNoisy);
-title(ax1, 'original');
 a = 0.05; % 5% pixels altered
 b = 0.5; % 50% percent white pixels among all altered pixels
-n = numel(imageNoisy(:,:,1));
+n = numel(imageNoisy(:,:));
 m = fix(a*n);
 idx = randperm(n, m);
 k = fix(b*m);
 idx1 = idx(1:k);
 idx2 = idx(k+1:end);
-idx1 = idx1' + n.*(0:size(imageNoisy,3)-1);
-idx1 = idx1(:);
-idx2 = idx2' + n.*(0:size(imageNoisy,3)-1);
-idx2 = idx2(:);
 imageNoisy(idx1) = 255;
 imageNoisy(idx2) = 0;
-figure;
-ax2 = axes();
 imshow(imageNoisy);
-title(ax2, 'noisy');
-% the mean(average)filter -------------------------------------------------
-imageNoisy = rgb2gray(imageNoisy);
+%imsave;
+```
+<div dir="rtl">
+ گرفتن سایز تصویر برای استفاده از آن در الگوریتم های نویز گیری
+</div>
+
+```
+% the mean(average)filter and median filter combined-------------------------------------------------
 imageNoisySize = size(imageNoisy);
 height = imageNoisySize(1,1);
 width = imageNoisySize(1,2);
+```
+
+<div dir="rtl">
+ ساختن نگهدارنده های تصاویر نویز گیری شده بوسیله الگوریتم های میانه و میانگین
+</div>
+
+```
 imageNoisyResultMean = zeros(height, width);
 imageNoisyResultMedian = zeros(height, width);
+```
+
+<div dir="rtl">
+    اعمال الگوریتم برای نقاط گوشه(این الگوریتم بازنویسی شده و بهبود داده شده ی الگوریتمی است که آقای شکری برای ما نوشتند)
+</div>
+
+
+```
 % mean window filter
 %UP LEFT
 sum = [ imageNoisy(1, 1) imageNoisy(1, 2) imageNoisy(2, 1) imageNoisy(2, 2)];
@@ -54,6 +88,19 @@ sum = [ imageNoisy(height-1, width-1) imageNoisy(height-1, width) imageNoisy(hei
 imageNoisyResultMean(1, width) = uint8(round(mean(sum)));
 sum = sort(sum);
 imageNoisyResultMedian(1, width) = uint8(sum(2));
+```
+
+<div dir="rtl">
+ :
+    اعمل این الگوریتم برای لبه ها
+</div>
+
+<div dir="rtl">
+    لبه های افقی(سمت بالا و پایین)
+</div>
+
+
+```
 %Horizontal
 for j = 2:width-1
     %UP
@@ -71,6 +118,13 @@ for j = 2:width-1
         sum = sort(sum);
         imageNoisyResultMedian(height, j) = uint8(sum(3));    
 end
+```
+
+<div dir="rtl">
+  لبه های عمودی(سمت راست و چپ)
+</div>
+
+```
 %Vertical
 for i = 2:height-1
     %LEFT        
@@ -88,6 +142,13 @@ for i = 2:height-1
         sum = sort(sum);
         imageNoisyResultMedian(i, width) = uint8(sum(3));    
 end
+```
+
+<div dir="rtl">
+ اعمال الگوریتم برای پیکسل های داخلی
+</div>
+
+```
 %Internal
 for i = 2:height-1
    for j= 2:width-1      
@@ -100,9 +161,26 @@ for i = 2:height-1
         
    end
 end
+```
+
+<div dir="rtl">
+  نشان دادن تصاویر پردازش شده توسط این دو الگوریتم
+</div>
+
+
+```
 figure,imshow(uint8(imageNoisyResultMean));
+%imsave;
 figure,imshow(uint8(imageNoisyResultMedian));
+%imsave;
 imageNoisy=double(imageNoisy);
+```
+
+<div dir="rtl">
+ بدست آوردن جمع پیکسل ها
+</div>
+
+```
 sumNoisy = 0;
 sumMean = 0;
 sumMedian = 0;
@@ -113,9 +191,35 @@ for i=1:height
         sumMedian=sumMedian+imageNoisyResultMedian(i,j);     
     end
 end
+```
+
+<div dir="rtl">
+  بدست آوردن میانگین پیکسل ها
+</div>
+
+```
 numberOfPixels=height*width;
 N = sumNoisy / numberOfPixels ;
 ME = sumMean / numberOfPixels ;
 MED = sumMedian / numberOfPixels ;
-disp("Noisy : "+round(N)+", Mean : "+round(ME)+", Median : "+round(MED));
+```
 
+<div dir="rtl">
+ نشان دادن آن 
+</div>
+
+```
+disp("Noisy : "+round(N)+", Mean : "+round(ME)+", Median : "+round(MED));
+```
+Noisy : 177, Mean : 177, Median : 180 <br />
+NOISY:
+
+![OUTPUT](t12-noisy.png)
+
+MEAN FILTER:
+
+![OUTPUT](t12-mean.png)
+
+MEDIAN FILTER:
+
+![OUTPUT](t12-median.png)

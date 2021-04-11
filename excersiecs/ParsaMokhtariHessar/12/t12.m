@@ -18,7 +18,8 @@ idx2 = idx(k+1:end);
 imageNoisy(idx1) = 255;
 imageNoisy(idx2) = 0;
 imshow(imageNoisy);
-% the mean(average)filter -------------------------------------------------
+%imsave;
+% the mean(average)filter and median filter combined-------------------------------------------------
 imageNoisySize = size(imageNoisy);
 height = imageNoisySize(1,1);
 width = imageNoisySize(1,2);
@@ -92,7 +93,9 @@ for i = 2:height-1
    end
 end
 figure,imshow(uint8(imageNoisyResultMean));
+%imsave;
 figure,imshow(uint8(imageNoisyResultMedian));
+%imsave;
 imageNoisy=double(imageNoisy);
 sumNoisy = 0;
 sumMean = 0;

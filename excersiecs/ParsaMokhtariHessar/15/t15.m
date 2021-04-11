@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = rgb2gray(imread('../benchmark/pool.png'));
+image = rgb2gray(imread('../../../benchmark/pool.png'));
 figure,imshow(image);
 imageSize = size(image);
 height = imageSize(1,1);
@@ -45,7 +45,9 @@ end
 
 
 figure,imshow(imageSec);
+%imsave;
 figure,imshow(uint8(imageResult));
+%imsave;
 %60to230 YellowBall
 
 

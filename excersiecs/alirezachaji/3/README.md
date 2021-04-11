@@ -1,5 +1,5 @@
 > # Exercise 3
-> 3. Write a program that grays benchmark images without using MATLAB functions.
+> 3. Write a program that grays benchmark images without using MATLAB functions. 
 ***
 >CODE
 

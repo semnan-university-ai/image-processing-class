@@ -121,4 +121,5 @@ for y=1:scale:height
 end
 figure,imshow(imageSec);
 figure,imshow(imageResult);
+imsave;
 

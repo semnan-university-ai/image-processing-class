@@ -1,7 +1,8 @@
 
 
 > # Exercise 1
-> 1. Write a program that creates a chessboard by getting a length and width as the value of the length and width of the image.
+>  Write a program to create a chessboard by taking the length and width of the image. 
+
 ***
 >CODE
 

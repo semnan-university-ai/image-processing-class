@@ -1,7 +1,7 @@
 clc;
 close all;
 clear all;
-image = rgb2gray(imread('../benchmark/watch.png'));
+image = rgb2gray(imread('../../../benchmark/watch.png'));
 figure,imshow(image);
 %imsave;
 imageSize = size(image);
@@ -44,3 +44,4 @@ for y=1:scale:height
     sy=sy+1;   
 end
 figure,imshow(imageResult);
+imsave;
