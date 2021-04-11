@@ -104,10 +104,12 @@ end
 plot(hist, '-d');
 end
 ```
-
+RED <br/>
 ![output](histRed.png)
-![output](histGreen.png)
-![output](histBlue.png)
 ![output](custhistRed.png)
+GREEN <br/>
+![output](histGreen.png)
 ![output](custhistGreen.png)
+BLUE <br/>
+![output](histBlue.png)
 ![output](custhistBlue.png)
