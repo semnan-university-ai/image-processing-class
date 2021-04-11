@@ -106,10 +106,10 @@ end
 ```
 RED <br/>
 ![output](histRed.png)
-![output](custhistRed.png)
+![output](custhistRed.png)<br/>
 GREEN <br/>
 ![output](histGreen.png)
-![output](custhistGreen.png)
+![output](custhistGreen.png)<br/>
 BLUE <br/>
 ![output](histBlue.png)
-![output](custhistBlue.png)
+![output](custhistBlue.png)<br/>
