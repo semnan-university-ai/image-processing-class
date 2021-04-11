@@ -51,4 +51,4 @@ imsave;
 
 
 ![output](t24-Pool.png)
-![output](t24-watch.png)
+![output](t24-Watch.png)
