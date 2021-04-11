@@ -1,5 +1,5 @@
 > # Exercise 2
-> 2. Write a program that creates a chessboard by getting a length and width as the value of the length and width of the image.
+> 2. Write a program that takes a number as the radius of a circle and a number as the location of the circle, and displays the circle in white in a 1000 x 1000 pixel image. 
 ***
 >CODE
 
