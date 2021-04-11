@@ -1,4 +1,4 @@
-> # Exercise 8
+> # Exercise 9
 > Write a program that specifies a length and width and then crop an image. 
 ***
 >CODE
