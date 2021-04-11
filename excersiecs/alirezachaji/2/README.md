@@ -1,5 +1,5 @@
 > # Exercise 2
-برنامه ای بنویسید که یک عدد را به عنوان شعاع دایره و یه عدد را به عنوان مکان رسم دایره از بگیرد و در یک تصویر 1000*1000 پیکسل مشکی رنگ آن دایره را با رنگ سفید نمایش دهد.
+Write a program that takes a number as the radius of a circle and a number as the center of the circle, in a 1000 x 1000 pixel image and displays that circle in white. 
 ***
 >CODE
 
