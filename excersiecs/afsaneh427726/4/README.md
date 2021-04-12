@@ -10,10 +10,13 @@ w=uint8(w);
 به ترتیب تصاویررا خوانده و ماتریس 100*100 گوشه پایین سمت راست آن را در درایه های ماتریس  جایگزین می کنیم.
 
 w1=imread('C:\Program Files\MATLAB\airplane.png');
-% w1=rgb2gray(w1)
+
 w(401:500,401:500,1:3)=w1(413:512,413:512,1:3);
+
 w1=imread('C:\Program Files\MATLAB\baboon.png');
+
 w(301:400,401:500,1:3)=w1(413:512,413:512,1:3);
+
 w1=imread('C:\Program Files\MATLAB\barbara.png');
 w(201:300,401:500)=w1(413:512,413:512);
 w1=imread('C:\Program Files\MATLAB\boat.png');
