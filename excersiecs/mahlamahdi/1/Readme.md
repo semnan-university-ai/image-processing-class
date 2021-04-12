@@ -20,6 +20,7 @@ colum = input('Number Of Column:');
     
 </div>
 
+
 ````
 for i=1:row
         for j=1:colum
