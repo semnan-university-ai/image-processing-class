@@ -1,1 +1,11 @@
-
+for i=1:row
+        for j=1:colum
+       
+            if mod((i+j),2)==0
+                image(i,j)=0;
+            else  
+                 image(i,j)=255;
+            end
+        end
+        
+        اگر مجموع i ,j زوج باشد پیکسل سیاه در غیر این صورت پیکسل سفید می شود.
