@@ -10,7 +10,7 @@ for i=1:row
             if mod((i+j),2)==0
                 image(i,j)=0;
             else  
-                 image(i,j)=1;
+                 image(i,j)=255;
             end
         end
 end
