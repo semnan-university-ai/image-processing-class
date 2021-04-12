@@ -1,9 +1,9 @@
 
 مقدار طول و عرض و اندازه مربع ها رو از ورودی دریافت می کنیم
 
-b=input('tool ra vared kon :   ')
+a=input('tool ra vared kon :   ')
 
-a=input('arz ra vared kon :   ')
+b=input('arz ra vared kon :   ')
 
 c=input('andazeye morabbaha vared kon :   ')
 
