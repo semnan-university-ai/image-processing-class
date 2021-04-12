@@ -48,3 +48,7 @@ end
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/adeace4ac5778db155e9302290f15a54b2533e3f/excersiecs/alirezachaji/23/Exce23.png)
+***
+<div dir="rtl">
+توضیحات برنامه <br /> در برنامه اصلی ابتدا کانال های رنگی را جدا کرده و سپس در تابع توسط سه حلقه تعداد تکرار هر رنگ را شمارش کرده و در نهایت توسط یه نمودار میله ای نمایش می دهیم 
+</div>
