@@ -5,6 +5,8 @@
 
 
 تک به تک پیکسل ها پیمایش شده وسطرها از بالا به صورت برعکس در سطرهای پایین کپی شده است
+
+
 a=imread('C:\Users\as\Downloads\zelda.png');
 c=imread('C:\Users\as\Downloads\zelda.png');
 b=size(a)
