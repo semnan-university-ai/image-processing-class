@@ -3,7 +3,7 @@
 Write a program to calculate histogram of each color channel of an image. Histogram calculator should be a seperated function. 
 ***
 >CODE
-Main Program
+>Main Program
 ```ruby
 close all
 clear all
