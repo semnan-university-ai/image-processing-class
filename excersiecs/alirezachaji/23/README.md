@@ -1,6 +1,6 @@
 
 > # Exercise 23
-Write a program that takes a number as the radius of a circle and a number as the center of the circle, in a 1000 x 1000 pixel image and displays that circle in white. 
+Write a program to calculate histogram of each color channel of an image. Histogram calculator should be a seperated function. 
 ***
 >CODE
 Main Program
