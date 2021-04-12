@@ -1,9 +1,9 @@
 
 مقدار طول و عرض و اندازه مربع ها رو از ورودی دریافت می کنیم
 
-b=input('tool ra vared kon :   ')
+a=input('tool ra vared kon :   ')
 
-a=input('arz ra vared kon :   ')
+b=input('arz ra vared kon :   ')
 
 c=input('andazeye morabbaha vared kon :   ')
 
@@ -13,24 +13,26 @@ w=ones(a*c,b*c);
 
 این حلقه ستون های فرد صفحه شطرنجی را ایجاد می کند
 
-for m=1:round((b)/2)
-    n=((m-1)*2*c)+1;
-for i=n:(n+c-1)
-    for j=0:(2*c):(a-1)*(c)
-        w((j+1):(j+c),i)=0;
+for i=1:a*c
+    if (mod(i,2*c)==1)
+        for j=1:b*c
+            if (mod(j,2*c)==1)
+            w(i:(i+(c-1)),j:(j+(c-1)))=0;
+            end
+        end
     end
-end
 end
 
 این حلقه ستون های زوج صفحه شطرنجی را ایجاد می کند
 
-for m=1:round((b-1)/2)
-    n=((m*2*c)+1)-c;
-for i=n:(n+c-1)
-    for j=c:(2*c):(a-1)*(c)
-        w((j+1):(j+c),i)=0;
+for i=2:a*c
+    if (mod((i),(2*c))==(c+1))
+        for j=2:b*c
+            if (mod(j,(2*c))==(c+1))
+            w(i:(i+(c-1)),j:(j+(c-1)))=0;
+            end
+        end
     end
-end
 end
     
 uint8(w);
