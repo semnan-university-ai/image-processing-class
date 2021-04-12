@@ -16,15 +16,25 @@ end
 
 v=2000;
 for n=1:4
+
+
 for m=1:v
-    i=randi(a);
-    j=randi(b);
-    image(i,j)=0;
+
+i=randi(a);
+
+j=randi(b);
+
+image(i,j)=0;
+
 end
+
 for m=1:v
-    i=randi(a);
-    j=randi(b);
-    image(i,j)=255;
+
+i=randi(a);
+
+j=randi(b);
+
+image(i,j)=255;
 end
 v=v+2000;
 figure;
