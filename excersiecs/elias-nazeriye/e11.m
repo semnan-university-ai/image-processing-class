@@ -3,7 +3,7 @@ clear all;
 clc;
 
 
-pic=imread('e3.png');  
+pic=imread('girl.png');  
 pic=rgb2gray(pic);
 [i,j]=size(pic); 
 x = randi([0 ,255] , i ,j);

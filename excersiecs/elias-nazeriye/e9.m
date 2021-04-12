@@ -3,7 +3,7 @@ clear all;
 clc;
 
 
-pic=imread('e3.png');
+pic=imread('girl.png');
 pic=rgb2gray(pic);
 sx=input("Enter the start length of the coordinates:");
 ex=input("Enter the length of the coordinate end:");

@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 
-pic=imread('e3.png');
+pic=imread('girl.png');
 [x,y,z]= size(pic); 
 ang= input("Enter a desired degree:");
 

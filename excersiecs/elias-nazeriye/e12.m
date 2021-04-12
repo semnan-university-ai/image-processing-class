@@ -5,7 +5,7 @@ clc;
 clear;
 close all;
 
-address = 'e3.png';
+address = 'girl.png';
 
 image = imread(address);
 im = rgb2gray(image);

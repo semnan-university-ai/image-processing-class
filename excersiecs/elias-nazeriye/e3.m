@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 
-pic1 = imread("e3.png");
+pic1 = imread("girl.png");
 ps=size(pic1);
      for i = 1:ps(1)
         for j=1:ps(2)
