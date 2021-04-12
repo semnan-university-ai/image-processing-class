@@ -1,8 +1,7 @@
 
 <div dir = "rtl">
     <h1> تمرین اول </h1>
-
-    </div>
+</div>
 
 <div dir="rtl">
 
