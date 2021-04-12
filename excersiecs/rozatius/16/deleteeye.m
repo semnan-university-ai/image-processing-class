@@ -1,15 +1,15 @@
 clc;clear;close all;
 img=(imread("../../../benchmark/zelda.png"));
-figure,imshow(img);
+subplot(1,2,1),imshow(img),title('Orginal');
 [sr,sc] = size(img);
 for x=1:sr
    for y=1:sc
-       if img(x,y)>40 && x>260 && y>210 && x<280 && y<260
-            img(x,y) = 120;
+       if  x>250 && y>210 && x<290 && y<260  &&(img(x,y)>40 ||img(x,y)<20)
+            img(x,y) = 150;
        end
-       if img(x,y)>40 && x>260 && y>305 && x<280 && y<350
-            img(x,y) = 120;
+       if  x>250 && y>305 && x<290 && y<350  &&(img(x,y)>40 ||img(x,y)<20)
+            img(x,y) = 150;
        end
    end
 end
-figure,imshow(img);
+subplot(1,2,2),imshow(img),title('ٍEdit');
