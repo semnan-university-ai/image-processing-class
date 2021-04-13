@@ -4,31 +4,32 @@
 
 <div dir="rtl">
 
- دریافت تعداد سطر و ستون صفحه شطرنجی
+ دریافت  مختصات مرکز دایره و شعاع دایره
 </div>
 
 ````
 clc
-clear
-close all
-row = input('Number of Row: ');
-colum = input('Number Of Column:');
+clear;
+close all;
+
+theta=linspace(0,2*pi);
+a=input('Enter X: ');
+b=input('Enter Y: ');
+r=input('Enter R: ');
+
 ````
 <div dir="rtl">
-        اگر مجموع i,j بر 2 بخش پذیر باشد پیکسل صفر و در غیر این صورت پیکسل مقدار 255را دریافت می کند.
+تبدیل مختصات قطبی به مختصات کارتزین 
     
 </div>
 
 
 ````
-for i=1:row
-        for j=1:colum
-           if mod((i+j),2)==0
-                image(i,j)=0;
-            else  
-                 image(i,j)=255;
-            end
-        end
-end
-imshow(image)
+x=r.*sin(theta)+a;
+y=r.*cos(theta)+b;
+img=zeros(1000,1000);
+imshow(img);
+hold on
+plot(x,y);
+hold off
 ````
