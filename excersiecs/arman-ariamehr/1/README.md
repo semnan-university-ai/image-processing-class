@@ -1,5 +1,5 @@
 <div dir = "rtl">
-  ```matlab
+  ```
   clc;
   clear;
   close all;
