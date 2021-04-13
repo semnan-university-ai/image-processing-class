@@ -1,3 +1,5 @@
+<div>
+    
 ```
 r = input('satr = ');
 c = input('soton = ');
@@ -21,6 +23,8 @@ for i = 1 : si_row : r
 end
 imshow(matris);
 ```
+    
+    </div>
 
 <div dir = "rtl">
   
