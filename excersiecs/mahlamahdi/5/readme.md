@@ -1,3 +1,16 @@
+<div dir = "rtl">
+    <h1> تمرین پنجم </h1>
+</div>
+
+<div dir="rtl">
+تصویر کوزه نصفه را خوانده </br>
+در تصویر resultابتدا مقدار x, y را درج می نماید.</br>
+
+ 
+</div>
+
+
+````
 clc;
 close all;
 clear;
@@ -11,3 +24,4 @@ for x=1:size(img,1)
    end
 end
 imshow(result);
+````
