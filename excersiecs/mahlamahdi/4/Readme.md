@@ -14,6 +14,7 @@ clear;
 files= dir('img');
 
 ````
+
 <div dir="rtl">
     به دلیل اینکه پوشه img حاوی دو پوشه .. و . می باشد از 3 به بعد را در file ریخته شد.
     
@@ -24,6 +25,8 @@ files=files(3:end,:);
 <div dir="rtl">
 فایل ها یکی یکی خوانده می شوندو با دو متغیر mo , di  مشخص می نماییم. مکان قرار گرفتن عکس های برش خورده 100 در 100 را     
 </div>
+
+````
 for i=1:25
     image= imread(files(i).name);
    imgcut=image(size(image,1)-100:size(image,1),size(image,2)-100:size(image,2),size(image,3));
