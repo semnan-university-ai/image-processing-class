@@ -1,35 +1,23 @@
 <div dir = "rtl">
-    <h1> تمرین دوم </h1>
+    <h1> تمرین سوم </h1>
 </div>
 
 <div dir="rtl">
-
- دریافت  مختصات مرکز دایره و شعاع دایره
+بعد از دریافت عکس و بدست آوردن مقدار هر  کانال رو در 0.33 نموده و با هم جمع نموده  و به تصویر خاکستری تبدیل می شود
 </div>
 
 ````
-clc
+clc;
 clear;
 close all;
-
-theta=linspace(0,2*pi);
-a=input('Enter X: ');
-b=input('Enter Y: ');
-r=input('Enter R: ');
-
+img1 = imread("img/airplane.png");
+imagesize=size(img1);
+     for i = 1:imagesize(1)
+        for j=1:imagesize(2)
+            img2(i,j) = 0.33*(img1(i, j, 1)) + 0.33*(img1(i, j, 2)) + 0.33*(img1(i, j, 3));
+        end
+     end
+    subplot(1,2,1),imshow(img1);
+    subplot(1,2,2),imshow(img2);
 ````
-<div dir="rtl">
-تبدیل مختصات قطبی به مختصات کارتزین 
-    
-</div>
 
-
-````
-x=r.*sin(theta)+a;
-y=r.*cos(theta)+b;
-img=zeros(1000,1000);
-imshow(img);
-hold on
-plot(x,y);
-hold off
-````
