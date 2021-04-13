@@ -1,5 +1,7 @@
 <div dir = "rtl">
   ```matlab
+  
+  
   r = input('satr = ');
     c = input('soton = ');
     matris = uint8(zeros(r,c));
