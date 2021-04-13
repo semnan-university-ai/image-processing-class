@@ -1,8 +1,13 @@
+> # Exercise 8
+>
+>  چرخش تصاویر پیکسل به پیکسل انجام شده است و تصاویر چرخش داده شده فرستاده شده است
+>  
+***
+>CODE
 
-چرخش تصاویر پیکسل به پیکسل انجام شده است و تصاویر چرخش داده شده فرستاده شده است
 
+```ruby
 (rotate180.m)چرخش 180
-
 
 تک به تک پیکسل ها پیمایش شده وسطرها از بالا به صورت برعکس در سطرهای پایین کپی شده است
 
@@ -38,3 +43,10 @@ for i=1:b(1)
     end
 end
 imshow(c)
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
+***
+
+
+
+
