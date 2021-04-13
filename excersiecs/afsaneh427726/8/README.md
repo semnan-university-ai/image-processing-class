@@ -26,7 +26,7 @@ for i=1:b(1)
     end
 end
 
-(rotate90.m)چرخش 90
+چرخش 90
 
 
 تک به تک پیکسل ها پیمایش شده وهرسطر در ستون متناظر با آن کپی شده است
@@ -43,8 +43,31 @@ for i=1:b(1)
     end
 end
 imshow(c)
+
+چرخش 45و120
+clc;
+clear data;
+clear all;
+x=imread('C:\Users\as\Downloads\fruits.png');
+
+x=imresize(x,[200 200]);
+% x=rgb2gray(x);
+x3=double(x);
+for i=1:400
+for j=1:400
+x1(i,j)=round((i-100).*cosd(120)+(j-100).*sind(120)+100);
+x2(i,j)=round(-(i-100).*sind(120)+(j-100).*cosd(120)+100);
+if(x1(i,j)<=200)&&(x1(i,j)>0)&&(x2(i,j)<=200)&&(x2(i,j)>0)
+      a(i,j,:)=x3(x1(i,j),x2(i,j),:);
+  end;
+  end;
+  end;
+image(uint8(a))
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
+[alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
+[alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
+[alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
 ***
 
 
