@@ -1,3 +1,10 @@
+> # Exercise 9
+> Write a program that specifies a length and width and then crop an image. 
+***
+>CODE
+
+Main Program
+```ruby
 
 یک تصویر از ورودی خوانده
   
@@ -29,3 +36,7 @@ for i=1:M
 end
 figure;
 imshow(image);
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2f41d1b4dcaf7e2e47a5336a258b560e66bca844/excersiecs/alirezachaji/9/Exce09.png)
+***
+
