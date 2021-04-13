@@ -16,4 +16,4 @@ a= bwdist(a) <= r;
 imshow(a) 
 ```
 ***
-![alt text](https://https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/2/soal2.jpg)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/2/soal2.jpg)
