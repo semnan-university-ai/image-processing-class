@@ -67,3 +67,4 @@ imshow(image);
 ```
 
 ![output](t1.bmp)
+![output](t2.png)
