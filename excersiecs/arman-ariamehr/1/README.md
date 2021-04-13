@@ -1,4 +1,4 @@
-<div>
+<div dir = "ltr">
     
 ```
 r = input('satr = ');
@@ -23,8 +23,7 @@ for i = 1 : si_row : r
 end
 imshow(matris);
 ```
-    
-    </div>
+</div>
 
 <div dir = "rtl">
   
