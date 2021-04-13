@@ -20,7 +20,7 @@ imshow(w)
 ```
 
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/6/soal6.2.jpg)
 
 
 
@@ -47,6 +47,6 @@ w=uint8(w);
 imshow(w)
 ```
 
-
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/6/soal6.1.jpg)
 
 
