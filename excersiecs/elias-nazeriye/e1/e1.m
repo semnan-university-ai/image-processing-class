@@ -1,14 +1,28 @@
-clear all
-r = input ('Number of rows for a checkered page:');
-c = input ('Number of columns for a checkered page:');
+clear all;
+close all;
+clc;
 
-for i=1:r
-        for j=1:c
-            if mod((i+j),2)==0
-                image(i,j)=0;
-            else  
-                 image(i,j)=1;
-            end
+r = input('Number of rows for a checkered page:');
+c = input('Number of columns for a checkered page:');
+
+Chessboard = zeros(r,c);
+
+for i = 1:1:r
+    x = i;
+    for j = 1:1:c
+        if(mod(x,2) == 1)
+            Chessboard(i,j) = 1;
         end
+        x = x + 1;
+    end
 end
-imshow(image);
+
+for i = 1:1:r
+    for j = 1:1:c
+        if(Chessboard(i,j) == 0)
+            rectangle('Position',[i j 1 1], 'FaceColor','k');
+        else
+            rectangle('Position',[i j 1 1], 'FaceColor','w');
+        end
+    end
+end
