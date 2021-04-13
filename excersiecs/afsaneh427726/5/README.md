@@ -30,7 +30,7 @@ end
 imshow(image)
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/359d9bf5deaea0d6e03754fa362704e2563d8fbd/excersiecs/alirezachaji/5/kozeh.bmp)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/5/1.jpg)
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/359d9bf5deaea0d6e03754fa362704e2563d8fbd/excersiecs/alirezachaji/5/Exce05.png)
 
