@@ -78,7 +78,7 @@ uint8(x);
 figure;
 imshow(x);
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/f252686eab76eab3b8a80fa18ed263105af2742a/excersiecs/alirezachaji/10/Exce10.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/10/kap.jpg)
 ***
 
 
