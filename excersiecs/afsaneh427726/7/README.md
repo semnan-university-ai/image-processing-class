@@ -111,7 +111,7 @@ end
 imshow(w) 
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/7/shekl.m)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/7/soal7.2.jpg)
 
 
 
