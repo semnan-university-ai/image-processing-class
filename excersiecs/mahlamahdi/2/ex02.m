@@ -11,6 +11,6 @@ y=r.*cos(theta)+b;
 img=zeros(1000,1000);
 imshow(img);
 hold on
-plot(x,y);
+plot(x,y,"-w",line,r);
 hold off
 
