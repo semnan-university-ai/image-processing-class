@@ -1,6 +1,7 @@
 <div dir = "rtl">
   ```
-    r = input('satr = ');
+  
+  r = input('satr = ');
     c = input('soton = ');
     matris = uint8(zeros(r,c));
 si_row = round(r / 8);
@@ -21,7 +22,8 @@ for i = 1 : si_row : r
     end
 end
 imshow(matris);
-   ```
+
+```
   
 ابتدا سطر و ستون را از کاربر گرفته و یک تصویر سیاه رنگ به اندازه آن ایجاد میشود. 
 سپس به اندازه یک هشتم سطر و ستون وارد شده دو مربع سفید و سیاه رنگ ایجاد می گردد
