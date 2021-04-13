@@ -1,13 +1,14 @@
 clc;
 close all;
 clear all;
-r=8;
-image = zeros(100*r,100*r);
+w=5;%width
+h=4;%height
+image = zeros(100*h,100*w);
 
 
-for i=1 : r*100
+for i=1 : h*100
     if floor(mod( i/100 , 2 )) == 0 
-        for j=1 : r*100
+        for j=1 : w*100
             if floor(mod( j/100 , 2 )) == 0 
                 image(i, j) = 255;
             end    
@@ -17,7 +18,7 @@ for i=1 : r*100
         end 
     end
     if floor(mod( i/100 , 2 )) == 1 
-        for j=1 : r*100
+        for j=1 : w*100
             if floor(mod( j/100 , 2 )) == 0 
                 image(i, j) = 0;
             end    
@@ -30,4 +31,5 @@ end
 
 figure,
 imshow(image);
+imsave;
 

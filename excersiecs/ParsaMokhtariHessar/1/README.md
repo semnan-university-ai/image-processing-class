@@ -16,7 +16,8 @@ clear all;
 </div>
 
 ```
-r=8;
+w=5;%width
+h=4;%height
 ```
 
 <div dir='rtl'>
@@ -24,7 +25,7 @@ r=8;
 </div>
 
 ```
-image = zeros(100*r,100*r);
+image = zeros(100*h,100*w);
 ```
 
 <div dir='rtl'>
@@ -32,9 +33,9 @@ image = zeros(100*r,100*r);
 </div>
 
 ```
-for i=1 : r*100
+for i=1 : h*100
     if floor(mod( i/100 , 2 )) == 0 
-        for j=1 : r*100
+        for j=1 : w*100
             if floor(mod( j/100 , 2 )) == 0 
                 image(i, j) = 255;
             end    
@@ -44,7 +45,7 @@ for i=1 : r*100
         end 
     end
     if floor(mod( i/100 , 2 )) == 1 
-        for j=1 : r*100
+        for j=1 : w*100
             if floor(mod( j/100 , 2 )) == 0 
                 image(i, j) = 0;
             end    
