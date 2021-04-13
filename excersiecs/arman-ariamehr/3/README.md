@@ -1,27 +1,26 @@
 <div dir = "ltr">
     
 ```
-r = input('satr = ');
-c = input('soton = ');
-matris = uint8(zeros(r,c));
-si_row = round(r / 8);
-si_col = round(c / 8);
-white = uint8(ones(si_row , si_col) * 255);
-black = uint8(zeros(si_row , si_col));
-last_number = 0;
-for i = 1 : si_row : r
-    choose = last_number;
-    for j = 1 : si_col : c
-        if choose == 0
-             matris(i : i + si_row - 1 , j : j + si_col - 1) = black;
-        else
-             matris(i : i + si_row - 1 , j : j + si_col - 1) = white;
-        end
-        last_number = choose;
-        choose = mod(choose + 1 , 2);
+projectdir = 'benchmark\';
+dinfo = dir(fullfile(projectdir));
+dinfo([dinfo.isdir]) = [];     %get rid of all directories including . and ..
+nfiles = length(dinfo);
+folder = 'output\';
+for j = 1 : nfiles
+    filename = fullfile(projectdir, dinfo(j).name);
+    address = fullfile(folder , dinfo(j).name);
+    rgb = imread(filename);
+    size(rgb);
+    if size(size(rgb) , 2) == 3
+        r = rgb( : , : , 1);
+        g = rgb( : , : , 2);
+        b = rgb( : , : , 3);
+        gray = (0.3 * r) + (0.59 * g) + (0.11 * b);
+        imwrite(gray , address);
+    else
+        imwrite(rgb , address);
     end
 end
-imshow(matris);
 ```
 </div>
 
