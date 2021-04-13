@@ -1,4 +1,12 @@
 
+> # Exercise 10
+>
+
+>CODE
+
+Main Program
+```ruby
+ 
 تک تک  فایل تصویری اعداد را خوانده و سایز آن را 200*200 می کنیم
 
 k=imread('C:\Users\as\Desktop\1.png');
@@ -69,4 +77,8 @@ end
 uint8(x);
 figure;
 imshow(x);
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/f252686eab76eab3b8a80fa18ed263105af2742a/excersiecs/alirezachaji/10/Exce10.png)
+***
+
 
