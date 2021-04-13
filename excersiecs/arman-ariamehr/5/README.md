@@ -1,27 +1,19 @@
 <div dir = "ltr">
     
 ```
-r = input('satr = ');
-c = input('soton = ');
-matris = uint8(zeros(r,c));
-si_row = round(r / 8);
-si_col = round(c / 8);
-white = uint8(ones(si_row , si_col) * 255);
-black = uint8(zeros(si_row , si_col));
-last_number = 0;
-for i = 1 : si_row : r
-    choose = last_number;
-    for j = 1 : si_col : c
-        if choose == 0
-             matris(i : i + si_row - 1 , j : j + si_col - 1) = black;
-        else
-             matris(i : i + si_row - 1 , j : j + si_col - 1) = white;
-        end
-        last_number = choose;
-        choose = mod(choose + 1 , 2);
-    end
-end
-imshow(matris);
+address = 'koze.jpeg';
+%read main image
+im = imread(address);
+%create its sym
+sym_im = fliplr(im);
+row = size(im , 1);
+col = size(im , 2);
+final_im = uint8(zeros(row , col * 2 , 3));
+%the left side (col = 1 to col of main image) is sym of main image
+final_im( : , 1 : col , : ) = sym_im;
+%the right side (col = col of main image to end) is main image
+final_im( : , col + 1 : end , : ) = im;
+imshow(final_im);
 ```
 </div>
 
