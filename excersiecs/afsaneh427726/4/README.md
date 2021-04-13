@@ -29,7 +29,7 @@ w(1:100,301:400,1:3)=w6(413:512,413:512,1:3);
 w7=imread('C:\Program Files\MATLAB\girl.png');
 ```
 ***
-![image](https://github.com/semnan-university-ai/image-processing-class/blob/08ef1711f0eab56bf8be8857a27ffcf699e017f3/excersiecs/alirezachaji/4/Exce04.png)
+![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/4/4.jpg)
 
 
 
