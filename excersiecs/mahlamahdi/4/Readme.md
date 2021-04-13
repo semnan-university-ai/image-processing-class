@@ -4,21 +4,34 @@
 </div>
 
 <div dir="rtl">
-بعد از دریافت عکس و بدست آوردن مقدار هر  کانال رو در 0.33 نموده و با هم جمع نموده  و به تصویر خاکستری تبدیل می شود
+ابتدا تمام محتویات پوشه img که حاوی benchmark هاست در متغیر file قرار می گیرد
 </div>
 
 ````
 clc;
-clear;
 close all;
-img1 = imread("img/airplane.png");
-imagesize=size(img1);
-     for i = 1:imagesize(1)
-        for j=1:imagesize(2)
-            img2(i,j) = 0.33*(img1(i, j, 1)) + 0.33*(img1(i, j, 2)) + 0.33*(img1(i, j, 3));
-        end
-     end
-    subplot(1,2,1),imshow(img1);
-    subplot(1,2,2),imshow(img2);
+clear;
+files= dir('img');
+
+````
+<div dir="rtl">
+    به دلیل اینکه پوشه img حاوی دو پوشه .. و . می باشد از 3 به بعد را در file ریخته شد.
+    
+</div>
+
+files=files(3:end,:);
+
+<div dir="rtl">
+فایل ها یکی یکی خوانده می شوندو با دو متغیر mo , di  مشخص می نماییم. مکان قرار گرفتن عکس های برش خورده 100 در 100 را     
+</div>
+for i=1:25
+    image= imread(files(i).name);
+   imgcut=image(size(image,1)-100:size(image,1),size(image,2)-100:size(image,2),size(image,3));
+   mo=mod(i-1,5)*100;di=fix((i-1)/5)*100;
+   img(di+1:di+101,mo+1:mo+101,:)=imgcut(1:101,1:101,:);
+ 
+end
+
+imshow(img);
 ````
 
