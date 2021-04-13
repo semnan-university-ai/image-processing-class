@@ -1,7 +1,7 @@
 > # Exercise 6
-> این سوال را به دو روش انجام داده ام
+> 
 
-روش1:یک طیف خاکستری از 0-255 که راه ها به سختی قابل مشاهده است وهردو سطر یک مقدار را میگیرند(rah.m)(6.2.jpg)
+روش1:یک طیف خاکستری از 0-255 که راه ها به سختی قابل مشاهده است وهردو سطر یک مقدار را میگیرند
 ***
 >CODE
 
@@ -20,13 +20,13 @@ imshow(w)
 ```
 
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/6/soal6.2.jpg)
 
 
 
 > 
-25روش2:دراین اینجا راه ها کاملا قابل مشاهده هستندولی از32تا از رنگ های خاکستری استفاده شده است وهر8 سطر یک مقدار را میگیرند
-(rah.m)(6.1.jpg)
+روش2:دراین اینجا راه ها کاملا قابل مشاهده هستندولی از32تا از رنگ های خاکستری استفاده شده است وهر8 سطر یک مقدار را میگیرند
+
 ***
 >CODE
 
@@ -47,6 +47,6 @@ w=uint8(w);
 imshow(w)
 ```
 
-
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/6/soal%206.1.jpg)
 
 

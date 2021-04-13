@@ -1,3 +1,9 @@
+> # Exercise 7
+> 
+***
+>CODE
+ 
+```ruby
 clc
 clear data;
 clear all;
@@ -102,6 +108,10 @@ for i=350:400
     j=j-1;
     
 end 
-imshow(w)
+imshow(w) 
+```
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/7/shekl.m)
+
 
 
