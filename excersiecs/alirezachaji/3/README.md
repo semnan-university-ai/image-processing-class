@@ -15,7 +15,8 @@ imshow(newimage)   % تصوير جديد را نشان مي دهد
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31b4e9ff9649852e898e3972eed32976e4ead0c8/excersiecs/alirezachaji/3/Exce03.png)
-<div>
+***
+<div dir="rtl">
 توضیحات کلی برنامه <br />
  در اين برنامه با توجه به فرمول رايج تبديل تصاوير رنگي به خاكستري پيكسل هاي تصوير جديد مقدار دهي ميشوند..
 </div>
