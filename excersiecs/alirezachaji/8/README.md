@@ -5,68 +5,76 @@
 
 Main Program
 ```ruby
-close all
-clear all
-clc
-a=imread("benchmark\lena.png");
-CurvaJV=figure('Name','Original Image');
-imshow(a);
-b=a;
-n=size(a);
-b=a;
+close all          % تمام پنجره ها را می بندد
+clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
+clc                % كامند ويندو را پاك مي كند
+
+a=imread("benchmark\lena.png");  % تصویر ورودی را میخواند
+CurvaJV=figure('Name','Original Image'); % یک فیگور با نام مشخص شده در دستور را ایجاد می کند
+imshow(a);  تصویر را نشان می دهد
+b=a;               % کپی میکند b  را در متغیر a تصویر
+n=size(a);         % ابعاد تصویر را بدست می آورد 
  %%%%%%%%%%%%%%%%%%%%%%% Flip Horizentaly  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-b(1:n(1),n(2):-1:1,1:n(3))=a(1:n(1),1:n(2),1:n(3));
-CurvaJV=figure('Name','Reverse Horizentaly');
-imshow(b)
+b(1:n(1),n(2):-1:1,1:n(3))=a(1:n(1),1:n(2),1:n(3));   % تصویر را به صورت افقی برعکس میکند
+CurvaJV=figure('Name','Reverse Horizentaly');         % فیگور جدید با نام مشخص برای تصویر برعکس شده ایجاد میکند
+imshow(b)                                             % تصویر را نمایش می دهد
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 45 Degree %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CurvaJV=figure('Name','45 Degree');
-image_rotate(a,45);
+CurvaJV=figure('Name','45 Degree');                   % فیگوری برای چرخش 45 درجه ای تصویر ایجاد میکند
+image_rotate(a,45);                                   % تابع چرخش تصویر را برای چرخش 45 درجه ای فراخوانی میکند
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 90 Degree %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CurvaJV=figure('Name','90 Degree');
-image_rotate(a,90);
+CurvaJV=figure('Name','90 Degree');                   % فیگوری برای چرخش 90 درجه ای تصویر ایجاد میکند
+image_rotate(a,90);                                   % تابع چرخش تصویر را برای چرخش 90 درجه ای فراخوانی میکند
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 180 Degree %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CurvaJV=figure('Name','120 Degree');
-image_rotate(a,120);
+CurvaJV=figure('Name','120 Degree');                  % فیگوری برای چرخش 120 درجه ای تصویر ایجاد میکند
+image_rotate(a,120);                                  % تابع چرخش تصویر را برای چرخش 120 درجه ای فراخوانی میکند
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 180 Degree %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CurvaJV=figure('Name','180 Degree');
-image_rotate(a,180);
+CurvaJV=figure('Name','180 Degree');                  % فیگوری برای چرخش 120 درجه ای تصویر ایجاد میکند
+image_rotate(a,180);                                  % تابع چرخش تصویر را برای چرخش 180 درجه ای فراخوانی میکند
 ```
-image_rotate Function
+image_rotate Function 
 ``` ruby
-function pic=image_rotate(pic,angel)
-n=size(pic);
-v=deg2rad(angel);
-r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));                      
-c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));                     
-pic2=zeros(r,c,n(3));
-pic2=uint8(pic2);
-midx=ceil((size(pic2,1))/2);
-midy=ceil((size(pic2,2))/2);
-for i=1:size(pic2,1)
-    for j=1:size(pic2,2)                                                       
-         xx= round((i-midx)*cos(v)+(j-midy)*sin(v)+ceil(n(1)/2));                                       
-         yy= round(-(i-midx)*sin(v)+(j-midy)*cos(v)+ceil(n(2)/2));                             
-         if (xx>=1 && yy>=1 ) 
-             if ( xx<=n(1) &&  yy<=n(2) ) 
-               pic2(i,j,1:n(3))=pic(xx,yy,1:n(3));  
+function pic=image_rotate(pic,angel)                  % تابع چرخش تصویر به ازای درجه مشخص
+n=size(pic);                                          % سایز تصویر را بدست می آورد
+v=deg2rad(angel);                                     % مقدار درجه را به رادیان تبدیل میکند
+r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));            % تعداد پیکسل تصویر جدید در سطر را محاسبه میکند                    
+c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));            % تعداد پیکسل تصویر جدید در ستون را محاسبه میکند             
+pic2=zeros(r,c,n(3));                                 % تصویر خامی باابعاد بدست آمده در بالا ایجاد میکند
+pic2=uint8(pic2);                                     % تغییر می دهد uint8 نوع داده تصویر را به
+midx=ceil((size(pic2,1))/2);                          % مختصات مرکز تصویر در حالت سطری را بدست می آورد
+midy=ceil((size(pic2,2))/2);                          % مختصات مرکز تصویر در حالت ستونی را بدست می آورد
+for i=1:size(pic2,1)                                  % حلقه جهت حرکت در پیکسل های سطری 
+    for j=1:size(pic2,2)                              % حلقه جهت حرکت در پیکسل های ستونی                        
+         xx= round((i-midx)*cos(v)+(j-midy)*sin(v)+ceil(n(1)/2));  % مختصات ستونی جدید تصویر دوران یافته را بدست می آورد                                      
+         yy= round(-(i-midx)*sin(v)+(j-midy)*cos(v)+ceil(n(2)/2)); % مختصات سطری جدید تصویر دوران یافته را بدست می آورد                             
+         if (xx>=1 && yy>=1 )                         % بررسی میکند که مختصات پیکسل مثبت و بزرگتر از 0 باشند
+             if ( xx<=n(1) &&  yy<=n(2) )             % بررسی میکند که مختصات پیکسل بدست امده از ابعاد مورد نظر بیشتر نباشد
+               pic2(i,j,1:n(3))=pic(xx,yy,1:n(3));    % پیکسل مورد نظر را مقدار دهی میکند
              end  
          end
     end
 end
-imshow(pic2);
+imshow(pic2);                                         % تصویر را نمایش می دهد
 pic3=pic;
-difx=ceil((r-n(1))/2);
-dify=ceil((c-n(2))/2);
-if (mod(angel,90)~=0)
-for i=1:n(1)
-    for j=1:n(2)
-        pic3(i,j,:)=pic2(difx+i,dify+j,:);
+                                                      % در این برنامه دو تصویر به ازای تصاویر مایل رسم می گردد یکی کل تصویر در تصویر جدید مشخص است 
+                                                      % و ابعاد تصویر جدید بزرگتر از تصویر اولیه است و تصویر دوم ابعاد تصویر برابر تصویر اولیه است
+                                                      % ولی قسمتی از کوشه های تصویر حذف شده است قسمت بعدی برنامه تصویر دوم را تولید میکند
+difx=ceil((r-n(1))/2);                                % میزان اختلاف پیکسل تصیر اول و دوم را در حالت ستونی مشخص میکند
+dify=ceil((c-n(2))/2);                                % میزان اختلاف پیکسل تصیر اول و دوم را در حالت ستونی مشخص میکند
+if (mod(angel,90)~=0)                                 % بررسی میکند آیا تصویر دوم نیاز است رسم شود یا خیر اگر چرخش دورانی 90 درجه ای کامل نداشته باشد نیاز نیست رسم شود
+                                                      % چون ابعاد تصویر جدید برابر تصویر اصلی خواهد شد
+for i=1:n(1)                                          % حلقه تکرار ستونی جهت آدرس دهی تصویر دوم
+    for j=1:n(2)                                      % حلقه تکرار ستونی جهت آدرس دهی تصویر دوم
+        pic3(i,j,:)=pic2(difx+i,dify+j,:);            % پیکسل های تصویر دوم را مقدار دهی میکند
     end
 end
-CurvaJV=figure('Name','Cutted Image');
-pic3=uint8(pic3);
-imshow(pic3)
+CurvaJV=figure('Name','Cutted Image');                % فیگوری برای تصویر دوم ایجاد میکند  
+pic3=uint8(pic3);                                     % تغییر می دهد uint8 نوع داده تصویر را به                   
+imshow(pic3)                                          % تصویر دوم را نمایش می دهد
 end
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/ec436b2073664290ac3f0508f72503ef8aa13683/excersiecs/alirezachaji/8/Exce08.png)
 ***
+<div dir="rtl">
+توضیحات کلی برنامه <br />
+ در این برنامه از یک تابع جهت چرخش تصویر استفاده شده است . در متن سوال آمده است جاهایی که تصویر بعد از چرخش از ابعاد تصویر اصلی خارج می شود را سیاه رنگ کنیم اما ما برای کامل تر شدن برنامه هر دو تصویر یعنی هم تصویر سیاه شده و هم تصویر کامل بعد از چرخش را تولید کرده ایم.
+</div>
