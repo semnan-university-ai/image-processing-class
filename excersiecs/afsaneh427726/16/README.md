@@ -1,3 +1,11 @@
+
+> # Exercise 11
+> حذف چشم های تصویر
+***
+>CODE
+
+
+```ruby
 تصویر را از ورودی می خوانیم
   
 
@@ -20,3 +28,8 @@ for i=1:383
     end
 end
 imshow(a);
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
+
+
