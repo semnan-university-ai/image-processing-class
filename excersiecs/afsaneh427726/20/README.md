@@ -43,7 +43,7 @@ w(200:700,750:800)=1;
  w(300:350,600:650)=1;
 imshow(w)
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/20/afsane.jpg)
 ***
 
 
