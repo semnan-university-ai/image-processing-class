@@ -35,7 +35,7 @@ image =imread('C:\Users\as\Desktop\af/1.jpg');
   imhist(image);     
 ```
 ****
-![image](https://user-images.githubusercontent.com/48456571/113308216-32c36b80-931b-11eb-887f-1843d12aa4c0.png)
+![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/14/1.jpg)
 
 
 
