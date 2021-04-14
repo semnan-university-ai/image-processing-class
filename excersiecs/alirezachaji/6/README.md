@@ -7,26 +7,31 @@
 % For this exercise I programed for 2 different stripes image
 % 1St one pixels are from 1-255 with steps of 1
 % 2nd one pixels are from 1-255 with steps of 60
-close all
-clear all
-clc
-pic=zeros(1020,1000);
-for i=1:1020
-    pic(i,1:1000)=ceil(i/4)+10;
+close all          % تمام پنجره ها را می بندد
+clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
+clc                % كامند ويندو را پاك مي كند
+pic=zeros(1020,1000); % تصویر خام مشکی رنگ به ابعاد 1020 در 1000 ایجاد میکند 
+for i=1:1020  % حلقه برای ایجاد تصویر راه راه اول
+    pic(i,1:1000)=ceil(i/4)+10; % هر 10 پیکسل را با یکی از اعداد بین 1 تا 255 مقدار دهی میکند
 end
 
-pic=uint8(pic);
-imshow(pic)
-figure;
+pic=uint8(pic);    % تبدیل میکند uint8 تصویر را به مد مورد
+imshow(pic)        % تصویر راه راه اول را نمایش می دهد
+figure;            % یک فیگور جدید ایجاد میکند
 d=0;
-for i=1:17
-    for j=1:60
-       d=d+1; 
-       pic(d,1:1000)=(i*15); 
+for i=1:17         % حلقه تکرار ستونی برای ایجاد تصویر راه راه دوم
+    for j=1:60     % حلقه تکرار سطری برای ایجاد تصویر راه راه دوم
+       d=d+1;      % شمارشگر حلقه
+       pic(d,1:1000)=(i*15); % هر 60 رديف پيكسل را با يك مقدار بين 1 تا 255 با پله هاي 15 تايي مقدار دهي ميكند
     end
 end    
-pic=uint8(pic);
-imshow(pic)
+pic=uint8(pic);    % تبدیل میکند uint8 تصویر را به مد مورد
+imshow(pic)        % تصوير راه راه دوم را نمايش مي دهد
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
+***
+<div dir="rtl">
+توضیحات کلی برنامه <br />
+ در این برنامه به دو صورت خروجی تهیه شده است یکی اینکه تصویر به مرور از سیاه به سفید تغییر کرده است و حالت دوم اینکه این تغییر به صورت پله ای بوده و خروجی شکل راه راه به خود گرفته است..
+</div>
