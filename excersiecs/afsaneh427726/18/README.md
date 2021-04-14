@@ -1,6 +1,6 @@
 
 > # Exercise 18
-> 
+> سفید کردن صفحه سفید ساعت
 ***
 >CODE
 
@@ -38,7 +38,7 @@ for j=333:694
     
 imshow(image);
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/18/18.jpg)
 ***
 
 
