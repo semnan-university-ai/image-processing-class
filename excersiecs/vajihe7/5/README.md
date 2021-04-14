@@ -24,7 +24,8 @@ figure;
 imshow(image2);
 ```
 ****
-![result](https://user-images.githubusercontent.com/79658260/114689571-12d47480-9d2b-11eb-8a38-be53b46456c6.png)
+![result](https://user-images.githubusercontent.com/79658260/114691356-d43fb980-9d2c-11eb-896b-14c806d0aae1.png)
+
 
 
 
