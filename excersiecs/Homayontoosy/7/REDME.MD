@@ -14,11 +14,26 @@
 
 
 
+
+
 <div dir="rtl">
 
 براي مستطيل هم به همين روال انجام داديم
 
 
 </div>
+![عكس مستطيل]()
 
-![عكس مستطيل](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/7/7-1/screen%207.1.png)
+
+
+
+
+
+<div dir="rtl">
+
+براي مثلث هم به همين روال انجام داديم
+
+
+</div>
+
+![عكس مثلث](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/7/7-1/screen%207.1.png)
