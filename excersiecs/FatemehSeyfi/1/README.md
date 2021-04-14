@@ -30,7 +30,7 @@ end
 
 ```
 ****![alt](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/1/q1.png)
-```
+
 <div dir="rtl">
 <h2>توضیحات برنامه</h2> <br />
  <b>1</b>.مقدار طول و عرض و اندازه مربع ها رو از ورودی دریافت می کنیم<br />
