@@ -6,22 +6,22 @@
 ```ruby
 % Depending on the specifications of your computer, running this program
 % may take some time, so wait at least 5 seconds.
-close all
-clear all
-clc
-pic=zeros(1500,1500);
+close all          % تمام پنجره ها را می بندد
+clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
+clc                % كامند ويندو را پاك مي كند
+pic=zeros(1500,1500);  % تصويري خام به ابعاد 1500 در 1500 پيكسل ايجاد ميكند
 
-% Draw a Rectangle in pos xpos and ypos :
+% Draw a Rectangle in pos xpos and ypos :   % در اين قسمت برنامه مستطيلي در نقطه شروع 100 و 150 به طول 300 و عرض 200 پيكسل رسم ميكند
 xpos=100;
 ypos=150;
 l=300;
 w=200;
-
+                                          % چهار سطر زير هر كدام يكي از اضلاع مستطيل را رسم ميكند
 pic=draw_line(pic,xpos,ypos,xpos,(ypos+l));
 pic=draw_line(pic,xpos+w,ypos,xpos+w,ypos+l);
 pic=draw_line(pic,xpos,ypos,xpos+w,ypos);
 pic=draw_line(pic,xpos,ypos+l,xpos+w,ypos+l);
-
+                                          % رسم مربع نيز كاملا مشابه مستطيل بوده و مستطيلي كه طول و عرض آن با هم برابر است
 % Draw a Square in pos xpos and ypos :
 xpos=100;
 ypos=650;
@@ -31,12 +31,12 @@ pic=draw_line(pic,xpos+l,ypos,xpos+l,ypos+l);
 pic=draw_line(pic,xpos,ypos,xpos+l,ypos);
 pic=draw_line(pic,xpos,ypos+l,xpos+l,ypos+l);
 
-%Draw a line
+%Draw a line                % رسم میکند P2 و P1 اين قسمت خط راستي بين نقاط
 p1=[400 1000];
 p2=[100 1400];
-pic=draw_line(pic,p1(1),p1(2),p2(1),p2(2));
+pic=draw_line(pic,p1(1),p1(2),p2(1),p2(2));   %  استفاده شده است به این صورت که مختصات نقطه اول و دوم را گرفته و خط را رسم میکند draw_line برای رسم خط بین 2 نقطه از تابع
 
-% Draw a triangle when we have 3 corners position 
+% Draw a triangle when we have 3 corners position  توسط سه نقطه داده شده که سه راس مثلث هستند و به کمک تابع فوق الذکر مثلث را رسم می کند
 p1=[800 100]
 p2=[700 400]
 p3=[500 300]
@@ -45,7 +45,7 @@ pic=draw_line(pic,p1(1),p1(2),p2(1),p2(2));
 pic=draw_line(pic,p1(1),p1(2),p3(1),p3(2));
 pic=draw_line(pic,p3(1),p3(2),p2(1),p2(2));
 
-% Draw a lozenge 
+% Draw a lozenge   توسط چهار نقطه داده شده و به کمک تابع فوق الذکر لوزی را رسم می کند 
 
 p1=[700 600]
 p2=[500 700]
@@ -57,7 +57,7 @@ pic=draw_line(pic,p1(1),p1(2),p4(1),p4(2));
 pic=draw_line(pic,p2(1),p2(2),p3(1),p3(2));
 pic=draw_line(pic,p3(1),p3(2),p4(1),p4(2));
 
-%Draw a Pentagon
+%Draw a Pentagon    توسط پنج نقطه داده شده و به کمک تابع فوق الذکر پنج ضلعی را رسم می کند
 p1=[900 1000]
 p2=[700 900]
 p3=[500 1150]
@@ -71,7 +71,7 @@ pic=draw_line(pic,p4(1),p4(2),p5(1),p5(2));
 pic=draw_line(pic,p1(1),p1(2),p5(1),p5(2));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Draw another type of Triangle
+% Draw another type of Triangle   توسط سه نقطه داده شده که سه راس مثلث هستند و به کمک تابع فوق الذکر مثلث را رسم می کند
 p1=[1400 100]
 p2=[1400 500]
 p3=[1000 300]
@@ -81,7 +81,7 @@ pic=draw_line(pic,p1(1),p1(2),p3(1),p3(2));
 pic=draw_line(pic,p3(1),p3(2),p2(1),p2(2));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Draw a Trapezoid
+% Draw a Trapezoid    توسط چهار نقطه داده شده که سه راس مثلث هستند و به کمک تابع فوق الذکر ذوزنقه را رسم می کند
 
 p1=[1400 700]
 p2=[1200 600]
@@ -94,45 +94,45 @@ pic=draw_line(pic,p2(1),p2(2),p3(1),p3(2));
 pic=draw_line(pic,p3(1),p3(2),p4(1),p4(2));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Draw a Circle
+% Draw a Circle  دایره ای به شعاع 150 و در نقطه 1300 و 1300 رسم میکند
 r=150;
 cx=1300;
 cy=1300;
-pic=draw_circle(pic,r,cx,cy);
+pic=draw_circle(pic,r,cx,cy);  % برای رسم دایره از تابع که همان برنامه مربوط به تمرین 2 در آن قرار داده شده است استفاده شده است
 ```
 ***
-draw_line function
+draw_line function           
 ```ruby
-function pic=draw_line(pic,ax,ay,bx,by)
-apos=[ax ay];
-bpos=[bx by];
-         if (apos(1)==bpos(1))
-             m=1;
-             if (apos(2)>bpos(2))
-                 pic(apos(1),bpos(2):apos(2))=1;
+function pic=draw_line(pic,ax,ay,bx,by)  % این تابع خط راستی بین دو نقطه داده شده رسم میکند
+apos=[ax ay];     % مختصات نقطه ابتدایی
+bpos=[bx by];     % مختصات نقطه انتهایی
+         if (apos(1)==bpos(1))    % بررسی میکند آیا خط مورب است یا موازی محور ایکس ها می باشد
+             m=1;                 % اگر شرط بالا برقرار باشد شیب خط را یک در نظر میگیرد
+             if (apos(2)>bpos(2)) % اگر ایکس نقطه دوم کمتر از ایکس نقطه اول باشد
+                 pic(apos(1),bpos(2):apos(2))=1; % مقدار پیکسل های مورد نیاز را برابر یک قرار می دهد 
              else
-                 pic(apos(1),apos(2):bpos(2))=1;
+                 pic(apos(1),apos(2):bpos(2))=1; % در غیر این صورت ادرس دهی جهت رسم خط را به این فرمت انجام می دهد
              end
          else
-             m=(abs(bpos(2)-apos(2))/abs(bpos(1)-apos(1)));
+             m=(abs(bpos(2)-apos(2))/abs(bpos(1)-apos(1))); % اگر خط موازی محور ایکس نبود شیب خط را از فرمول روبرو حساب میکند
          end
-if (apos(1)>bpos(1))
+if (apos(1)>bpos(1))  % بررسی میکند که آیا شیب خط منفی است یا خیر اگر منفی بود عدد شیب را در -1 ضرب مبکند
     if (bpos(2)<apos(2))
         m=m*-1;
     end    
-    l=abs(apos(1)-bpos(1))
-    for i=1:l
-         j=round(m*i);
-         ii=apos(1)-i;
-         jj=j+apos(2);
-         if (apos(1)==bpos(1))
-             ii=apos(1);
+    l=abs(apos(1)-bpos(1)) % طول ارتفاع خط  در محور ایکس ها را محاسبه میکند
+    for i=1:l       % حلقه تکرار به اندازه طول خط در محور ایکس
+         j=round(m*i);  %   با توجه به شیب خط مقدار تغییر پیکسل در جهت طول تصویر را محاسبه میکند 
+         ii=apos(1)-i;  % با توجه به مختصات شروع ترسیم خط مختصات جدید را در راستای محور عمودی محاسبه میکند
+         jj=j+apos(2);  % با توجه به مختصات شروع ترسیم خط مختصات جدید را در راستای محور افقی محاسبه میکند
+         if (apos(1)==bpos(1)) % اگر خط موازای محور عمودی بود
+             ii=apos(1);   % با توجه به مختصات شروع ترسیم خط مختصات جدید را در راستای محور عمودی محاسبه میکند 
          end
-         pic(ii,jj)=1;
+         pic(ii,jj)=1;  % پیکسل با مختصات محاسبه شده در فوق را سفید رنگ میکند
     end   
 end  
-
-if (apos(1)<bpos(1)) 
+                       % خطوط بعد مشابه بالا می باشد با این تفاوت که بررسی میکند مختصات عمودی نقطه اول کمتر از نقطه دوم باشد
+if (apos(1)<bpos(1))    
     l=abs(bpos(1)-apos(1))
     for i=1:l
          j=round(m*i);
@@ -157,33 +157,38 @@ draw_circle function
 
 function pic=draw_circle(pic,r,cx,cy)
 
-pic2=zeros(1500,1500);
+pic2=zeros(1500,1500);  % تصویری خام جهت رسم دایره ایجاد میکند
 
-for i=1:r
-    y=round(sqrt((r^2)-(i^2)));
-    xx=r-y+1;
-    yy=r+i;
-    pic2(xx,yy)=1;
-    pic2(yy,xx)=1;
-    xx=(2*r)-xx;
-    pic2(xx,yy)=1;
-    pic2(yy,xx)=1;
-    yy=r-(yy-r)+1;
-    pic2(xx,yy)=1;  
-end  
-for i=1:r-1
-    for j=1:2*r
-        pic2(r-i,j)=pic2(r+i,j);
+for i=1:r                % اين حلقه استفاده از مختصات قطبي دو يك چهارم دايره رسم ميكند
+    y=round(sqrt((r^2)-(i^2)));  %مقدار انحراف به ازاي هر پيكسل را محاسبه ميكند
+    xx=r-y+1;                    % مختصات عمودي كمان يك چهارم دايره را بدست مي آورد
+    yy=r+i;                      % مختصات افقي كمان يك چهارم دايره را بدست مي آورد
+    pic(xx,yy)=1;                % پيكسل كمان اول را سفيد رنگ ميكند
+    pic(yy,xx)=1;                % پيكسل كمان دوم را سفيد ميكند 
+    xx=(2*r)-xx;                 % مختصات عمودي كمان جديد را مشخص ميكند. چون سفيدي دايره در همه زوايا يكسان باشد هر كمان به صورت دو طرفه رسم شده است
+    pic(xx,yy)=1;                % پيكسل كمان اول را سفيد رنگ ميكند 
+    pic(yy,xx)=1;                % پيكسل كمان دوم را سفيد ميكند
+    yy=r-(yy-r)+1;               % مختصات افقي كمان يك چهارم دايره را بدست مي آورد
+    pic(xx,yy)=1;                % پيكسل كمان به دست آمده را سفيد ميكند
+end 
+for i=1:r-1                      % حلقه افقي براي رسم كمان ربع دوم دايره
+    for j=1:2*r                  % حلقه عمودي براي رسم كمان ربع دوم دايره
+        pic2(r-i,j)=pic2(r+i,j); % كمان را از كمان رسم شده قبلي كپي ميكند
     end
 end    
-for i=1:2*r
-    for j=1:2*r
-        pic(cx-r+i,cy-r+j)=pic2(i,j);
+for i=1:2*r                      % دايره مورد نظر را روي صفحه اصلي در محل مورد نظر كپي ميكند
+    for j=1:2*r                  % دايره مورد نظر را روي صفحه اصلي در محل مورد نظر كپي ميكند
+        pic(cx-r+i,cy-r+j)=pic2(i,j);  % پيكل هاي تصوير جديد را از دايره رسم شده مقدار دهي مي كند
     end
 end    
         
    
-imshow(pic) 
+imshow(pic)  % تصویر را رسم میکند
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/3c90faf383ed7f9d035c6f61340956814d2d1e38/excersiecs/alirezachaji/7/Exce07.png)
+***
+<div dir="rtl">
+توضیحات کلی برنامه <br />
+ در این برنامه تعدادی اشکال هندسی در یک تصویر خام 1500 در 1500 پیکسلی رسم شده است برای چند ضلعی ها از تابع نوشته شده جهت رسم خط که مختصات دو نقطه آن را می گیرد استفاده شده است و برای رسم دایره از برنامه نوشته شده در تمرین 2 استفاده شده است ..
+</div>
