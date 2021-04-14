@@ -5,16 +5,16 @@
 ***
 >CODE
 
-```ruby
+
  
 در اینجا مقدار نویز قابل تغییر می باشد(m)
-
+```ruby
 image=imread('C:\Users\as\Downloads\boat.png');
 a=size(image);
 for m=1:4000
-
+```
 تولید اعداد رندوم برای مشخص شدن طول و عرض پیکسل تغییر یافته
-
+```ruby
     i=randi(a(1));
     j=randi(a(2));
     image(i,j)=0;
