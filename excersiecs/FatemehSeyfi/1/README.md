@@ -27,7 +27,7 @@ end
 
 end
 ```
-****![alt](https://github.com/semnan-university-ai/image-processing-class/blob/19edc3c81c43fb7c551e120de823663981e77cb0/excersiecs/FatemehSeyfi/1/q1.png)
+****![alt](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/1/q1.png)
 
 
 
