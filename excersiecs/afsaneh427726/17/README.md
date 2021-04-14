@@ -1,4 +1,10 @@
 
+> # Exercise 17
+> سیاه کردن آسمان تصویر کوه
+***
+>CODE
+
+```ruby
 تصویر کوه را گرفته
 
 a=imread('C:\Users\as\Downloads\mountain.png');
@@ -17,3 +23,8 @@ for j=1:640 %arze tasvir
 end
 
 imshow(a)
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
+
+
