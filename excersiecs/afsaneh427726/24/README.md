@@ -4,7 +4,6 @@
 ***
 >CODE
 
-Main Program
 ```ruby
 clc;
 clear data;
