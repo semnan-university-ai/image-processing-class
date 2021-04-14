@@ -1,5 +1,5 @@
 
-> # Exercise 11
+> # Exercise 16
 > حذف چشم های تصویر
 ***
 >CODE
@@ -29,7 +29,7 @@ for i=1:383
 end
 imshow(a);
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/16/16.jpg)
 ***
 
 
