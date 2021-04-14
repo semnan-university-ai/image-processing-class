@@ -75,11 +75,13 @@ for x =0 : size
 end
 
 ````
+
 <div dir="rtl">
 رسم لوزی
 </br>
 
 </div>
+
 ````
 size=50;
 start=[250,250];
