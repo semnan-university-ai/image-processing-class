@@ -1,4 +1,14 @@
-ایجاد نویز فلفل  نمکی با تولید اعداد رندوم به اندازه طول  عرض و تصویر و سفید و سیاه کردن پیکسل های انتخاب شده.
+
+> # Exercise 11
+> 
+ایجاد نویز فلفل  نمکی با تولید اعداد رندوم به اندازه طول  عرض و تصویر و سفید و سیاه کردن پیکسل های انتخاب شده
+***
+>CODE
+
+Main Program
+```ruby
+ 
+
 
 در اینجا مقدار نویز قابل تغییر می باشد(m)
 
@@ -20,4 +30,8 @@ for m=1:4000
 end
 
 imshow(image);
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
+
     
