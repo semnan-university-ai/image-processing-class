@@ -26,7 +26,7 @@ for i=1:l                                      % حلقه برا حرکت روی
     end
 end
 pic=uint8(pic);                                % تغییر می دهد uint8 نوع داده تصویر را به
-CurvaJV=figure('Name','Cropped Image');        % فیگور جدیدی برای نمایش تصویر جدید ایجاد میکند
+figure('Name','Cropped Image');        % فیگور جدیدی برای نمایش تصویر جدید ایجاد میکند
 imshow(pic)                                    % تصویر را نمایش می دهد
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2f41d1b4dcaf7e2e47a5336a258b560e66bca844/excersiecs/alirezachaji/9/Exce09.png)
