@@ -1,7 +1,12 @@
 
+> # Exercise 18
+> 
+***
+>CODE
+
+```ruby
 
 image=imread('C:\Users\as\Downloads\watch.png');
-
 
 ابتدا کانال های رنگی تصویر راجدا گرده
 
@@ -29,10 +34,11 @@ for j=333:694
             image(i,j,1:3) = 255;
        end
         end
-
-        
-     
-
     end
     
 imshow(image);
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
+
+
