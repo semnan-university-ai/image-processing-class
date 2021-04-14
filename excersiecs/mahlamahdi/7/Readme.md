@@ -4,9 +4,7 @@
 </div>
 
 <div dir="rtl">
-تصویر کوزه نصفه را خوانده </br>
-به صورت ردیف به ردیف شروع به ایجاد تصویر result می نمایید.</br>
-به این صورت که ابتدا مقدار x  و y را درج می نمایید سپس از آخرین پیکسل همان ردیف شروع شده و آن را در تصویر result قرار داده است.
+رسم مربع
 </br>
 
 </div>
@@ -14,16 +12,89 @@
 
 ````
 clc;
-close all;
 clear;
+close all;
 
-img=imread("kozeh.png");
-img = rgb2gray(img);
-for x=1:size(img,1)
-   for y=1:size(img,2)
-       result(x,y) = img(x,y);
-       result(x,size(img,2)+y)=img(x,size(img,2)-y+1);
-   end
+image=ones(500,500);
+
+
+size=200;
+start=[20,20];
+
+for x =0 : size
+    image(start(1),start(2)+x)=0;
+    image(start(1)+size,start(2)+x)=0;
+    image(start(1)+x,start(2))=0;
+    image(start(1)+x,start(2)+size)=0;
 end
-imshow(result);
+
+````
+<div dir="rtl">
+رسم مثلث
+</br>
+
+</div>
+ 
+```` 
+start=[250,100];
+size = 100;
+
+for x =0 : size
+    image(start(1),start(2)+x)=0;
+    image(start(1)+x,start(2))=0;
+end
+y=0;
+for x=0:size
+    image(start(1)+x,(start(2)+size)-y)=0;
+    y=y+1;
+end
+
+````
+<div dir="rtl">
+رسم مستطیل
+</br>
+
+</div>
+
+````
+size = 100;
+x_axis= 100;
+y_axis=150;
+start=[20,250];
+for x =0 : size
+    image(start(1),start(2)+x)=0;
+    image(start(1)+y_axis,start(2)+x)=0;
+    
+end
+size=150;
+start=[20,250];
+for x =0 : size
+    image(start(1)+x,start(2))=0;
+    image(start(1)+x,start(2)+x_axis)=0;
+   
+end
+
+````
+<div dir="rtl">
+رسم لوزی
+</br>
+
+</div>
+````
+size=50;
+start=[250,250];
+y=0;
+for x=0:size
+    image(start(1)+x,(start(2)+size)-y)=0;
+    image(start(1)+x,(start(2)+size)+y)=0;
+    y=y+1;
+end
+y=0;
+for x=0:size
+    image((start(1)+size)+x,(start(2)+2*size)-x)=0;
+   image((start(1)+size)+y,start(2)+x)=0;
+    y=y+1;
+  
+end
+   imshow(image)
 ````
