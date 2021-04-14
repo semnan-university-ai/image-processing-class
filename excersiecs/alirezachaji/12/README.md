@@ -72,7 +72,7 @@ end
 pic=uint8(pic);                                   % تبدیل میکند uint8 تصویر را به مد 
 subplot(1,2,2);imshow(pic);                       % تصویر نویزی شده را نمایش می دهد
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/93c12db2cfb86ef4cdafcc446aafe05d26bf73ea/excersiecs/alirezachaji/11/Exce11.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/6606dac982f26896f5093ad5dbcc0dda28d49371/excersiecs/alirezachaji/12/Exce12.png)
 ***
 <div dir="rtl">
 توضیحات کلی برنامه <br />
