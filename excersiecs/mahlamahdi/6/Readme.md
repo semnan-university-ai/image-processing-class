@@ -3,8 +3,8 @@
 </div>
 
 <div dir="rtl">
- </br>
-</br>
+ تصویر 300 در 300 ایجاد شده  و آن را تبدیل به uint8 می کنیم. </br>
+با استفاده از متغیر a اندازه راه راه بودن را مشخص می نماییم.</br>
 
 </br>
 
@@ -16,13 +16,12 @@ clc;
 close all;
 clear;
 
-img=imread("kozeh.png");
-img = rgb2gray(img);
-for x=1:size(img,1)
-   for y=1:size(img,2)
-       result(x,y) = img(x,y);
-       result(x,size(img,2)+y)=img(x,size(img,2)-y+1);
-   end
+img= zeros(300,300);
+img = uint8(img);
+[m , n ] = size(img);
+a =25;
+for i = 1:a:m
+       img(i:i+a,1:n)=i;
 end
-imshow(result);
+imshow(img);
 ````
