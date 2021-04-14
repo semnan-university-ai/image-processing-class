@@ -22,7 +22,7 @@
 
 
 </div>
-![عكس مستطيل]()
+![عكس مستطيل](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/7/7-3/Untitled.png)
 
 
 
