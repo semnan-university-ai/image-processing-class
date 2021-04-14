@@ -6,3 +6,6 @@
  
 
 </div>
+
+![عكس مربع](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/7/7-2/screen%207.2.png)
+
