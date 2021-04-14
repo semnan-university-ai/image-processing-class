@@ -7,14 +7,15 @@
 Main Program
 ```ruby
  
-close all
-clear all
-clc
-pepper_noise("benchmark\lena.png",10);
-pepper_noise("benchmark\cat.png",25);
-pepper_noise("benchmark\fruits.png",40);
-pepper_noise("benchmark\ball.png",50);
-pepper_noise("benchmark\monarch.png",70);
+close all          % تمام پنجره ها را می بندد
+clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
+clc                % كامند ويندو را پاك مي كند
+
+pepper_noise("benchmark\lena.png",10);             % یک عکس از تصاویر بنچمارک انتخاب و جهت اعمال نویز به میزان 10 درصد به تابع ارسال می گردد
+pepper_noise("benchmark\cat.png",25);              % یک عکس از تصاویر بنچمارک انتخاب و جهت اعمال نویزبه میزان 25 درصد به تابع ارسال می گردد
+pepper_noise("benchmark\fruits.png",40);           % یک عکس از تصاویر بنچمارک انتخاب و جهت اعمال نویز به میزان 40 درصد به تابع ارسال می گردد
+pepper_noise("benchmark\ball.png",50);             % یک عکس از تصاویر بنچمارک انتخاب و جهت اعمال نویز به میزان 50 درصد به تابع ارسال می گردد
+pepper_noise("benchmark\monarch.png",70);          % یک عکس از تصاویر بنچمارک انتخاب و جهت اعمال نویز به میزان 70 درصد به تابع ارسال می گردد
 ```
 Function
 ```ruby
@@ -23,23 +24,30 @@ Function
 %%%% This nunction get the address of an image and number of noise pixel%%%
 %%%%%%%%%%%%%%%%%%%%% and add noise on the Image %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function pic=pepper_noise(add,ps)
-pic=imread(add);
-figure;
-subplot(1,2,1);imshow(pic);
-n=size(pic);
-if (n(3)==3)
-    pic=rgb2gray(pic);
+function pic=pepper_noise(add,ps)                 % تابع اعمال نویز روی تصویر
+pic=imread(add);                                  % تصویر را با توجه به آدرس که به تابع داده شده است میخواند
+figure;                                           % یک فیگور جدید ایجاد میکند
+subplot(1,2,1);imshow(pic);                       % تصویر را نمایش می دهد
+n=size(pic);                                      % ابعاد تصویر را بدست می آورد
+if (n(3)==3)                                      % بررسی میکند تصویر رنگی است یا خیر
+    pic=rgb2gray(pic);                            % اگر رنگی بود آن را به خاکستری تبدیل میکند
 end 
-px=round((ps*n(1)*n(2))/100);
-for i=1:px
-    x=randi(n(1));
-    y=randi(n(2));
-    z=round(mod(randi(10),2));
-    pic(x,y)=z*255;
+px=round((ps*n(1)*n(2))/100);                     % با توجه به درصد مقدار پیکسل که باید نویزی شود را محاسبه میکند
+for i=1:px                                        % حلقه  به تعداد نویز ها
+    x=randi(n(1));                                % مختصات سطری رندم
+    y=randi(n(2));                                % مختصات ستونی رندم 
+    z=round(mod(randi(10),2));                    % به صورت رندم مشخص میکند پیکسل سیاه باشد یا سفید
+    pic(x,y)=z*255;                               % نویز را روی تصویر اعمال میکند
 end
-pic=uint8(pic);
-subplot(1,2,2);imshow(pic);
+pic=uint8(pic);                                   % تبدیل میکند uint8 تصویر را به مد 
+subplot(1,2,2);imshow(pic);                       % تصویر نویزی شده را نمایش می دهد
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/93c12db2cfb86ef4cdafcc446aafe05d26bf73ea/excersiecs/alirezachaji/11/Exce11.png)
 ***
+<div dir="rtl">
+توضیحات کلی برنامه <br />
+ در این برنامه چند تصویر از تصاویر بنچمارک را از ورودی میخوانیم و جهت اعمال نویز نمک فلفلی به تابع ارسال میکنیم
+ به همراه عکس مقدار درصدی که تصویر باید نویزی شود را نیز برای تابع ارسال میکنیم
+ بررسی میکنیم اگر تصویر رنگی بود آن را به خاکستری تبدیل می کنیم
+ و در نهایت تصویر نویزی شده را نمایش می دهیم
+</div>
