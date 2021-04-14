@@ -28,6 +28,8 @@ end
 imshow(image);
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/11/s%26p1.jpg)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/11/s%26p2.jpg)
 ***
+
 
     
