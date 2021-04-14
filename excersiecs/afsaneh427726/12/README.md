@@ -1,5 +1,5 @@
 
-> # Exercise 11
+> # Exercise 12
 > اعمال فیلتر میانه و میانگین بر روی تصویر دارای نویز فلفل نمکی
 ***
 >CODE
@@ -67,7 +67,12 @@ end
      end
  end
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+> فیلتر میانگین
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/12/mean.jpg)
+> فیلتر میانه
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/12/median.jpg)
 ***
 
 
