@@ -1,6 +1,10 @@
-
+> # Exercise 1
+ 
+***
+>CODE
+>
 مقدار طول و عرض و اندازه مربع ها رو از ورودی دریافت می کنیم
-
+***
 a=input('tool ra vared kon :   ')
 
 b=input('arz ra vared kon :   ')
@@ -37,6 +41,11 @@ end
     
 uint8(w);
  imshow(w)
+```
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/2/soal2.jpg)
+
+
  
  
  عکس موجود در فایل ها مربوط به طول 12 و عرض 10 و اندازه مربع 6 می باشد
