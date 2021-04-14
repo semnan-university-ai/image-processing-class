@@ -1,4 +1,13 @@
 
+> # Exercise 13
+> ایجاد نویز فلفل نمکی روی تصاویر خاکستری و بدست آوردن میانگین پیکسل ها
+***
+>CODE
+
+
+```ruby
+ 
+
 ابتدا تصویر خاکستری را نگاتیو کرده
 
 clc;
@@ -16,33 +25,23 @@ end
 
 v=2000;
 for n=1:4
-
-
-for m=1:v
-
-i=randi(a);
-
-j=randi(b);
-
-image(i,j)=0;
+ for m=1:v
+    i=randi(a);
+    j=randi(b);
+    image(i,j)=0;
 
 end
 
 for m=1:v
-
-i=randi(a);
-
-j=randi(b);
-
-image(i,j)=255;
+    i=randi(a);
+     j=randi(b);
+     image(i,j)=255;
 end
 v=v+2000;
 figure;
 imshow(image);
 r=sum(sum(image));
 average(n)=r/(a*b);
-end
-
 و در انتها مقدار میانگین پیکسل ها را نمایش می دهیم:
 disp('average pixels in noise 4000= ');
 disp(average(1));
@@ -52,10 +51,14 @@ disp('average pixels in noise 12000= ');
 disp(average(3));
 disp('average pixels in noise 18000= ');
 disp(average(4));
+end
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
 
-خروجی:
 
-average pixels in noise 4000= 
+> خروجی
+> average pixels in noise 4000= 
   125.3570
 
 average pixels in noise 8000= 
@@ -66,3 +69,9 @@ average pixels in noise 12000=
 
 average pixels in noise 18000= 
   125.8091
+>
+***
+
+
+
+
