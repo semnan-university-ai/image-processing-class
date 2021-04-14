@@ -1,4 +1,11 @@
-در ابتدا بر روی عکس نویز فلفل نمکی ایجاد می کنیم:
+
+> # Exercise 11
+> اعمال فیلتر میانه و میانگین بر روی تصویر دارای نویز فلفل نمکی
+***
+>CODE
+
+
+`در ابتدا بر روی عکس نویز فلفل نمکی ایجاد می کنیم:
 
 clc;
 clear data;
@@ -18,7 +25,7 @@ for m=1:3000
     image(i,j)=255;
 end
 
-سپس فیلتر میانگین راروی تصویر اعمال می کنیم(mean.jpg)
+سپس فیلتر میانگین راروی تصویر اعمال می کنیم
 
 %filter miangin
  for i=2:a-1
@@ -41,7 +48,7 @@ end
  img= uint8(img);
  imshow(img);
  
-سپس فیلتر میانه راروی تصویر اعمال می کنیم(median.jpg)
+سپس فیلتر میانه راروی تصویر اعمال می کنیم
 
   for i=2:a-1
      for j=2:b-1
@@ -59,3 +66,8 @@ end
          
      end
  end
+```
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
+***
+
+
