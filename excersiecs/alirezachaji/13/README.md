@@ -10,52 +10,52 @@ Main Program
 close all          % تمام پنجره ها را می بندد
 clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
 clc                % كامند ويندو را پاك مي كند
-t=zeros(10,6);
-for i=1:10
-    d=randi([10000,100000]);
-    figure;
-    A=func_13("benchmark\lena.png",d);
-    t(i,1)=i;
-    t(i,2)=d;
-    t(i,3:5)=A;
-    t(i,6)=round((A(1)+A(2)+A(3))/3);
+t=zeros(10,6);     % ماتریسی به ابعاد 10 در 6 برای ساخت جدول ایجاد میکند
+for i=1:10         % حلقه برای ایجاد 10 نویز متفاوت روی تصویر
+    d=randi([10000,100000]);   % عددی رندم بین 10000 تا 1000000 ایجاد میکند
+    figure;                    % یک فیگور جدید برای هر عکس ایجاد میکند
+    A=func_13("benchmark\lena.png",d);   % آدرس تصویر را به همراه میزان نویز به تابع ارسال می کند و تابع میانگین پیکسل های سه کانال رنگی را برمی گرداند
+    t(i,1)=i;         % ستون اول جدول را برابر شماره تصویر قرار می دهد
+    t(i,2)=d;         % ستون دوم جدول را برابر میزان نویز قرار می دهد
+    t(i,3:5)=A;       % سه ستون بعد را برابر میانگین پیکسل های سه کانال رنگ قرار میدهد
+    t(i,6)=round((A(1)+A(2)+A(3))/3); % ستون ششم را برابر میانگین سه کانال رنگی قرار می دهد
 end 
-T = array2table(t,'VariableNames', {'Item','Noise_size','Red_ave','Green_ave','Blue_ave','All_ave'})
-f=figure;
-h={'Item','Noise_size','Red_ave','Green_ave','Blue_ave','All_ave'};
+T = array2table(t,'VariableNames', {'Item','Noise_size','Red_ave','Green_ave','Blue_ave','All_ave'}) % تیتر های جدول را ایجاد میکند
+f=figure;                            % فیگور جدید برای رسم جدول ایجاد میکند
+h={'Item','Noise_size','Red_ave','Green_ave','Blue_ave','All_ave'}; % ستون های موجود در جدول درون فیگور را نامگذاری میکند
 
-f=figure;
-t=uitable(f,'data',t,'columnname',h);
+f=figure;                           % فیگور جدید ایجاد میکند
+t=uitable(f,'data',t,'columnname',h); % جدول را درون فیگور قرار می دهد
 ```
 Function
 ```ruby
-function ave=func_13(add,ps)
-pic=imread(add);
-subplot(1,3,1);imshow(pic);
-pic(:,:,:)=255-pic(:,:,:);
-subplot(1,3,2);imshow(pic);
-n=size(pic);
-ave=zeros(1,3);
-for i=1:ps
-    x=randi(n(1));
-    y=randi(n(2));
-    z=round(mod(randi(10),2));
-    pic(x,y,:)=z*255;
+function ave=func_13(add,ps)     % تابع جهت محاسبه میانگین پیکسل های سه کانال رنگی پس از اعمال نویز
+pic=imread(add);                 % تصویر را میخواند و در متغیر قرار می دهد
+subplot(1,3,1);imshow(pic);      % تصویر را نمایش می دهد
+pic(:,:,:)=255-pic(:,:,:);       % نگاتیو تصویر ورودی را بدست می آورد
+subplot(1,3,2);imshow(pic);      % تصویر نگاتیو شده را نمایش می دهد
+n=size(pic);                     % ابعاد تصویر را بدست می آورد
+ave=zeros(1,3);                  % ماتریسی 1 در 3 ایجاد میکند
+for i=1:ps                       % حلقه ای به تعداد نویزها ایجاد میکند
+    x=randi(n(1));               % مختصاتی تصادفی در محور عمودی تعیین میکند
+    y=randi(n(2));               % مختصاتی تصادفی در محور افقی تعیین میکند
+    z=round(mod(randi(10),2));   % مقدار رندم بین 0 و 1 ایجاد میکند
+    pic(x,y,:)=z*255;            % مقدار رندم  دستور بالا را به بازه 0 و 255 تبدیل کرده و درون تصویر اعمال میکند
 end
-s=0;
-for i=1:n(1)
-    for j=1:n(2)
-        for k=1:3
-            ave(k)=ave(k)+double(pic(i,j,k));
+s=0;                             % متغیر جهت محاسبه حاصل جمع
+for i=1:n(1)                     % حلقه جهت حرکت سطری روی تصویر
+    for j=1:n(2)                 % حلقه جهت حرکت ستونی روی تصویر
+        for k=1:3                % حلقه جهت حرکت روی سه کانال رنگ
+            ave(k)=ave(k)+double(pic(i,j,k)); % محاسبه مجموع مقادیر هر کانال رنگ
         end
     end
 end  
-ave=round(ave/(n(1)*n(2)));
-subplot(1,3,3);imshow(pic)   
+ave=round(ave/(n(1)*n(2)));      % محاسبه میانگین هر کانال رنگ
+subplot(1,3,3);imshow(pic)       % نمایش تصویر
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/5649db8aae407cfd267632b0a079cb165655db73/excersiecs/alirezachaji/13/Exce13.png)
 ***
 <div dir="rtl">
 توضیحات کلی برنامه <br />
- . 
+در این برنامه یکی از تصاویر بنچمارک خوانده شده و جهت اعمال نویز و تبدیل به نگاتیو به تابع ارسال می شود. سپس میانگین هر یک از کانال های رنگی محاسبه شده و به تابع اصلی ارسال می گردد. در تابع اصلی توسط این اطلاعات جدولی تهیه گردیده که هم به صورت فیگور و هم درون کامند ویندو نمایش داده می شود. 
 </div>
