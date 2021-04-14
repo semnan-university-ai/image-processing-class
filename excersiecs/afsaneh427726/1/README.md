@@ -45,7 +45,7 @@ uint8(w);
  imshow(w)
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/2/soal2.jpg)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/1/soal1.jpg)
 
 
  
