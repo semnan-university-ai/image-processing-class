@@ -26,17 +26,20 @@ Function
 function pic=pepper_noise(add,ps)
 pic=imread(add);
 figure;
-imshow(pic);
+subplot(1,2,1);imshow(pic);
 n=size(pic);
-for i=1:ps
+if (n(3)==3)
+    pic=rgb2gray(pic);
+end 
+px=round((ps*n(1)*n(2))/100);
+for i=1:px
     x=randi(n(1));
     y=randi(n(2));
     z=round(mod(randi(10),2));
-    pic(x,y,:)=z*255;
+    pic(x,y)=z*255;
 end
 pic=uint8(pic);
-figure;
-imshow(pic);
+subplot(1,2,2);imshow(pic);
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
 ***
