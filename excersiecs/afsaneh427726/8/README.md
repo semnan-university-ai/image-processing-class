@@ -6,11 +6,11 @@
 >CODE
 
 
-```ruby
-(rotate180.m)چرخش 180
+
+چرخش 180
 
 تک به تک پیکسل ها پیمایش شده وسطرها از بالا به صورت برعکس در سطرهای پایین کپی شده است
-
+```ruby
 
 a=imread('C:\Users\as\Downloads\zelda.png');
 c=imread('C:\Users\as\Downloads\zelda.png');
@@ -25,12 +25,12 @@ for i=1:b(1)
         
     end
 end
-
+```
 چرخش 90
 
 
 تک به تک پیکسل ها پیمایش شده وهرسطر در ستون متناظر با آن کپی شده است
-
+```ruby
 b=size(a)
 m=b(1);
 n=b(2);
@@ -43,11 +43,9 @@ for i=1:b(1)
     end
 end
 imshow(c)
-
+```
 چرخش 45و120
-clc;
-clear data;
-clear all;
+```ruby
 x=imread('C:\Users\as\Downloads\fruits.png');
 
 x=imresize(x,[200 200]);
