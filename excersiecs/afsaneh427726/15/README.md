@@ -1,6 +1,6 @@
 
 > # Exercise 15
-> Create salt pepper noise on several images without using MATLAB built-in commands. 
+> حذف توپ زرد 
 ***
 >CODE
 
