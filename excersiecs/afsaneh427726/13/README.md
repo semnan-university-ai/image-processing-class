@@ -53,11 +53,11 @@ disp('average pixels in noise 18000= ');
 disp(average(4));
 end
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2687c7cd96689152e04a67441b485851d3ee9add/excersiecs/alirezachaji/11/Exce11.1.png)
 ***
 
 
 > خروجی
+> 
 > average pixels in noise 4000= 
   125.3570
 
@@ -71,7 +71,20 @@ average pixels in noise 18000=
   125.8091
 >
 ***
+> 4000پیکسل
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/13/4000.jpg)
 
+> 8000پیکسل 
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/13/8000.jpg)
 
+> 12000پیکسل
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/13/12000.jpg)
+
+> 16000پیکسل
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/13/16000.jpg)
 
 
