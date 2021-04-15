@@ -98,6 +98,7 @@ subplot(2,2,1),imshow(img),title('Orginal');
 subplot(2,2,2),imshow(RHimg),title('R-Chanel');
 subplot(2,2,3),imshow(GHimg),title('G-Chanel');
 subplot(2,2,4),imshow(BHimg),title('B-Chanel');```
+```
 <div dir="rtl">
 تصویر خروجی:<br />
 </div>
