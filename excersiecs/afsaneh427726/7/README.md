@@ -9,16 +9,17 @@ clear data;
 clear all;
 ```
  <div dir="rtl">
-
+ 
 یک ماتریس 500*500مشکی در نظر میگیریم
  </div> 
+ 
 ```ruby
 w=zeros(500);
 
 ```
  <div dir="rtl">
 برای هرکدام ازشکل ها مقدار درایه های مربوطه را 1 میکنیم
- </div >
+ </div>
  % rectangle
 ```ruby
 
