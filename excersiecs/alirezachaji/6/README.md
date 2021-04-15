@@ -1,18 +1,19 @@
 > # Exercise 6
 > 6. Create a striped image that is completely black at the top and white at the bottom.
 ***
-***
 <div dir="rtl">
 توضیحات کلی برنامه <br />
  در این برنامه به دو صورت خروجی تهیه شده است یکی اینکه تصویر به مرور از سیاه به سفید تغییر کرده است و حالت دوم اینکه این تغییر به صورت پله ای بوده و خروجی شکل راه راه به خود گرفته است..
 </div>
 ***
->CODE
-
+<div dir="rtl">
+ توضیحات بخش های برنامه <br />
+</div>
+***
+<div dir="rtl">
+ این قسمت باعث بسته شدن تمام پنجره ها ، ریست شدن تمام متغیر ها و پاک شدن کامند ویندو می گردد <br />
+</div>
 ```ruby
-% For this exercise I programed for 2 different stripes image
-% 1St one pixels are from 1-255 with steps of 1
-% 2nd one pixels are from 1-255 with steps of 60
 close all          % تمام پنجره ها را می بندد
 clear all          % سيستم مموري و مقادير تمام متغير ها را پاك ميكند
 clc                % كامند ويندو را پاك مي كند
