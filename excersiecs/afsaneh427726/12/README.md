@@ -1,11 +1,14 @@
 
 > # Exercise 12
-> اعمال فیلتر میانه و میانگین بر روی تصویر دارای نویز فلفل نمکی
+>  <div dir="rtl">
+ اعمال فیلتر میانه و میانگین بر روی تصویر دارای نویز فلفل نمکی
 ***
+     </div>
 >CODE
-
-
+ <div dir="rtl">
 در ابتدا بر روی عکس نویز فلفل نمکی ایجاد می کنیم:
+     </div>
+
 ```ruby
 clc;
 clear data;
@@ -24,9 +27,11 @@ for m=1:3000
     image(i,j)=255;
 end
 ```
+ <div dir="rtl">
 سپس فیلتر میانگین راروی تصویر اعمال می کنیم
-
+ </div>
 filter miangin
+
 ```ruby
  for i=2:a-1
      for j=2:b-1
@@ -52,8 +57,10 @@ filter miangin
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/12/mean.jpg)
 
-
+ <div dir="rtl">
 سپس فیلتر میانه راروی تصویر اعمال می کنیم
+ </div>
+
 ```ruby
   for i=2:a-1
      for j=2:b-1
