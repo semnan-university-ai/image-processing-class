@@ -1,6 +1,13 @@
 <div dir="rtl">
-تمرین 6:<br/>
+###  تمرین6:<br/>
  </div>
+ 
+<div dir ="rtl">
+
+*   ابتدا عکس را می خوانیم.<br/>
+</div>
+ 
+ 
 ```
 clc;
 close all;
