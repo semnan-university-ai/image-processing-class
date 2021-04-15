@@ -18,5 +18,7 @@
 
 ![تصويز اصلي](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/12/street.jpg)
 
+
 خروجي تصوير </br>
+
 ![تصوير خروجي](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/12/khoroji%201.jpg)
