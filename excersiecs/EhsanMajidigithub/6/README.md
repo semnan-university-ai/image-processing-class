@@ -59,7 +59,7 @@ end
 تصویر خروجی:<br />
 </div>
 
-![Image of Yaktocat](result.png)
+![Image of Yaktocat](image1.png)
 
 ```
 
