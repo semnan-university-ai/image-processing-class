@@ -46,7 +46,7 @@ end
 
 
 pic=uint8(pic);   
-imshow(pic) 
+subplot(1,2,1);imshow(pic) 
 ```
 ***
 <div dir="rtl">
@@ -57,8 +57,7 @@ imshow(pic)
 </div>
 
 ```matlab
-
-figure;          
+ 
 d=0;
 for i=1:17         
     for j=1:60    
@@ -78,7 +77,7 @@ end
 ```matlab
 
 pic=uint8(pic);   
-imshow(pic)       
+subplot(1,2,2);imshow(pic)       
 
 ```
 ***
