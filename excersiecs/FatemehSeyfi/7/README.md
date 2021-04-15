@@ -40,21 +40,13 @@ fill(a, b, 'g')
 axis([0 100 0 100]);
 ```
 ****
-<div dir="rtl">
-مستطیل 
-</div>
+
 ![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/7/rectangle.png)
-<div dir="rtl">
-مربع 
-</div>
+
 ![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/7/square.png)
-<div dir="rtl">
-مثلث
-</div>
+
 ![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/7/triangle.png)
-<div dir="rtl">
-لوزی 
-</div>
+
 ![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/7/diamond.png)
 
 
