@@ -60,3 +60,4 @@ step=round(w/255);
 imshow(image);
 ````
 
+![Image of Yaktocat](result.jpg)
