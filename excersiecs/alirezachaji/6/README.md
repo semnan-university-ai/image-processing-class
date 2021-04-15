@@ -1,6 +1,12 @@
 > # Exercise 6
 > 6. Create a striped image that is completely black at the top and white at the bottom.
 ***
+***
+<div dir="rtl">
+توضیحات کلی برنامه <br />
+ در این برنامه به دو صورت خروجی تهیه شده است یکی اینکه تصویر به مرور از سیاه به سفید تغییر کرده است و حالت دوم اینکه این تغییر به صورت پله ای بوده و خروجی شکل راه راه به خود گرفته است..
+</div>
+***
 >CODE
 
 ```ruby
@@ -30,10 +36,6 @@ imshow(pic)        % تصوير راه راه دوم را نمايش مي دهد
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
-***
-<div dir="rtl">
-توضیحات کلی برنامه <br />
- در این برنامه به دو صورت خروجی تهیه شده است یکی اینکه تصویر به مرور از سیاه به سفید تغییر کرده است و حالت دوم اینکه این تغییر به صورت پله ای بوده و خروجی شکل راه راه به خود گرفته است..
-</div>
+
 
 
