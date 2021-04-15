@@ -47,6 +47,7 @@ figure,imshow(cropPic);
 ````
 
 ![Image of Yaktocat](result.jpg)
+![Image of Yaktocat](fruits.png)
 
 ````
 clc;
