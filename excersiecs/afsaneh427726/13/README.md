@@ -7,8 +7,10 @@
 
 
  
-
+ <div dir="rtl">
 ابتدا تصویر خاکستری را نگاتیو کرده
+ </div>
+
 ```ruby
 clc;
 clear data;
@@ -21,7 +23,11 @@ for i=1:a
     end 
 end
 ```
+
+ <div dir="rtl">
 سپس با 4 عدد مختلف نویز فلفل نمکی را اعمال کرده و تصاویر را نمایش می دهیم و میانگین پیکسلهای آن را محاسبه می کنیم:
+ </div>
+
 ```ruby
 v=2000;
 for n=1:4
@@ -43,7 +49,10 @@ imshow(image);
 r=sum(sum(image));
 average(n)=r/(a*b);
 ```
+ <div dir="rtl">
 و در انتها مقدار میانگین پیکسل ها را نمایش می دهیم:
+ </div>
+
 ```ruby
 disp('average pixels in noise 4000= ');
 disp(average(1));
@@ -57,9 +66,9 @@ end
 ```
 ***
 
-
-> خروجی
-> 
+ <div dir="rtl">
+ خروجی
+  </div>
 > average pixels in noise 4000= 
   125.3570
 
