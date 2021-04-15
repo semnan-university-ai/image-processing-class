@@ -1,5 +1,5 @@
 clc;clear;close all;
-imagepad=imread("../../../benchmark/cat.png");
+imagepad=imread("../../../benchmark/pool.png");
 imagepad=rgb2gray(imagepad);
 imagerot=zeros(size(imagepad),"uint8");
 %midpoints
