@@ -32,13 +32,17 @@ pic=zeros(1020,1000);
 for i=1:1020
     pic(i,1:1000)=floor(i/4);
 end
+
 ```
 <div dir="rtl">
 
 در این بخش مد تصویر را به اینتجر 8 بیتی تبدیل کرده و سپس آن را نمایش می دهد
-```
 
 </div>
+
+```matlab
+
+
 
 pic=uint8(pic);   
 imshow(pic) 
@@ -47,9 +51,10 @@ imshow(pic)
 
 در قسمت بعد تصویری تولید می کند که سطح خاکستری آن به صورتی مضربی از 15 می باشد به این معنی که تصویر بیشتر حالت راه راه به خود گرفته
 و تمایز به اختلاف سطح خاکستری هر بخش قابل مشاهده تر می باشد
-```
 
 </div>
+
+```matlab
 
 figure;          
 d=0;
@@ -58,17 +63,21 @@ for i=1:17
        d=d+1;     
        pic(d,1:1000)=(i*15); 
     end
-end    
+end  
+
 ```
+
 <div dir="rtl">
 
 در این بخش مد تصویر را به اینتجر 8 بیتی تبدیل کرده و سپس آن را نمایش می دهد
-```
 
 </div>
 
-pic=uint8(pic);    % تبدیل میکند uint8 تصویر را به مد مورد
-imshow(pic)        % تصوير راه راه دوم را نمايش مي دهد
+```matlab
+
+pic=uint8(pic);   
+imshow(pic)       
+
 ```
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
