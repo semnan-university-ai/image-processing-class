@@ -1,7 +1,16 @@
-> # Exercise 7
-> 7. Draw geometric shapes of squares, rectangles, rhombuses, triangles without MATLAB functions.
+<div dir="rtl">
+ 
+#### تمرین 7
+#### اشکال هندسی مربع، مستطیل، لوزی، مثلث را بدون توابع متلب رسم کنید. <br />
+
 ***
->CODE
+6
+### توضیحات کلی برنامه:
+
+ در این برنامه تعدادی اشکال هندسی در یک تصویر خام 1500 در 1500 پیکسلی رسم شده است برای چند ضلعی ها از تابع نوشته شده جهت رسم خط که مختصات دو نقطه آن را می گیرد استفاده شده است و برای رسم دایره از برنامه نوشته شده در تمرین 2 استفاده شده است 
+
+### توضیحات بخش های برنامه
+***
  Main Program
 ```ruby
 % Depending on the specifications of your computer, running this program
