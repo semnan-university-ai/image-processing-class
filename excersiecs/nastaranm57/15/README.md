@@ -10,13 +10,13 @@
 ![voroodi](pool.png)
 
 ```
-a=imread('C:\Users\PC\Desktop\pool.png');   % وارد کردن تصویر ورودی
-b=rgb2gray(a);  % تبدیل آن به تصویر خاکستری
-mask=roipoly(b); % ساخت ماسک با استفاده از تابع roipoly
-imshow(mask);
-j=regionfill(b,mask);
+a=imread('C:\Users\PC\Desktop\pool.png');            % وارد کردن تصویر ورودی
+b=rgb2gray(a);                                       % تبدیل آن به تصویر خاکستری
+mask=roipoly(b);                                     % ساخت ماسک با استفاده از تابع 
+imshow(mask);                                        % نمایش ماسک
+j=regionfill(b,mask);                                % قرار دادن تصویری که با استفاده از ماسک، پوشش داده شده در یک متغیر دیگر
 figure;
-imshow(j);
+imshow(j);                                           %  نمایش تصویر خروجی
 ```
 
 <div dir="rtl">
