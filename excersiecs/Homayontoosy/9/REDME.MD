@@ -7,7 +7,7 @@
   </div>
   
   
-  تصوير اصلي 
+ 
   
   ![تصوير اصلي]('https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/9/joje.jpg')
 
