@@ -43,7 +43,7 @@ img=imread("../../../benchmark/watch.png");
 
 ---
 2. <br/>
--lمتغیر حالت رنگ  <br />
+-متغیر حالت رنگ ابی و قرمز و سبز<br />
 </div>
 
 ```matlab
