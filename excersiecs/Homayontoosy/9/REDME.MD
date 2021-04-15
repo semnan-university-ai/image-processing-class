@@ -4,7 +4,6 @@
   
   </div>
   
-    
-  ![تصوير خروجي]('https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/9/khoroji%20tasvir.png')
 
 
+![تصوير خروجي]("https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/9/khoroji%20tasvir.png")
