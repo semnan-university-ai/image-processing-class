@@ -81,7 +81,7 @@ subplot(1,2,2);imshow(pic)
 
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/04b40e8847f7822b00b798e35bd8f57e93c324cd/excersiecs/alirezachaji/6/Exce06.png)
 
 
 
