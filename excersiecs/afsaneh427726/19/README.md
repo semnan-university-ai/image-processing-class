@@ -3,12 +3,12 @@
 ***
 
 
-
+>CODE
  <div dir="rtl">
 فایل عکس های حروف رامیخوانیم و سایز آن را 200*200می کنیم
  </div>
 
->CODE
+
 ```ruby
 a=imread('C:\Users\as\Desktop\?????? ???? ???????\a.png');
 a=im2bw(a,0.001);
