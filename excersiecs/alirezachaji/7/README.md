@@ -53,10 +53,15 @@ pic=draw_line(pic,xpos,ypos,xpos+w,ypos);
 pic=draw_line(pic,xpos,ypos+l,xpos+w,ypos+l);
 
 ```
-
 ***
-
-                                          % رسم مربع نيز كاملا مشابه مستطيل بوده و مستطيلي كه طول و عرض آن با هم برابر است
+<div dir="rtl">
+ 
+ در اين قسمت برنامه مربعی در نقطه شروع 100 و 650 به طول 200 و عرض 200 پيكسل رسم ميكند
+ 
+ </div>
+ 
+ ```matlab
+                                          
 % Draw a Square in pos xpos and ypos :
 xpos=100;
 ypos=650;
@@ -66,10 +71,21 @@ pic=draw_line(pic,xpos+l,ypos,xpos+l,ypos+l);
 pic=draw_line(pic,xpos,ypos,xpos+l,ypos);
 pic=draw_line(pic,xpos,ypos+l,xpos+l,ypos+l);
 
-%Draw a line                % رسم میکند P2 و P1 اين قسمت خط راستي بين نقاط
+```
+***
+<div dir="rtl">
+ 
+در این بخش توسط تابع رسم خط که در ادامه برنامه توضیح داده شده است خطی بین دو نقطه مشخص شده در برنامه رسم می کند
+ </div>
+ 
+ ```matlab
+              
 p1=[400 1000];
 p2=[100 1400];
-pic=draw_line(pic,p1(1),p1(2),p2(1),p2(2));   %  استفاده شده است به این صورت که مختصات نقطه اول و دوم را گرفته و خط را رسم میکند draw_line برای رسم خط بین 2 نقطه از تابع
+pic=draw_line(pic,p1(1),p1(2),p2(1),p2(2));   
+
+```
+***
 
 % Draw a triangle when we have 3 corners position  توسط سه نقطه داده شده که سه راس مثلث هستند و به کمک تابع فوق الذکر مثلث را رسم می کند
 p1=[800 100]
