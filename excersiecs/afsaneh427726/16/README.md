@@ -2,20 +2,30 @@
 > # Exercise 16
 > حذف چشم های تصویر
 ***
->CODE
 
 
 
+ <div dir="rtl">
 تصویر را از ورودی می خوانیم
+ </div>
+ 
+ >CODE
+
 ```ruby  
 
 a=imread('C:\Users\as\Downloads\zelda.png');
 ```
+ <div dir="rtl">
 مختصات چشم هارا با استفاده از دستور زیر پیدا می کنیم
+ </div>
+
 ```ruby
   imtool(a)
   ```
+   <div dir="rtl">
   در مختصات داده شده رنگ های چشم ها را به 130 و140 تغییر می دهیم.
+  </div>
+ 
  ```ruby 
 for i=1:383
     for j=1:510
