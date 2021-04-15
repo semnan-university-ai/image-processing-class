@@ -33,7 +33,6 @@ subplot(1,2,2),imshow(imgout);
 
 1. <br/>
 - لود تصویر رنگی در متغیر img <br/>
-- تبدیل آن به تصویر safe color <br/>
 </div>
 
 ```matlab
