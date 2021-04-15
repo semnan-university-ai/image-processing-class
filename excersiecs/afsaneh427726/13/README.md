@@ -69,7 +69,7 @@ end
  <div dir="rtl">
  خروجی
   </div>
-> average pixels in noise 4000= 
+average pixels in noise 4000= 
   125.3570
 
 average pixels in noise 8000= 
