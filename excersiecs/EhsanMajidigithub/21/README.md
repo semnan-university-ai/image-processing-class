@@ -79,4 +79,4 @@ imshow(imgsc);
 تصویر خروجی:<br />
 </div>
 
-![Image of Yaktocat](image.jpg)
+![Image of Yaktocat](untitled.jpg)
