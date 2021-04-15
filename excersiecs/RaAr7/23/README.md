@@ -1,11 +1,11 @@
-## تمرین 3
+## تمرین 23
 <div dir='rtl'>
 تصویر را از ورودی میخوانیم و قسمت های قرمز و سبز و آبی را به صورت جداگانه به تابع p3_histogram میدهیم تا هیستوگرام را برای آنها به صورت جداگانه محاسبه کند و سپس برای مقادیر برگشتی از تابع هیستوگرام نمودار رسم میکنیم.
 </div>
 </br>
 
 ```
-image = imread("../../benchmark/airplane.png");
+image = imread("../benchmark/airplane.png");
 
 r = p3_histogram(image(:,:,1));
 g = p3_histogram(image(:,:,2));
@@ -23,7 +23,7 @@ title('B Component');
 ```
 
 <div dir='rtl'>
-تابع p3_histogram:
+تابع p23_histogram:
 </div>
 </br>
 
@@ -48,4 +48,4 @@ end
 </div>
 </br>
 
-![](p3.png)
+![](p23.png)

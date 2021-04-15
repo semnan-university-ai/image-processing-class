@@ -1,12 +1,12 @@
-## تمرین 4
+## تمرین 24
 <div dir='rtl'>
 تصاویر را از ورودی خوانده و سایز تصاویر را ذخیره میکنیم و سپس مولفه R تصاویر را در متغیر های جداگانه قرار میدهیم.
 </div>
 </br>
 
 ```
-image_watch = imread("../../benchmark/watch.png");
-image_pool = imread("../../benchmark/pool.png");
+image_watch = imread("../benchmark/watch.png");
+image_pool = imread("../benchmark/pool.png");
 
 [x,y,z] = size(image_watch);
 [s,t,u] = size(image_pool);
@@ -37,4 +37,4 @@ imshow(image_pool);
 </div>
 </br>
 
-![](p4.png)
+![](p24.png)

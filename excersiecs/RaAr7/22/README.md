@@ -1,11 +1,11 @@
-## تمرین 2
+## تمرین 22
 <div dir='rtl'>
 تصویر را از ورودی خوانده و سایز تصویر را در x و y ذخیره میکنیم و در subplot تصویر اولیه را نمایش میدهیم.
 </div>
 </br>
 
 ```
-image = imread("../../benchmark/pool.png");
+image = imread("../benchmark/pool.png");
 [x,y] = size(image);
 
 subplot(1,2,1)
@@ -33,4 +33,4 @@ title('After');
 </div>
 </br>
 
-![](p2.png)
+![](p22.png)

@@ -1,11 +1,11 @@
-## تمرین 1
+## تمرین 21
 <div dir='rtl'>
 تصویر را از ورودی خوانده و سایز تصویر را در x و y ذخیره میکنیم و پیکسل های تصویر را به ضریب 51 تبدیل میکنیم.
 </div>
 </br>
 
 ```
-image = imread("../../benchmark/pool.png");
+image = imread("../benchmark/pool.png");
 [x,y] = size(image);
 image = (image/51);
 ```
@@ -32,4 +32,4 @@ imshow(image);
 </div>
 </br>
 
-![](p1.png)
+![](p21.png)

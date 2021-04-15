@@ -2,11 +2,11 @@ close all
 clear all
 clc
 
-image = imread("../../benchmark/airplane.png");
+image = imread("../benchmark/airplane.png");
 
-r = p3_histogram(image(:,:,1));
-g = p3_histogram(image(:,:,2));
-b = p3_histogram(image(:,:,3));
+r = p23_histogram(image(:,:,1));
+g = p23_histogram(image(:,:,2));
+b = p23_histogram(image(:,:,3));
 
 subplot(3,1,1)
 plot(r);
