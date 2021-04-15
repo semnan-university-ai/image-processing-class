@@ -1,6 +1,6 @@
 
 > # Exercise 12
->  <div dir="rtl">
+  <div dir="rtl">
  اعمال فیلتر میانه و میانگین بر روی تصویر دارای نویز فلفل نمکی
 ***
      </div>
@@ -53,13 +53,13 @@ filter miangin
  img= uint8(img);
  imshow(img);
  ```
- > فیلتر میانگین
-***
+
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/12/mean.jpg)
 
  <div dir="rtl">
 سپس فیلتر میانه راروی تصویر اعمال می کنیم
  </div>
+filter median
 
 ```ruby
   for i=2:a-1
@@ -80,9 +80,9 @@ filter miangin
  end
 ```
 
-> فیلتر میانه
-***
+
+
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/12/median.jpg)
-***
+
 
 
