@@ -112,4 +112,4 @@ end
 تصویر خروجی:<br />
 </div>
 
-![Image of Yaktocat](result.jpg)
+![Image of Yaktocat](image.jpg)
