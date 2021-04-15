@@ -29,20 +29,33 @@ clc
  
  ```matlab
  
-pic=zeros(1500,1500);  % تصويري خام به ابعاد 1500 در 1500 پيكسل ايجاد ميكند
+pic=zeros(1500,1500);  
 
 ```
-
-% Draw a Rectangle in pos xpos and ypos :   % در اين قسمت برنامه مستطيلي در نقطه شروع 100 و 150 به طول 300 و عرض 200 پيكسل رسم ميكند
+***
+<div dir="rtl">
+ 
+ در اين قسمت برنامه مستطيلي در نقطه شروع 100 و 150 به طول 300 و عرض 200 پيكسل رسم ميكند
+ 
+ </div>
+ 
+ ```matlab
+ 
+% Draw a Rectangle in pos xpos and ypos :    
 xpos=100;
 ypos=150;
 l=300;
 w=200;
-                                          % چهار سطر زير هر كدام يكي از اضلاع مستطيل را رسم ميكند
+                                         
 pic=draw_line(pic,xpos,ypos,xpos,(ypos+l));
 pic=draw_line(pic,xpos+w,ypos,xpos+w,ypos+l);
 pic=draw_line(pic,xpos,ypos,xpos+w,ypos);
 pic=draw_line(pic,xpos,ypos+l,xpos+w,ypos+l);
+
+```
+
+***
+
                                           % رسم مربع نيز كاملا مشابه مستطيل بوده و مستطيلي كه طول و عرض آن با هم برابر است
 % Draw a Square in pos xpos and ypos :
 xpos=100;
