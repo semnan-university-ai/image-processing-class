@@ -124,7 +124,7 @@ T = array2table(A,...
     'VariableNames',{'main_image','salt','mean','middle'})
 
 ```
-![alt text]()
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/12/Screenshot%20(32).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
