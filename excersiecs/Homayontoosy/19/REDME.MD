@@ -11,3 +11,6 @@
   
  
   </div>
+
+
+![خروجي تمرين](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/19/output%20tamrin19.png)
