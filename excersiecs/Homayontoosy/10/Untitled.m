@@ -1,4 +1,9 @@
-captcha = zeros(25 , 100);
+
+close all
+clear
+clc
+ 
+ captcha = zeros(25 , 100);
 cut = 1;
 for i = 1 : 4
     Possibility = randi([0 9]);
