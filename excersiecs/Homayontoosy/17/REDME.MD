@@ -6,4 +6,5 @@
 
 </br>
 
-[خروجي تصويرithub.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/17/Untitled.png)
+
+![خروجي تصوير](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/17/Untitled.png)
