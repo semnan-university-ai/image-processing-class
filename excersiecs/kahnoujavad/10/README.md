@@ -8,7 +8,7 @@ ahvaz<br />
 kerman<br />
 shiraz<br />
 </ div>
-~~~clc;
+```clc;
    clear all;
    close all;
-~~~
+```
