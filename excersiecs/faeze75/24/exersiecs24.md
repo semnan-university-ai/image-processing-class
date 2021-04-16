@@ -19,7 +19,7 @@ image2(:, :,1)=r;
 figure, imshow(image);             % نمایش تصاویر
 figure, imshow(image2);
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/upload/main/excersiecs/faeze75/24)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/24/Screenshot%20(35).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
