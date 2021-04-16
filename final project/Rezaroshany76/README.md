@@ -9,7 +9,7 @@ image processing class - 992
 
 ### Student Info :
 
-- Full name : َAlireza Karami
-- github id : alireza_k74
-- Email : alirezakaram.k74@gmail.com
-- Type : majazi
+- Full name : --
+- github id : --
+- Email : --
+- Type : --
