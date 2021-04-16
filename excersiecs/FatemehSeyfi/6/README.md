@@ -16,7 +16,7 @@ imageColumns = 512; % Whatever...
 % imageColumns =input("please enter Columns:");
 oneLine=ones(stripeWidth,imageColumns);
 wholeImage=repmat( [oneLine;0*oneLine], imageRows/(2*stripeWidth),1);
-
+wholeImage=imrotate(wholeImage,180);
 imshow(wholeImage)
 ```
 ****
@@ -27,6 +27,6 @@ imshow(wholeImage)
 
 <div dir="rtl">
 <h2>توضیحات برنامه</h2> <br />
- <b></b>یک تصویر سیاه و سفید راه راه  به صورت افقی به ضخامت 2  و سایز آن  512*512 با  استفاده از تابع repmat ساخته شد.   <br />
+ <b></b>یک تصویر   راه راه سیاه ،سفید که از بالا صفحه سیاه و  پایین صفحه سفید به صورت افقی به ضخامت 2  و سایز آن  512*512 با  استفاده از تابع repmat ساخته شد.   <br />
 
 </div>
