@@ -2,13 +2,20 @@ clc;
 close all;
 clear all;
 
-pictures =dir('b/*.jpg');
+pictures=dir('Test/*.jpg');
 
-for k =1:9
-        pic=imageList(k).name;
+for k =1:12
+        pic=pictures(k).name;
         image=imread(pic);
         image=rgb2gray(image);
-        subplot(6,2,k)
+        subplot(3,4,k)
         imhist(image);
+
+    
         
 end
+
+
+
+ 
+ 
