@@ -8,5 +8,6 @@ imageColumns = 512; % Whatever...
 % imageColumns =input("please enter Columns:");
 oneLine=ones(stripeWidth,imageColumns);
 wholeImage=repmat( [oneLine;0*oneLine], imageRows/(2*stripeWidth),1);
+wholeImage=imrotate(wholeImage,180);
 
 imshow(wholeImage)
