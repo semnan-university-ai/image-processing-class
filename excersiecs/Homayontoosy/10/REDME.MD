@@ -10,4 +10,6 @@
 </div>
 
 
+![خروجي تمرين 10](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/10/output%20tamrin%2010.png)
+
 
