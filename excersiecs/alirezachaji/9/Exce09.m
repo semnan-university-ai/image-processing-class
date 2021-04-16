@@ -16,5 +16,5 @@ for i=1:l
     end
 end
 pic=uint8(pic);
-CurvaJV=figure('Name','Cropped Image');
+figure('Name','Cropped Image');
 imshow(pic)

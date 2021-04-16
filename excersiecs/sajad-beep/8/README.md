@@ -1,0 +1,48 @@
+~~~
+clc;
+clear;
+img=imread('C:\Users\SajadEd\Documents\GitHub\image-processing-class\benchmark\airplane.png'); 
+
+[rowsi,colsi,z]= size(img); 
+
+angle=180;
+
+rads=2*pi*angle/360;  
+
+%calculating array dimesions such that  rotated image gets fit in it exactly.
+% we are using absolute so that we get  positve value in any case ie.,any quadrant.
+
+rowsf=ceil(rowsi*abs(cos(rads))+colsi*abs(sin(rads)));                      
+colsf=ceil(rowsi*abs(sin(rads))+colsi*abs(cos(rads)));                     
+
+% define an array withcalculated dimensionsand fill the array  with zeros ie.,black
+C=uint8(zeros([rowsf colsf 3 ]));
+
+%calculating center of original and final image
+xo=ceil(rowsi/2);                                                            
+yo=ceil(colsi/2);
+
+midx=ceil((size(C,1))/2);
+midy=ceil((size(C,2))/2);
+
+% in this loop we calculate corresponding coordinates of pixel of A 
+% for each pixel of C, and its intensity will be  assigned after checking
+% weather it lie in the bound of A (original image)
+for i=1:size(C,1)
+    for j=1:size(C,2)                                                       
+
+         x= (i-midx)*cos(rads)+(j-midy)*sin(rads);                                       
+         y= -(i-midx)*sin(rads)+(j-midy)*cos(rads);                             
+         x=round(x)+xo;
+         y=round(y)+yo;
+
+         if (x>=1 && y>=1 && x<=size(img,1) &&  y<=size(img,2) ) 
+              C(i,j,:)=img(x,y,:);  
+         end
+
+    end
+end
+
+imshow(C);
+~~~
+![camelCase](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/sajad-beep/8/%D8%AE%D8%B1%D9%88%D8%AC%DB%8C%20%D8%AA%D9%85%D8%B1%DB%8C%D9%86%208.PNG)

@@ -2,7 +2,7 @@ clc;
 close all;
 clear all;
 r = 50;
-t = 2 % threshhold
+t = 2; % threshhold
 p = [250 250];
 image = zeros(500,500);
 image1 = zeros(500,500);
@@ -48,13 +48,13 @@ end
 
 figure,
 imshow(image);
-imsave
+%imsave
 figure,
 imshow(image1);
-imsave
+%imsave
 figure,
 imshow(image2);
-imsave
+%imsave
 figure,
 imshow(image3);
-imsave
+%imsave

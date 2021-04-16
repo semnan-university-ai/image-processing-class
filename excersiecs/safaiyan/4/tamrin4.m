@@ -2,20 +2,34 @@ clc;
 close all;
 clear;
 
-imgpath ="../../../benchmark/";
-img = ones(500, 500, 3,'uint8');
-pngfiles =dir(imgpath+'*.png');
-tiffiles =dir(char(imgpath+'*.tif'));
-bmpfiles = dir(imgpath+"*.bmp");
-imagefiles = [pngfiles;tiffiles;bmpfiles];
-for ii=1:25
-   currentimg = imread(imgpath+imagefiles(ii).name);
-   [sx,sy,sz]=size(currentimg);
-   imgcut=currentimg(sx-100:sx,sy-100:sy,:);
-   if sz==1
-       imgcut=cat(3,imgcut,imgcut,imgcut);
-   end
-   mo=mod(ii-1,5)*100;di=fix((ii-1)/5)*100;
-   img(di+1:di+101,mo+1:mo+101,:)=imgcut(1:101,1:101,:);
+imgdir = 'C:\Users\Nakisa™\Documents\GitHub\image-processing-class\benchmark';
+imginfo = dir(fullfile(imgdir));
+imginfo([imginfo.isdir]) = []; 
+n = length(imginfo);
+img = uint8(ones(500 , 500));
+i = 1;
+j = 1;
+for s = 1 : 25 
+    filename = fullfile(imgdir, imginfo(s).name);
+    input = imread(filename);
+    if size(input , 3 ) == 3 
+        image = rgb2gray(input);
+    else 
+        image = input;
+    end
+    
+    row = size(image , 1); 
+    col = size(image , 2);
+    start_i = row - 100 + 1;
+    start_j = col - 100 + 1;
+    
+    cut = image(start_i : end , start_j : end);
+    img(i : i + 100  - 1 , j : j + 100 - 1) = cut;
+    
+    j = j + 100;
+    if j == 501
+        i = i + 100;
+        j = 1;
+    end
 end
 imshow(img);

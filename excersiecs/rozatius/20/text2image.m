@@ -1,34 +1,58 @@
-clc;close all;clear;
-polyline=0;
-img=zeros(400,'uint8');
-dd=[polyline,50,50,100,50,100,100,50,100,50,50,... %spure
-    polyline,50,200,100,250,100,150,50,200,...   %triangle
-    polyline,50,300,50,350,150,350,150,300,50,300,... %rectangle
-    polyline,200,100,250,150,300,100,250,50,200,100]; %Diamond
-l=length(dd)-2;k=1;
-while (k < l)
-    if (dd(k)==0) k=k+1; end
-    if (dd(k+2)==0) k=k+3; end
-    
-    x0=dd(k);y0=dd(k+1);x1=dd(k+2);y1=dd(k+3);
-    if( x0 == x1 ) img(x0,y0:y1); end %Draw vertical line
-    %Simplified Bresenham algorithm
-    dx = abs(x1-x0);
-    dy = abs(y1-y0);
- 
-    if(x0 < x1) sx = 1;else sx = -1; end
-    if(y0 < y1) sy = 1;else sy = -1; end
- 
-    err = dx - dy;
-    x= x0;y = y0;
- 
-    while(true)
-        img(x,y)=255; %setPixel
-        if( x == x1 )&&( y == y1) break; end
-        e2 = 2*err;
-        if( e2 > -dy ) err = err - dy; x = x + sx; end
-        if( e2 <  dx ) err = err + dx; y = y + sy; end
-    end 
-    k=k+2;
+clc;clear;close all;
+imgout= imread("../../../benchmark/boat.png");
+
+
+dd=[-973,-83,120.... %A
+    911,95,10,-930,-120,26,911,146,10,-892,-120,26,855,147,50....%M
+    -818,-115,35,782,147,50,804,189,6,776,189,6....%I
+    -748,-115,35,-748,-180,35,712,212,38....%R
+    -618,-115,35,-618,-180,35,582,212,38....%R
+    511,95,10,-530,-120,26,511,146,10,-492,-120,26,-530,-180,35,496,212,38....%O
+    400,95,50,-442,-120,26,400,146,50,-358,-120,26,338,147,10,-320,-127,15,294,147,30,402,53,6....%Z
+    -263,-83,100....%A
+    -222,-120,26,188,147,40,226,53,6,200,53,6....%T
+    -156,-120,26,124,95,40,-92,-116,20,112,138,15,-130,-164,26,74,188,85,-22,-147,50]; %I
+
+for nn=1:3
+    if nn==1
+        XX=50;YY=10;scale=2;C=0;
+    end
+    if nn==2
+        XX=320;YY=10;scale=5;C=255;
+    end
+    if nn==3
+        XX=400;YY=10;scale=2.5;C=255;
+    end
+    th=fix(8/scale);
+    l=length(dd);k=1;    
+    while (k <= l)
+        Y=fix(dd(k)/scale);
+        X=fix(dd(k+1)/scale);
+        D=fix((dd(k+2)/2)/scale);
+
+        if X>0 && Y>0  %horizontal
+            y0=YY+Y-D;
+            y1=YY+Y+D;
+            x=XX+X;
+            for i=1:th
+                imgout(x-(th-i):x+(th-i),y1+i)=C;
+                imgout(x-(th-i):x+(th-i),y0-i)=C;
+            end
+            imgout(x-th:x+th,y0:y1)=C;
+        end
+        if X<0 && Y<0   %vertical
+            x0=XX+((X+D)*(-1));
+            x1=XX+((X-D)*(-1));
+            y=YY+(-1*Y);
+            %x=x*(-1);y=y*(-1);
+            for j=1:th
+                imgout(x1+j,y-(th-j):y+(th-j))=C;
+                imgout(x0-j,y-(th-j):y+(th-j))=C;
+            end
+            imgout(x0:x1,y-th:y+th)=C;
+        end
+        k=k+3;
+    end
 end
-imshow(img);
+imwrite(imgout,"result.png");
+imshow(imgout);    

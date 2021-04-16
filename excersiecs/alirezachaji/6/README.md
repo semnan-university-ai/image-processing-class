@@ -1,32 +1,87 @@
-> # Exercise 6
-> 6. Create a striped image that is completely black at the top and white at the bottom.
+<div dir="rtl">
+ 
+#### تمرین 6
+#### یک تصویر راه راه بسازید که از سمت بالا سیاه کامل و پایین آن سفید باشد. <br />
 ***
->CODE
+### توضیحات کلی برنامه:
+ در این برنامه به دو صورت خروجی تهیه شده است یکی اینکه تصویر به مرور از سیاه به سفید تغییر کرده است و حالت دوم اینکه این تغییر به صورت پله ای بوده و خروجی شکل راه راه به خود گرفته است..
+ 
+### توضیحات بخش های برنامه
+***
 
-```ruby
-% For this exercise I programed for 2 different stripes image
-% 1St one pixels are from 1-255 with steps of 1
-% 2nd one pixels are from 1-255 with steps of 60
-close all
-clear all
-clc
-pic=zeros(1020,1000);
-for i=1:1020
-    pic(i,1:1000)=ceil(i/4)+10;
-end
+ این قسمت باعث بسته شدن تمام پنجره ها ، ریست شدن تمام متغیر ها و پاک شدن کامند ویندو می گردد <br />
+</div>
 
-pic=uint8(pic);
-imshow(pic)
-figure;
-d=0;
-for i=1:17
-    for j=1:60
-       d=d+1; 
-       pic(d,1:1000)=(i*15); 
-    end
-end    
-pic=uint8(pic);
-imshow(pic)
+``` matlab
+
+close all;         
+clear all;         
+clc;    
+
 ```
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/1f0ddad82bcb7784f43b0e724afda66e05c0bb43/excersiecs/alirezachaji/6/Exce06.png)
+<div dir="rtl">
+
+در این بخش تصویر خامی با ابعاد 1020 در 1000  ایجاد میکند و هر 4 پیکسل را به ترتیب از 1 تا 255 مقدار دهی میکند
+این کار باعث ایجاد تصویر راه راهی می شود که رنگ آن از مشکی کامل تا سفید کامل و هر 4 پیکسل یک سطح خاکستری را دارد
+</div>
+
+``` matlab
+
+pic=zeros(1020,1000);  
+for i=1:1020
+    pic(i,1:1000)=floor(i/4);
+end
+
+```
+***
+<div dir="rtl">
+
+در این بخش مد تصویر را به اینتجر 8 بیتی تبدیل کرده و سپس آن را نمایش می دهد
+
+</div>
+
+```matlab
+
+
+
+pic=uint8(pic);   
+subplot(1,2,1);imshow(pic) 
+```
+***
+<div dir="rtl">
+
+در قسمت بعد تصویری تولید می کند که سطح خاکستری آن به صورتی مضربی از 15 می باشد به این معنی که تصویر بیشتر حالت راه راه به خود گرفته
+و تمایز و اختلاف سطح خاکستری هر بخش قابل مشاهده تر می باشد
+
+</div>
+
+```matlab
+ 
+d=0;
+for i=1:17         
+    for j=1:60    
+       d=d+1;     
+       pic(d,1:1000)=(i*15); 
+    end
+end  
+
+```
+***
+<div dir="rtl">
+
+در این بخش مد تصویر را به اینتجر 8 بیتی تبدیل کرده تا قابلیت نمایش داشته باشد و سپس آن را نمایش می دهد
+
+</div>
+
+```matlab
+
+pic=uint8(pic);   
+subplot(1,2,2);imshow(pic)       
+
+```
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/04b40e8847f7822b00b798e35bd8f57e93c324cd/excersiecs/alirezachaji/6/Exce06.png)
+
+
+

@@ -1,16 +1,16 @@
 clc;clear;close all;
 img=rgb2gray(imread("../../../benchmark/cat.png"));
+subplot(1,4,1),imshow(img),title('Orginal');
 [m, n] = size(img);
  
-for i=1:30000
+for i=1:100000
     X=randi([1,m]);
     Y=randi([1,n]);
     img(X,Y)=randi([0,1])*255;
 end
-figure;
-imshow(img);
-A = im2double(img);
+subplot(1,4,2),imshow(img),title('Add noise');
 
+A = im2double(img);
 M = [];
 %Median filter 
 for i=2:m-1
@@ -26,8 +26,7 @@ for i=2:m-1
             A(i,j) = median(M);
     end
 end 
-figure;
-imshow(A);
+subplot(1,4,3),imshow(A),title('Add Median filter');
 %Mean filter 
 B = im2double(img);
 for i=2:m-1
@@ -43,5 +42,4 @@ for i=2:m-1
             B(i,j) = mean(M);
     end
 end 
-figure;
-imshow(B);
+subplot(1,4,4),imshow(B),title('Add Mean filter ');

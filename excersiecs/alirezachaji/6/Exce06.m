@@ -6,12 +6,11 @@ clear all
 clc
 pic=zeros(1020,1000);
 for i=1:1020
-    pic(i,1:1000)=ceil(i/4)+10;
+    pic(i,1:1000)=floor(i/4);
 end
 
 pic=uint8(pic);
-imshow(pic)
-figure;
+subplot(1,2,1);imshow(pic)
 d=0;
 for i=1:17
     for j=1:60
@@ -20,7 +19,7 @@ for i=1:17
     end
 end    
 pic=uint8(pic);
-imshow(pic)
+subplot(1,2,2);imshow(pic)
 
     
     
