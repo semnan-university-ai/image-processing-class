@@ -4,12 +4,12 @@
 >CODE
 
 ```ruby
-% ImagesList = dir('city\*.png');
+% ImagesList = dir('city\*.png');   %فولدر تصاویر را میخواند 
 %  for i=1:12
-%       name{i}=ImagesList(i).name;
-%       name{i}=imread(name{i});
-%       name{i}=rgb2gray(name{i});
-%       x=imhist(name{i});
+%       name{i}=ImagesList(i).name; %نام تصاویر را جدا میکند
+%       name{i}=imread(name{i}); % تصاویر را فراخوانی می‌کند 
+%       name{i}=rgb2gray(name{i}); % تصاویر را خاکستری میکند
+%       x=imhist(name{i}) ; %هیستوگرام تصاویر را رسم میکنند 
 %       subplot(4,3,i)
 %  end
 
