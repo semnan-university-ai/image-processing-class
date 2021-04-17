@@ -66,4 +66,4 @@ end
 subplot(1,2,1),imshow(image);
 subplot(1,2,2),imshow(Crop);
   ````
-![image](assets/result.png)
+![خروجی](assets/result.jpg)
