@@ -2,7 +2,6 @@ close all
 clear all
 clc
 a=imread("benchmark\lena.png");
-a=uint8(a);
 imshow(a);
 n=size(a);
 l=input("Enter length of cropping area: ");
