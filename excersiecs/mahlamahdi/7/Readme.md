@@ -87,5 +87,5 @@ imshow(image);
 
 ````
 
-![image](image-processing-class/excersiecs/mahlamahdi/7/assets/result.jpg)
+![خروجی](image-processing-class/excersiecs/mahlamahdi/7/assets/result.jpg)
 
