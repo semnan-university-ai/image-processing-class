@@ -56,7 +56,14 @@ for i=1: x
         Crop(i,j)=image(startx+i,starty+j);
     end
 end
+````
 
+<div dir = "rtl">
+  نمایش دادن تصویر 
+</div>
+
+````
 subplot(1,2,1),imshow(image);
 subplot(1,2,2),imshow(Crop);
   ````
+
