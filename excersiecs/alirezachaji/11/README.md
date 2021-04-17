@@ -85,6 +85,7 @@ end
 pic=uint8(pic);                                  
 subplot(1,2,2);imshow(pic);                    
 ```
+***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/93c12db2cfb86ef4cdafcc446aafe05d26bf73ea/excersiecs/alirezachaji/11/Exce11.png)
 ***
 
