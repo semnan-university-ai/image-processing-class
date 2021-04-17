@@ -48,19 +48,19 @@ n=size(a);
 
 ```matlab
 
-l=input("Enter length of cropping area: ");    % طول قسمتی که قرار است کراپ شود را از کاربر دریافت میکند
-w=input("Enter width of cropping area: ");     % عرض قسمتی که قرار است کراپ شود را از کاربر دریافت میکند
-x=ceil((n(1)-l)/2);                            % چون قرار است از وسط تصویر کراپ شود لذا طول تقسیم بر 2 نموده و رند میکند 
-y=ceil((n(2)-w)/2);                            % چون قرار است از وسط تصویر کراپ شود لذا عرض تقسیم بر 2 نموده و رند میکند
-pic=zeros(l,w);                                % تصویر خام جدید به ابعاد وارد شده توسط کاربر ایجاد میکند
-for i=1:l                                      % حلقه برا حرکت روی پیکسل های سطری
-    for j=1:w                                  % حلقه برای حرکت روی پیکسل های ستونی
-        pic(i,j,1:n(3))=a(x+i,y+j,1:n(3));     % قسمت مورد نظر کراپ را از تصویر اصلی کپی کرده و روی تصویر خام قرار می دهد
+l=input("Enter length of cropping area: ");     
+w=input("Enter width of cropping area: ");      
+x=ceil((n(1)-l)/2);                              
+y=ceil((n(2)-w)/2);                              
+pic=zeros(l,w);                                
+for i=1:l                                      
+    for j=1:w                                  
+        pic(i,j,1:n(3))=a(x+i,y+j,1:n(3));      
     end
 end
-pic=uint8(pic);                                % تغییر می دهد uint8 نوع داده تصویر را به
-figure('Name','Cropped Image');        % فیگور جدیدی برای نمایش تصویر جدید ایجاد میکند
-imshow(pic)                                    % تصویر را نمایش می دهد
+pic=uint8(pic);                                
+figure('Name','Cropped Image');        
+imshow(pic)                                    
 ```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/2f41d1b4dcaf7e2e47a5336a258b560e66bca844/excersiecs/alirezachaji/9/Exce09.png)
 ***
