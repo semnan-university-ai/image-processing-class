@@ -5,5 +5,8 @@
   
   </div>
   
+  هيستوگرام يك تصوير 12 تايي 
   
   
+  
+![هيستوگرام تصوير ](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/14/output%20tamrin%2014%20histogram.png)
