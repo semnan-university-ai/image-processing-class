@@ -48,4 +48,4 @@ pic=im2bw(pic);
 imshow(pic)
 ````
 
-![خروجی](assets/result.jpg)
+![خروجی](assets/Capture.JPG)
