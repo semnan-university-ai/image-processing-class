@@ -28,9 +28,12 @@ clc
 <div dir="rtl">
  
   در این قسمت چند عدد از تصاویر بنچمارک انتخاب گردیده و جهت اعمال نویز نمک فلفلی به تابع مربوطه که در ادامه توضیح داده شده است ارسال می گردد. خاطر نشان می سازد یکی از پارامترهای ورودی این تابع میزان درصد نویز اعمالی می باشد که عددی بین 0 تا 100 می باشد.
- 
- ***
+
  </div>
+ 
+```matlab
+
+
 
 pepper_noise("benchmark\lena.png",10);          
 pepper_noise("benchmark\cat.png",25);           
@@ -38,31 +41,51 @@ pepper_noise("benchmark\fruits.png",40);
 pepper_noise("benchmark\ball.png",50);            
 pepper_noise("benchmark\monarch.png",70);         
 ```
-Function
-```ruby
+***
+<div dir="rtl">
+ 
+بخش بعد مربوط به تابع اعمال نویز نمک فلفلی روی تصویر می باشد
+در ابتدا تصویر ورودی خوانده شده و در متغیر ذخیره می گردد سپس بررسی می شود اگر تصویر رنگی بود آن را به خاکستری تبدیل می کند و همچنین محاسبه می کند که با توجه به ابعاد تصویر متناسب با درصد خواسته شده چند پیکسل باید نویزی شوند
+
+ </div>
+ 
+```matlab
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%% Pepper_noise Function %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% This nunction get the address of an image and number of noise pixel%%%
 %%%%%%%%%%%%%%%%%%%%% and add noise on the Image %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function pic=pepper_noise(add,ps)                 % تابع اعمال نویز روی تصویر
-pic=imread(add);                                  % تصویر را با توجه به آدرس که به تابع داده شده است میخواند
-figure;                                           % یک فیگور جدید ایجاد میکند
-subplot(1,2,1);imshow(pic);                       % تصویر را نمایش می دهد
-n=size(pic);                                      % ابعاد تصویر را بدست می آورد
-if (n(3)==3)                                      % بررسی میکند تصویر رنگی است یا خیر
-    pic=rgb2gray(pic);                            % اگر رنگی بود آن را به خاکستری تبدیل میکند
+function pic=pepper_noise(add,ps)                
+pic=imread(add);                                
+figure;                                          
+subplot(1,2,1);imshow(pic);                     
+n=size(pic);                                    
+if (n(3)==3)                                    
+    pic=rgb2gray(pic);                          
 end 
-px=round((ps*n(1)*n(2))/100);                     % با توجه به درصد مقدار پیکسل که باید نویزی شود را محاسبه میکند
-for i=1:px                                        % حلقه  به تعداد نویز ها
-    x=randi(n(1));                                % مختصات سطری رندم
-    y=randi(n(2));                                % مختصات ستونی رندم 
-    z=round(mod(randi(10),2));                    % به صورت رندم مشخص میکند پیکسل سیاه باشد یا سفید
-    pic(x,y)=z*255;                               % نویز را روی تصویر اعمال میکند
-end
-pic=uint8(pic);                                   % تبدیل میکند uint8 تصویر را به مد 
-subplot(1,2,2);imshow(pic);                       % تصویر نویزی شده را نمایش می دهد
+px=round((ps*n(1)*n(2))/100);                   
 ```
+***
+<div dir="rtl">
+ 
+در این حلقه تکراری به تعداد پیکسل هایی که باید نویزی شوند وجود دارد که به ازای هر پیکسل مقدار رندمی بین 0 و 255 را به آن پیکسل اختصاص می دهد و در نهایت نیز
+نویزهای را روی تصویر اصلی اعمال کرده و نتیجه را نمایش می دهد
+
+ </div>
+ 
+```matlab
+
+for i=1:px                                      
+    x=randi(n(1));                               
+    y=randi(n(2));                                
+    z=round(mod(randi(10),2));                 
+    pic(x,y)=z*255;                           
+end
+pic=uint8(pic);                                  
+subplot(1,2,2);imshow(pic);                    
+```
+***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/93c12db2cfb86ef4cdafcc446aafe05d26bf73ea/excersiecs/alirezachaji/11/Exce11.png)
 ***
 

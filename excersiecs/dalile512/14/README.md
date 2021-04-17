@@ -86,14 +86,46 @@ out=![out](te14.JPG )
 
 <div dir ="rtl">
 
-*   این خروجی ، مربوط به 12 تصویر در پوشه Test می باشد: <br/>
+###  این خروجی ، مربوط به 12 تصویر در پوشه Test می باشد: <br/>
 
 </div>
 
 
-out=![out](tt14bJPG.JPG )
+<div dir ="rtl">
+
+*   تصاویراصلی: <br/>
+
+</div>
 
 
+
+
+
+
+
+
+
+out=![out](ttt14a.JPG )
+
+<div dir ="rtl">
+
+*   تصاویر خاکستری: <br/>
+
+</div>
+
+out=![out](ttt14b.JPG )
+
+
+
+
+<div dir ="rtl">
+
+*   هیستوگرام : <br/>
+
+</div>
+
+
+out=![out](ttt14c.JPG )
 
 
 
