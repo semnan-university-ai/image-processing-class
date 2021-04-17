@@ -101,6 +101,7 @@ end
 ave=round(ave/(n(1)*n(2)));   
 subplot(1,3,3);imshow(pic)    
 ```
+***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/5649db8aae407cfd267632b0a079cb165655db73/excersiecs/alirezachaji/13/Exce13.png)
 ***
 
