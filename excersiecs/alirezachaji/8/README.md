@@ -84,20 +84,27 @@ image_rotate(a,180);
  </div>
  ***
  
+ در بخش اول پس از تعریف تابع ابعاد تصویر را محاسبه ورودی را بدست آورده و با استفاده از روابط مثلثاتی ابعاد تصویر جدید بعد از دوران را محاسبه می کند
+ همچنین با توجه به اینکه تصویر حول مرکز دوران می کند مختصات نقطه وسط تصویر را نیز بدست می آورد
+ </div>
+ 
  ```matlab
 
 
 image_rotate Function 
 ``` ruby
-function pic=image_rotate(pic,angel)                  % تابع چرخش تصویر به ازای درجه مشخص
-n=size(pic);                                          % سایز تصویر را بدست می آورد
-v=deg2rad(angel);                                     % مقدار درجه را به رادیان تبدیل میکند
-r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));            % تعداد پیکسل تصویر جدید در سطر را محاسبه میکند                    
-c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));            % تعداد پیکسل تصویر جدید در ستون را محاسبه میکند             
-pic2=zeros(r,c,n(3));                                 % تصویر خامی باابعاد بدست آمده در بالا ایجاد میکند
-pic2=uint8(pic2);                                     % تغییر می دهد uint8 نوع داده تصویر را به
-midx=ceil((size(pic2,1))/2);                          % مختصات مرکز تصویر در حالت سطری را بدست می آورد
-midy=ceil((size(pic2,2))/2);                          % مختصات مرکز تصویر در حالت ستونی را بدست می آورد
+function pic=image_rotate(pic,angel)                 
+n=size(pic);                                         
+v=deg2rad(angel);                                    
+r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));                                
+c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));                         
+pic2=zeros(r,c,n(3));                                
+pic2=uint8(pic2);                                     
+midx=ceil((size(pic2,1))/2);                        
+midy=ceil((size(pic2,2))/2);                          
+```
+***
+
 for i=1:size(pic2,1)                                  % حلقه جهت حرکت در پیکسل های سطری 
     for j=1:size(pic2,2)                              % حلقه جهت حرکت در پیکسل های ستونی                        
          xx= round((i-midx)*cos(v)+(j-midy)*sin(v)+ceil(n(1)/2));  % مختصات ستونی جدید تصویر دوران یافته را بدست می آورد                                      
