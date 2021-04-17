@@ -1,68 +1,30 @@
+
 clc;
 clear;
 close all;
+image=uint8(zeros(500,500));
 
-image=ones(500,500);
+image (20:220 , 20 : 220) = 255;
 
-%Square
-size=200;
-start=[20,20];
+image (20: 150 , 230 : 470) = 255;
 
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+size,start(2)+x)=0;
-    image(start(1)+x,start(2))=0;
-    image(start(1)+x,start(2)+size)=0;
+size = 200;
+for i =250 : 250+size
+    for j = 250:i
+        image(i,j-220) = 255;
+    end
 end
 
-size=200;
-start=[20,20];
-
-
-
-start=[250,100];
+start=[300,300];
 size = 100;
-
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+x,start(2))=0;
+y =0;
+image(start(1),start(2)) = 255;
+for i =1 : 50
+       image(start(1)-i:start(1)+i,start(2)+y) = 255;
+       y= y+1;
 end
-y=0;
-for x=0:size
-    image(start(1)+x,(start(2)+size)-y)=0;
-    y=y+1;
+for i =50 : -1:1
+       image(start(1)-i:start(1)+i,start(2)+y) = 255;
+       y= y+1;
 end
 imshow(image);
-
-x_axis= 100;
-y_axis=150;
-start=[20,250];
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+y_axis,start(2)+x)=0;
-    
-end
-size=150;
-start=[20,250];
-for x =0 : size
-    image(start(1)+x,start(2))=0;
-    image(start(1)+x,start(2)+x_axis)=0;
-   
-end
-
-size=50;
-start=[250,250];
-y=0;
-for x=0:size
-    image(start(1)+x,(start(2)+size)-y)=0;
-    image(start(1)+x,(start(2)+size)+y)=0;
-    y=y+1;
-end
-y=0;
-for x=0:size
-    image((start(1)+size)+x,(start(2)+2*size)-x)=0;
-   image((start(1)+size)+y,start(2)+x)=0;
-    y=y+1;
-  
-end
-   imshow(image)
