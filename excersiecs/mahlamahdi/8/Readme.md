@@ -101,4 +101,5 @@ subplot(2,4,5:6), imshow(img);
 subplot(2,4,7:8), imshow(img1);
 ````
 
+![خروجی](assets/result.jpg)
 
