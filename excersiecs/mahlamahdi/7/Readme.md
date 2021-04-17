@@ -86,3 +86,6 @@ imshow(image);
 
 
 ````
+<div>
+![خروجی تصویر:](result.JPG)
+</div>
