@@ -86,6 +86,6 @@ imshow(image);
 
 
 ````
-<div>
+
 ![image](/assets/result.jpg)
-</div>
+
