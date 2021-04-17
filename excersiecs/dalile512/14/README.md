@@ -105,7 +105,7 @@ out=![out](te14.JPG )
 
 
 
-out=![out](tt14a.JPG )
+out=![out](ttt14a.JPG )
 
 <div dir ="rtl">
 
@@ -113,7 +113,9 @@ out=![out](tt14a.JPG )
 
 </div>
 
-out=![out](tt14b.JPG )
+out=![out](ttt14b.JPG )
+
+
 
 
 <div dir ="rtl">
@@ -123,7 +125,7 @@ out=![out](tt14b.JPG )
 </div>
 
 
-out=![out](tt14c.JPG )
+out=![out](ttt14c.JPG )
 
 
 
