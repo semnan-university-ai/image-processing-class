@@ -87,5 +87,5 @@ imshow(image);
 
 ````
 <div>
-![7](result.jpg)
+![out](result.jpg)
 </div>
