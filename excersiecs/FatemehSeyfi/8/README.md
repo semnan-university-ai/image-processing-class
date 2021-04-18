@@ -121,7 +121,8 @@ title( ' 120 degrees')
 
 ```
 ****
-![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/8/q8 _120%2645 .png)
+
+![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/8/q8%20_120%2645%20.png)
 ![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/8/q8_180%2690.png)
 
 
