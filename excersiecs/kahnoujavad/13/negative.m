@@ -1,43 +1,23 @@
 clc;
 clear all;
 close all;
-a=[0,20000,20000,20000,20000,20000];
+image = imread('../../../benchmark/lena.png');
+imgray=rgb2gray(image);
+[x,y] = size(imgray);
 
-image = imread("D:/image-processing-class/benchmark/lena.png");
-image = rgb2gray(image);
-[r,c,d] = size(image);
-image(:,:,:)=255-image(:,:,:);
-
-n=length(a);
-Avg=zeros(n,1);
-rnames = strings(1,n);
-for n = 1:n
-    sum=0;
-    for i=1:a(n)
-        X=randi([1,r]);
-        Y=randi([1,c]);
-        image(X,Y,:)=randi([0,1])*255;
+for i=1:x
+    for j=1:y
+        imgray(i,j) = 255 - imgray(i,j);
     end
-    
-
-    avg=mean(image(:));
-    
-    for i=1:r
-        for j=1:c
-            sum=sum+double(image(i,j));
-        end
-    end
-    avgm=sum/(r*c);
-    Avg(n,1) = avgm;
-    rnames(1,n)=strcat('image',int2str(n));
-    subplot(2,fix((n+1)/2),n),imshow(image),title(rnames(n));
+end
+s=1;
+for i=.1:.1:.8
+   image2 = imnoise(imgray,"salt & pepper",i);
+   avg = mean(image2(:));
+   subplot(2,4,s);
+   imshow(image2);
+   title(avg);
+   s=s+1;
 end
 
-figure;
-cnames = {'average all pixel'};
 
-
-t = uitable('Data',Avg,...
-            'ColumnName',cnames,... 
-            'RowName',rnames,...
-            'ColumnWidth',{150});
