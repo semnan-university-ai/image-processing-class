@@ -43,4 +43,31 @@ for i=1:12
         subplot(1,2,1);imshow(pic2);title("Image "+int2str(i));
         subplot(1,2,2);bar(ans);title("Histogram "+int2str(i));
        
-end  
+end 
+
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.1.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.2.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.3.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.4.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.5.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.6.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.7.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.8.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.9.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.10.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.11.png)
+***
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.12.png)
+***
+
