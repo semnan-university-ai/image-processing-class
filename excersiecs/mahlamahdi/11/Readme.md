@@ -51,3 +51,4 @@ subplot(2,3,i+3), imshow(a);
 end
 ````
 
+![خروجی](assets/result.jpg)
