@@ -47,7 +47,7 @@ end
 ```
 
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/998f833daa7df3e463dc2ff389eecca480a4ea1f/excersiecs/alirezachaji/14/Exce14.1.png
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/998f833daa7df3e463dc2ff389eecca480a4ea1f/excersiecs/alirezachaji/14/Exce14.1.png)
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.2.png)
 ***
