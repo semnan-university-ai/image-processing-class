@@ -46,7 +46,8 @@ for i=1:12
 end 
 
 ***
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.1.png)
+![alt text]((https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.1.png)
+
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/31284691b001dd7603f747b4d6921506f9eed342/excersiecs/alirezachaji/14/Exce14.2.png)
 ***
