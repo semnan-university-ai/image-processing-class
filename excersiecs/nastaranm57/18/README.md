@@ -5,7 +5,8 @@
 </div>
 
 ```
-a = imread('C:\Users\PC\Desktop\watch.png');
+addpath("../../../benchmark/");
+a = imread("watch.png");
 [rows, columns, numberOfColorChannels] = size(a);
 imshow(a, []);
 axis on;
@@ -63,7 +64,8 @@ title('تصویر تغییر یافته', 'FontSize', 15);
 </div>
 
 ```
-image = imread('C:\Users\PC\Desktop\watch.png');
+addpath("../../../benchmark/");
+image=imread("watch.png");
 subplot(1,2,1)
 imshow(image);
 title 'tasvire asli'
