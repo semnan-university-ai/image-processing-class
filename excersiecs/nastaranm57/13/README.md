@@ -19,7 +19,7 @@
 </div>
 
 ```
-input_im = imread('C:\Users\PC\Desktop\jd.png');
+input_im = imread('.\jd.png');
 ```
 
 <div dir="rtl">
