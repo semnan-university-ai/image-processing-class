@@ -26,7 +26,7 @@ image=im2bw(image);
 imshow(image)
 ```
 ****
-![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/10/10.png)
+![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/10/q10.png)
 
 
 
