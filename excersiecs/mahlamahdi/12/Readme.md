@@ -55,6 +55,7 @@ image_result1=image_result;
  
    در ایتدا 9 همسایه را در متغیر m  قرار می دهیم 
 </div>
+
 ````
 for i = 2 : m-1
     for j = 2 : n-1
@@ -62,6 +63,7 @@ for i = 2 : m-1
         m(4:6) = image_result(i,j-1:j+1);
         m(7:9)=image_result(i+1,j-1:j+1);
 ````
+
 <div dir = "rtl">
  
 میانگین 9 همسایه را حساب کرده و جایگزین پیکسل می نمایم.
@@ -74,16 +76,19 @@ for i = 2 : m-1
         temp = round ((p1+p2+p3)/9);
         image_result(i-1,j-1) = uint8(temp);
 ````
+
 <div dir = "rtl">
  
 9 همسایه را مرتب نموده و عنصر 5 را جایگزین پیکسل می نماییم
 </div>
+
 ````
 S = sort(m);
         image_result1(i-1,j-1) = S(5);
     end
 end
 ````
+
 <div dir = "rtl">
  
 بدست آوردن میانگین پیکس ها و نمایش خروجی
