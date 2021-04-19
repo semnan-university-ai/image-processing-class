@@ -1,6 +1,7 @@
 clc;
 clear;
-x=imread('C:\Users\PC\Desktop\8.jpg');
+addpath("../../../benchmark/");
+x=imread("lena.png");
 x=imresize(x,[200 200]);
 x3=double(x);
 degree=input('daraje ra vared konid');
