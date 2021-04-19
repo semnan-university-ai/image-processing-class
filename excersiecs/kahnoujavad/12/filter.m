@@ -9,12 +9,7 @@ for i=1:30000
     Y=randi([1,b]);
     image(X,Y)=randi([0,1])*255;
 end
-<<<<<<< Updated upstream
 subplot(2,2,2),imshow(image),title("noise image");
-=======
-figure;
-imshow(image),title("midlee noise");
->>>>>>> Stashed changes
 x = im2double(image);
 k = [];
 for i=2:a-1
