@@ -1,4 +1,5 @@
-image =imread('C:\Users\PC\Desktop\pool.png');
+addpath("../../../benchmark/");
+image =imread("pool.png");
 subplot(1,2,1) 
 imshow(image);
 title 'tasvire asli'
