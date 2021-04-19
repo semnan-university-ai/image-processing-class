@@ -1,4 +1,5 @@
-image = imread('C:\Users\PC\Desktop\watch.png');
+addpath("../../../benchmark/");
+image=imread("mountain.png");
 subplot(1,2,1)
 imshow(image);
 title 'tasvire asli'
