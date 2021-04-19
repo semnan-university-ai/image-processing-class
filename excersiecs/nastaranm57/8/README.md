@@ -18,7 +18,7 @@
 clc;
 clear;
 addpath("../../../benchmark/");
-x=imread('lena.png');
+x=imread("lena.png");
 ```
 
 <div dir="rtl">
