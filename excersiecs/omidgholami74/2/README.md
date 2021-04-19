@@ -8,15 +8,15 @@ clc;
 close all;
 clear all;
 
-A=zeros(1000,1000);
-r =input('shoaa ra vared konid='); %radius
+A=zeros(1000,1000); % .ابتدا یک ماتریس 1000 در 1000 شامل صفر میکشیم به عنوان پس زمینه ی تصویر
+r =input('shoaa ra vared konid='); %radius % سپس شعاغ و مرکز دایره را از کاربر دریافت میکنیم
 x=input('x markaze dayere ra vared konid=');
 y=input('y markaze dayere ra vared konid=');
-centeral = {x,y}; %midpoint
-A(centeral{:})=1;
+centeral = {x,y}; %midpoint % 
+A(centeral{:})=1; % با استفاده از دستور centeral وسط مختصات را پیدا میکنیم به عنوان مرکز دایره
 
-B = bwdist(A) <= r ;
-imshow(B)
+B = bwdist(A) <= r ; % .سپس تمامی المان های درون آرایه که فاصله شعاعی آنها از مرکز کمتر از شعاع وارد
+imshow(B) % سپس تصویر را به نمایش می گذاریم
 ```
 ***
 ![image](https://user-images.githubusercontent.com/48456571/113269772-0a714800-92ee-11eb-8d1d-34d49831e35b.png)
