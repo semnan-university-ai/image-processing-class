@@ -1,4 +1,4 @@
-keanu=imread("excersiecs\nastaranm57\9\9.jpg");
+keanu=imread("./9.jpg");
 disp('tul va raze tasvir ra baraye crop moshakhas konid:');
 row_start=input('crop az che arzi shoroo shavad?');
 row_end=input('crop dar che arzi tamam shavad?');
