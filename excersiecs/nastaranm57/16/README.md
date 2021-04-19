@@ -5,7 +5,8 @@
 </div>
 
 ```
-a=imread('C:\Users\PC\Desktop\zelda.png');       % تصویر را درون متغیر قرار می دهیم   
+addpath("../../../benchmark/");
+a=imread("zelda.png");                           % تصویر را درون متغیر قرار می دهیم   
 mask=roipoly(a);                                 % برای یکی از چشمان تصویر، یک ماسک درست می کنیم
 imshow(mask);                                    % ماسک را نمایش می دهیم
 j=regionfill(a,mask);                            % درون ماسک را با رنگ اطرافش پوشش می دهیم و تصویر جدید را درون متغیر دیگری قرار می دهیم
@@ -33,7 +34,8 @@ imshow(k);                                       % تصویر نهایی را ن
 ![khorooji](02682.jpg)
 
 ```
-image =imread('C:\Users\PC\Desktop\zelda.png');                                  % تصویر را از آدرس مورد نظر خوانده و درون یک متغیر قرار می دهیم
+addpath("../../../benchmark/");
+image =imread("zelda.png");                                                      % تصویر را از آدرس مورد نظر خوانده و درون یک متغیر قرار می دهیم
 subplot(1,2,1)
 imshow(image);                                                                   % تصویر اصلی را با عنوان خودش، در سمت چپ تصویر خروجی نمایش می دهیم
 title 'tasvire asli'
