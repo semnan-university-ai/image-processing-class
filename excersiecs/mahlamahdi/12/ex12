@@ -3,7 +3,7 @@ clear;
 close all;
 
 
-image = imread('airplane.png');
+image = imread('../../../airplane.png');
 im = rgb2gray(image);
 [m,n]=size(im); 
 
