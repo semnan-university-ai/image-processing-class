@@ -1,4 +1,5 @@
-a=imread('C:\Users\PC\Desktop\pool.png');
+addpath("../../../benchmark/");
+a=imread("pool.png");
 b=rgb2gray(a);
 mask=roipoly(b);
 imshow(mask);
