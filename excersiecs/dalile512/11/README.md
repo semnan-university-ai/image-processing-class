@@ -2,7 +2,7 @@
 <div dir ="rtl">
 
 تمرین 11:<br/>
-ابتدا تصویر را می خوانیم.<br/>
+* ابتدا تصویر را می خوانیم.<br/>
 
 </div>
 
@@ -17,7 +17,7 @@ img_with_noise=rgb2gray(image);
 
 <div dir ="rtl">
 
- حال به صورت رندوم ،نقاط نویز را ایجاد می کند.<br/>
+ * حال به صورت رندوم ،نقاط نویز را ایجاد می کند.<br/>
 
 </div>
 
@@ -33,7 +33,7 @@ img_with_noise(x>=255-2)=255;
 <div dir ="rtl">
 
 
-نمایش  تصویر : <br/>
+* نمایش  تصویر : <br/>
 
 </div>
 
@@ -46,14 +46,15 @@ subplot(1,2,2);imshow(image);title('Orginal image','Color','blue');
 
 <div dir ="rtl">
 
- نمایش تصویر نویز فلفلی و تصویر اصلی:<br/>
+ * نمایش تصویر نویز فلفلی و تصویر اصلی:<br/>
 
 </div>
 
 
+
 out=![out](t11.JPG)
 
-out=![out](tt11.JPG)
+out1=![out](tt11.JPG)
 
 
 
