@@ -13,7 +13,8 @@
 </div>
 
 ```
-im1 = imread('C:\Users\PC\Desktop\keanu.jpeg');
+addpath("../../../benchmark/");
+im1 =imread("lena.png");
 im = rgb2gray(im1);
 row = size(im , 1);
 col = size(im , 2);
