@@ -8,36 +8,34 @@
 </div>
 
 ```
-m=imread('C:\Users\PC\Desktop\0.png');
+m=imread('images/0.png');
 m1=im2bw(m,0.0001);
 m2=imresize(m1,[200,200]);
-n=imread('C:\Users\PC\Desktop\1.png');
+n=imread('images/1.png');
 n1=im2bw(n,0.0001);
 n2=imresize(n1,[200,200]);
-o=imread('C:\Users\PC\Desktop\2.png');
+o=imread('images/2.png');
 o1=im2bw(o,0.0001);
 o2=imresize(o1,[200,200]);
-p=imread('C:\Users\PC\Desktop\3.png');
+p=imread('images/3.png');
 p1=im2bw(p,0.001);
 p2=imresize(p1,[200,200]);
-q=imread('C:\Users\PC\Desktop\4.png');
+q=imread('images/4.png');
 q1=im2bw(q,0.00001);
 q2=imresize(q1,[200,200]);
-r=imread('C:\Users\PC\Desktop\5.jpg');
+r=imread('images/5.jpg');
 r1=im2bw(r,0.00001);
 r2=imresize(r1,[200,200]);
-s=imread('C:\Users\PC\Desktop\6.png');
+s=imread('images/6.png');
 s1=im2bw(s,0.00001);
 s2=imresize(s1,[200,200]);
-t=imread('C:\Users\PC\Desktop\7.png');
+t=imread('images/7.png');
 t1=im2bw(t,0.00001);
 t2=imresize(t1,[200,200]);
-u=imread('C:\Users\PC\Desktop\8.png');
+u=imread('images/8.png');
 u1=im2bw(u,0.00001);
 u2=imresize(u1,[200,200]);
-w=imread('C:\Users\PC\Desktop\9.png');
-w1=im2bw(w,0.001);
-w2=imresize(w1,[200,200]);
+w=imread('images/9.png');
 ```
 
 <div dir="rtl">
