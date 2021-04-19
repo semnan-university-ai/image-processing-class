@@ -196,5 +196,4 @@ suptitle('ImageMedian ');
 
 ```
 
-
 out=![out](tt12a.JPG)
