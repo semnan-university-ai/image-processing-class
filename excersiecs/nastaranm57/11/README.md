@@ -5,7 +5,8 @@
 </div>
 
 ```
-i=imread('C:\Users\PC\Desktop\11.jpg');  
+addpath("../../../benchmark/");
+i=imread("lena.png");    
 i=rgb2gray(i);
 ```
 
