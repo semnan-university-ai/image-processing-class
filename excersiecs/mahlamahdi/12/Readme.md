@@ -113,4 +113,4 @@ subplot(2,2,4);imshow(image_result1);title('median filter');
 ````
 
 ![خروجی](assets/result.jpg)
-![خروجی](assets/result.jpg)
+![خروجی](assets/Capture.JPG)
