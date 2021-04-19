@@ -1,4 +1,5 @@
-image =imread('C:\Users\PC\Desktop\zelda.png');
+addpath("../../../benchmark/");
+image =imread("zelda.png");
 subplot(1,2,1)
 imshow(image);
 title 'tasvire asli'
