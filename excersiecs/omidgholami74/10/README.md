@@ -22,20 +22,20 @@ function imageOut = e10_captcha(numbers)
 %   Detailed explanation goes here
 
 
-files =dir('numbers/*.png');
-blankImage=[];
+files =dir('numbers/*.png'); %خوانده عکس شماره ها 
+blankImage=[]; % ساخت یک آرایه خالی
 
 for k =1:numbers
-    temp=zeros(100,100);
-    rand=randi(9);
-    deg=randi(360);
+    temp=zeros(100,100); % ساخت  ماتریس سفر برای هر شماره
+    rand=randi(9); % استفاه از تابع رندوم برای اعداد تصادفی
+    deg=randi(360); % چرخش تصاویر بصورت رندوم
         name =files(rand).name;
-       image=imread(name);
-%        path=strcat('numbers/',name)
-%        image=e8_rotate(path,deg);
+       image=imread(name);% خواندن عکس
+%        path=strcat('numbers/',name) % ساخت آدر س عکس
+%        image=e8_rotate(path,deg);%  چرخش تصاویر
 %        temp=image;
 %        size(temp)
-       blankImage =cat(2,blankImage,image);
+       blankImage =cat(2,blankImage,image);% بهم چسباندن تصاویر
 end
 
 imageOut= blankImage;
