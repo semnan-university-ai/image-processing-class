@@ -2,7 +2,7 @@ clc;
 close all;
 clear all;
 
-image = imread("../benchmark/fruits.png");
+image = imread('../../../benchmark/fruits.png');
 imsize = size(image);
 ImageGrey = zeros(imsize(1,1),imsize(1,2));
 for i=1 : 512

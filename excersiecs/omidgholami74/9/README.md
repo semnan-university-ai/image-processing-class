@@ -9,7 +9,7 @@ clc;
 close all;
 clear all;
 
-image= e9_cut('airplane.png',200,350,160,250);
+image= e9_cut('airplane.png',200,350,160,250);% ایعداد  و لوکیشن تصویری که میخواهیم ببریم را مشخص میکنیم
 imshow(image);
 
 ```
@@ -19,12 +19,12 @@ crop function
 function imageOut = e9_cut(name,startPixelWidth,endPixelWidth,startPixelHeight,endPixelHeight)
 %E9_CUT Summary of this function goes here
 %   Detailed explanation goes here
-image=imread(strcat('benchmark/',name));
+image=imread(strcat('benchmark/',name));% نمایش عکس
         n=size(size(image));
-        if n(2) ==3
-            image=rgb2gray(image);
+        if n(2) ==3% اگر رنگی بود به سیاه و سفید تبدیل کن
+            image=rgb2gray(image); % تبدیل عکس  به سیاه و سفید
         end
-        image_cuted =image(startPixelWidth+1:endPixelWidth,startPixelHeight+1:endPixelHeight);
+        image_cuted =image(startPixelWidth+1:endPixelWidth,startPixelHeight+1:endPixelHeight);% بریدن عکس با استفاده از آررایه ها
         imageOut=image_cuted;
 end
 

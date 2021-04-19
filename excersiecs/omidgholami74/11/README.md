@@ -33,20 +33,20 @@ noise function
 function imageOut = e11_noise(image,numbers)
 %E11_NOISE Summary of this function goes here
 %   Detailed explanation goes here
-imageSize=size(image);
-width=imageSize(1,1);
-height=imageSize(1,2);
+imageSize=size(image);% دریافت ابعاد تصویر
+width=imageSize(1,1);% عرض تصویر
+height=imageSize(1,2);% ارتفاع تصویر
 n=size(imageSize);
 colors=[0 255];
 if n(2)==3
-    image=rgb2gray(image);
+    image=rgb2gray(image);% اگر زنگی بود تبدیل به خاکستری شود
 end
 for k=1:numbers
     
-    widthRand=randi(width);
-    heightRand=randi(height);
+    widthRand=randi(width);% ایجاد طول و عرض رندوم
+    heightRand=randi(height);%ایجاد طول و عرض رندوم
     
-    image(widthRand,heightRand)=colors(randi(2));
+    image(widthRand,heightRand)=colors(randi(2));% ایحاد نویز های سیاه و سفید
 end
 imageOut=image;
 ```

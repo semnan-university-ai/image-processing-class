@@ -10,11 +10,11 @@ close all;
 clear all;
 
 
-deg=[45 90 120 180];
+deg=[45 90 120 180];% مقادیر چرخش هایی که میخواهیم روی عکس اعمال کنیم.
 sizeDeg=size(deg);
 for i=1:sizeDeg(2)
     figure;
-    imshow(e8_rotate('benchmark/airplane.png',deg(i)));
+    imshow(e8_rotate('benchmark/airplane.png',deg(i)));% نمایش عکس ها
 end
 
 ```
@@ -26,58 +26,58 @@ function image_rotated = e8_rotate(A,deg)
 %   Detailed explanation goes here
 %Find the midpoint
 % path=strcat(name)
-if(deg > 155)
-    midx = ceil((size(A,1))/2);
-    midy = ceil((size(A,2))/2);
+if(deg > 155)   
+    midx = ceil((size(A,1))/2);%مشخص کردن وسط تصویر برای چرخش بیش از 155
+    midy = ceil((size(A,2))/2);%مشخص کردن وسط تصویر برای چرخش بیش از 155
 else
-    midx = ceil((size(A,2))/2);
-    midy = ceil((size(A,1))/2);
+    midx = ceil((size(A,2))/2);%مشخص کردن وسط تصویر برای چرخش کمتر از 155
+    midy = ceil((size(A,1))/2); %مشخص کردن وسط تصویر برای چرخش کمتر از 155
 end
 
-[y,x] = meshgrid(1:size(A,2), 1:size(A,1));
-[t,r] = cart2pol(x-midx,y-midy);
-t1 = radtodeg(t)+deg;
+[y,x] = meshgrid(1:size(A,2), 1:size(A,1)); % ساخت یک ماتریس دو بعدی برای نمایش تصویر با دشتور meshgrid
+[t,r] = cart2pol(x-midx,y-midy); % تبدیل مختصات کارتزین به قطبی
+t1 = radtodeg(t)+deg;  % تیدیل رادیان به درجه 
 
-%Convert from degree to radians
+%ندیل رادیان به درجه
 t = degtorad(t1);
 
-%Convert to Cartesian Co-ordinates
+% تبدیل مختصات قطبی به کارتزین
 [x,y] = pol2cart(t,r);
 
-%Add the mid points to the new co-ordinates
+%افزودن نقطه وسط به مختصات جدید
 tempx = round(x+midx);
 tempy = round(y+midy);
 
-if ( min(tempx(:)) < 0 )
+if ( min(tempx(:)) < 0 )% اگر کمترین طول کوچکتر از صفر باشد یا منفی باشد
    
-newx = max(tempx(:))+abs(min(tempx(:)))+1;
+newx = max(tempx(:))+abs(min(tempx(:)))+1; % از قدر مطلق استفاده میکنیم
 tempx = tempx+abs(min(tempx(:)))+1;
 else
-    newx = max(tempx(:));
+    newx = max(tempx(:));% در غیر اینصورت بیشترین عدد طول را به عنوان نقطه جدید قرار میدهیم
 end
 
-if( min(tempy( : )) < 0 )
+if( min(tempy( : )) < 0 )اگر کمترین عرض کوچکتر از صفر باشد یا منفی باشد
    
-newy = max(tempy(:))+abs(min(tempy(:)))+1;
-tempy = tempy+abs(min(tempy(:)))+1;
+newy = max(tempy(:))+abs(min(tempy(:)))+1; % از قدر مطلق استفاده میکنیم
+tempy = tempy+abs(min(tempy(:)))+1; % از قدر مطلق استفاده میکنیم
 else
-    newy = max(tempy(:));
+    newy = max(tempy(:)); % در غیر اینصورت بیشترین عدد طول را به عنوان نقطه جدید قرار میدهیم
 end
 tempy(tempy==0) = 1;
 tempx(tempx==0) = 1;
 
-C = uint8(zeros([newx newy]));
+C = uint8(zeros([newx newy])); % ماتریس صفر جدی زا به uint8 تیدیل میکنیم
 
 
 for i = 1:size(A,1)
     for j = 1:size(A,2)
-        C(tempx(i,j),tempy(i,j)) = A(i,j);
+        C(tempx(i,j),tempy(i,j)) = A(i,j); %  حال به اندازه طول و عرض تصویر . مختصلا جدید را درون خروجی قرار کیدهیم
        
     end
   
 end
-Output = C;
-%FILL THE HOLES OR GAPS-NEAREST NEIGHBOR
+Output = C; %
+%جاهای خالی را با پیدا میکنیم
 for i = 2:size(C,1)-1
     for j = 2:size(C,2)-1
        

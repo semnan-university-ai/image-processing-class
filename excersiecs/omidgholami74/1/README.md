@@ -7,19 +7,19 @@
 >CODE
 
 ```ruby
- n  = input("pleas enter a number as the chess dimension more than 8 : ");
+ n  = input("pleas enter a number as the chess dimension more than 8 : "); % ابتدا ابعاد شطرنج را از کاربر می گیریم که باید بزرگتر از 8 باشذ
 while(n <8)
-  n  = input("pleas enter a number as the chess dimension more than 8 : ");
+  n  = input("pleas enter a number as the chess dimension more than 8 : ");  % ابتدا ابعاد شطرنج را از کاربر می گیریم که باید بزرگتر از 8 باشذ
 end
-areaOfpixel=floor(n/8);
+areaOfpixel=floor(n/8);  % تقسیم بر 8 میکنیم تا اندازه هر خانه شطرنج بدست آید
 
-chess =zeros(8,8);
-for i=1:8
-    for j=1:2:8
-        if mod(i,2) == 0
+chess =zeros(8,8); % یک ماتریس 8*8 صفر درست می کنیم
+for i=1:8  % حلقه از یک تا 8
+    for j=1:2:8 %حلقه از یک تا 8 با گام 2
+        if mod(i,2) == 0  % اگر سطر ما زوج بود از این رنگ ها اسافاده میکنیم
            chess(i,j)=255;
            chess(i,j+1)=0;
-        else
+        else             % اگر سطر ما فرد بود از این رنگ ها اسافاده میکنیم
            chess(i,j)=0;
            chess(i,j+1)=255;
         end
@@ -27,7 +27,7 @@ for i=1:8
     end
 end
 
-orginalSize = repelem(chess,areaOfpixel,areaOfpixel);
+orginalSize = repelem(chess,areaOfpixel,areaOfpixel); % به اندازه ابعادی که کاربر وارد کرده است آرایه های ماتریس را تکرار میکنیم
 imshow(orginalSize)
 ```
 ![image](https://user-images.githubusercontent.com/48456571/113267661-dac14080-92eb-11eb-8117-01bf5d56e0c5.png)

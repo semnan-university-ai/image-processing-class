@@ -5,8 +5,10 @@ image = imread('benchmark/fruits.png');
 figure;
 imshow(image);
 a=size(image);
-if a >= 1
-  image = image( : , : , 2); 
+n=size(a);
+color=[0 255]'
+if n(2)==3
+    image=rgb2gray(image);
 end
 figure;
 imshow(image);

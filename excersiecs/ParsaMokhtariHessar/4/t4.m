@@ -4,7 +4,7 @@ close all;
 clear all;
 
 % Specify the folder where the files live.
-myFolder = '..\benchmark\';
+myFolder = '..\..\..\benchmark\';
 % Check to make sure that folder actually exists.  Warn user if it doesn't.
 if ~isfolder(myFolder)
     errorMessage = sprintf('Error: The following folder does not exist:\n%s\nPlease specify a new folder.', myFolder);

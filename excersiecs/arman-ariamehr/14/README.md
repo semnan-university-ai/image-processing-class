@@ -1,3 +1,25 @@
+<div dir = "ltr">
+    
+```
+projectdir = 'clock\';
+dinfo = dir(fullfile(projectdir));
+dinfo([dinfo.isdir]) = [];     %get rid of all directories including . and ..
+nfiles = length(dinfo);
+for amount = 1 : nfiles
+    %read image
+    filename = fullfile(projectdir, dinfo(amount).name);
+    input_im = imread(filename);
+    
+    image = rgb2gray(input_im);
+    
+    subplot(2,6,amount);
+    imhist(image);
+end
+
+```
+</div>
+
+
 <div dir = "rtl">
   ابتدا آدرس مشخص مي شود
   براي تمام فايل هاي موجود در آن آدرس ابتدا تصوير به خاكستري تبديل شده و در قدم بعدي به كمك تابع imhist هيستوگرام تصوير ايجاد مي گردد و در نهايت هم به نمايش در مي آيد

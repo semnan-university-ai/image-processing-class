@@ -1,6 +1,6 @@
 <div dir="rtl">
 جواب سوال 17:
-  برای سیاه کردن آسمان،یک ماسک باینری می سازیم و درون ماسک را به رنگ سیاه در می آوریم. از آنجایی که تصویر کوهستان خاکستری است، ابتدا آن را رنگی می کنیم و رنگ درون ماسک را به انتخاب سه مولفه rgb مشکی می کنیم
+  برای سیاه کردن آسمان از دو تکنیک استفاده می کنیم، تکنیک اول به این صورت است که یک ماسک باینری می سازیم و درون ماسک را به رنگ سیاه در می آوریم. از آنجایی که تصویر کوهستان خاکستری است، ابتدا آن را رنگی می کنیم و رنگ درون ماسک را با انتخاب سه مولفه rgb مشکی می کنیم
 </div>
 
 ```
@@ -56,3 +56,36 @@ title('Image with color inside the mask region', 'FontSize', 30);
 </div>
 
 ![khorooji](17.jpg)
+
+<div dir="rtl">
+در تکنیک دوم،از مختصات تصویر کمک می گیریم. با تشکر از آقای امید غلامی برای ارائه کد و توضیحات درباره تکنیک دوم این سوال:
+</div>
+
+@omidgholami74
+
+```
+image=imread('C:\Users\PC\Desktop\mountain.png');
+subplot(1,2,1)
+imshow(image);
+title 'tasvire asli'
+for j=1:640 %arze tasvir
+    for i=1:150 %tule tasvir
+     if 165<image(i,j)
+         image(i,j)=0;
+     end
+     if image(i+1,j)<165
+         break;
+     end
+    end
+end
+image=uint8(image);
+subplot(1,2,2)
+imshow(image);
+title 'tasvire nahaii'
+```
+
+<div dir="rtl">
+خروجی کد بالا به صورت زیر است:
+</div>
+
+![khorooji](02684.jpg)

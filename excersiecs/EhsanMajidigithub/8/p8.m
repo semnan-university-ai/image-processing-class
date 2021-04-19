@@ -1,30 +1,31 @@
-close all
-clear all
-clc
+clc;clear;close all;
+imagepad=imread("../../../benchmark/pool.png");
+imagepad=rgb2gray(imagepad);
+imagerot=zeros(size(imagepad),"uint8");
+%midpoints
+midx=ceil((size(imagepad,1)+1)/2);
+midy=ceil((size(imagepad,2)+1)/2);
+dd=[45,120,90,180,270];
+l=length(dd);k=1;
+subplot(2,(l+1)/2,1),imshow(imagepad),title('Orginal');
+while (k <= l)
+    imagerot=zeros(size(imagepad),"uint8");
+    rad=(pi/180)*dd(k);
+    for i=1:size(imagerot,1)
+        for j=1:size(imagerot,2)
 
-imagepad = imread("baboon.png");
-[nrows ncols nslices] = size(imagepad);
-midx=ceil((ncols+1)/2);
-midy=ceil((nrows+1)/2);
+             x= (i-midx)*cos(rad)+(j-midy)*sin(rad);
+             y=-(i-midx)*sin(rad)+(j-midy)*cos(rad);
+             x=round(x)+midx;
+             y=round(y)+midy;
 
-degree = [pi/4,pi/2,2*pi/3,pi];
+             if (x>=1 && y>=1 && x<=size(imagepad,1) && y<=size(imagepad,2))
+                  imagerot(i,j)=imagepad(x,y);        
+             end
 
-for i=1:4
-    Mr = [cos(degree(i)) sin(degree(i)); -sin(degree(i)) cos(degree(i))];
+        end
+    end
+    subplot(2,(l+1)/2,k+1),imshow(imagerot),title(int2str(dd(k)));
     
-    [X Y] = meshgrid(1:ncols,1:nrows);
-    XYt = [X(:)-midx Y(:)-midy]*Mr;
-    XYt = bsxfun(@plus,XYt,[midx midy]);
-
-    xout = round(XYt(:,1)); yout = round(XYt(:,2));
-    outbound = yout<1 | yout>nrows | xout<1 | xout>ncols;
-    zout=repmat(cat(3,1,2,3),nrows,ncols,1); zout=zout(:);
-    xout(xout<1) = 1; xout(xout>ncols) = ncols;
-    yout(yout<1) = 1; yout(yout>nrows) = nrows;
-    xout = repmat(xout,[3 1]); yout = repmat(yout,[3 1]);
-    imagerot = imagepad(sub2ind(size(imagepad),yout,xout,zout(:)));
-    imagerot = reshape(imagerot,size(imagepad));
-    imagerot(repmat(outbound,[1 1 3])) = 0;
-    figure;
-    imshow(imagerot);
+    k=k+1;
 end

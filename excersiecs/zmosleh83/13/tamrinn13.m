@@ -1,4 +1,4 @@
-im = imread('C:\SemnanClass\9902\شکری\Benchmark\negative image13.jpg');
+im = imread('C:\SemnanClass\9902\TA\Benchmark\negative image13.jpg');
 figure;
 ax1 = axes();
 imshow(im);

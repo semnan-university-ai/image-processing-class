@@ -2,7 +2,6 @@ close all
 clear all
 clc
 a=imread("benchmark\lena.png");
-a=uint8(a);
 imshow(a);
 n=size(a);
 l=input("Enter length of cropping area: ");
@@ -16,5 +15,5 @@ for i=1:l
     end
 end
 pic=uint8(pic);
-CurvaJV=figure('Name','Cropped Image');
+figure('Name','Cropped Image');
 imshow(pic)

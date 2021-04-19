@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-imagepad = imread("../benchmark/baboon.png");
+imagepad = imread("D:/image-processing-class/benchmark/girl.png");
 [nrows ncols nslices] = size(imagepad);
 midx=ceil((ncols+1)/2);
 midy=ceil((nrows+1)/2);

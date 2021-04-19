@@ -8,9 +8,9 @@
 close all
 clear all
 clc
-image=imread("benchmark/lena.png");
-imshow(image)
-newimage=0.299*image(:,:,1)+0.587*image(:,:,2)+0.114*image(:,:,3);
+image=imread("benchmark/lena.png"); % ابتدا نام عکس را از کاربر دریافت میکند و آن عکس را در پوشه بنچ مارک پیدا میکند
+imshow(image)    % نمایش عکس
+newimage=0.299*image(:,:,1)+0.587*image(:,:,2)+0.114*image(:,:,3); %کانال های رنگی  را از عکس  استخراج میکند با استفاده از فرمول  عکس را به عکس خاکستری تبدیل میکند
 figure;
 imshow(newimage)
 ```
