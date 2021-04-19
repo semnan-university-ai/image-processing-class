@@ -1,5 +1,5 @@
 addpath("../../../benchmark/");
-grayImage = imread("watch.png");
+a = imread("watch.png");
 [rows, columns, numberOfColorChannels] = size(a);
 imshow(a, []);
 axis on;
