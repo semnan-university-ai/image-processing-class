@@ -1,5 +1,5 @@
 addpath("../../../benchmark/");
-image=imread("mountain.png");
+image=imread("watch.png");
 subplot(1,2,1)
 imshow(image);
 title 'tasvire asli'
