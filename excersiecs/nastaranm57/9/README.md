@@ -12,7 +12,7 @@
 ![voroodi](9.jpg)
 
 ```
-keanu=imread('C:\Users\PC\Desktop\9.jpg');
+keanu=imread("./9.jpg");
 ```
 
 <div dir="rtl">
