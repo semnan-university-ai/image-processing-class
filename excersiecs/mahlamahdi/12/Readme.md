@@ -111,3 +111,6 @@ subplot(2,2,2);imshow(im);title('noise image');
 subplot(2,2,3);imshow(image_result);title('mean filter');
 subplot(2,2,4);imshow(image_result1);title('median filter');
 ````
+
+![خروجی](assets/result.jpg)
+![خروجی](assets/result.jpg)
