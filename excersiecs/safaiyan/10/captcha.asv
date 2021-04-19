@@ -1,0 +1,20 @@
+clc;
+close all;
+clear all;
+
+m1=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\1.png');
+m2=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\2.png');
+m3=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\3.png');
+m4=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\4.png');
+m5=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\5.png');
+m6=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\6.png');
+m7=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\7.png');
+m8=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\8.png');
+m9imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\9.png');
+m0=imread ('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\0-9\0.png');
+a=randi(10);
+b=randi(10);
+c=randi(10);
+d=randi(10);
+m=[a b c d];
+imshow(m);

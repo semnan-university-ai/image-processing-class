@@ -1,7 +1,8 @@
-clc;
-close all;
-clear all;
-image_boat = imread('C:\Users\Nakisa™\Documents\MATLAB\negative.jfif');
+#### tamrin 13 code:
+
+
+```
+image_boat = imread('C:\Users\Nakisaâ„¢\Documents\MATLAB\negative.jfif');
 noise_boat = imnoise(image_boat,'salt & pepper',0.05);
 subplot(2,2,1); imshow(noise_boat);
 
@@ -13,3 +14,9 @@ subplot(2,2,3); imshow(noise_boat);
 
 noise_boat = imnoise(image_boat,'salt & pepper',0.5);
 subplot(2,2,4); imshow(noise_boat);
+
+
+```
+
+
+![khorooji](result.jpg)
