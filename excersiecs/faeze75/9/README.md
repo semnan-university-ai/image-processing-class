@@ -6,7 +6,7 @@
 ```ruby
 image=imread('lena.png');
 imshow(image);
-x=input('Enter x of position: ');           
+x=input('Enter x of position: ');   % دریافت ورودی مختصات و طول و عرض مد نظر برای برش          
 y=input('Enter y of position: ');
 l=input('Enter Width of cropping area: ');
 w=input('Enter length of cropping area: ');
@@ -20,7 +20,7 @@ for i=1:l
     end
 end
 
-Icrop=uint8(crop);
+Icrop=uint8(crop);  %تبدیل تصویر به فرمت uint8
 figure,
 imshow(Icrop);
 
