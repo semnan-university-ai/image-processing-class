@@ -26,5 +26,13 @@ for i=1:s1
      else
             m=0;
      end
+       if rem(s2,2)==0
+            if m==0
+            m=1;
+            else
+            m=0;
+            end
+        end
+     
      
 end
