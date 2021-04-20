@@ -40,26 +40,31 @@ imshow(img)
 ```
 ***
 <div dir="rtl">
- در این قسمت ابتدا تصویر خامی به ابعاد 100 در 400 ايجاد مي كند سپس توسط يك حلقه تكرار و توليد كننده اعداد تصادفي 4 عدد تصادفي توليد كرده و از روي شمارنده حلقه آدرس آن تصوير ايجاد مي گردد سپس آن تصوير خوانده شده و به اندازه 0 تا 360 درجه به صورت رندم دوران داده مي شود و در پايان نيز تصوير به حالت سياه و سفيد برده شده و نمايش داده مي شود
+ در این قسمت ابتدا تصویر خامی به ابعاد 100 در 400 ايجاد مي كند سپس توسط يك حلقه تكراراعداد تصادفي 4 عدد تصادفي توليد كرده و از روي شمارنده حلقه آدرس آن تصوير ايجاد مي گردد سپس آن تصوير خوانده شده و به اندازه 0 تا 360 درجه به صورت رندم دوران داده مي شود 
  
  </div>
  
  ```matlab                                         
-pic=zeros(100,400);                           
-for i=1:4                                       
-   d=randi(10);                                 
-   add="images\numbers\"+int2str(d-1)+".png";    
-   a=imread(add);                               
-   for r=1:100                                  
-       for k=1:100                                
-           c=(i-1)*100+k;                      
-           pic(r,c)=(255-a(r,k));              
+img=zeros(100,400);
+for i=1:4
+   r1=randi(10);
+   r2=randi(100);
+   pic="picture\number\"+int2str(r1-1)+".png";
+   a=imread(pic);
+   g=randi(30);
+   r1=randi(360);
+   b=captcha_rotate(a,r1);
+   
+   for r=r2+1:r2+100
+       for k=g:100+g
+           c=(i-1)*100+k;
+           img(r,c)=(b(r-r2,k));
        end
    end    
 end 
-figure;                                         
-pic=im2bw(pic);                                 
-imshow(pic)                                    
+figure
+img=im2bw(img);
+imshow(img)                    
 ```
 ***
 <div dir="rtl">
@@ -68,45 +73,5 @@ imshow(pic)
  
  </div>
  
- ```matlab 
-
-function pic2=captcha_rotate(pic,angel)
-n=size(pic);
-v=deg2rad(angel);
-r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));                      
-c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));                     
-pic2=zeros(r,c,n(3));
-pic2=uint8(pic2);
-midx=ceil((size(pic2,1))/2);
-midy=ceil((size(pic2,2))/2);
-```
-***
-
-<div dir="rtl">
- 
- در این بخش با استفاده از حلقه های تکرار و روابط مثلثاتی مختصات جدید هر پیکسل پس از دوران را محاسبه می کند و مقدار هر پیکسل در مختصات جدید را برابر
- مقدار پیکسل در مختصات قبلی قرار داده و در به تابع اصلی برگشت داده می شود.
- 
- ***
- </div>
- 
- 
- ```matlab
-pic=255-pic;
-for i=1:size(pic2,1)
-    for j=1:size(pic2,2)                                                       
-         xx= round((i-midx)*cos(v)+(j-midy)*sin(v)+ceil(n(1)/2));                                       
-         yy= round(-(i-midx)*sin(v)+(j-midy)*cos(v)+ceil(n(2)/2));                             
-         if (xx>=1 && yy>=1 ) 
-             if ( xx<=n(1) &&  yy<=n(2) ) 
-               pic2(i,j,1:n(3))=pic(xx,yy,1:n(3));  
-             end  
-         end
-    end
-end                                       
-
-```
-***
-
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/d3ef792b98325f473d9f3a118e66253a889b95f6/excersiecs/alirezachaji/10/Exce10.png)
+![Image of Yaktocat](Resulte.PNG)
 ***
