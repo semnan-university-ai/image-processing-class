@@ -40,10 +40,10 @@ image=uint8(image);    %تصویر را به فرمت uint8 تبدیل میکن�
 imshow(image)
 
 ```
-![alt text]()
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/21/Screenshot%20(37).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
-safe colorمان حاصل شش رنگ است که با دسته بندی 50 تایی بازه رنگها بدست امده است  تصویر.
+ تصویرsafe colorمان حاصل شش رنگ است که با دسته بندی 50 تایی بازه رنگها بدست امده است .
 </div>
 
