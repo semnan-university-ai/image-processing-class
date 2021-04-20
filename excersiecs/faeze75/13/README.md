@@ -35,7 +35,7 @@ figure,
 imshow(image)
 end
 ```
-![alt text]()
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/faeze75/13/Screenshot%20(41).png)
 ***
 <div dir="rtl">
 توضیحات برنامه <br />
