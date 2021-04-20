@@ -33,7 +33,7 @@ clc
 
 ```matlab
 
-a=imread("https://i.ibb.co/Gp1N4GW/lena.png");   
+a=imread("..\..\..\benchmark\lena.png");   
 imshow(a);                                     
 n=size(a);        
 
