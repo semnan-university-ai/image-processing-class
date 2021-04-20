@@ -3,16 +3,7 @@ clear;
 close all;
 
 image = imread('saat.png');
-im= rgb2gray(image);
-[x, y] = size(im);
-
-
-for i=1:x
-    for j=1:y
-       im(i,j) = 255 - im(i,j);
-    end
-end
-
+im = rgb2gray(image);
 
 img_with_noise1= imnoise(im, 'salt & pepper', 0.05);
 img_with_noise2 = imnoise(im, 'salt & pepper',0.1);
@@ -76,15 +67,9 @@ display(mean_noise8);
  
  suptitle('Salt & Pepper ');
  
-% 
-% 
- %*************** Table   ************
  
-
-Average ={mean_noise1; mean_noise2; mean_noise3; mean_noise4; mean_noise5; mean_noise6 ; mean_noise7;  mean_noise8 };
-Image = {'noise=0.05';'noise=0.1';'noise=0.2';'noise=0.3' ;'noise=0.4';'noise=0.6';'noise=0.7';'noise=0.9'};
-handles.T=table(Image ,Average);
-display(handles.T);
+ 
+ 
  
  
  
