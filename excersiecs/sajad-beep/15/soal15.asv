@@ -1,0 +1,50 @@
+clc;
+clear;
+X = imread('C:\Users\SajadEd\Documents\GitHub\image-processing-class\benchmark\pool.png');
+X=im2gray(X);
+imshow(X);
+m=40;n=150;
+im_size=size(X);
+for i=10:im_size(1,1)-10
+    for j=10:im_size(1,2)-10
+        if (X(i-1,j)<m && X(i,j)>120)
+            k=i;l=j;
+            while( X(k,l)>120)
+             X(k,l)=255;
+            k=k+1;
+            end
+        elseif (X(i-1,j-1)<70 && X(i,j)>100)
+            k=i;l=j;
+            while( X(k,l)>120)
+             X(k,l)=255;
+            k=k+1;
+            end
+        elseif (X(i,j-1)<70 && X(i,j)>100)
+           k=i;l=j;
+            while( X(k,l)>120)
+             X(k,l)=255;
+            k=k+1;
+            end
+        elseif (X(i,j+1)<70 && X(i,j)>100)
+           k=i;l=j;
+            while( X(k,l)>120)
+             X(k,l)=255;
+            k=k+1;
+            end
+        elseif(X(i+1,j+1)<70 && X(i,j)>100)
+            k=i;l=j;
+            while( X(k,l)>120)
+             X(k,l)=255;
+            k=k+1;
+            end
+        elseif(X(i,j+1)<70 && X(i,j)>100)
+           k=i;l=j;
+            while( X(k,l)>120)
+            X(k,l)=255;
+            k=k+1;
+            end
+        end
+    end
+end
+figure(1),
+imshow(X);

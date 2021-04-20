@@ -1,0 +1,244 @@
+<div dir="rtl">
+جواب سوال 10:
+    صورت سوال: بدون استفاده از دستوران متلب یک کپچای تصویری را بکشید؛ اعداد را با تابع عدد تصادفی ایجاد کنید و سپس با توجه به اعداد بدست آمده برای هر یک در تصویر پیکسل های مورد نظر را رسم کنید؛ تصویر باینری باشد و اعداد رنگ سفید و پیش زمینه رنگ مشکی داشته باشد.
+</div>
+
+<div dir="rtl">
+در این قسمت، عکس اعداد 0 تا 9 را یکی یکی از ورودی دریافت کرده، و آن ها را به صورت باینری در می آوریم. در ادامه، با استفاده از دستور imresize اندازه هر کدام از تصاویر را به 200 در 200 برمی گردانیم:
+</div>
+
+```
+m=imread('images/0.png');
+m1=im2bw(m,0.0001);
+m2=imresize(m1,[200,200]);
+n=imread('images/1.png');
+n1=im2bw(n,0.0001);
+n2=imresize(n1,[200,200]);
+o=imread('images/2.png');
+o1=im2bw(o,0.0001);
+o2=imresize(o1,[200,200]);
+p=imread('images/3.png');
+p1=im2bw(p,0.001);
+p2=imresize(p1,[200,200]);
+q=imread('images/4.png');
+q1=im2bw(q,0.00001);
+q2=imresize(q1,[200,200]);
+r=imread('images/5.jpg');
+r1=im2bw(r,0.00001);
+r2=imresize(r1,[200,200]);
+s=imread('images/6.png');
+s1=im2bw(s,0.00001);
+s2=imresize(s1,[200,200]);
+t=imread('images/7.png');
+t1=im2bw(t,0.00001);
+t2=imresize(t1,[200,200]);
+u=imread('images/8.png');
+u1=im2bw(u,0.00001);
+u2=imresize(u1,[200,200]);
+w=imread('images/9.png');
+```
+
+<div dir="rtl">
+ برای این سوال، یک کپچای 5 عدده درست کردیم. به عبارت دیگر، 5 متغیر در نظر می گیریم و در ابتدا، یک عدد رندوم انتخاب می کنیم. با توجه به نتیجه تابع رندوم، عدد متناظر با آن را درون متغیر قرار می دهیم. متغیر اولمان a نام دارد:
+</div>
+
+```
+a=randi(10);
+if a==1
+    a=m2
+else if a==2
+        a=n2
+    else if a==3
+          a=o2
+        else if a==4
+                a=p2
+            else if a==5
+                    a=q2
+                else if a==6
+                        a=r2
+                    else if a==7
+                            a=s2
+                        else if a==8
+                                a=t2
+                            else if a==9
+                                    a=u2
+                                else if a==10
+                                        a=w2
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+```
+
+<div dir="rtl">
+متغیر دوم b نام دارد:
+</div>
+
+```
+b=randi(10);
+if b==1
+    b=m2
+else if b==2
+        b=n2
+    else if b==3
+          b=o2
+        else if b==4
+                b=p2
+            else if b==5
+                    b=q2
+                else if a==6
+                        b=r2
+                    else if b==7
+                            b=s2
+                        else if b==8
+                                b=t2
+                            else if b==9
+                                    b=u2
+                                else if b==10
+                                        b=w2
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+```
+
+<div dir="rtl">
+متغیر سوم c نام دارد:
+</div>
+
+```
+c=randi(10);
+if c==1
+    c=m2
+else if c==2
+        c=n2
+    else if c==3
+          c=o2
+        else if c==4
+                c=p2
+            else if c==5
+                    c=q2
+                else if c==6
+                        c=r2
+                    else if c==7
+                            c=s2
+                        else if c==8
+                                c=t2
+                            else if c==9
+                                    c=u2
+                                else if c==10
+                                        c=w2
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+```
+
+<div dir="rtl">
+متغیر چهارم d نام دارد:
+</div>
+
+```
+d=randi(10);
+if d==1
+    d=m2
+else if d==2
+        d=n2
+    else if d==3
+          d=o2
+        else if d==4
+                d=p2
+            else if d==5
+                    d=q2
+                else if d==6
+                        d=r2
+                    else if d==7
+                            d=s2
+                        else if d==8
+                                d=t2
+                            else if d==9
+                                    d=u2
+                                else if d==10
+                                        d=w2
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+```
+
+<div dir="rtl">
+متغیر پنجم e نام دارد:
+</div>
+
+```
+e=randi(10);
+if e==1
+    e=m2
+else if e==2
+        e=n2
+    else if e==3
+          e=o2
+        else if e==4
+                e=p2
+            else if e==5
+                    e=q2
+                else if e==6
+                        e=r2
+                    else if e==7
+                            e=s2
+                        else if e==8
+                                e=t2
+                            else if e==9
+                                    e=u2
+                                else if e==10
+                                        e=w2
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+```
+
+<div dir="rtl">
+در پایان، یک آرایه تعریف می کنیم و متغیر ها را درون آن قرار داده و با دستور imshow، کپچا را نمایش می دهیم:
+</div>
+
+```
+l=[a b c d e];
+imshow(l);   
+```
+
+<div dir="rtl">
+با هر بار اجرای برنامه، خروجی متفاوتی خواهید داشت. نتیجه یک بار اجرای برنامه بالا، به صورت زیر است:
+</div>
+
+![khorooji](02516.jpg)

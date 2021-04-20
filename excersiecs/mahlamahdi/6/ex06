@@ -1,0 +1,12 @@
+clc;
+close all;
+clear;
+
+img= zeros(255,255);
+img = uint8(img);
+[m , n ] = size(img);
+a =25;
+for i = 1:a:m
+       img(i:i+a,1:n)=i;
+end
+imshow(img);

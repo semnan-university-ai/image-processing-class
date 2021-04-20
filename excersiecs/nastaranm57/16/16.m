@@ -1,0 +1,10 @@
+addpath("../../../benchmark/");
+a=imread("zelda.png");
+mask=roipoly(a);
+imshow(mask);
+j=regionfill(a,mask);
+mask2=roipoly(j);
+imshow(mask2);
+k=regionfill(j,mask2);
+figure;
+imshow(k);

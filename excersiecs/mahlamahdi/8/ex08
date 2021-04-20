@@ -1,0 +1,53 @@
+
+clc;
+close all;
+clear;
+
+img=imread('airplane.png');
+img1 = rgb2gray(img);
+[m,n]= size(img1); 
+%angle= input("Enter 45, 90, 120 or 180:");
+
+for p = 1 :4
+    if p == 1
+        angle = 45;
+    elseif p==2
+        angle =90;
+    elseif p==3
+         angle =120;
+    elseif  p==4
+         angle = 180;
+    end
+rads=2*pi*angle/360;                
+out=uint8(zeros([m ,n]));
+
+row= m;
+col = n;
+x_out=ceil(row/2);                                                            
+y_out=ceil(col/2);
+
+midx=ceil((size(out,1))/2);
+midy=ceil((size(out,2))/2);
+
+
+for i=1:size(out,1)
+    for j=1:size(out,2)                                                       
+
+         x= (i-midx)*cos(rads)+(j-midy)*sin(rads);                                       
+         y= -(i-midx)*sin(rads)+(j-midy)*cos(rads);                             
+         x=round(x)+x_out;
+         y=round(y)+y_out;
+
+         if (x>=1 && y>=1 && x<=size(img,1) &&  y<=size(img,2) ) 
+              out(i,j)=img(x,y);  
+         end
+
+    end
+end
+subplot (2,4,p), imshow(out);
+end
+
+subplot(2,4,5:6), imshow(img);
+subplot(2,4,7:8), imshow(img1);
+
+

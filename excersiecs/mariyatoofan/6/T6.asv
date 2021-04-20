@@ -1,0 +1,5 @@
+theta = linspace(0, 2*pi, 256);
+I = repmat( sin(theta), [256 1]);
+I2= repmat( cos(theta), [256 1]);
+I3= cat(256,I1,I2);
+im = imshow(I3);

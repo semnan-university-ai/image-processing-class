@@ -1,0 +1,42 @@
+> # Exercise 4
+>
+
+
+
+***
+>CODE
+>
+یک ماتریس500*500  با درایه های 1 ایجاد می کنیم
+
+```ruby
+w=ones(500,500,3);
+w=uint8(w);
+```
+به ترتیب تصاویررا خوانده و ماتریس 100*100 گوشه پایین سمت راست آن را در درایه های ماتریس  جایگزین می کنیم.
+```ruby
+w1=imread('C:\Program Files\MATLAB\airplane.png');
+
+w(401:500,401:500,1:3)=w1(413:512,413:512,1:3);
+
+w1=imread('C:\Program Files\MATLAB\baboon.png');
+
+w(301:400,401:500,1:3)=w1(413:512,413:512,1:3);
+
+w1=imread('C:\Program Files\MATLAB\barbara.png');
+w(201:300,401:500)=w1(413:512,413:512);
+w1=imread('C:\Program Files\MATLAB\boat.png');
+w(101:200,401:500)=w1(413:512,413:512);
+w5=imread('C:\Program Files\MATLAB\cat.png');
+w(1:100,401:500,1:3)=w5(391:490,391:490,1:3);
+w6=imread('C:\Program Files\MATLAB\fruits.png');
+w(1:100,301:400,1:3)=w6(413:512,413:512,1:3);
+w7=imread('C:\Program Files\MATLAB\girl.png');
+```
+***
+![image](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/4/4.jpg)
+
+
+
+
+
+
