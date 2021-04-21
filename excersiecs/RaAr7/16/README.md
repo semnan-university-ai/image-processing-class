@@ -6,7 +6,7 @@
 </br>
 
 ```
-image = imread("../benchmark/zelda.png");
+image = imread("../../../benchmark/zelda.png");
 [x,y] = size(image);
 
 ```

@@ -8,7 +8,7 @@
 a = input('Enter a : ');
 b = input('Enter b : ');
 
-image = imread("../benchmark/airplane.png");
+image = imread("../../../benchmark/airplane.png");
 CropImage = imcrop(image,[a b a b]);
 
 imshow(CropImage);

@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("../benchmark/mountain.png");
+image = imread("../../../benchmark/mountain.png");
 [x,y] = size(image);
 
 for j=2:y
