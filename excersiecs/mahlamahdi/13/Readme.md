@@ -2,10 +2,12 @@
   <h1> تمرین سیزدهم</h1>
 </div>
 <hr>
+
 ````
 clc;
 clear;
 close all;
+
 ````
 
   
