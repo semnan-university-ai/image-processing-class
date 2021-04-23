@@ -11,15 +11,20 @@ for i =1:m
         negative_pic(i,j) = 255- image(i,j);
     end
 end
-
-for i=1:4
-   noise= input ("Enter  a number between 1 - 20:");
-x = randi([0 ,255] , m ,n);
-negative_pic(x<=0+noise)=0;
-negative_pic(x>=255-noise)=255;
-subplot(2,2,i),imshow(negative_pic);
-ave=mean(negative_pic);
-b(i)=mean(ave);
+p= 0.1;
+for i=1:10
+    img_noise= imnoise(negative_pic, 'salt & pepper', p);
+   
+    subplot(2,5,i),imshow(img_noise);
+     p = p+0.1;
+     ave=mean(img_noise);
+    b(i)=round(mean(ave));
 
 end
-display(b);
+Noise = {'noise0.1='; 'noise0.2=';'noise0.3=';'noise0.4=';'noise0.5=';
+              'noise0.6=';'noise0.7=';'noise0.8=';'noise0.9=';'noise1='};
+Ave = [b(1);b(2);b(3);b(4);b(5);b(6);b(7);b(8);b(9);b(10)];
+
+T = table(Noise,Ave);
+disp(T);
+
