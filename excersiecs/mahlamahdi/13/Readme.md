@@ -22,7 +22,6 @@ image=imread('lena.png');
 image=rgb2gray(image);
 imshow( image);
 [m,n] = size(image);
-
 ````
 
   
