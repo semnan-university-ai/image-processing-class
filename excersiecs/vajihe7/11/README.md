@@ -1,4 +1,4 @@
-![result2](https://user-images.githubusercontent.com/79658260/115950051-2c757900-a4ee-11eb-8cda-60dffe0e5222.png)
+
 > # Exercise 11
 >بدون استفاده از دستورهای آماده ی متلب نویز فلفل نمکی را روی چند تصویر ایجاد کنید
 ***
