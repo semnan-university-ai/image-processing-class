@@ -6,8 +6,8 @@ if z~=1
 end
 ratio=0.02;
 N=fix(r.*c.*ratio);
-g1=fix(r.*rand(1,N));
-g2=fix(c.*rand(1,N));
+g1=ceil(r.*rand(1,N));
+g2=ceil(c.*rand(1,N));
 imgn=img;
 for ii=1:N
     f=rand(1);
