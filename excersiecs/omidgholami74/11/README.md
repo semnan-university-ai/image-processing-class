@@ -12,20 +12,20 @@ clear all;
 
 
 figure;
-image=e11_noise(imread('benchmark/lena.png'),1000);
-imshow(image);
+image=e11_noise(imread('benchmark/lena.png'),1000); % فراخوانی فانکشن
+imshow(image); % نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/airplane.png'),500);
-imshow(image);
+image=e11_noise(imread('benchmark/airplane.png'),500);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/baboon.png'),700);
-imshow(image);
+image=e11_noise(imread('benchmark/baboon.png'),700);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/peppers.png'),1500);
-imshow(image);
+image=e11_noise(imread('benchmark/peppers.png'),1500);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 ```
 ****
 noise function
@@ -38,8 +38,8 @@ width=imageSize(1,1);% عرض تصویر
 height=imageSize(1,2);% ارتفاع تصویر
 n=size(imageSize);
 colors=[0 255];
-if n(2)==3
-    image=rgb2gray(image);% اگر زنگی بود تبدیل به خاکستری شود
+if n(2)==3 % دریافت تعداد بعد عکس.اگر 3 بعد داشت پس رنگی است.
+    image=rgb2gray(image);% اگر رنگی بود تبدیل به خاکستری شود
 end
 for k=1:numbers
     
@@ -48,7 +48,7 @@ for k=1:numbers
     
     image(widthRand,heightRand)=colors(randi(2));% ایحاد نویز های سیاه و سفید
 end
-imageOut=image;
+imageOut=image; % خروجی فانکشن
 ```
 ***
 
