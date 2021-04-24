@@ -40,29 +40,26 @@ figure;imshow(image);% نمایش عکس
 ****
 median
 ```ruby
-function imageOut = image_cut(imageName,cropSize)
-%E4_FUN_CUT Summary of this function goes here
-%   Detailed explanation goes here
-image=imread(strcat('benchmark/',imageName));
-        n=size(size(image));
-        if n(2) ==3
-            image=rgb2gray(image);
-        end
-        imageSize =size(image);
-        image_cuted =image(imageSize(1,1)-(cropSize-1):imageSize(1,1),imageSize(1,2)-(cropSize-1):imageSize(1,2));
-        imageOut=image_cuted;
+image=e11_noise('benchmark/airplane.png',500); % اعمال نویز بر روی عکس با تابع ای که قبلا نوشتیم
+[r,c]=size(image); % دریافت طول و عرض تصویر
+
+
+B=zeros(r,c); % ایجاد ماتریس صفر با همان ابعد تصویر اصلی
+for i=2:r-1  % ایحاد حلقه برای تصویر(پیکسل اول را به عنوان پدینگ حساب میکنیم)
+    for j=2:c-1  % ایحاد حلقه برای تصویر(پیکسل اول را به عنوان پدینگ حساب میکنیم)
+        pixels=[];  % ایجاد یک آرایه خالی برای ریختن حاصل ماتریس دراون آن
+          for k=i-1:i+1  %3*3 median filter %قیلتر میانه
+            for m=j-1:j+1 %قیلتر میانه
+                pixels=[pixels;image(k,m)];% افزودن مقدار هر پیکسل درون آرایه
+            end
+        end %3*3 median filter 
+        mid =median(pixels);% پیدا کردن حد وسط
+        B(i,j)=mid; جایگذازی به جای پیکسل وسط ماتریس
+    end
 end
+figure;imshow(uint8 (B));% نمایش عکس
+figure;imshow(image);% نمایش عکس
 ```
 ![image](https://user-images.githubusercontent.com/48456571/113304816-a2cff280-9317-11eb-9e53-cb56e3e529bf.png)
 
 ***
-
-
-<div dir="rtl">
-<h2>توضیحات برنامه</h2> <br />
- <b>1</b>.درابندا برنامه عکس را بارگذاری میکند<br />
-<b>2</b>.عکس و سایز  را به تابع بریدن عکس میدهد <br />
-<b>3</b>. عکس را با استفاده از آراایه ها در ابعاد مشخص شده می دهیم.<br />
-<b>4</b>. با استفاده از حلقه ها اکثر را در آرایه ها میگذاریم
-    
-</div>
