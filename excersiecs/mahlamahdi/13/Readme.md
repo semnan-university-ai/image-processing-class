@@ -67,3 +67,6 @@ T = table(Noise,Ave);
 disp(T)
 
 ````
+
+![خروجی](assets/result.jpg)
+![خروجی](assets/Capture.JPG)
