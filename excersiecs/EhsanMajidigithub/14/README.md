@@ -57,6 +57,6 @@ subplot(4,6,i*2),imhist(img),title(strcat('histogram',int2str(i)));
 تصویر خروجی:<br />
 </div>
 
-![Image of Yaktocat](result.jpg)
+![Image of Yaktocat](untitled.jpg)
 
 
