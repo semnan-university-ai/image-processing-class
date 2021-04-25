@@ -27,4 +27,4 @@ title(i);
 p =p+2;
 end
 ````
-  
+![خروجی](assets/result.jpg)  
