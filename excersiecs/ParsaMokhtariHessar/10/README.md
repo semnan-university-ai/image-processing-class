@@ -135,8 +135,19 @@ end
 figure,
 imshow(uint8(uint8(PatchArray)));
 ```
+
+<div dir="rtl">
+ ميتوانيم آن را به باينري نيز تبديل كنيم.
+</div>
+
+```
+figure,
+imshow(im2bw(uint8(PatchArray)));
+```
+
 ![output](t10-1.png)
 ![output](t10-2.png)
 ![output](t10-3.png)
 ![output](t10-4.png)
 ![output](t10-5.png)
+![output](t10-6.png)
