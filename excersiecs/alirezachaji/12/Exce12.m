@@ -2,7 +2,7 @@ close all
 clear all
 clc
 a=pepper_noise("..\..\..\benchmark\lena.png",10);
-p=imread('benchmark\lena.png');
+p=imread('..\..\..\benchmark\lena.png');
 n=size(a);
 subplot(2,2,1);imshow(p);title("Original Image");
 subplot(2,2,2);imshow(a);title(" Noisy Image ");
