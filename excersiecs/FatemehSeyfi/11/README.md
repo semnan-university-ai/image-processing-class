@@ -32,13 +32,13 @@ clear;
 ```
 
 <div dir ="rtl">
- که در متغیرهای bو w فرار میگرد. با فرض اینکه پیکسل سیاه ما دارای مقدار "4" باشد و پیکسل  سفید "251" باشد.<br/>
+ و size تصویرمان را در متغیر جدید m n قرار می دهیم با فرض اینکه پیکسل سیاه ما دارای مقدار "4" باشد و پیکسل  سفید "251" باشد.<br/>
 </div>
 
 ```
 b=4;w=251;  %assuming our black pixel is having a value of '4' & the white one is '251'
  img_with_noise= im; 
- %preserving the original image 'i' & operating on a new variable
+ %preserving the original image 'im' & operating on a new variable
  [m,n]=size(im);
 ```
 <div dir ="rtl">
