@@ -5,11 +5,11 @@
 
 ```
 addpath("../../../benchmark/");
-grayImage = imread("mountain.png");
+grayImage = imread("mountain.png");                           %khandane tasvir
 [rows, columns, numberOfColorChannels] = size(grayImage);
 imshow(grayImage, []);
 axis on;
-title('Original Grayscale Image', 'FontSize', 30);
+title('Original Grayscale Image', 'FontSize', 30);            %namayeshe tasvire avalie ba titre morede nazar baraye emale taghirat.
 set(gcf, 'Position', get(0,'Screensize'));                    % baraye bozorg kardane tasvir.
 message = sprintf('Left click and hold to begin drawing.\nSimply lift the mouse button to finish');
 uiwait(msgbox(message));
@@ -22,8 +22,7 @@ subplot(2, 2, 1);
 imshow(grayImage, []);
 axis on;
 drawnow;
-title('Original Grayscale Image', 'FontSize', 30);
-                                                              % namayeshe mask.
+title('Original Grayscale Image', 'FontSize', 30);            % namayeshe tasvir.
 subplot(2, 2, 2);
 imshow(binaryImage);
 axis on;
@@ -43,13 +42,11 @@ blueChannel = rgbImage(:, :, 3);
 desiredColor = [0, 0, 0]; % meshki
 redChannel(binaryImage) = desiredColor(1);
 greenChannel(binaryImage) = desiredColor(2);
-blueChannel(binaryImage) = desiredColor(3);
-                                                              % kanal haye rangi motefavet ra be ham motasek kon.
-rgbImage = cat(3, redChannel, greenChannel, blueChannel);
-                                                              % tasvir ra namayesh bede.
+blueChannel(binaryImage) = desiredColor(3);  
+rgbImage = cat(3, redChannel, greenChannel, blueChannel);     % kanal haye rangi motefavet ra be ham motasel kon.
 subplot(2, 2, 3);
 imshow(rgbImage);
-title('Image with color inside the mask region', 'FontSize', 30);
+title('Image with color inside the mask region', 'FontSize', 30);    % tasvir ra namayesh bede.
 ```
 
 <div dir="rtl">
@@ -66,16 +63,16 @@ title('Image with color inside the mask region', 'FontSize', 30);
 
 ```
 addpath("../../../benchmark/");
-image=imread("mountain.png");
+image=imread("mountain.png");           %khandane tasvire avaliye
 subplot(1,2,1)
 imshow(image);
-title 'tasvire asli'
+title 'tasvire asli'                    %namayeshe tasvire avaliye
 for j=1:640                             %arze tasvir
     for i=1:150                         %tule tasvir
-     if 165<image(i,j)
+     if 165<image(i,j)                  %agar andaze pixel bishtar az 165 bood, meghdarash ra 0 kon.
          image(i,j)=0;
      end
-     if image(i+1,j)<165
+     if image(i+1,j)<165                %dar gheyre in soorat break kon.
          break;
      end
     end
@@ -83,7 +80,7 @@ end
 image=uint8(image);
 subplot(1,2,2)
 imshow(image);
-title 'tasvire nahaii'
+title 'tasvire nahaii'                 %namayeshe tasvire nahaii
 ```
 
 <div dir="rtl">
