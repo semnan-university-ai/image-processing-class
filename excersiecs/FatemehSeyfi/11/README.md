@@ -42,8 +42,8 @@ b=4;w=251;  %assuming our black pixel is having a value of '4' & the white one i
  [m,n]=size(im);
 ```
 <div dir ="rtl">
-  ایجاد می کند که پیکسل های این تکه کد یک ماتریس رندوم m*n  به صورت رندوم مقادیر 0 یا 255می گیرند. <br/>
-</div>
+  یک ماتریس رندوم m*n ایجاد میکند که پیکسل های آن به صورت رندون مقدار یا br/>
+</div> می گیرند.
 
 ```
 x = randi([0,255],m,n);  
