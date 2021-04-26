@@ -5,7 +5,7 @@ t=zeros(10,6);
 for i=1:10
     d=randi([10000,100000]);
     figure;
-    A=func_13("benchmark\lena.png",d);
+    A=func_13("..\..\..\benchmark\lena.png",d);
     t(i,1)=i;
     t(i,2)=d;
     t(i,3:5)=A;
