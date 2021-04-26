@@ -54,7 +54,7 @@ subplot(4,6,n*2),imhist(img),title(strcat('histogram',int2str(n)));
 ```
 
 <div dir="rtl">
-تصویر خروجی:<br />
+تصویر خروجی:با دسته تصویری که خودم تهیه کردم<br />
 </div>
 
 ![result1](result.jpg)
