@@ -23,7 +23,8 @@ length_y = input('Enter length : ');
 </div>
 
 ```
-image = imread("../../../benchmark/pool.png");
+addpath("benchmark");
+image = imread("pool.png");
 figure
 imshow(image);
 
