@@ -142,7 +142,7 @@ imshow(uint8(uint8(PatchArray)));
 
 ```
 figure,
-imshow(im2bw(uint8(PatchArray)));
+imshow(im2bw(uint8(PatchArray),0.2));
 ```
 
 ![output](t10-1.png)
