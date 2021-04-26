@@ -1,13 +1,3 @@
-<div dir="rtl">
-
-#### 22 تمرین <br />
-
-
-
-### کد:
-</div>
-
-```matlab
 clc;clear;close all;
 
 img=imread("../../../benchmark/watch.png");
@@ -23,6 +13,3 @@ for r=1:sr
    end
 end
 subplot(1,2,2),imshow(imgout);
-```
-
-با تشکر از آقای احسان مجیدی و توضیحات کامل آقای شکری در کلاس

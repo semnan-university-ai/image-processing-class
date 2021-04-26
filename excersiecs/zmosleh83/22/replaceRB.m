@@ -1,16 +1,6 @@
-<div dir="rtl">
-
-#### 22 تمرین <br />
-
-
-
-### کد:
-</div>
-
-```matlab
 clc;clear;close all;
 
-img=imread("../../../benchmark/watch.png");
+img=imread("../../../benchmark/cat.png");
 subplot(1,2,1),imshow(img);
 R = img(:, :, 1);G = img(:, :, 2);B = img(:, :, 3);
 [sr,sc,sz] = size(img);
@@ -23,6 +13,3 @@ for r=1:sr
    end
 end
 subplot(1,2,2),imshow(imgout);
-```
-
-با تشکر از آقای احسان مجیدی و توضیحات کامل آقای شکری در کلاس
