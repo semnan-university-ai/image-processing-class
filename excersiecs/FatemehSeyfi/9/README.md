@@ -47,4 +47,4 @@ figure
 imshow(imgcrop);
 ```
 
-out=![out](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/9/q9.png)
+![out](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/9/q9.png)
