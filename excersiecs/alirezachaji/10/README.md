@@ -34,7 +34,7 @@ clc
 pic=zeros(100,400);                           
 for i=1:4                                       
    d=randi(10);                                 
-   add="images\numbers\"+int2str(d-1)+".png";    
+   add=".\images\numbers\"+int2str(d-1)+".png";   
    a=imread(add);                               
    for r=1:100                                  
        for k=1:100                                
