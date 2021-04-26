@@ -106,4 +106,4 @@ for i=1 : numberOfCaptcha
 end
 figure,
 imshow(uint8(uint8(PatchArray)));
-imsave;
+%imsave;
