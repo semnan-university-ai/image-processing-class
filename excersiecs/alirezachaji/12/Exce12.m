@@ -1,7 +1,7 @@
 close all
 clear all
 clc
-a=pepper_noise("benchmark\lena.png",10);
+a=pepper_noise("..\..\..\benchmark\lena.png",10);
 p=imread('benchmark\lena.png');
 n=size(a);
 subplot(2,2,1);imshow(p);title("Original Image");
