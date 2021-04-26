@@ -1,8 +1,8 @@
 clc;
 close all;
 clear all;
-addpath('benchmark')
- im=imread('pool.png');
+
+ im = imread("../../../benchmark/pool.png");
 
  im=imresize(im,[250,400]);
  im=rgb2gray(im);
