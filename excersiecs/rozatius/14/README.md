@@ -58,4 +58,7 @@ subplot(4,6,n*2),imhist(img),title(strcat('histogram',int2str(n)));
 </div>
 
 ![result1](result.jpg)
+<div dir="rtl">
+تصویر خروجی: با تصاویر دیگر<br />
+</div>
 ![result2](result2.jpg)
