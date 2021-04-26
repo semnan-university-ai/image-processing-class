@@ -18,32 +18,40 @@ clear;
 image=zeros(50,200);
 ```
 <div dir ="rtl">
-با این کد تصویر خوانده می شود و تصویر اولیه نمایش داده می شود. <br/>
+این تکه کد در حلقه اول  4  عدد تصادفی در بین 10 عدد 0 تا 9 تولید می کند ودر حلقه   m و k آدرس تصویرمان ایجاد می گردد.. <br/>
 </div>
 
 ```
-addpath("benchmark");
-image = imread("pool.png");
-figure
-imshow(image);
+for i=1:4
+  j=randi(10);
+   inc="numbers\"+int2str(j-1)+".png";
+   b=imread(inc);
+   for m=1:100
+       for k=1:100
+           c=(i-1)*100+k;
+           image(m,c)=(255-b(m,k));
+       end
+   end    
+end 
 
 ```
 
 <div dir ="rtl">
-با استفاده از تابع imcrop،تصویر را برش می دهد.باتوجه به طول وعرض داده شده .<br/>
+با استفاده از دستور im2bw تصویر را باینری می کنیم.<br/>
 </div>
 
 ```
-imgcrop = imcrop(image,[width_x length_y length_y  width_x]);
+figure;
+image=im2bw(image);
 ```
 <div dir ="rtl">
- نمایش تصویر crop شده.<br/>
+ نمایش خروجی  <br/>
 </div>
 
 ```
 figure
 
-imshow(imgcrop);
+imshow(image)
 ```
 
-![out](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/9/q9.png)
+![out](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/FatemehSeyfi/10/q10.png)
