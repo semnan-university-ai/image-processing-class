@@ -1,0 +1,16 @@
+clc;
+close all;
+clear all;
+
+img=rgb2gray(imread('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\benchmark\pool.png'));
+subplot(2,2,3),imshow(img),title('Orginal-gray');
+[sr,sc] = size(img);
+for x=1:sr
+   for y=1:sc
+       if ((imggray(x,y) > 50) || (imggray(x,y) < 48)) && (x >230) && (y >355)
+            imggray(x,y) = 49;
+            
+       end
+   end
+end
+subplot(2,2,4),imshow(imggray),title('Edited-gray');
