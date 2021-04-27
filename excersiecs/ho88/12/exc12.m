@@ -46,8 +46,8 @@ medImage = medfilt2(grayImg);
 filterWindow = ones(3) / 9;
 filteredImage = imfilter(grayImg, filterWindow);
 
-subplot(221); imshow(grayImg); subplot(222); imshow(medImage); 
-subplot(223); imshow(filteredImage);
+subplot(221); imshow(grayImg); title('Adding noise'); subplot(222); imshow(medImage); title('median filtered') 
+subplot(223); imshow(filteredImage); title('Mean filtered');
 
 
 
