@@ -2,7 +2,7 @@
 <div dir="rtl">
  
 #### تمرین 15
-#### را به خاکستری تبدیل کنید و سپس توپ زرد را از تصویر حذف کنید pool.png ابتدا تصویر. <br />
+#### ابتدا تصویر pool.png را به grayscale تبدیل کنید و سپس توپ زرد را از تصویر حذف کنید. <br />
 ***
 ### توضیحات کلی برنامه:
  در این برنامه ابندا مختصات حدودی توپ زرد را پیدا کرده و سپس با توجه به مقادیر پیکسل ها توپ زرد را حذف کند..
@@ -49,6 +49,7 @@ imshow(a)
 
 ```
 ***
+
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/9f06b76e542aa2869769710154319db63cac0e2a/excersiecs/alirezachaji/15/Exce15.png)
 
 
