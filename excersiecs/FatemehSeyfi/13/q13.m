@@ -2,11 +2,11 @@ close all
 clear all
 clc
 t=zeros(8,1);
-image = imread("benchmark/airplane.png");
-[x,y] = size(image);
+image = imread("../../../benchmark/airplane.png");
+[m,n] = size(image);
 
-for i=1:x
-    for j=1:y
+for i=1:m
+    for j=1:n
         image(i,j) = 255 - image(i,j);
     end
 end

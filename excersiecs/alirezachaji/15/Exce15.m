@@ -1,7 +1,7 @@
 close all
 clear all
 clc
-a=imread("benchmark\pool.png");
+a=imread("..\..\..\benchmark\pool.png");
 imshow(a);
 a=rgb2gray(a);
 figure;
