@@ -26,25 +26,25 @@ for n=1:12
 </div>
 ```
         image=rgb2gray(images); 
- ``` 
+```
  <div dir ="rtl">
   نمایش عکس ها.  <br/>
 </div>
- ``` 
+``` 
         subplot(4,6,m)
         imshow(image);          
         title("Image "+int2str(n));
- ```         
+```        
  <div dir ="rtl">
 نمایش هیستوگرام عکس ها.  <br/>
  </div>  
-    ``` 
+ ``` 
         subplot(4,6,m+1)
         imhist(image);       
         title("Histogram "+int2str(n));
         m=m+2;  
 end
-  ``` 
+```
 
 
 
