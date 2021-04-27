@@ -47,9 +47,6 @@ imshow(a)
 ```
 ***
 
-```
-***
-
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/9f06b76e542aa2869769710154319db63cac0e2a/excersiecs/alirezachaji/15/Exce15.png)
 
 
