@@ -3,7 +3,8 @@ clear all
 clc
 
 % ################## pic1###########################
- im=imread('benchmark/pool.png');
+ addpath('benchmark')
+ im=imread('pool.png');
  im=imresize(im,[250,400]);
  im=rgb2gray(im); 
  figure

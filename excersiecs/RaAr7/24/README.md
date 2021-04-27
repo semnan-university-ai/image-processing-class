@@ -5,8 +5,8 @@
 </br>
 
 ```
-image_watch = imread("../benchmark/watch.png");
-image_pool = imread("../benchmark/pool.png");
+image_watch = imread("../../../benchmark/watch.png");
+image_pool = imread("../../../benchmark/pool.png");
 
 [x,y,z] = size(image_watch);
 [s,t,u] = size(image_pool);

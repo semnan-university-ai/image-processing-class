@@ -6,7 +6,7 @@
 </br>
 
 ```
-image = imread("../benchmark/watch.png");
+image = imread("../../../benchmark/watch.png");
 
 for i=295:585
     for j=300:700

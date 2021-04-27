@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("../benchmark/mountain.png");
+image = imread("../../../benchmark/mountain.png");
 
 for j=2:y
     f = true;

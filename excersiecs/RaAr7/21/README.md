@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("../benchmark/pool.png");
+image = imread("../../../benchmark/pool.png");
 [x,y] = size(image);
 image = (image/51);
 ```

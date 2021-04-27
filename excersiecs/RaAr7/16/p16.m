@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("../benchmark/zelda.png");
+image = imread("../../../benchmark/zelda.png");
 [x,y] = size(image);
 
 %Right Eye
