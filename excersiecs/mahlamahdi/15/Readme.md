@@ -34,5 +34,7 @@ end
   `````
 <div dir= "rtl">
  نمایش خروجی
-  </div>
+</div>
+  
+  
 ![خروجی](assets/result.jpg) 
