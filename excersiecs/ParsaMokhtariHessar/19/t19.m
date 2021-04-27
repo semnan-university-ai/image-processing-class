@@ -223,9 +223,8 @@ for i=1 : numberOfCaptcha
             disp('other value')
     end
 end
-imageN = 1-im2bw(uint8(PatchArray),0.9);
 figure,
-imshow(imageN);
-imsave;
+imshow(uint8(uint8(PatchArray)));
+%imsave;
 
 
