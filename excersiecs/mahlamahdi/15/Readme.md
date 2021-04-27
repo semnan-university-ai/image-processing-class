@@ -35,6 +35,10 @@ end
 <div dir= "rtl">
  نمایش خروجی
 </div>
-  
-  
+ 
+ ````
+ subplot(1,2,1), imshow(a);
+subplot(1,2,2), imshow(b);
+
+````  
 ![خروجی](assets/result.jpg) 
