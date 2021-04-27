@@ -24,9 +24,15 @@ a=rgb2gray(a);
   </div>
   
   ````
-  
+ for i= 230:330
+    for j=360:460
+        b(i,j) = 48; % عدد رنگ زمینه 
+    end
+end 
   
   
   `````
-
+<div dir= "rtl">
+ نمایش خروجی
+  </div>
 ![خروجی](assets/result.jpg) 
