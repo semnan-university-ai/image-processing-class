@@ -273,3 +273,15 @@ imshow(uint8(uint8(PatchArray)));
 ![output](t19-2.png)
 ![output](t19-3.png)
 ![output](t19-4.png)
+
+<div dir="rtl">
+ يا ميتوانيم آن را به باينري تبديل كنيم.
+</div>
+
+imageN = 1-im2bw(uint8(PatchArray),0.9);
+figure,
+imshow(imageN);
+imsave;
+
+![output](t19-5.png)
+
