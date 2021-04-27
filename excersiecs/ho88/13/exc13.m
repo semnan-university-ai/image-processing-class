@@ -16,9 +16,9 @@ grayImg = rgb2gray(image);
 
 
 negImage = 255 - grayImg(:,:,:);
-salt_arr = [ 10, 20, 30, 50, 60];
+salt_arr = [0, 10, 20, 30, 50, 60];
 avg = [];
-
+rownames = strings(1,100);
 for n=1:length(salt_arr)
     
    sum = 0;
@@ -37,15 +37,16 @@ for n=1:length(salt_arr)
        end
     end
     
-    avg(n) = sum / (rows*cols);
-    subplot(2, fix((length(salt_arr)+1/2)), n); imshow(negImage);title(strcat('image ', int2str(n)));
+    avg(n,1) = sum / (rows*cols);
+    rownames(1,n) = strcat('image ', int2str(n));
+    subplot(2, fix((length(salt_arr)/2)), n); imshow(negImage);title(rownames(n));
 end
     
 figure;
 % 
 col_names = { 'Average Values '};
 
-table = uitable( 'Data', avg, 'col_names', col_names);
+table = uitable( 'Data', avg, 'columnname', col_names, 'rowname', rownames);
 
 
 
