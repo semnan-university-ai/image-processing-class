@@ -278,10 +278,14 @@ imshow(uint8(uint8(PatchArray)));
  يا ميتوانيم آن را به باينري تبديل كنيم.
 </div>
 
+
+
+```
 imageN = 1-im2bw(uint8(PatchArray),0.9);
 figure,
 imshow(imageN);
 imsave;
+```
 
 ![output](t19-5.png)
 
