@@ -117,7 +117,7 @@ for k=1:255
     his(k)=s;
 end 
 ```
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/22/1.jpg)
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/23/sub.jpg)
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/22/2.jpg)
 ***
 
