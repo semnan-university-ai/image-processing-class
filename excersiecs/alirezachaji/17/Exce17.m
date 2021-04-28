@@ -1,7 +1,7 @@
 close all
 clear all
 clc
-a=imread("benchmark\mountain.png");
+a=imread("..\..\..\benchmark\mountain.png");
 imshow(a)
 a=uint8(a);
 a(150,193:207)=1;
