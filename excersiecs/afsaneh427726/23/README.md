@@ -96,6 +96,7 @@ m=size(pic);
 <div dir="rtl">
  ایجاد یک ماتریس سطری به اندازه 255
  </div>
+ 
   ```ruby
 his=zeros(1,255);
 for k=1:255
@@ -115,7 +116,7 @@ for k=1:255
     end
     his(k)=s;
 end 
-
+```
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/22/1.jpg)
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/22/2.jpg)
 ***
