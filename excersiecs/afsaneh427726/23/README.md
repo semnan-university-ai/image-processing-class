@@ -1,14 +1,13 @@
 
 > # Exercise 23
   <div dir="rtl">
- رسم هیستوگرام کانال های رنگی تصوسر بدون استفاده از توابع آماده
+ رسم هیستوگرام کانال های رنگی تصویر بدون استفاده از توابع آماده
  </div>
  
 >CODE
 
 >Main program
 ```ruby 
-
 image=imread('C:\Users\as\Downloads\pool.png');
 ```
   <div dir="rtl">
