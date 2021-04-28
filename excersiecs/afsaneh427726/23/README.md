@@ -13,6 +13,7 @@ image=imread('C:\Users\as\Downloads\pool.png');
   <div dir="rtl">
  جدا کردن کانال های رنگی تصویر
  </div>
+ 
  ```ruby 
 r=image(:,:,1);
 g=image(:,:,2);
@@ -21,44 +22,50 @@ b=image(:,:,3);
   <div dir="rtl">
  مشخص کردن مکان رسم نمودار
  </div>
+ 
  ```ruby
 subplot(3,2,1);
  ```
   <div dir="rtl">
  رسم هیستوگرام کانال رنگی با استفاده از دستور آمده متلب به منظور مقایسه
  </div>
+ 
  ```ruby
 imhist(r);
  ```
  <div dir="rtl">
  مشخص کردن عنوان نمودار
  </div>
+ 
  ```ruby
 title('Red Histogram with imhist')
 ```
   <div dir="rtl">
  مشخص کردن مکان رسم نمودار
  </div>
+ 
  ```ruby
 subplot(3,2,2);
 ```
   <div dir="rtl">
  رسم نمودار با استفاده از فراخوانی تابع نوشته شده
  </div>
+ 
  ```ruby
 bar(hist(r),'r');
  ```
  <div dir="rtl">
  مشخص کردن عنوان نمودار
  </div>
+ 
  ```ruby
 title('Red Histogram')
  ```
  <div dir="rtl">
   برای دو کانال دیگر نیز همانند کانال قرمزعملیات بالا انجام می شود.
  </div>
+ 
  ```ruby
-
 subplot(3,2,3);
 imhist(g);
 title('Green Histogram with imhist')
@@ -82,6 +89,7 @@ function his=hist(pic)
 <div dir="rtl">
  به دست آوردن سایز تصویر
  </div>
+ 
   ```ruby
 m=size(pic);
  ```
@@ -96,6 +104,7 @@ for k=1:255
 <div dir="rtl">
  ایجاد یک حلقه تو درتو برای شمارش تعداد پیکسل ها با شمارهk
  </div>
+ 
   ```ruby
     for i=1:m(1)
         for j=1:m(2)
