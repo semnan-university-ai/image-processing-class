@@ -16,6 +16,10 @@ watch=imresize(watch,[383 510]);   % تغییر سایز عکس ساعت
 figure,imshow(watch); % نمایش عکس
 figure,imshow(pool);% نمایش عکس
 ```
+ <div dir="rtl">
+جابه جایی کانال های رنگی
+ </div>
+ 
 ```ruby
 redWatch=watch(:, :,1); % دریافت بعد قرمر ساعت
 redPool=pool(:, :,1); % دریافت بعد قرمز بیلیارد
