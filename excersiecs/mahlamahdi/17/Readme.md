@@ -10,14 +10,28 @@ close all;
 ````
 
 <div dir= "rtl">
-  خواندن تصویر و با توجه به اینکه تصویر آسمان تا ردیف 150 وجود دارد اگر مقدار پیسکل از 200 کمتر بود آن را سیاه نماید.
+  خواندن تصویر و با توجه به مکان  آسمان در تصویر اگر مقدار پیسکل از 200 کمتر بود آن را سیاه نماید.
   </div>
 
 ````
-a=imread("mountain.png");
-[m,n] =size(a);
-for i=1:150
+for i=1:80
     for j=1:639
+        if (a(i,j))>200
+            a(i,j)=0;
+        end
+        
+    end
+end
+for i=80:150
+    for j=1:290
+        if (a(i,j))>200
+            a(i,j)=0;
+        end
+        
+    end
+end
+for i=80:150
+    for j=600:639
         if (a(i,j))>200
             a(i,j)=0;
         end
@@ -32,9 +46,10 @@ end
   </div>
   
   `````
- imshow(a);
+subplot(1,2,1),imshow("mountain.png");
+subplot(1,2,2),imshow(a);
  
 `````
 
 ![خروجی](assets/result.jpg)
-![خروجی](assets/mountain.png)
+
