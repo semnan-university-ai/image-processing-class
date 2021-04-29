@@ -1,5 +1,5 @@
 <div dir= "rtl">
-  تمرین شانزدهم
+  <h1> تمرین شانزدهم </h1>
   </div>
   
 ````    
@@ -40,5 +40,5 @@ subplot(1,2,2), imshow(b);
   
 `````
 
-![خروجی](assert/result.png)
+![خروجی](assets/result.jpg)
   
