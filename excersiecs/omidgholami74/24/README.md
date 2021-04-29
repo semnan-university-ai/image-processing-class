@@ -32,5 +32,6 @@ figure, imshow(pool);
  <div dir="rtl">
 خروجی
  </div>
+ 
 ![image](https://user-images.githubusercontent.com/48456571/116563033-ecacf800-a918-11eb-878d-b6b676753e86.png)
 
