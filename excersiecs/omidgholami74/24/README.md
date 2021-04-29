@@ -6,20 +6,22 @@
 
 Main Program
 ```ruby
+clear all
 clc;
 close all;
-clear all;
 
-imageList =dir('nature/*.png');
+watch = imread('benchmark/watch.png'); % بارگزاری عکس ساعت
+pool= imread('benchmark/pool.png'); % بارگذاری عکس بیلیارد
+watch=imresize(watch,[383 510]);   % تغییر سایز عکس ساعت
+figure,imshow(watch); % نمایش عکس
+figure,imshow(pool);% نمایش عکس
 
-for k =1:12
-        name =imageList(k).name;
-        image=imread(name);
-        image=rgb2gray(image);
-        subplot(6,2,k)
-        imhist(image);
-        
-end
+redWatch=watch(:, :,1); % دریافت بعد قرمر ساعت
+redPool=pool(:, :,1); % دریافت بعد قرمز بیلیارد
+watch(:,:,1)=redPool(:,:,1);  % جابجایی بعد ها      
+pool(:, :,1)=redWatch(:,:,1);% جا به جایی بعد ها
+figure, imshow(watch);             
+figure, imshow(pool);
 ```
 ****
 ![image](https://user-images.githubusercontent.com/48456571/116563033-ecacf800-a918-11eb-878d-b6b676753e86.png)
