@@ -15,7 +15,8 @@ pool= imread('benchmark/pool.png'); % بارگذاری عکس بیلیارد
 watch=imresize(watch,[383 510]);   % تغییر سایز عکس ساعت
 figure,imshow(watch); % نمایش عکس
 figure,imshow(pool);% نمایش عکس
-
+```
+```ruby
 redWatch=watch(:, :,1); % دریافت بعد قرمر ساعت
 redPool=pool(:, :,1); % دریافت بعد قرمز بیلیارد
 watch(:,:,1)=redPool(:,:,1);  % جابجایی بعد ها      
