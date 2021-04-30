@@ -1,5 +1,5 @@
 <div dir= "rtl">
-  <h1> تمرین هفدهم </h1>
+  <h1> تمرین هجدهم </h1>
   </div>
   
 ````    
@@ -10,44 +10,40 @@ close all;
 ````
 
 <div dir= "rtl">
-  خواندن تصویر و با توجه به مکان  آسمان در تصویر اگر مقدار پیسکل از 200 کمتر بود آن را سیاه نماید.
-  </div>
+خواندن تصویر و تبدیل به خاکستری نمودن تصویر و بدست آوردن اندازه تصویر
+</div>
 
 ````
-for i=1:80
-    for j=1:639
-        if (a(i,j))>200
-            a(i,j)=0;
-        end
-        
-    end
-end
-for i=80:150
-    for j=1:290
-        if (a(i,j))>200
-            a(i,j)=0;
-        end
-        
-    end
-end
-for i=80:150
-    for j=600:639
-        if (a(i,j))>200
-            a(i,j)=0;
-        end
-        
-    end
-end
+pic = imread('watch.png');
+pic2= rgb2gray(pic);
+subplot(1,2,1), imshow(pic), title('axe asli');
+[m , n ] = size (pic2);
 
 `````
 
 <div dir= "rtl">
-  نمایش خروجی
-  </div>
+مکان تقریبی قرار گرفتن در ساعت را در نظر می گیریم و محدوده رنگ مورد نظر را بررسی نموده و پیکسل ها را سفید می نماییم.
+</div>
   
   `````
-subplot(1,2,1),imshow("mountain.png");
-subplot(1,2,2),imshow(a);
+  
+  for i=300:m-150
+    for j=300:n-300
+        r=pic(i,j,1);
+        g=pic(i,j,2);
+        b=pic(i,j,3);
+         if((abs(r-b)<3) && (abs(r-g)<3)&&(abs(b-g)<10))
+              pic2(i,j)=255;
+        end 
+    end
+end    
+`````
+<div dir= "rtl">
+نمایش خروجی
+</div>
+
+`````
+subplot(1,2,2), imshow(pic2), title('khorooji');
  
 `````
 
