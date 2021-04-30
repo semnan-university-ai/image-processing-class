@@ -50,4 +50,4 @@ end
 imshow(pic)
 ````
 
-![خروجی](assets/result.png)
+![خروجی](assets/result.jpg)
