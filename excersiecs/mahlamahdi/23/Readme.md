@@ -41,40 +41,30 @@ end
   subplot(1,2,1), imshow(pic);
   subplot(1,2,2), imshow(image);
 ````
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-<table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
-</table>
 
+<div>
+  <h2> بدست آوردن هیستوگرام</h2>
+  </div>
+  
+  <div>
+  بدست  آوردن هیستوگرام هر کانال 
+  </br>
+  هیستوگرام با تشکر از جناب شکری برای آموزش مفید
+  </div>
+  
+  `````
+  
+ function [pixel_histogram] =  compute_hist(image)
+[m ,n] = size(image);
+pixel_histogram = zeros(1, 256);
+for i = 1 : m
+    for j = 1 : n
+        pixel_histogram(1, image(i,j) + 1) = pixel_histogram(1, image(i,j) + 1) + 1;
+        % pixel_histogram(1, image(i,j) + 1) += 1;
+    end
+end
+end
+
+`````
 
 ![خروجی](assets/result.jpg)
