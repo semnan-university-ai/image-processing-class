@@ -1,5 +1,5 @@
 <div dir = "rtl">
-<h1> تمرین بیست و دوم </h1>
+<h1> تمرین بیست و سوم  </h1>
 
 <br/>
 </div>
@@ -10,24 +10,29 @@ close all
 clear
 ````
 <div dir = "rtl">
-خواندن تصویر
+خواندن تصویر و بدست آوردن اندازه تصویر
 </div>
 
 ````
-pic = imread('fruits.png');
-
-image =pic;
+image = imread("fruits.png");
+image2 = image;
+[m, n ,r] = size(image);
 ````
 
 <div dir = "rtl">
-استفاده از متعیر کمکی temp برای جابجا نمودن دو کانال red و Blue
-</div>
+  به ازای هر کدام کانل ها تابع compute_hist که برای محاسبه هیستوگرام هر کانال است فراخوانده می شود.
+ <div>
+  
+  </div
+ </div>
 
 
 ````
-temp= image(:,:,1);
- image(:,:,1) = image(:,:,3);
- image(:,:,3)=temp;
+for p=1:r
+  hist=compute_hist(image(:,:,p));
+  bar(hist);
+  subplot(2,3,p); bar(hist); 
+end
 
 ````
 
