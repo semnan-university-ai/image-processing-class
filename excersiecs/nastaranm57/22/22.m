@@ -1,11 +1,11 @@
-spectrum=imread('C:\Users\PC\Desktop\cat.png');
+addpath("../../../benchmark/");
+spectrum = imread("cat.png");
 R=spectrum(:,:,1);
-G=spectrum(:,:,2);
-B=spectrum(:,:, 3);
-temp=R;
-R=B;
-B=temp;
+spectrum(:,:,1)=spectrum(:,:,3);
+spectrum(:,:, 3)=R;
 subplot(2,2,1)
+B=spectrum(:,:, 3);
+G=spectrum(:,:, 2);
 imshow(R);
 title('R');
 subplot(2,2,2)
@@ -17,4 +17,3 @@ title('B');
 subplot(2,2,4)
 imshow(spectrum);
 title('spectrum');
-
