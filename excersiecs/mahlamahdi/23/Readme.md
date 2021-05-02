@@ -38,8 +38,7 @@ end
 </div>
 
 ````
-  subplot(1,2,1), imshow(pic);
-  subplot(1,2,2), imshow(image);
+  subplot(2,3,4:6), imshow(image);
 ````
 
 <div dir = "rtl">
