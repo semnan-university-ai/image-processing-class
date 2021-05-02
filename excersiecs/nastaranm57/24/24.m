@@ -1,9 +1,12 @@
-pool=imread('C:\Users\PC\Desktop\pool.png');
+
+addpath("../../../benchmark/");
+pool = imread("pool.png");
 pool=imresize(pool,[768 1024]);
 subplot(2,2,1)
 imshow(pool);
 title('original pool');
-watch=imread('C:\Users\PC\Desktop\watch.png');
+addpath("../../../benchmark/");
+watch = imread("watch.png");
 subplot(2,2,3)
 imshow(watch);
 title('original watch');
