@@ -15,12 +15,11 @@ figure;imshow(pic);title('Original');
 [height,width,k]=size(pic);
 ```
 
-```ruby
-
- <div dir="rtl">
+<div dir="rtl">
  ایجاد حلقه برای دسترسی به هر پیکسل از عکس و ایجاد بازه های 50 تایی برای کوانتزیه کردن(بسته بندی) کردن رمگ ها
  </div>
 
+```ruby
 for i=1:height
     for j=1:width
             pic(i,j,:)=floor(pic(i,j,:)/51)*51;
