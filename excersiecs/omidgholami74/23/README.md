@@ -2,7 +2,12 @@
 >بدون استفاده از توابع آماده ی متلب هیستوگرام هر یک از کانال های رنگی یکی از تصاویر را به صورت جداگانه محاسبه کنید. کدهای هیستوگرام را تبدیل به یک تابع در فایل جداگانه کنید و برای هر سه کانال رنگی آن را فراخوانی کنید
 ***
 >CODE
-Main Program
+>
+ <div dir="rtl">
+
+ </div>
+
+
 ```ruby
 clc;
 close all;
@@ -11,6 +16,13 @@ pic=imread('benchmark/sails.png');
 hisR=his(pic,1);
 hisG=his(pic,2);
 hisB=his(pic,3);
+```
+
+<div dir="rtl">
+
+ </div>
+ 
+ ```ruby
 hisR=his(pic,1); % هیستوگرام قزمز
 hisG=his(pic,2); % هستوگرام سبز
 hisB=his(pic,3);% هستوگرام آبی
@@ -19,18 +31,26 @@ hisB=his(pic,3);% هستوگرام آبی
  figure;bar(hisB);title('Blue')
 ```
 
-histogram function
+<div dir="rtl">
+تابع هیستوگرام
+ </div>
+ 
 ```ruby
 function image = his(pic,n)
 his=zeros(1,255);
-[h,w,k] = size(pic);
+[h,w,k] = size(pic);% دریافت سایز و طول و بعد عکس
     for i=1:h
         for j=1:w
-            his(1,pic(i,j,n))=his(1,pic(i,j,n))+1;
+            his(1,pic(i,j,n))=his(1,pic(i,j,n))+1; % به ازای هر مقادیر پیکسلی که پیدا میکند. مقدار  موجود دراندیس متناسب  با همان مقار پیکسل را یک واحد افزایش میدهد
         end
     end
     image =his;
 end
 ```
 ****
+
+<div dir="rtl">
+خروجی
+ </div>
+ 
 ![image](https://user-images.githubusercontent.com/48456571/116561662-c470c980-a917-11eb-9e31-7737ba0f583b.png)
