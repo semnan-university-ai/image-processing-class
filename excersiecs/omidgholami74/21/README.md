@@ -1,24 +1,40 @@
-> # Exercise 14
+> # Exercise 21
 >رنگ های موجود در یکی از تصاویر benchmark را به انتخاب خودتان به safe color تبدیل کنید.
 ***
 >CODE
 
 Main Program
+
+ <div dir="rtl">
+بار گزاری عکس و نمایش عکس اصلی 
+ </div>
+
 ```ruby
-clc;
-close all;
-clear all;
+pic=imread('benchmark/sails.png');
+figure;imshow(pic);title('Original');
+[height,width,k]=size(pic);
+```
 
-imageList =dir('nature/*.png');
+```ruby
 
-for k =1:12
-        name =imageList(k).name;
-        image=imread(name);
-        image=rgb2gray(image);
-        subplot(6,2,k)
-        imhist(image);
-        
-end
+ <div dir="rtl">
+ ایجاد حلقه برای دسترسی به هر پیکسل از عکس و ایجاد بازه های 50 تایی برای کوانتزیه کردن(بسته بندی) کردن رمگ ها
+ </div>
+
+for i=1:height
+    for j=1:width
+            pic(i,j,:)=floor(pic(i,j,:)/51)*51;
+    end
+end 
+
+
+ <div dir="rtl">
+نمایش عکس safe color 
+ </div>
+
+```ruby
+pic=uint8(pic);
+figure;imshow(pic);title('safe color')
 ```
 ****
 
