@@ -2,7 +2,8 @@ clc;
 close all;
 clear all;
 
-pic=imread('C:\Users\PC\Desktop\lena.png');
+addpath("../../../benchmark/");
+pic = imread("lena.png");
 
 subplot(2,2,1);imshow(pic);title('original image')
 hisR=his(pic,1);
