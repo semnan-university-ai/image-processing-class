@@ -12,21 +12,21 @@ clear all;
 
 
 
-imageList =dir('alpha_eng/*.png');
-blankImage=[];
-n=input("please insert Number of Characters")
-for k =1:n
-    rand=randi(24);
-    deg=randi(180);
-    temp=zeros(100,100);
-        name =imageList(rand).name;
-       image=imread(name);
-       image=rgb2gray(image);
+imageList =dir('alpha_eng/*.png'); % بارگزاری تمامی تصاویر اعداد حروف انگلیسی
+blankImage=[]; % ساخت یک آرایه خالی یرای نمایش عکس نهایی
+n=input("please insert Number of Characters") % انتخاب تعداد کاراکتر توسط کاربر
+for k =1:n           % ایجاد حلقه برای بارگزاری تصاویر
+    rand=randi(24);% ایجاد عدد رندم برای انتخاب حذوف انگلیسی
+    deg=randi(180); % انتخاب یک زاویه رندوم برای چرخاندن حروف
+    temp=zeros(100,100); % ساخت یک ماتریس صفر 100 در 100
+        name =imageList(rand).name;% انتخاب تصاویر عدد ها بصورت رندوم
+       image=imread(name); % بارگزاری تصویر
+       image=rgb2gray(image); % تبدیل عکس به خاکستری
        
-       image=e8_rotate(image,deg);
-       [w,h]=size(image);
-       temp(1:w,1:h) = image;
-       blankImage =cat(2,blankImage,temp);
+       image=e8_rotate(image,deg); % چرخش تصویر
+       [w,h]=size(image); % دریافت طول و عرض تصویر
+       temp(1:w,1:h) = image; % ریختن غکس چرخانده شده درون ماتریس صفر
+       blankImage =cat(2,blankImage,temp); % چسباندن تصاویر یا همان آرایه ها بهم
 end
 imshow(blankImage);
 ```
@@ -38,58 +38,58 @@ function image_rotated = e8_rotate(A,deg)
 %   Detailed explanation goes here
 %Find the midpoint
 % path=strcat(name)
-if(deg > 155)
-    midx = ceil((size(A,1))/2);
-    midy = ceil((size(A,2))/2);
+if(deg > 155)   
+    midx = ceil((size(A,1))/2);%مشخص کردن وسط تصویر برای چرخش بیش از 155
+    midy = ceil((size(A,2))/2);%مشخص کردن وسط تصویر برای چرخش بیش از 155
 else
-    midx = ceil((size(A,2))/2);
-    midy = ceil((size(A,1))/2);
+    midx = ceil((size(A,2))/2);%مشخص کردن وسط تصویر برای چرخش کمتر از 155
+    midy = ceil((size(A,1))/2); %مشخص کردن وسط تصویر برای چرخش کمتر از 155
 end
 
-[y,x] = meshgrid(1:size(A,2), 1:size(A,1));
-[t,r] = cart2pol(x-midx,y-midy);
-t1 = radtodeg(t)+deg;
+[y,x] = meshgrid(1:size(A,2), 1:size(A,1)); % ساخت یک ماتریس دو بعدی برای نمایش تصویر با دشتور meshgrid
+[t,r] = cart2pol(x-midx,y-midy); % تبدیل مختصات کارتزین به قطبی
+t1 = radtodeg(t)+deg;  % تیدیل رادیان به درجه 
 
-%Convert from degree to radians
+%ندیل رادیان به درجه
 t = degtorad(t1);
 
-%Convert to Cartesian Co-ordinates
+% تبدیل مختصات قطبی به کارتزین
 [x,y] = pol2cart(t,r);
 
-%Add the mid points to the new co-ordinates
+%افزودن نقطه وسط به مختصات جدید
 tempx = round(x+midx);
 tempy = round(y+midy);
 
-if ( min(tempx(:)) < 0 )
+if ( min(tempx(:)) < 0 )% اگر کمترین طول کوچکتر از صفر باشد یا منفی باشد
    
-newx = max(tempx(:))+abs(min(tempx(:)))+1;
+newx = max(tempx(:))+abs(min(tempx(:)))+1; % از قدر مطلق استفاده میکنیم
 tempx = tempx+abs(min(tempx(:)))+1;
 else
-    newx = max(tempx(:));
+    newx = max(tempx(:));% در غیر اینصورت بیشترین عدد طول را به عنوان نقطه جدید قرار میدهیم
 end
 
-if( min(tempy( : )) < 0 )
+if( min(tempy( : )) < 0 )اگر کمترین عرض کوچکتر از صفر باشد یا منفی باشد
    
-newy = max(tempy(:))+abs(min(tempy(:)))+1;
-tempy = tempy+abs(min(tempy(:)))+1;
+newy = max(tempy(:))+abs(min(tempy(:)))+1; % از قدر مطلق استفاده میکنیم
+tempy = tempy+abs(min(tempy(:)))+1; % از قدر مطلق استفاده میکنیم
 else
-    newy = max(tempy(:));
+    newy = max(tempy(:)); % در غیر اینصورت بیشترین عدد طول را به عنوان نقطه جدید قرار میدهیم
 end
 tempy(tempy==0) = 1;
 tempx(tempx==0) = 1;
 
-C = uint8(zeros([newx newy]));
+C = uint8(zeros([newx newy])); % ماتریس صفر جدی زا به uint8 تیدیل میکنیم
 
 
 for i = 1:size(A,1)
     for j = 1:size(A,2)
-        C(tempx(i,j),tempy(i,j)) = A(i,j);
+        C(tempx(i,j),tempy(i,j)) = A(i,j); %  حال به اندازه طول و عرض تصویر . مختصلا جدید را درون خروجی قرار کیدهیم
        
     end
   
 end
-Output = C;
-%FILL THE HOLES OR GAPS-NEAREST NEIGHBOR
+Output = C; %
+%جاهای خالی را با پیدا میکنیم
 for i = 2:size(C,1)-1
     for j = 2:size(C,2)-1
        
@@ -109,12 +109,3 @@ end
 ```
 ***
 ![image](https://user-images.githubusercontent.com/48456571/113310193-37891f00-931d-11eb-939f-2b530b5bd3d0.png)
-
-<div dir="rtl">
-<h2>توضیحات برنامه</h2> <br />
- <b>1</b>.درابندا برنامه عکس را بارگذاری میکند<br />
-<b>2</b>.عکس و سایز  را به تابع بریدن عکس میدهد <br />
-<b>3</b>. عکس را با استفاده از آراایه ها در ابعاد مشخص شده می دهیم.<br />
-<b>4</b>. با استفاده از حلقه ها اکثر را در آرایه ها میگذاریم
-    
-</div>

@@ -1,7 +1,7 @@
 clc;
 clear;
 close all;
-pic = imread('fruits.png');
+pic = imread("../../../benchmark/fruits.png");
 image =pic;
  image(:,:,1)= ((image(:,:,1)/51))*51;
 image(:,:,2)= ((image(:,:,2)/51))*51;
