@@ -10,6 +10,10 @@
 ![توضيحات](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/21/khoroji%20tasvir.jpg)
 
 </br>
+<div dir="rtl">
+  
+
+
 
 1- تصوير مورد نظر را فراخواني ميكنيم 
 </br>
@@ -24,3 +28,4 @@
 6- در پاياننمايش ميدهيم تصوير safe color را
 </br>
 7- با تشكر از Faeze75
+</div>
