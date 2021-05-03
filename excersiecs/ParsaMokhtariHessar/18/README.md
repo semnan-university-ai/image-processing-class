@@ -109,6 +109,33 @@ figure,imshow(imageResult);
 ![output](t18outputv2.png)
 
 <div dir="rtl">
+برای حل این مسئله می توانیم از حل یک لوزی که مختصات آن بر روی ساعت مپ شده نیز استفاده نماییم.
+</div>
+
+
+```
+
+circleY = (height+105);
+circleX = (width-16);
+
+r = 140;
+t = 200;
+for i=1 : 1000
+    for j=1 : 1000
+        circle = (((circleY/2)-i)^2)/1 +(((circleX/2)-j)^2)/1.5;
+        if  circle <= r^2
+            imageResult(i, j) = 255;
+        end
+    end
+end
+figure,imshow(imageResult);
+
+```
+
+![output](t18outputv3.png)
+
+
+<div dir="rtl">
  برای این تمرین تلاش زیادی شده ، لطفا در صورت قابل قبول نبودن بیان فرمایید.
 </div>
 

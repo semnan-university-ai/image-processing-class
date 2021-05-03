@@ -1,10 +1,23 @@
-<div dir="rtl">
-تصوير را خوانده و با توجه به پيكسلهاي اسمان ان را سياه كرده و تعغير رنگ اعمال شده حلقه اي كه تعريف شده براي پيمايش پيكسل ها  
-  
-  
-  </div>
+![خروجي تصوير](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/17/Untitled.png)
+
+
+
+
 
 </br>
 
+<div dir="rtl">
 
-![خروجي تصوير](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/17/Untitled.png)
+1- ابتدا تصوير فراخواني شده از مسير مربوطه
+</br>
+2- سپس رنگ پيكسل توسط دستور شرط if  اگر بزرگتر از 165 بود 
+</br>
+3- رنگ پيكسل را به رنگ مشكي تعغير بده
+</br>
+4- اگر رنگ پيكسل چنانچه كوچتر از 165 بود حلقه را متوقف كن و از نقطه ديگر شروع كن 
+</br>
+5- تصوير را تبديل به unit8 بكن
+</br>
+6- تصوير جديد و عكس را نمايش بده با استفاده از دستور figure  و imshow
+
+  </div>
