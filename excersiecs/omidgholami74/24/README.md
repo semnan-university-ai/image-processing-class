@@ -3,8 +3,10 @@
 >کانال رنگی قرمز تصویر watch.png را با کانال رنگی قرمز تصویر pool.png جا به جا کنید و خروجی هر دو را نمایش دهید.
 ***
 >CODE
-
-Main Program
+ <div dir="rtl">
+باگذاری و نمایش تصاویر
+ </div>
+ 
 ```ruby
 clear all
 clc;
