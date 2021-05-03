@@ -28,7 +28,7 @@ clc;
 </div>
 
 ``` matlab
-pic=imread('benchmark\fruits.png');
+pic=imread('..\..\..\benchmark\fruits.png');
 subplot(1,2,1);imshow(pic);
 title('Original Image')
 n=size(pic);
