@@ -1,7 +1,9 @@
 clc;
 close all;
 clear all;
-im=imread('benchmark/pool.png');
+
+ im = imread("../../../benchmark/pool.png");
+
  im=imresize(im,[250,400]);
  im=rgb2gray(im);
  [m,n]=size(im);

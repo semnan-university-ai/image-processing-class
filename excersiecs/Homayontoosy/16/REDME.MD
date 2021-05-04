@@ -6,4 +6,5 @@
 </div>
 
 تصوير اصلي با خروجي تصوير نمايش داده شده 
+</br>
 ![نمايش تصوير اصلي ](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/16/zelda2.png)

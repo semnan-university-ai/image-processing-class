@@ -1,33 +1,20 @@
-clc;
-clear all;
-close all;
-img=imread('A-Z');
-imgcap=zeros(0,0,'logical');
-a1=0;
-c='';
-for i=0:8
-   
-    L=randi([0,3]);
-    if L<2 
-        ttl=65+(L*13+B);
-    else
-        ttl=71+(L*13+B);
-    end
-    
-    code=strcat(code,char(ttl));
-    p=randi([1,20]);
-    q=randi([1,10]);
-    
-    C=B*100+1;
-    D=i*40+1+q;
-    h=L*100+1;
-    imgcaptcha(p:59+p, D:D+39) = img(40+h:99+h, C+30:C+69);
-end    
-%add noise
-for i=1:7000
-    X=randi([1,size(imgcaptcha,1)]);
-    Y=randi([1,size(imgcaptcha,2)]);
-    imgcaptcha(X,Y)=randi([0,1])*255;
-end
+close all
+clear all
+clc
+img=zeros(100,400);
+img(1:100,100:100:400)=1;
+for i=1:4
+   r1='a':'z';
+   r2=r1(randi(numel(r1)));
+   pic="chare\letters\"+r2+".png";
+   a=imread(pic);
+   for r=1:100
+       for k=1:100
+           c=(i-1)*100+k;
+           img(r,c)=(255-a(r,k));
+       end
+   end    
+end 
 figure;
-imshow(imgcaptcha),title(code);
+img=im2bw(img);
+imshow(img)

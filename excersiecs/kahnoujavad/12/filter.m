@@ -3,16 +3,14 @@ clear all;
 close all;
 image=rgb2gray(imread("d:/image-processing-class/benchmark/fruits.png"));
 [a, b] = size(image);
- 
+ subplot(2,2,1),imshow(image),title("orginal");
 for i=1:30000
     X=randi([1,a]);
     Y=randi([1,b]);
     image(X,Y)=randi([0,1])*255;
 end
-figure;
-imshow(image);
+subplot(2,2,2),imshow(image),title("noise image");
 x = im2double(image);
-
 k = [];
 for i=2:a-1
     for j=2:b-1
@@ -27,8 +25,7 @@ for i=2:a-1
             x(i,j) = median(k);
     end
 end 
-figure;
-imshow(x);
+subplot(2,2,3),imshow(x),title("avrage noise");
 y = im2double(image);
 for i=2:a-1
     for j=2:b-1
@@ -43,5 +40,4 @@ for i=2:a-1
             y(i,j) = mean(k);
     end
 end 
-figure;
-imshow(y);
+subplot(2,2,4),imshow(y),title("middle noise ");

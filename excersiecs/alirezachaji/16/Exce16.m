@@ -1,7 +1,7 @@
 close all
 clear all
 clc
-pic = imread('benchmark\zelda.png');
+pic = imread('..\..\..\benchmark\zelda.png');
 imshow(pic);
 EyeDetect = vision.CascadeObjectDetector('LeftEyeCART');
 BB=step(EyeDetect,pic);

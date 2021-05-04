@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("../benchmark/airplane.png");
+image = imread("../../../benchmark/airplane.png");
 image = rgb2gray(image);
 
 [x,y] = size(image);

@@ -1,10 +1,10 @@
-input_im = imread('C:\Users\PC\Desktop\jd.png');
+input_im = imread('.\jd.png');
 if size(input_im , 3) == 3
     image = rgb2gray(input_im);
 else
     image = input_im;
 end
-amount = input('å ÊÚÏÇÏ Ú˜Ó äæ?Ò ÏÇÑ ã? ÎæÇå?Ï¿:');
+amount = input('ÂÃ¥ ÃŠÃšÃÃ‡Ã ÃšËœÃ“ Ã¤Ã¦?Ã’ ÃÃ‡Ã‘ Ã£? ÃÃ¦Ã‡Ã¥?ÃÂ¿:');
 chart = zeros(1,amount);
 for i = 1 : amount 
     percent = rand;

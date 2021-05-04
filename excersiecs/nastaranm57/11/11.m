@@ -1,4 +1,5 @@
-i=imread('C:\Users\PC\Desktop\11.jpg');  
+addpath("../../../benchmark/");
+i=imread("lena.png");  
 i=rgb2gray(i);
 b=0;w=255;  %farz bar in ast le meghdare pixel haye meshli barabare '0' va meghdare pixel haye sefid '255' bashad
 img_with_noise= i; 

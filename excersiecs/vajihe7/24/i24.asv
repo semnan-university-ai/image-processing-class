@@ -1,0 +1,30 @@
+close all;
+clear;
+clc;
+
+img1=imread("watch.png");
+image_w=img1;
+[Rs,Cs,Zs]=size(image_w);
+
+
+img2=imread("pool.png");
+image_p=img2
+[Rp,Cp,Zp]=size(image_p);
+
+R_S = image_w(:, :, 1);
+R_p = image_p(:, :, 1);
+image_w(:, :, 1)=0;
+image_p(:, :, 1)=0;
+
+for r=1:Rs
+   for c=1:Cs
+       if (r<=Rp&& c<=Cp)
+          image_w(r,c,1)=R_p(r,c);
+          image_p(r,c,1)=R_S(r,c);
+       end
+   end
+end
+subplot(2,2,1),imshow(img1),title('watch')
+subplot(2,2,3),imshow(img2),title('pool');
+subplot(2,2,2),imshow(image_w);
+subplot(2,2,4),imshow(image_p); 

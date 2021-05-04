@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("../benchmark/pool.png");
+image = imread("../../../benchmark/pool.png");
 image2 = rgb2gray(image);
 
 [x,y] = size(image2);

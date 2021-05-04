@@ -10,7 +10,8 @@
 ![voroodi](pool.png)
 
 ```
-a=imread('C:\Users\PC\Desktop\pool.png');            % وارد کردن تصویر ورودی
+addpath("../../../benchmark/");
+a=imread("pool.png");                                % وارد کردن تصویر ورودی
 b=rgb2gray(a);                                       % تبدیل آن به تصویر خاکستری
 mask=roipoly(b);                                     % ساخت ماسک با استفاده از تابع 
 imshow(mask);                                        % نمایش ماسک
@@ -51,7 +52,8 @@ imshow(j);                                           %  نمایش تصویر خ
 </div>
 
 ```
-image =imread('C:\Users\PC\Desktop\pool.png');          % تصویر را درون متغیر قرار می دهیم
+addpath("../../../benchmark/");
+image =imread("pool.png");                              % تصویر را درون متغیر قرار می دهیم
 subplot(1,2,1)                                          % تثویر اصلی را با عنوان خودش در سمت چپ تصویر خروجی نمایش می دهیم
 imshow(image);
 title 'tasvire asli'

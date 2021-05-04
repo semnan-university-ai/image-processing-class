@@ -1,22 +1,23 @@
-clc;
-clear all;
-close all;
-img=imread('0-9');
-imgcap=zeros(0,0,'logical');
-a1=0;
-for i=0:3
-    B=randi([1,9]);
-    a1=a1+B*10^(3-i);
-    p=randi([1,20]);
-    q=randi([1,10]);
-    C=B*100+1;
-    D=i*40+1+q;
-    imgcap(p:60+p, D:D+39) = img(40:100, C+30:C+69);
-end    
-for i=1:3000
-    X=randi([1,size(imgcap,1)]);
-    Y=randi([1,size(imgcap,2)]);
-    imgcap(X,Y)=randi([0,1])*255;
-end
+close all
+clear all
+clc
+img=zeros(100,400);
+for i=1:4
+   r1=randi(10);
+   r2=randi(100);
+   pic="picture\number\"+int2str(r1-1)+".png";
+   a=imread(pic);
+   g=randi(30);
+   r1=randi(360);
+   b=captcha_rotate(a,r1);
+   
+   for r=r2+1:r2+100
+       for k=g:100+g
+           c=(i-1)*100+k;
+           img(r,c)=(b(r-r2,k));
+       end
+   end    
+end 
 figure;
-imshow(imgcap),title(int2str(a1));
+img=im2bw(img);
+imshow(img)

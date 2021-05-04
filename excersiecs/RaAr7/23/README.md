@@ -5,7 +5,7 @@
 </br>
 
 ```
-image = imread("../benchmark/airplane.png");
+image = imread("../../../benchmark/airplane.png");
 
 r = p3_histogram(image(:,:,1));
 g = p3_histogram(image(:,:,2));

@@ -1,88 +1,60 @@
 
 <div dir ="rtl">
 
-تمرین 11:<br/>
-ابتدا تصویر را می خوانیم.<br/>
+### تمرین 11:<br/>
+* ابتدا تصویر را می خوانیم.<br/>
 
 </div>
 
 ```
-image = imread('saat.png');
-figure;
-ax1 = axes();
-```
-<div dir ="rtl">
 
-
-نمایش  تصویر اصلی: <br/>
-
-</div>
-
+image=imread('saat.png');
+img_with_noise=rgb2gray(image);
+[m,n]=size(img_with_noise);
 
 ```
-imshow(image);
-title(ax1, 'original image');
-```
+
 
 <div dir ="rtl">
 
-10٪ پیکسل تغییر کرده است.<br/>
+ * حال به صورت رندوم ،نقاط نویز را ایجاد می کند.<br/>
 
 </div>
 
 
 ```
-a = 0.1; 
-```
-<div dir ="rtl">
+%salt & pepper
 
- 50٪ درصد پیکسل های سفید در میان همه پیکسل های تغییر یافته.<br/>
-
-</div>
-
-```
-b = 0.5; 
+x = randi([0 ,255] , m ,n);
+img_with_noise(x<=0+2)=0;
+img_with_noise(x>=255-2)=255;
 ```
 
 <div dir ="rtl">
 
- حال به صورت رندوم ،نقاط نویز را ایجاد می کند.<br/>
+
+* نمایش  تصویر : <br/>
 
 </div>
 
 
+```
+subplot(1,2,1); imshow(img_with_noise);title('Image with noise','Color','blue');
+subplot(1,2,2);imshow(image);title('Orginal image','Color','blue');
+````
 
-```
-n = numel(image(:,:,1));
-m = fix(a*n);
-idx = randperm(n, m);
-k = fix(b*m);
-idx1 = idx(1:k);
-idx2 = idx(k+1:end);
-idx1 = idx1' + n.*(0:size(image,3)-1);
-idx1 = idx1(:);
-idx2 = idx2' + n.*(0:size(image,3)-1);
-idx2 = idx2(:);
-image(idx1) = 255;
-image(idx2) = 0;
-```
 
 <div dir ="rtl">
 
- نمایش تصویر نویز فلفلی:<br/>
+ * نمایش تصویر نویز فلفلی و تصویر اصلی:<br/>
 
 </div>
 
-```
-figure;
-ax2 = axes();
-imshow(image);
-title(ax2, 'noisy  image ');
-
-```
 
 
 out=![out](t11.JPG)
+
+out1=![out](tt11.JPG)
 
 
 

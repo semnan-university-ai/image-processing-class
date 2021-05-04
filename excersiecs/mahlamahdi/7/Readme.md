@@ -4,7 +4,7 @@
 </div>
 
 <div dir="rtl">
-رسم مربع
+پاک نمودن صفحه و workspace
 </br>
 
 </div>
@@ -14,89 +14,78 @@
 clc;
 clear;
 close all;
+````
+<div dir="rtl">
+در نظر گرفتن یک تصویر 500 در 500</br>
 
-image=ones(500,500);
+</div>
 
-
-size=200;
-start=[20,20];
-
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+size,start(2)+x)=0;
-    image(start(1)+x,start(2))=0;
-    image(start(1)+x,start(2)+size)=0;
-end
+````
+image=uint8(zeros(500,500));
 
 ````
 <div dir="rtl">
+ رسم مربع
+</div>
+
+````
+
+image (20:220 , 20 : 220) = 255;
+
+````
+
+<div dir="rtl">
+ رسم مستطیل
+</div>
+
+````
+image (20: 150 , 230 : 470) = 255;
+
+````
+
+<div dir="rtl">
+
 رسم مثلث
-</br>
-
-</div>
- 
-```` 
-start=[250,100];
-size = 100;
-
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+x,start(2))=0;
-end
-y=0;
-for x=0:size
-    image(start(1)+x,(start(2)+size)-y)=0;
-    y=y+1;
-end
-
-````
-<div dir="rtl">
-رسم مستطیل
-</br>
-
 </div>
 
 ````
-size = 100;
-x_axis= 100;
-y_axis=150;
-start=[20,250];
-for x =0 : size
-    image(start(1),start(2)+x)=0;
-    image(start(1)+y_axis,start(2)+x)=0;
-    
+size = 200;
+for i =250 : 250+size
+    for j = 250:i
+        image(i,j-220) = 255;
+    end
 end
-size=150;
-start=[20,250];
-for x =0 : size
-    image(start(1)+x,start(2))=0;
-    image(start(1)+x,start(2)+x_axis)=0;
-   
-end
-
 ````
 
 <div dir="rtl">
+
 رسم لوزی
-</br>
-
 </div>
 
 ````
-size=50;
-start=[250,250];
-y=0;
-for x=0:size
-    image(start(1)+x,(start(2)+size)-y)=0;
-    image(start(1)+x,(start(2)+size)+y)=0;
-    y=y+1;
+start=[300,300];
+size = 100;
+y =0;
+image(start(1),start(2)) = 255;
+for i =1 : 50
+       image(start(1)-i:start(1)+i,start(2)+y) = 255;
+       y= y+1;
 end
-y=0;
-for x=0:size
-    image((start(1)+size)+x,(start(2)+2*size)-x)=0;
-   image((start(1)+size)+y,start(2)+x)=0;
-    y=y+1;
-  
+for i =50 : -1:1
+       image(start(1)-i:start(1)+i,start(2)+y) = 255;
+       y= y+1;
 end
-   imshow(image)
 ````
+<div dir="rtl">
+
+کد رسم شکل نهایی
+</div>
+
+````
+imshow(image);
+
+
+````
+
+![خروجی](assets/result.jpg)
+

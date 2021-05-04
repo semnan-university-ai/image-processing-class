@@ -1,8 +1,9 @@
-a = imread('C:\Users\PC\Desktop\watch.png');
+addpath("../../../benchmark/");
+a = imread("watch.png");
 [rows, columns, numberOfColorChannels] = size(a);
 imshow(a, []);
 axis on;
-title(' ’Ê?— «’·?', 'FontSize', 15);
+title('√ä√ï√¶?√ë √á√ï√°?', 'FontSize', 15);
 set(gcf, 'Position', get(0,'Screensize')); % baraye bozorg kardane tasvir.
 message = sprintf('Left click and hold to begin drawing.\nSimply lift the mouse button to finish');
 uiwait(msgbox(message));
@@ -15,12 +16,12 @@ subplot(2, 2, 1);
 imshow(a, []);
 axis on;
 drawnow;
-title(' ’Ê?— «’·?', 'FontSize', 15);
+title('√ä√ï√¶?√ë √á√ï√°?', 'FontSize', 15);
 % namayeshe mask.
 subplot(2, 2, 2);
 imshow(binaryImage);
 axis on;
-title(' ’Ê?— „«”ò', 'FontSize', 15);
+title('√ä√ï√¶?√ë √£√á√ìÀú', 'FontSize', 15);
 % agar tasvir grayscale ast, be rangi tabdil kon
 if numberOfColorChannels < 3
   rgbImage = cat(3, a, a, a);
@@ -42,4 +43,4 @@ rgbImage = cat(3, redChannel, greenChannel, blueChannel);
 % tasvir ra namayesh bede.
 subplot(2, 2, 3);
 imshow(rgbImage);
-title(' ’Ê?—  €??— ?«› Â', 'FontSize', 15);
+title('√ä√ï√¶?√ë √ä√õ??√ë ?√á√ù√ä√•', 'FontSize', 15);

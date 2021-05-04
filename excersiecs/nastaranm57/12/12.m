@@ -1,4 +1,5 @@
-im1 = imread('C:\Users\PC\Desktop\keanu.jpeg');
+addpath("../../../benchmark/");
+im1 =imread("lena.png"); 
 im = rgb2gray(im1);
 row = size(im , 1);
 col = size(im , 2);
@@ -57,13 +58,13 @@ display(mean_med);
 
 %show
 subplot(2,2,1);
-imshow(im1);title(' ’Ê?— «’·?');
+imshow(im1);title('√ä√ï√¶?√ë √á√ï√°?');
 
 subplot(2,2,2);
-imshow(noise_im);title('‰Ê?“ ›·›· & ‰„ò');
+imshow(noise_im);title('√§√¶?√í √ù√°√ù√° & √§√£Àú');
 
 subplot(2,2,3);
-imshow(avg_im);title('›?· — „?«‰ê?‰');
+imshow(avg_im);title('√ù?√°√ä√ë √£?√á√§¬ê?√§');
 
 subplot(2,2,4);
-imshow(med_im);title('›?· — „?«‰Â');
+imshow(med_im);title('√ù?√°√ä√ë √£?√á√§√•');

@@ -2,7 +2,7 @@ close all
 clear all
 clc
 
-image = imread("../benchmark/airplane.png");
+image = imread("../../../benchmark/airplane.png");
 
 r = p23_histogram(image(:,:,1));
 g = p23_histogram(image(:,:,2));

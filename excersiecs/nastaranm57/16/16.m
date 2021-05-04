@@ -1,4 +1,5 @@
-a=imread('C:\Users\PC\Desktop\zelda.png');
+addpath("../../../benchmark/");
+a=imread("zelda.png");
 mask=roipoly(a);
 imshow(mask);
 j=regionfill(a,mask);

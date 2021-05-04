@@ -1,11 +1,11 @@
 close all
 clear all
 clc
-clear all
-close all
+
 width_x = input('Enter width : ');
 length_y = input('Enter length : ');
-image = imread("benchmark/pool.png");
+addpath("benchmark");
+image = imread("pool.png");
 figure
 imshow(image);
 

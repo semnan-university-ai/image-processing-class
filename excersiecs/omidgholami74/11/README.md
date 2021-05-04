@@ -12,20 +12,20 @@ clear all;
 
 
 figure;
-image=e11_noise(imread('benchmark/lena.png'),1000);
-imshow(image);
+image=e11_noise(imread('benchmark/lena.png'),1000); % فراخوانی فانکشن
+imshow(image); % نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/airplane.png'),500);
-imshow(image);
+image=e11_noise(imread('benchmark/airplane.png'),500);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/baboon.png'),700);
-imshow(image);
+image=e11_noise(imread('benchmark/baboon.png'),700);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 
 figure;
-image=e11_noise(imread('benchmark/peppers.png'),1500);
-imshow(image);
+image=e11_noise(imread('benchmark/peppers.png'),1500);% فراخوانی فانکشن
+imshow(image);% نمایش عکس
 ```
 ****
 noise function
@@ -33,22 +33,22 @@ noise function
 function imageOut = e11_noise(image,numbers)
 %E11_NOISE Summary of this function goes here
 %   Detailed explanation goes here
-imageSize=size(image);
-width=imageSize(1,1);
-height=imageSize(1,2);
+imageSize=size(image);% دریافت ابعاد تصویر
+width=imageSize(1,1);% عرض تصویر
+height=imageSize(1,2);% ارتفاع تصویر
 n=size(imageSize);
 colors=[0 255];
-if n(2)==3
-    image=rgb2gray(image);
+if n(2)==3 % دریافت تعداد بعد عکس.اگر 3 بعد داشت پس رنگی است.
+    image=rgb2gray(image);% اگر رنگی بود تبدیل به خاکستری شود
 end
 for k=1:numbers
     
-    widthRand=randi(width);
-    heightRand=randi(height);
+    widthRand=randi(width);% ایجاد طول و عرض رندوم
+    heightRand=randi(height);%ایجاد طول و عرض رندوم
     
-    image(widthRand,heightRand)=colors(randi(2));
+    image(widthRand,heightRand)=colors(randi(2));% ایحاد نویز های سیاه و سفید
 end
-imageOut=image;
+imageOut=image; % خروجی فانکشن
 ```
 ***
 
