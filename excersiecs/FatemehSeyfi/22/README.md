@@ -22,10 +22,9 @@ figure()
 imshow(orginal)              % show orignal
 ```
 <div dir ="rtl">
- 
-     در این کد کانال های آبی و قرمز جابجا می شوند     .<br/>
+    
+در این کد کانال های آبی و قرمز جابجا می شوند .    <br/>
 </div>
-
 ```
 new_image(:,:,1)=orginal(:,:,3);
 new_image(:,:,2)=orginal(:,:,2);
