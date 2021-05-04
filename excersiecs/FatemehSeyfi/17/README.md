@@ -18,21 +18,20 @@ clear;
  image = imread("../benchmark/mountain.png");	
 ```
 <div dir ="rtl">
-در این کدعرض تصویر در حلقه مشخص شده به شرط اینکه اگر بزرگتر از 150 بود  رنگ سیاه در غیر این صورت  break.     <br/>
+در این کدعرض تصویر در حلقه مشخص شده به شرط اینکه اگر بزرگتر از 150 بود  رنگ سیاه در غیر این صورت می شود  break.     <br/>
 </div>
 
 ```
 for j=1:640 
-		    for i=1:150
-		     if 150<image(i,j)
-		         image(i,j)=0;
-		     end
-		     if image(i+1,j)<150
-		         break;
-		     end
-		    end
-		end
-
+    for i=1:150
+	if 150<image(i,j)
+	   image(i,j)=0;
+	end
+	if image(i+1,j)<150
+	break;
+	end
+     end
+ end
 ```
 
 <div dir ="rtl">
@@ -41,8 +40,8 @@ for j=1:640
 
 ```
 
-		figure;
- 		imshow(image) ;
+figure;
+imshow(image) ;
    
 
 ```
