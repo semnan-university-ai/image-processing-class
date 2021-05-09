@@ -1,0 +1,10 @@
+clc;
+clear all;
+close all;
+img= imread("D:/image-processing-class/benchmark/lena.png");
+r = hist(img(:,:,1));
+g = hist(img(:,:,2));
+b = hist(img(:,:,3));
+subplot(2,2,1),plot(r),title('R Argoman');
+subplot(2,2,2);plot(g),title('G Argoman');
+subplot(2,2,3),plot(b),title('B Argoman');
