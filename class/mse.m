@@ -21,6 +21,7 @@ img_two = zeros(x_bound, y_bound);
 temp_mse = 0;
 
 img_ref = einstein;
+%img_two = einstein;
 
 for i = 1 : 599
     for j = 1 : 599

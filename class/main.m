@@ -8,9 +8,8 @@ einstein_coat_damage = 'einstein_coat_damage.bmp';
 einstein_histogram_change = 'einstein_histogram_change.bmp';
 
 image1 = einstein;
+image2 = einstein_histogram_change;
 
-
-image2 = image1;
 K = [0.01 0.03];
 window = fspecial('gaussian', 11, 1.5);
 L = 255;

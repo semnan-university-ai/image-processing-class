@@ -1,16 +1,18 @@
 function [mssim, ssim_map] = ssim(image1_filename, image2_filename, K, window, L)
 
 image1 = imread(image1_filename);
-
+%image2 = imnoise(image1, "salt & pepper", 1);
+%image2 = imread(image2_filename);
+%image2 = image1;
 image2 = image1;
+for i = 1 : 599
+    for j = 1 : 599
+        image2(i,j) = 255 - image2(i, j);
+    end
+end
 
-%for i = 1 : 599
-    %for j = 1 : 599
-    %    image2(i,j) = 255 - image2(i, j);
-    %end
-%end
-
-image2 = uint8(ones(600, 600));%imnoise(image1, "salt & pepper", 0.9);
+%image2 = uint8(ones(600, 600));%imnoise(image1, "salt & pepper", 0.9);
+%image2 = uint8(zeros(600, 600));
 
 if (nargin < 2 || nargin > 5)
    mssim = -Inf;
