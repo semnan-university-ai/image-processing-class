@@ -41,7 +41,8 @@
    
    ![alt text](/Tasver/image_1.jpg "Title")
 
-   
+   ![Semantic description of image](/Tasver/image_1.png "Image Title")
+
    
    #### <br/>
 
