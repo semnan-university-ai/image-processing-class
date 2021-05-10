@@ -40,3 +40,11 @@
 
    
    ![alt text](/Tasver/image_1.jpg "Title")
+   
+   
+   <p align="center">
+      <img src="/Tasver/image_1.jpg" />
+    </p>
+   
+   
+   
