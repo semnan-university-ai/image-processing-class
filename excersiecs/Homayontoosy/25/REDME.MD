@@ -285,17 +285,34 @@ II) ماژول رمز گذاري:
 ۴. گذرواژه را وارد کنید
 <br/>
 ۵. انتخاب Done 
- 
   
   <div/>
   
  <br/>
  <br/>
   <div dir="rtl">
-  شرح ماژول 
+ III: ماژول رمزگشایی 
   </div>
 <br/>
 
 <div dir="rtl">
+  
+  </div>
+
+
+
+
+
+<div dir="rtl">
  I) ‏ماژول ورودی: 
   </div>
+
+</br>
+<div dir="rtl">
+  
+1-select encryption <br/>
+2- Select save location  <br/>
+3-Enter password </br>
+4-select done  <br/>
+
+<div/>
