@@ -230,3 +230,34 @@ C. فاز واترمارکینگ
   <p align="center">
       <img src="pic/image005.jpg" />
     </p>
+
+<br/>
+
+<div dir="rtl">
+  C. فاز علامت گذاري 
+  <div/>
+  
+  <br/>
+  
+  <div dir="rtl">
+  ماژولها
+  <div/>
+  
+  <br/>
+  
+  <div dir="rtl">
+   : I‏ماژول ورودی: 
+: II ماژول رمز گذاري
+<div/>
+  <br/
+      
+ <div dir="rtl">
+ 1- انتخاب secret file 
+۲. فایل جلد (‏ویدئو، صوتی)‏را انتخاب کنید،
+ ۳.  انتخاب save location
+۴. گذرواژه را وارد کنید
+ ۵. انتخاب Done 
+ 
+  
+  <div/>
+  
