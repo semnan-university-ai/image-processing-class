@@ -214,7 +214,10 @@ C. فاز واترمارکینگ
    <p align="center">
       <img src="pic/image004.jpg" />
     </p>
-
- 
+<br/>
+<div dir="rtl">
+ B. فاز ورود به سیستم 
+ </div>
+  
   
   
