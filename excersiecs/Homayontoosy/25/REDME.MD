@@ -100,3 +100,5 @@
   
   
   ![تصوير 2](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/25/pic/image002.jpg)
+  <br/>
+  شكل 2(معماري سيستم)
