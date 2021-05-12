@@ -71,9 +71,12 @@
   
   <br/>
  
-![تصوير 1](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/25/pic/image001.jpg)
-<br/>
-شكل1 (برخي از كلمات كپچا)
+
+<p align="center">
+      <img src="pic/image001.jpg" />
+     <br> شكل 2) برخي از كلمات كپچا<br/>
+    </p>
+ 
 
 <br/>
 <br/>
