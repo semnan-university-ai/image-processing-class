@@ -211,9 +211,19 @@ C. فاز واترمارکینگ
   <div/>
   
   <br/>
+  
+  
+  
+ 
+    
    <p align="center">
-      <img src="pic/image004.jpg" />
-    </p>
+   <img src="pic/image004.jpg" />
+   <br> شكل 4.1) زماني كه كاربر فرايند ثبت نام را انجام مي دهد<br/>
+   </p>
+    
+    
+    
+    
 <br/>
 <div dir="rtl">
  B. فاز ورود به سیستم 
