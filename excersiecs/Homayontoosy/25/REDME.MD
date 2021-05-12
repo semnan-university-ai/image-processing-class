@@ -229,13 +229,14 @@ C. فاز واترمارکینگ
   
   <p align="center">
       <img src="pic/image005.jpg" />
-   </p>
    
-   <br> وقتی کاربر سعی می کند وارد سایت شودشكل 4.2) <br/>
-<div dir="rtl">
+   <br> وقتی کاربر سعی می کند وارد سایت شودشكل 4.2) 
+   </p>
+               <br/>
+               <div dir="rtl">
  
    
-  <div/>
+             <div/>
 <br/>
 
 <div dir="rtl">
