@@ -230,7 +230,9 @@ C. فاز واترمارکینگ
   <p align="center">
       <img src="pic/image005.jpg" />
     </p>
-
+<div dir="rtl">
+  وقتی کاربر سعی می کند وارد سایت شود
+  <div/>
 <br/>
 
 <div dir="rtl">
