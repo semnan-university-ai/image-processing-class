@@ -315,3 +315,10 @@ II) ماژول رمز گذاري:
 4-select done  <br/>
 
 <div/>
+
+
+<br/>
+<div dir="rtl">
+  **شرح ماژول**
+  </div>
+
