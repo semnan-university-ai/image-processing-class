@@ -71,7 +71,6 @@
   <br/>
  
 ![تصوير 1](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/25/pic/image001.jpg)
-  <div dir="rtl">
 برخي از كلمات كپچا
-</div>
+
 
