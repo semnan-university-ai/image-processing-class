@@ -8,10 +8,7 @@
   </div>
 <br/>
 
-<div dir="rtl">
- ####چكيده####
-</div>
-
+**چكيده**
 
 <br/>
 <div dir="rtl">
