@@ -211,6 +211,10 @@ C. فاز واترمارکینگ
   <div/>
   
   
+    <p align="center">
+      <img src="pic/image004.jpg" />
+    </p>
+
  
   
   
