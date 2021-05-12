@@ -307,7 +307,6 @@ II) ماژول رمز گذاري:
  I) ‏ماژول ورودی: 
   </div>
 
-</br>
 <div dir="rtl">
   
 1-select encryption <br/>
