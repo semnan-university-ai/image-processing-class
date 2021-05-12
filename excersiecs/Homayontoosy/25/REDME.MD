@@ -98,7 +98,11 @@
   
   <br/>
   
+  <center>
+ 
+
   
   ![تصوير 2](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/Homayontoosy/25/pic/image002.jpg)
-  <br/>
+ </center>
+ <br/>
   شكل 2(معماري سيستم)
