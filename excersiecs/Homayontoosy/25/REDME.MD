@@ -8,8 +8,8 @@
   </div>
 <br/>
 <div dir"rtl">
-چكيده
-<div/>
+**چكيده**
+</div>
 
 <br/>
 <div dir="rtl">
