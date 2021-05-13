@@ -8,7 +8,7 @@
   </div>
 <br/>
 
-<div dir"rtl">
+<div dir="rtl">
 چكيده
 </div>
 
