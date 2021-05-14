@@ -1,12 +1,123 @@
-# image-processing-class
-image processing class - 992
+<div dir = "rtl">
+توضیح تابع choose_a_pic
+ 
+ ![p1](https://user-images.githubusercontent.com/80279784/118284149-5c101380-b4e5-11eb-8536-f4903941e3fc.PNG)
 
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+ 
+ 
+در اولین قدم پوشه ای که دارای تصاویر است مشخص می شود (add1). سپس نام یک تصویر به صورت تصادفی انتخاب شده (add2) و همچنین حرفی که در این تصویر آمده است (letter) ذخیره می گردد.
+ 
+ 
+ 
+ ![p2](https://user-images.githubusercontent.com/80279784/118284236-71853d80-b4e5-11eb-871b-065686040c55.PNG)
 
-### Student Info :
-* Full name : seied ahmad davodmosavi
-* github id : arman-ariamehr
-* Email : sadhappy062@gmail.com
-* Type : majazi
+ 
+ 
+پس از مشخص شدن نام عکس تصویر که یک ماتریس عددی است خوانده می شود و در قسمت output برنامه قرار داده می شود.
+ 
+ 
+توضیح تابع create_captcha
+ 
+ 
+ ![p3](https://user-images.githubusercontent.com/80279784/118284395-9d082800-b4e5-11eb-9f72-6c6ce614ba34.PNG)
+
+ 
+ 
+ 
+از آنجا که اندازه هر عکس 25 در 25 پیکسل است در ابتدا تصویری سیاه رنگ با 25 سطر و ضریبی از 25 در ستون به نام captcha ایجاد می گردد که در اول کار نامی به تصویر داده نمی شود.
+ 
+ 
+ ![p4](https://user-images.githubusercontent.com/80279784/118284472-b4dfac00-b4e5-11eb-9f69-57f1dd924c59.PNG)
+
+ 
+ 
+ 
+به تعداد درخواست شده (amount) توسط تابع choose_a_pic تصویر یک حرف یا عدد خوانده شده (خط 7) و سپس در تصویر گنجانده شده و اسم تصویر به روز رسانی می گردد. در نهایت پسوند تصویر به نام تصویر افزوده می شود تا نام عکس کامل گردد.
+ 
+ 
+ 
+توضیح تابع change_captcha
+ 
+ 
+ ![p5](https://user-images.githubusercontent.com/80279784/118284776-05efa000-b4e6-11eb-9898-bd02f0fdfdfc.PNG)
+
+ 
+ 
+ 
+ابتدا اندازه تصویر بر اساس اندازه های ورودی (width و height) تغییر می کند. سپس 5 درصد نویز نمک فلفلی به آن  اضافه می شود و تصویر حاصل که کپچای اصلی می باشد در خروجی قرار می گیرد.
+
+ توضیح تابع create_excel
+ 
+ 
+ 
+ ![p6](https://user-images.githubusercontent.com/80279784/118284980-47804b00-b4e6-11eb-9689-241a6da5ce30.PNG)
+
+ 
+ 
+ 
+ابتدا سر ستون ها مشخص می شود و در نهایت هم سر ستون ها و داده های درون جدول (data) سطر به سطر در اکسلی به نام result نوشته می شوند.
+ 
+ 
+توضیح برنامه اصلی (final_ta)
+ 
+ 
+ ![p7](https://user-images.githubusercontent.com/80279784/118285097-5e26a200-b4e6-11eb-892d-208faad76f3b.PNG)
+
+ 
+ 
+ 
+ابتدا میزان کاراکتر موجود در کپچا (numbers_count) و اندازه آن (width و height) از کاربر دریافت می شود. در قدم بعدی آرایه سلولی به اندازه تعداد آزمایشات درخواست شده (150 تا)  در تعداد سر ستون ها (4 تا)  ایجاد می گردد.
+ 
+ 
+ ![p8](https://user-images.githubusercontent.com/80279784/118285140-667edd00-b4e6-11eb-9a7a-49e1022acaa2.PNG)
+
+ 
+ 
+ 
+در هر آزمایش ابتدا کپچا ایجاد می گردد.
+ 
+ 
+ 
+ ![p9](https://user-images.githubusercontent.com/80279784/118285178-6f6fae80-b4e6-11eb-9b82-e0073773e9e6.PNG)
+
+ 
+ 
+و به نام های 001.png، 002.png و ... در پوشه captchas ذخیره می گردد.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/80279784/118286085-59162280-b4e7-11eb-940c-c2f45f9c2c75.png)
+
+
+ 
+ 
+ 
+در قدم بعدی خروجی تابع ocr و انسان معلوم می شود.
+ 
+ 
+ ![p10](https://user-images.githubusercontent.com/80279784/118286128-6206f400-b4e7-11eb-88c7-b76310abe4ea.PNG)
+
+
+ 
+ 
+ 
+ 
+پس از پایان هر آزمایش داده ها که شامل شماره آزمون، متن درون تصویر، خروجی ocr و خروجی انسان می باشد در آرایه سلولی یعنی data ذخیره می گردد.
+ 
+ 
+ 
+ ![p11](https://user-images.githubusercontent.com/80279784/118286154-68956b80-b4e7-11eb-889d-69c0a3a001d1.PNG)
+
+ 
+ 
+در نهایت هم نتیجه هر 150 آزمایش در فایل اکسل ذخیره می گردد.
+
+نتیجه
+ 
+ 
+ ![p12](https://user-images.githubusercontent.com/80279784/118286226-7b0fa500-b4e7-11eb-8df9-858cf43c8867.PNG)
+
+ 
+ 
+همانطور که مشاهده می گردد تابع ocr حتی به سختی توانسته است که نوشته ای در تصویر تشخیص دهد.
+
+</div>
