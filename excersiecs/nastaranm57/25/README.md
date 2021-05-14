@@ -514,6 +514,7 @@ Captcha متمرکز خواهد بود. محققان قصد
 ## منابع
 <br/>
 
+</div>
 
 1.	Naomi S. Altman. An Introduction to Kernel and NearestNeighbor Nonparametric Regression. Am. Stat., 46(3): 175–185, aug 1992. ISSN 0003-1305. doi: 10.1080/ 00031305.1992.10475879.
 
@@ -563,4 +564,4 @@ Captcha متمرکز خواهد بود. محققان قصد
 
 24.	Luis von Ahn, Benjamin Maurer, Colin Mcmillen, David Abraham, and Manuel Blum. reCAPTCHA: HumanBased Character Recognition via Web Security Measures. Science (80-.)., 321(12 September 2008):1465– 1468, sep 2008. ISSN 0036-8075. doi: 10.1126/science. 1160379.
 
-</div>
+
