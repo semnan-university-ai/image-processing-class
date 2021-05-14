@@ -353,6 +353,9 @@ c نشان داده می‌شوند) Bubble Captcha به عنوان مجموعه
 می‌رفت، الگوریتم k-NN در مرحله یادگیری بسیار سریع بود؛ چرا که فقط
 الگوهای یادگیری را ذخیره کرد. اما در مرحله طبقه بندی، به دلیل محاسبه فاصله تمام
 نقاط، آهسته‌تر از سایر الگوریتم‌ها عمل کرد.
+
+
+
 <br/>
 
 
@@ -442,11 +445,21 @@ cross entropy محاسبه شده با معادله 4 ارزیابی می‌شو
 پایان رساند. با وجود این، نتایج بسیار خوب بود و این نشان دهنده قدرت شبکه عصبی مصنوعی
 است.
 
+<p align="center">
+      <img src="02798.jpg" />
+     <br>جدول 2. مقایسه دقت الگوریتم ها
+<br/>
+</p>
 
-جنبه دومی‌که
+جنبه دومی که
 مورد مقایسه قرار می‌گیرد، زمان مصرف و به این ترتیب پیچیدگی محاسباتی هر الگوریتم
 به صورت جداگانه است. نتایج این مقایسه را می‌توانید در جدول 3 مشاهده کنید.
 
+<p align="center">
+      <img src="02799.jpg" />
+     <br>جدول 3. مقایسه هزینه محاسباتی الگوریتم ها
+<br/>
+</p>
 
 یکی از پارامترهای
 دو زمانه، یادگیری زمان Tlearn است. برنده آشکار از بین
@@ -502,157 +515,52 @@ Captcha متمرکز خواهد بود. محققان قصد
 <br/>
 
 
-1.       Naomi S. Altman.
-An Introduction to Kernel and NearestNeighbor Nonparametric Regression. Am.
-Stat., 46(3): 175–185, aug 1992. ISSN 0003-1305. doi: 10.1080/ 00031305.1992.10475879.
+1.	Naomi S. Altman. An Introduction to Kernel and NearestNeighbor Nonparametric Regression. Am. Stat., 46(3): 175–185, aug 1992. ISSN 0003-1305. doi: 10.1080/ 00031305.1992.10475879.
 
+2.	Christopher M. Bishop. Pattern recognition and machine learning. Springer, 2006. ISBN 0387310738.
 
+3.	Bernhard E. Boser, Isabelle M. Guyon, and Vladimir N. Vapnik. A training algorithm for optimal margin classifiers. In Proc. fifth Annu. Work. Comput. Learn. theory - COLT '92, pages 144–152, New York, New York, USA, 1992. ACM Press. ISBN 089791497X. doi: 10.1145/ 130385.130401.
 
-2.       Christopher M.
-Bishop. Pattern recognition and machine learning. Springer, 2006. ISBN
-0387310738.
+4.	Ondrej Bostik, Karel Horak, Jan Klecka, and Daniel Davidek. Bubble Captcha - A Start of the New Direction of Text Captcha Scheme Development. In Mendel 2017, 23rd Int. Conf. Soft Comput., volume 23 of 23, pages 57–64. Brno University of Technology, 2017.
 
+5.	Elie Bursztein, Matthieu Martin, and John C. Mitchell. Text-based CAPTCHA strengths and weaknesses. Proc. 18th ACM Conf. Comput. Commun. Secur., 2011:125– 138, 2011. ISSN 15437221. doi: 10.1145/2046707. 2046724.
 
+6.	Carnegie Mellon University. The Official CAPTCHA Site, 2010. URL http://www.captcha.net/.
 
-3.       Bernhard E.
-Boser, Isabelle M. Guyon, and Vladimir N. Vapnik. A training algorithm for
-optimal margin classifiers. In Proc. fifth Annu. Work. Comput. Learn. theory -
-COLT '92, pages 144–152, New York, New York, USA, 1992. ACM Press. ISBN
-089791497X. doi: 10.1145/ 130385.130401.
+7.	Corinna Cortes and Vladimir N. Vapnik. Support-vector networks. Mach. Learn., 20(3):273–297, sep 1995. doi: 10.1007/BF00994018.
 
+8.	Sagarmay Deb and Yanchun Zhang. An Overview of Content-based Image Retrieval Techniques. 18th Int. Conf. Adv. Inf. Netw. Appl. 2004 AINA 2004, 1:59–64, 2004. doi: 10.1109/AINA.2004.1283888.
 
+9.	Thomas G. Dietterich and Ghulum Bakiri. Solving Multiclass Learning Problems via Error-Correcting Output Codes. J. Artif. Intell. Res., dec 1994.
 
-4.       Ondrej Bostik,
-Karel Horak, Jan Klecka, and Daniel Davidek. Bubble Captcha - A Start of the
-New Direction of Text Captcha Scheme Development. In Mendel 2017, 23rd Int.
-Conf. Soft Comput., volume 23 of 23, pages 57–64. Brno University of
-Technology, 2017.
+10.	Karel Horak. Classification of segregation level in steel wires by image processing. 2015 38th Int. Conf. Telecommun. Signal Process. TSP 2015, 2015. doi: 10. 1109/TSP.2015.7296413.
 
+11.	Karel Horak and Ilona Kalova. Eyes Detection and Tracking for Monitoring Driver Vigilance. In 33rd Int. Conf. Telecommun. Signal Process., pages 204–208, 2010.
 
+12.	Karel Horak, Miloslav Richter, and Ilona Kalova. Human eyes localization for driver inattention monitoring system. Mendel, 15(chapter 2):283–288, 2009a. ISSN 18033814.
 
-5.       Elie Bursztein,
-Matthieu Martin, and John C. Mitchell. Text-based CAPTCHA strengths and
-weaknesses. Proc. 18th ACM Conf. Comput. Commun. Secur., 2011:125– 138, 2011.
-ISSN 15437221. doi: 10.1145/2046707. 2046724.
+13.	Karel Horak, Miroslav Richter, and Ilona Kalova. Automated Flaws Detection on Bottles in Food Industry. Proc. 20th Int. DAAAM Symp., (May 2014):4–6, 2009b.
 
+14.	Kiranjot Kaur and Sunny Behal. Designing a Secure Textbased CAPTCHA. In Procedia Comput. Sci., volume 57, pages 122–125. Elsevier, 2015. doi: 10.1016/j.procs.2015. 07.381.
 
+15.	Jan Klecka and Karel Horak. Fusion of 3D model and uncalibrated stereo reconstruction. Adv. Intell. Syst. Comput., 378:343–351, 2015. ISSN 21945357. doi: 10. 1007/978-3-319-19824-8 28.
 
-6.       Carnegie Mellon
-University. The Official CAPTCHA Site, 2010. URL http://www.captcha.net/.
+16.	Elias N. Malamas, Euripides G M Petrakis, Michalis Zervakis, Laurent Petit, and Jean Didier Legat. A survey on industrial vision systems, applications and tools, 2003.
 
+17.	Tom M. Mitchell. Machine Learning. McGraw-Hill, 1997. ISBN 0070428077.
 
+18.	Martin F. Møller. A scaled conjugate gradient algorithm for fast supervised learning. NEURAL NETWORKS, 6 (4):525—-533, 1993.
 
-7.       Corinna Cortes
-and Vladimir N. Vapnik. Support-vector networks. Mach. Learn., 20(3):273–297,
-sep 1995. doi: 10.1007/BF00994018.
+19.	Lior Rokach and Oded Maimon. Data Mining with Decision Trees. Series in Machine Perception and Artificial Intelligence. World Scientific, 2 edition, oct 2014. ISBN 978-981-4590-07-5. doi: 10.1142/9097.
 
+20.	Hermann Rorschach. Psychodiagnostics: A Diagnostic Test Based on Perception. Hogrefe Huber Pub, 10th edition, 1998. ISBN 3456830246.
 
+21.	Suphannee Sivakorn, Iasonas Polakis, and Angelos D. Keromytis. I am Robot: (Deep) Learning to Break Semantic Image CAPTCHAs. In 2016 IEEE Eur. Symp. Secur. Priv. (EuroS P), pages 388–403, 2016. doi: 10.
 
-8.       Sagarmay Deb and
-Yanchun Zhang. An Overview of Content-based Image Retrieval Techniques. 18th
-Int. Conf. Adv. Inf. Netw. Appl. 2004 AINA 2004, 1:59–64, 2004. doi: 10.1109/AINA.2004.1283888.
+22.	Mohammed Y. Siyal and Mahmood Fathy. Real-Time Measurement of Traffic Queue Parameters by Using Image Processing Techniques. In Fifth Int. Conf. Image Process. its Appl., pages 450–454, 1995. doi: 10.1049/ cp:19950699.
 
+23.	Luis von Ahn, Manuel Blum, Nicholas J. Hopper, and John Langford. CAPTCHA: Using Hard AI Problems for Security. In Lect. Notes Comput. Sci., pages 294– 311. Springer, Berlin, Heidelberg, 2003. doi: 10.1007/ 3-540-39200-9 18.
 
-
-9.       Thomas G.
-Dietterich and Ghulum Bakiri. Solving Multiclass Learning Problems via
-Error-Correcting Output Codes. J. Artif. Intell. Res., dec 1994.
-
-
-
-10.   Karel Horak.
-Classification of segregation level in steel wires by image processing. 2015
-38th Int. Conf. Telecommun. Signal Process. TSP 2015, 2015. doi: 10. 1109/TSP.2015.7296413.
-
-
-
-11.   Karel Horak and
-Ilona Kalova. Eyes Detection and Tracking for Monitoring Driver Vigilance. In
-33rd Int. Conf. Telecommun. Signal Process., pages 204–208, 2010.
-
-
-
-12.   Karel Horak,
-Miloslav Richter, and Ilona Kalova. Human eyes localization for driver
-inattention monitoring system. Mendel, 15(chapter 2):283–288, 2009a. ISSN
-18033814.
-
-
-
-13.   Karel Horak,
-Miroslav Richter, and Ilona Kalova. Automated Flaws Detection on Bottles in
-Food Industry. Proc. 20th Int. DAAAM Symp., (May 2014):4–6, 2009b.
-
-
-
-14.   Kiranjot Kaur and
-Sunny Behal. Designing a Secure Textbased CAPTCHA. In Procedia Comput. Sci.,
-volume 57, pages 122–125. Elsevier, 2015. doi: 10.1016/j.procs.2015. 07.381.
-
-
-
-15.   Jan Klecka and
-Karel Horak. Fusion of 3D model and uncalibrated stereo reconstruction. Adv.
-Intell. Syst. Comput., 378:343–351, 2015. ISSN 21945357. doi: 10.
-1007/978-3-319-19824-8 28.
-
-
-
-16.   Elias N. Malamas,
-Euripides G M Petrakis, Michalis Zervakis, Laurent Petit, and Jean Didier Legat.
-A survey on industrial vision systems, applications and tools, 2003.
-
-
-
-17.   Tom M. Mitchell.
-Machine Learning. McGraw-Hill, 1997. ISBN 0070428077.
-
-
-
-18.   Martin F. Møller.
-A scaled conjugate gradient algorithm for fast supervised learning. NEURAL
-NETWORKS, 6 (4):525—-533, 1993.
-
-
-
-19.   Lior Rokach and
-Oded Maimon. Data Mining with Decision Trees. Series in Machine Perception and
-Artificial Intelligence. World Scientific, 2 edition, oct 2014. ISBN
-978-981-4590-07-5. doi: 10.1142/9097.
-
-
-
-20.   Hermann Rorschach.
-Psychodiagnostics: A Diagnostic Test Based on Perception. Hogrefe Huber Pub,
-10th edition, 1998. ISBN 3456830246.
-
-
-
-21.   Suphannee
-Sivakorn, Iasonas Polakis, and Angelos D. Keromytis. I am Robot: (Deep)
-Learning to Break Semantic Image CAPTCHAs. In 2016 IEEE Eur. Symp. Secur. Priv.
-(EuroS P), pages 388–403, 2016. doi: 10.
-
-
-
-22.   Mohammed Y. Siyal
-and Mahmood Fathy. Real-Time Measurement of Traffic Queue Parameters by Using
-Image Processing Techniques. In Fifth Int. Conf. Image Process. its Appl.,
-pages 450–454, 1995. doi: 10.1049/ cp:19950699.
-
-
-
-23.   Luis von Ahn,
-Manuel Blum, Nicholas J. Hopper, and John Langford. CAPTCHA: Using Hard AI
-Problems for Security. In Lect. Notes Comput. Sci., pages 294– 311. Springer,
-Berlin, Heidelberg, 2003. doi: 10.1007/ 3-540-39200-9 18.
-
-
-
-24.   Luis von Ahn,
-Benjamin Maurer, Colin Mcmillen, David Abraham, and Manuel Blum. reCAPTCHA:
-HumanBased Character Recognition via Web Security Measures. Science (80-.).,
-321(12 September 2008):1465– 1468, sep 2008. ISSN 0036-8075. doi: 10.1126/science.
-
+24.	Luis von Ahn, Benjamin Maurer, Colin Mcmillen, David Abraham, and Manuel Blum. reCAPTCHA: HumanBased Character Recognition via Web Security Measures. Science (80-.)., 321(12 September 2008):1465– 1468, sep 2008. ISSN 0036-8075. doi: 10.1126/science. 1160379.
 
 </div>
