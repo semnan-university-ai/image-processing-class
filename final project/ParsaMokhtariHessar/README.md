@@ -229,6 +229,7 @@ end
 
 ```
 myFolder = 'OutPut\';
+% myFolder = 'OutPutClean\';
 filePattern1 = fullfile(myFolder,'*.PNG');
 theFiles = dir(filePattern1);
 ```
