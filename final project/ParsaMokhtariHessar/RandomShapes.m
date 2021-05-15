@@ -1,6 +1,6 @@
 function image = RandomShapes(image,NumberOfShapes,m)
 NumberOfCases = 5;
-Shapes = [randi([0 NumberOfCases],1,NumberOfShapes);];
+Shapes = [randi([0 NumberOfCases-1],1,NumberOfShapes);];
 [width , height] = size(image);
 r = [randi([0 m],1,NumberOfShapes);];
 t = 2; % threshhold
