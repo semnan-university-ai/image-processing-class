@@ -1,7 +1,7 @@
 clc;
 close all;
 clear;
-myFolder = 'OutPutClean\';
+myFolder = 'OutPut\';
 filePattern1 = fullfile(myFolder,'*.PNG');
 theFiles = dir(filePattern1);
 Tru=0;
