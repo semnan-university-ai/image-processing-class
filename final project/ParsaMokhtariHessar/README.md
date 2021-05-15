@@ -492,7 +492,7 @@ NumberOfCases = 5;
 </div>
 
 ```
-Shapes = [randi([0 NumberOfCases],1,NumberOfShapes);];
+Shapes = [randi([0 NumberOfCases-1],1,NumberOfShapes);];
 ```
 
 <div dir="rtl">
