@@ -1,7 +1,7 @@
 close all
 clear all
 clc
-pic = imread('benchmark\watch.png');
+pic = imread('..\..\..\benchmark\watch.png');
 imshow(pic);
 k=8;
 for i=300:585
