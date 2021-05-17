@@ -3,6 +3,7 @@ clear all;
 close all;
 
 image = imread('class/paint.jpg');
+%image = imread('class/paint1.jpg');
 image_size = size(image);
 
 temp_image_size = size(image_size);
