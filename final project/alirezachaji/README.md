@@ -221,3 +221,35 @@ end
  رهای تصویر کپچا را به عنوان ورودی دریافت می کند  و سپس توسط حلقه تکرار هر کارکتر را توسط تابع captcha_rotate به اندازه مقداری تصادفی بین ۰ تا ۲۷۰ درجه دوران می دهد سپس توسط حلقه های تکرار تو در تو این تصاویر کارکترها را کنار هم می چسباند و در نهایت تصویر تولیدی را به تابع قبل باز می گرداند  
 
 </div>
+
+
+``` matlab
+function pic2=captcha_rotate(pic,angel)
+n=size(pic);
+v=deg2rad(angel);
+r=ceil(n(1)*abs(cos(v))+n(2)*abs(sin(v)));                      
+c=ceil(n(1)*abs(sin(v))+n(2)*abs(cos(v)));                     
+pic2=zeros(r,c);
+pic2=uint8(pic2);
+midx=ceil((size(pic2,1))/2);
+midy=ceil((size(pic2,2))/2);
+for i=1:size(pic2,1)
+    for j=1:size(pic2,2)                                                       
+         xx= round((i-midx)*cos(v)+(j-midy)*sin(v)+ceil(n(1)/2));                                       
+         yy= round(-(i-midx)*sin(v)+(j-midy)*cos(v)+ceil(n(2)/2));                             
+         if (xx>=1 && yy>=1 ) 
+             if ( xx<=n(1) &&  yy<=n(2) ) 
+               pic2(i,j)=pic(xx,yy);  
+             end  
+         end
+    end
+end
+```
+***
+### captcha_rotate :
+
+<div dir="rtl">
+ 
+ رهای تصویر کپچا را به عنوان ورودی دریافت می کند  و سپس توسط حلقه تکرار هر کارکتر را توسط تابع captcha_rotate به اندازه مقداری تصادفی بین ۰ تا ۲۷۰ درجه دوران می دهد سپس توسط حلقه های تکرار تو در تو این تصاویر کارکترها را کنار هم می چسباند و در نهایت تصویر تولیدی را به تابع قبل باز می گرداند  
+
+</div>
