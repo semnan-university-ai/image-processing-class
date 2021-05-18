@@ -144,7 +144,6 @@ pic=pepper_noise(pic,30);
 imshow(pic);
 
 end
-
 ‍‍‍‍```
 
 ***
