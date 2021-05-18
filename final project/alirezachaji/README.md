@@ -133,17 +133,7 @@ pic=zeros(height,width);
 ``` matlab
 
 %% Joing random chars in a single image
-pic=join_char(pic,alphabet,height,width,n);
 
-%% Invert a random part of the image
-pic=rand_inv(pic,height,width);
-
-
-%% Add some salt & pepper noise to be more hard to read by OCR
-pic=pepper_noise(pic,30);
-imshow(pic);
-
-end
 ‍‍‍‍```
 
 ***
