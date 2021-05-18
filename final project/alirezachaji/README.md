@@ -166,7 +166,9 @@ i=1;
     end  
     alphabet = uint8(alphabet);
     text=char(code);
+    
 ```    
+
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/adeace4ac5778db155e9302290f15a54b2533e3f/excersiecs/alirezachaji/23/Exce23.png)
 ***
