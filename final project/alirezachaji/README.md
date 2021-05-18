@@ -113,39 +113,42 @@ xlswrite('Result.xlsx',g);
 #### توضیحات توابع استفاده شده در برنامه
 ***
 <div dir="rtl">
-
-این تابع مربوط به محاسبه هیستوگرام می باشد عملکرد آن به این صورت است که یک کانال رنگی را از ورودی گرفته و توسط حلقه های تکرار فراوانی مقادیر پیکسل های هم مقدار را با هم جمع شده و در نهایت هیستوگرام تصویر را تولید کرده و آن را به برنامه اصلی برمی گرداند .
+این تابع وظیفه تولید تصویر کپچا در هر حلقه تکرار برنامه اصلی را برعهده دارد که خود این تابع نیز تعدادی تابع دیگر را در دل خود جای داده که در ادامه به توضیح آن می پردازیم . این تابع تعداد کاراکتر و ابعاد تصویر را به عنوان ورودی از تابع اصلی دریافت کرده و در ابتدا تصویر خام اولیه به ابعاد مورد نظر را تولید می کند سپس توسط تابع get_ch ماتریسی شامل تصاویر هر یک از کارکترهای مورد نیاز آن تصویر کپچا و همچنین تکست آن کپچا را تولید می کند .
 
 </div>
 
 ``` matlab
+function [pic,code]=main_func(n,height,width)
 
--------
+%% parameters defining
+[alphabet,code]=get_ch(n);
+pic=zeros(height,width);
+```
 ***
 <div dir="rtl">
-
-این تابع مربوط به محاسبه هیستوگرام می باشد عملکرد آن به این صورت است که یک کانال رنگی را از ورودی گرفته و توسط حلقه های تکرار فراوانی مقادیر پیکسل های هم مقدار را با هم جمع شده و در نهایت هیستوگرام تصویر را تولید کرده و آن را به برنامه اصلی برمی گرداند .
+در ادامه توسط تابع join_char تصویری که حاصل از به هم چسباندن کلیه کارکتر هاست را تولید می کند و در ادامه بخشی از این تصویر که به صورت رندم انتخاب می گردد این تصویر تولید شده توسط تابع rand_inv به نگاتیو تبدیل می شود بدینصورت که بخش های سیاه سفید شده و بخش های سفید سیاه می شود 
 
 </div>
 
 ``` matlab
-  
-function his=ch_hist(pic)
-n=size(pic);
-his=zeros(1,255);
-x=[1:255];
-for k=1:255
-    s=0;
-    for i=1:n(1)
-        for j=1:n(2)
-            if(pic(i,j)==k)
-                s=s+1;
-            end    
-        end
-    end
-    his(k)=s;
-end  
-```
+
+%% Joing random chars in a single image
+pic=join_char(pic,alphabet,height,width,n);
+
+%% Invert a random part of the image
+pic=rand_inv(pic,height,width);
+% figure('Name',code);
+% imshow(pic);
+
+%% Add some salt & pepper noise to be more hard to read by OCR
+pic=pepper_noise(pic,30);
+%figure('Name',code);
+imshow(pic);
+
+
+end
+‍‍‍‍```
+
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/adeace4ac5778db155e9302290f15a54b2533e3f/excersiecs/alirezachaji/23/Exce23.png)
 ***
