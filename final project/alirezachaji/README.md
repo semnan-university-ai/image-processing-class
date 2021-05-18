@@ -154,6 +154,7 @@ end
 </div>
 
 ``` matlab
+
 function [alphabet,text]=get_ch(n)
 alphabet=zeros(25,25,n);
 code=zeros(1,n);
