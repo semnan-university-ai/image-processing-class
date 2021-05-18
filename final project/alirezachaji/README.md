@@ -145,7 +145,28 @@ imshow(pic);
 
 end
 ‍‍‍‍```
+<div dir="rtl">
+این تابع وظیفه تولید تصویر کپچا در هر حلقه تکرار برنامه اصلی را برعهده دارد که خود این تابع نیز تعدادی تابع دیگر را در دل خود جای داده که در ادامه به توضیح آن می پردازیم . این تابع تعداد کاراکتر و ابعاد تصویر را به عنوان ورودی از تابع اصلی دریافت کرده و در ابتدا تصویر خام اولیه به ابعاد مورد نظر را تولید می کند سپس توسط تابع get_ch ماتریسی شامل تصاویر هر یک از کارکترهای مورد نیاز آن تصویر کپچا و همچنین تکست آن کپچا را تولید می کند .
 
+</div>
+
+``` matlab
+function [alphabet,text]=get_ch(n)
+alphabet=zeros(25,25,n);
+code=zeros(1,n);
+i=1;
+    for i=1:n
+       s='A':'Z';
+       str=s(randi(numel(s))); 
+       add="..\..\..\excersiecs\arman-ariamehr\19\alphabet\"+str+".txt";
+       code(i)=str;
+       ch_arr=dlmread(add);
+       alphabet(:,:,i)=ch_arr; 
+       i=i+1;
+    end  
+    alphabet = uint8(alphabet);
+    text=char(code);
+```    
 ***
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/adeace4ac5778db155e9302290f15a54b2533e3f/excersiecs/alirezachaji/23/Exce23.png)
 ***
