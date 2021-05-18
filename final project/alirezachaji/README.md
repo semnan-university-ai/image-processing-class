@@ -125,15 +125,26 @@ function [pic,code]=main_func(n,height,width)
 pic=zeros(height,width);
 ```
 ***
+
 <div dir="rtl">
+ 
 در ادامه توسط تابع join_char تصویری که حاصل از به هم چسباندن کلیه کارکتر هاست را تولید می کند و در ادامه بخشی از این تصویر که به صورت رندم انتخاب می گردد   توسط تابع rand_inv به نگاتیو تبدیل می شود بدینصورت که بخش های سیاه سفید شده و بخش های سفید سیاه می شود و در نهایت توسط تابع pepper_noise  میزان ۳۰ درصد نویز فلفل نمکی به تصویر اضافه می گردد. البته امکان اینکه میزان درصد نویز نیز رندم باشد وجود داشت که به همین میزان ۳۰ درصد اکتفا گردیده است . پس از اعمال نویز تصویر نهایی نمایش داده می شود. 
 
 </div>
 
 ``` matlab
-
 %% Joing random chars in a single image
+pic=join_char(pic,alphabet,height,width,n);
 
+%% Invert a random part of the image
+pic=rand_inv(pic,height,width);
+
+
+%% Add some salt & pepper noise to be more hard to read by OCR
+pic=pepper_noise(pic,30);
+imshow(pic);
+
+end
 ‍‍‍‍```
 
 ***
