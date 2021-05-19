@@ -278,35 +278,69 @@ outImage = captcha_image;
 <p align="center">
   <img width="1000" height="1000" src="result.jpg">
   
-  <h1 align="center">تعداد ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع </h1>
+  <h3 align="center">تعداد ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع </h3>
 </p>
 
 <div dir="rtl">
   
   ##### تابع ocrdetect :<br />
-این تابع اصلی برنامه است که وظیفه ایجاد کپجا به وسیله متدهایی، جهت غیر قابل شناسایی کردن حروف برای روباتهای خودکار را بر عهده دارد.<br />
-پارامترهای ورودی تابع به ترتیب شامل :<br />
-ماتریس دیتا که نقش کاراکترها را به تابع ارسال می‌نماید.<br /> 
-تعداد کاراکترهای درون کپچا که توسط کاربر تعیین شده و تصویر خروجی در نهایت همان تعداد کاراکتر را خواهد داشت .<br />
-شش پارامتر آخر شامل متد های مورد استفاده در ایجاد کپچا جهت ناخوانا شدن تصویر برای رباتها است. نوع  این پارامترهای ورودی بولی بوده  و در صورت true بودن بر کپچا وارد می‌شوند این متدها به ترتیب عبارتند ازانتقال‌عمودی، چرخش حروف، رسم خطوط افقی، نویز ریز و  نویز درشت <br />
-پارامترهای خروجی تابع ، پارامتر اول رشته متن تصادفی ایجاد شده  درون کپچا را برمی گرداند و پارامتر دوم تصویر ایجاد شده کپچا را برمی‌گرداند.<br />
+این تابع جهت آنالیز تشخیص کپچای تولید شده توسط تابع ocr متلب ایجاد شده است. ورودی تابع رشته متنی که براساس آن کپچا تولید شده و پارامتر ورودی دوم تصویری از کپچا که توسط برنامه تولید شده است را به تابع میفرستد. تابع ocr متلب متن خوانده شده از تصویر را با متن واقعی مقایسه کرده و در صورت درست بودن آن نتیجه  true را برمی‌گرداند پارامترهای خروجی به ترتیب متن خوانده شده، نتیجه مقایسه و در صورتی که مقایسه صحیح باشد تصویر کپچا را به رنگ سبز و در صورت غلط بودن تشخیص تصویر را به رنگ قرمز برمی‌گرداند.<br />
+
 </div>
 
 ~~~matlab
+function [txtocr,resultOcr,imgRGB] = ocrDetect(txtCaptcha,imgCaptcha)
+%OCRDETET  function compare an set image of the captcha with real content
+%   input parameters is path of a folder that is contain images of captcha
 
+ocrCaptcha = ocr(imgCaptcha);
+imgRGB = zeros(size(imgCaptcha,1),size(imgCaptcha,2),3);
+txtocr = strtrim(string(ocrCaptcha.Text));
+if string(txtCaptcha) == txtocr
+    resultOcr = true;
+    blackPixels = imgCaptcha == 0;
+    imgRGB(:,:,2) = blackPixels;
+else 
+    resultOcr = false;
+    blackPixels = imgCaptcha == 0;
+    imgRGB(:,:,1) = blackPixels;
+end
+
+end
 ~~~
 <div dir="rtl">
+خط اول تصویر ورودی را به عنوان پارامتر به تابع ocr متلب ارسال و خروجی را در متغیر ocrcaptcha ذخیره می نماید.<br />
+ خط دوم یک ماتریس دو بعدی به اندازه تصویر ورودی جهت تغییر رنگ پیش زمینه ایجاد می کند.<br />
+ خط سوم مقدار به دست آمده از تابع ocr را به شکل رشته متنی به خروجی تابع  نسبت می‌دهد .<br />
 </div>
 
 ~~~matlab
-
+ocrCaptcha = ocr(imgCaptcha);
+imgRGB = zeros(size(imgCaptcha,1),size(imgCaptcha,2),3);
+txtocr = strtrim(string(ocrCaptcha.Text));
 ~~~
 <div dir="rtl">
+در صورتی که مقایسه صحیح باشد تصویر کپچا را به رنگ سبز و در صورت غلط بودن تشخیص تصویر را به رنگ قرمز برمی‌گرداند.<br />
 </div>
 
 ~~~matlab
-
+if string(txtCaptcha) == txtocr
+    resultOcr = true;
+    blackPixels = imgCaptcha == 0;
+    imgRGB(:,:,2) = blackPixels;
+else 
+    resultOcr = false;
+    blackPixels = imgCaptcha == 0;
+    imgRGB(:,:,1) = blackPixels;
+end
 ~~~
+
+<p align="center">
+  <img width="1000" height="1000" src="analysis/100000-R.jpg">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع </h3>
+</p>
+
 <div dir="rtl">
 </div>
 
