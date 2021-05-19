@@ -57,8 +57,24 @@ clear;
  result = cell(150,6);
 result(1,:)={'Number','Captcha not modify','OCR1','Captcha','OCR','HumanGuess'};
 ````
+ <div dir="rtl">
+تعداد کاراکتر های تصویر کپچا اعدادی بین 4 تا 6 مشخص می شود. اندازه تصویر خروجی کپچا نیز بر این اساس تعیین می شود.<br>
+ captcha_image2 نیز برای مشخص کردن کپچای بدون تغییر می باشد.
+</div>
  
- 
- 
+ ````
+ for j = 1: size(result,1)
+alphabet_count = randi([4,6]);
+width = 300*alphabet_count;
+height = 300;
+captcha_alphabet = [ randi([1 62],1,alphabet_count,'uint8'); ];
+captcha_alphabet = uint8(captcha_alphabet);
+alphabet=get_alphabet();
+captcha_image = zeros(size(alphabet(:,:,1)));
+
+captcha_image = alphabet(:,:,captcha_alphabet(1,1));
+captcha_image2 = alphabet(:,:,captcha_alphabet(1,1));
+
+````
  
  
