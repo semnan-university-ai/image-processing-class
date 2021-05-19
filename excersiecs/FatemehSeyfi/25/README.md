@@ -3,7 +3,7 @@
   # روش تشخیص  کپچا مبتنی بر  شبکه عصبی کانولوشن  با  FL (Focal Loss)
 <br/>
 
-###### به منظور تمایز بین کامپیوترها و انسان‌ها، کپچا به طور گسترده‌ای در لینک‌هایی مانند ورود به وب سایت و ثبت‌نام استفاده می‌شود. روش شناسایی سنتی CAPTCHA دارای قابلیت شناسایی ضعیف و مقاومت در برابر انواع مختلف کدهای تایید است. به همین دلیل، این مقاله یک روش تشخیص CAPTCHA را براساس شبکه عصبی کانولوشن با تابع اتلاف کانونی پیشنهاد می‌کند این روش ساختار شبکه VGG سنتی را بهبود می‌بخشد و تابع اتلاف کانونی برای تولید مدل تشخیص کپچا جدید معرفی می‌کند. ابتدا ما پیش‌پردازش مانند مقیاس خاکستری، روشنایی، نویز زدایی، تقسیم‌بندی و حاشیه‌نویسی را انجام می‌دهیم و سپس از کتابخانه Keras برای ساخت یک مدل شبکه عصبی ساده استفاده می‌کنیم. علاوه بر این، ما یک مدل شبکه عصبی پایانه به پایانه برای تشخیص کپچا پیچیده با چسبندگی بالا و پیکسل تداخل بیشتر می‌سازیم. با آزمایش CNKI CAPTCHA، Zengfang CAPTCHA و تولید تصادفی CAPTCHA، نتایج تجربی نشان می‌دهد که روش پیشنهادی دارای اثر شناسایی و مقاومت بهتری برای سه مجموعه داده مختلف است و مزایای خاصی در مقایسه با روش‌های یادگیری عمیق سنتی دارد. میزان  تشخیص به ترتیب ۹۹ %، ۹۸.۵ % و ۹۷.۸۴ % می‌باشد.
+#### به منظور تمایز بین کامپیوترها و انسان‌ها، کپچا به طور گسترده‌ای در لینک‌هایی مانند ورود به وب سایت و ثبت‌نام استفاده می‌شود. روش شناسایی سنتی CAPTCHA دارای قابلیت شناسایی ضعیف و مقاومت در برابر انواع مختلف کدهای تایید است. به همین دلیل، این مقاله یک روش تشخیص CAPTCHA را براساس شبکه عصبی کانولوشن با تابع اتلاف کانونی پیشنهاد می‌کند این روش ساختار شبکه VGG سنتی را بهبود می‌بخشد و تابع اتلاف کانونی برای تولید مدل تشخیص کپچا جدید معرفی می‌کند. ابتدا ما پیش‌پردازش مانند مقیاس خاکستری، روشنایی، نویز زدایی، تقسیم‌بندی و حاشیه‌نویسی را انجام می‌دهیم و سپس از کتابخانه Keras برای ساخت یک مدل شبکه عصبی ساده استفاده می‌کنیم. علاوه بر این، ما یک مدل شبکه عصبی پایانه به پایانه برای تشخیص کپچا پیچیده با چسبندگی بالا و پیکسل تداخل بیشتر می‌سازیم. با آزمایش CNKI CAPTCHA، Zengfang CAPTCHA و تولید تصادفی CAPTCHA، نتایج تجربی نشان می‌دهد که روش پیشنهادی دارای اثر شناسایی و مقاومت بهتری برای سه مجموعه داده مختلف است و مزایای خاصی در مقایسه با روش‌های یادگیری عمیق سنتی دارد. میزان  تشخیص به ترتیب ۹۹ %، ۹۸.۵ % و ۹۷.۸۴ % می‌باشد.
 <br/>
 
 ### ۱.مقدمه
@@ -114,42 +114,42 @@
 ## (‏۳)‏لایه کانولوشن C2
 <br/>
   
-####با استفاده از ۸ کرنل  کانولوشن، اما اندازه کرنل کانولوشن ۸* ۳ *۳می‌شود، padding هنوز هم کانولوشن مشابهی دارد، اندازه گام کانولوشن ۱ است، پارامتر کل۵۸۴ =۸* (‏۱+ ۸* ۳ *۳)‏ و تابع فعال‌سازی تابع ReLU است، که به دنبال آن یک لایه نرمال سازی دسته‌ای، و خروجی ۸* ۲۵ * ۱۲  نقشه ویژگی قرار دارد.
+با استفاده از ۸ کرنل  کانولوشن، اما اندازه کرنل کانولوشن ۸* ۳ *۳می‌شود، padding هنوز هم کانولوشن مشابهی دارد، اندازه گام کانولوشن ۱ است، پارامتر کل۵۸۴ =۸* (‏۱+ ۸* ۳ *۳)‏ و تابع فعال‌سازی تابع ReLU است، که به دنبال آن یک لایه نرمال سازی دسته‌ای، و خروجی ۸* ۲۵ * ۱۲  نقشه ویژگی قرار دارد.
 <br/>
   
-##(‏۴)‏لایه  Pooling لایه P3  
+## (‏۴)‏لایه  Pooling لایه P3  
 <br/>
   
-####ما الگوریتم Pooling حداکثر نتیجه خروجی را به لایه C2 برای عملیات Pooling اعمال می‌کنیم؛این لایه نیز لایه  downsampling نامیده می‌شود. در لایه downsampling، اندازه پنجره مورد استفاده ۲* ۲و خروجی آن ۸ * ۶ * ۱۲ نقشه ویژگی می باشد.
+ما الگوریتم Pooling حداکثر نتیجه خروجی را به لایه C2 برای عملیات Pooling اعمال می‌کنیم؛این لایه نیز لایه  downsampling نامیده می‌شود. در لایه downsampling، اندازه پنجره مورد استفاده ۲* ۲و خروجی آن ۸ * ۶ * ۱۲ نقشه ویژگی می باشد.
 <br/>
   
-##(‏۵)‏لایه کانولوشن C4 
-  <br/>
+## (‏۵)‏لایه کانولوشن C4 
+<br/>
    
 #### با استفاده از ۱۶ کرنل کانولوشن که اندازه آن‌ها ۸* ۳ *۳ است، padding همان کانولوشن را دارد، طول گام کانولوشن ۱ است، پارامترهای مورد نیاز کل ۱۱۶۸= ۱۶ * (‏۱+ ۸* ۳ *۳)‏ هستند، تابع فعالسازی تابع ReLU است، که به دنبال آن یک لایه نرمال سازی دسته‌ای و خروجی ۱۲ * ۶* ۱۶ نقشه ویژگی قرار دارند.
- <br/>
+<br/>
   
 ##(‏۶)‏لایه کانولوشن لایه C5
-  <br/>
+<br/>
   
 ####با استفاده از ۱۶ کرنل کانولوشن که اندازه آن‌ها  ۱۶* ۳ *۳  است، padding همان کانولوشن، طول گام کانولوشن ۱، پارامترهای مورد نیاز کل عبارتند از ۲۳۲۰= ۱۶ * (‏۱+ ۱۶* ۳ *۳)‏ تابع فعالسازی تابع ReLU است، که به دنبال آن یک لایه نرمال سازی دسته‌ای و خروجی ۱۲ * ۶* ۱۶ نقشه ویژگی قرار دارند.
-  <br/>
+<br/>
   
 ##(‏۷)‏لایه پولینگ P6
-  <br/>
+<br/>
   
 ####ما الگوریتم Pooling حداکثر نتیجه خروجی را به لایه C2 برای عملیات Pooling اعمال می‌کنیم در لایه downsampling، اندازه پنجره مورد استفاده ۲* ۲و خروجی آن ۳ * ۶ * ۱۶ نقشه ویژگی می باشد.
-  <br/>
+<br/>
   
   
 ##(‏۸)‏لایه مسطح کننده F7(Flattening) 
-  <br/>
+<br/>
   
 ####ما داده‌های خروجی نقشه‌های ویژگی را به لایه   P6مسطح می‌کنیم، که در مجموع  ۲۸۸  = ۳ * ۶ * ۱۶  گره است.
-  <br/>\
+<br/>
   
 #### (‏۹) لایه متراکم کاملاً با لایه F7 متصل است. تابع فعالیت تابع اتلاف  کانونی است. تمام ویژگی‌ها طبقه‌بندی می‌شوند. نتیجه طبقه‌بندی  مربوط به دسته کاراکترهای کپچا است، که شامل ۱۰ عدد و ۲۶ کاراکتر بزرگ انگلیسی است، که به معنی ۳۶ نتیجه ممکن است. در مجموع ۳۶ پارامتر ۱۰۴۰۴ =( ۱+‏۳ * ۶ * ۱۶  )‏ مورد نیاز است.
-   <br/>
+<br/>
  
 ## ۳.۴. کپچا پیچیده
 <br/>
@@ -158,11 +158,11 @@
  <br/>
   
 ####(‏۱)‏لایه ورودی: داده‌های ورودی داده‌های تصویر RGB با اندازه ۲۷* ۷۲  و ۳ کانال هستند.
-  <br/>
+<br/>
   
 ####(‏۲)‏لایه کانولوشن : C1 ۳۲ کانولوشن کرنل با اندازه  ۳ *۳ *۳استفاده می‌شود، و همان محتوا برای padding استفاده می‌شود؛به عبارت دیگر، یک دایره از ۰ به لبه ماتریس داده تصویر ورودی، و مرحله عملیات کانولوشن ۱ است. هر کانولوشن کرنل شامل ۲۷ پارامتر است و یک پارامتر بایاس اضافه می‌کند.از این رو پارامترهای مورد نیاز این لایه ۸۹۶=۳۲ * (‏۱ +۳ *۳ *۳)‏ می‌باشد. - تابع فعال‌سازی تابع ReLU است که در کنار لایه نرمال سازی دسته‌ای قرار دارد و ۲۷ * ۷۲ * ۳۲ نقشه ویژگی خروجی دارد
   
-  <br/>
+<br/>
 <p align="center">
       <img src="table1.png" />
      
@@ -186,13 +186,11 @@
 #### (‏۴)‏لایه پولینگ لایه P3: ما الگوریتم Pooling حداکثر نتیجه خروجی را به لایه C2 برای عملیات Pooling اعمال می‌کنیم در لایه downsampling، اندازه پنجره مورد استفاده ۲* ۲و خروجی آن ۱۳ * ۳۶ * ۳۲ نقشه ویژگی می باشد.
 <br/>
   
- #### (‏۵)‏لایه کانولوشن C4: ما از ۶۴ کرنل کانولوشن استفاده می‌کنیم که اندازه آن‌ها ۳۲*۳ *۳  است، padding همان کانولوشن است، گام کانولوشن ۱ است، پارامترهای مورد نیاز کل عبارتند از :
+#### (‏۵)‏لایه کانولوشن C4: ما از ۶۴ کرنل کانولوشن استفاده می‌کنیم که اندازه آن‌ها ۳۲*۳ *۳  است، padding همان کانولوشن است، گام کانولوشن ۱ است، پارامترهای مورد نیاز کل عبارتند از :
 ۱۸۴۹۶= ۶۴ * (‏ ۱+ ۳۲*۳ *۳  ) و تابع فعال‌سازی تابع ReLU است، که به دنبال آن یک لایه نرمال سازی دسته‌ای و خروجی ۱۳ * ۳۶ * ۶۴ نقشه ویژگی قرار دارند.
 
 <br/>
- #### (‏۶)‏لایه کانولوشن C5 :ما از ۶۴*۳ *۳کرنل کانولوشن استفاده می کنیم که اندازه آن ۶۴ است ، padding همان مرحله کانولوشن است ، مرحله کانولوشن ۱ است ، کل پارامترهای مورد نیاز مجدد۶۳۶۹۲۸=۶۴ * (۱+ ۶۴*۳ *۳) هستند ، و تابع فعال سازی تابع ReLU است که به دنبال آن یک لایه نرمال سازی دسته ای و خروجی ۱۳ * ۳۶ * ۶۴ نقشه ویژگی قرار دارند.
-
-
+#### (‏۶)‏لایه کانولوشن C5 :ما از ۶۴*۳ *۳کرنل کانولوشن استفاده می کنیم که اندازه آن ۶۴ است ، padding همان مرحله کانولوشن است ، مرحله کانولوشن ۱ است ، کل پارامترهای مورد نیاز مجدد۶۳۶۹۲۸=۶۴ * (۱+ ۶۴*۳ *۳) هستند ، و تابع فعال سازی تابع ReLU است که به دنبال آن یک لایه نرمال سازی دسته ای و خروجی ۱۳ * ۳۶ * ۶۴ نقشه ویژگی قرار دارند.
 <br/>
   
 #### (‏۷)‏لایه پولینگ P6: الگوریتم Pooling حداکثر نتیجه خروجی را به لایه C5 برای عملیات Pooling اعمال می‌کند و در لایه downsampling، اندازه پنجره مورد استفاده ۲* ۲و خروجی آن ۱۸ * ۶ * ۶۴ نقشه ویژگی می باشد.
@@ -225,35 +223,34 @@
 <br/>
  
 ## ۴. آزمایش‌ها
- <br/>
+<br/>
   
 ## ۴.۱. Dataset
-  <br/>
+<br/>
   
 ####. مجموعه داده کپچا استفاده‌شده در این مقاله شامل CNKI کپچا، ژنگفانگ کپچا و به طور تصادفی کپچا را تولید می‌کند. تمام مجموعه داده‌های کپچا از حروف و اعداد بزرگ و کوچک، شامل ۳۳ دسته تشکیل شده‌اند.
- <br/>
+<br/>
   
 ##کپچا CNKI
- <br/>
+<br/>
   
 ####شامل روش‌های متداول کپچا است، مانند تغییر مقیاس کاراکتر، نویز خطی و چسبندگی کاراکتر، که برای آزمایش کاربرد کپچا مناسب‌تر است. مجموعه داده تصویر شامل ۴۰۰۰ تصویر در مجموعه آموزش و ۶۰۰ تصویر در مجموعه آزمون است. تصویر نمونه در شکل ۴ نشان‌داده شده‌است.
-  <br/>
+<br/>
   
 ##سیستم مدیریت آموزشی ژنگ فانگ کپچا
-  <br/>
+<br/>
   
 ####ویژگی‌های نویز نقطه‌ای و چسبندگی انحراف نسبی را دارد که می‌تواند برای ارزیابی عملکرد روش تشخیص کد تایید ویژگی چسبنده مورد استفاده قرار گیرد. ما از ۲۰۰۰ مجموعه داده کپچا به عنوان مجموعه آموزشی و ۲۰۰ مجموعه آزمایشی استفاده می‌کنیم، و به صورت دستی برخی از تصاویر تغییر نام یافته را برچسب می‌زنیم. تصویر نمونه در شکل ۵ نشان‌داده شده‌است.
 کپچا که به صورت تصادفی تولید می‌شود دارای ویژگی‌های اعوجاج و چسبندگی متوسط است که با روش‌های سنتی تشخیص کپچا قابل‌تشخیص نیست. ما ۱۰۰۰۰ تصویر کپچا را به عنوان مجموعه آموزشی و ۲۰۰۰ را به عنوان مجموعه آزمایشی تولید می‌کنیم. - e، کاراکترهایی هستند که توسط تصویر به علاوه شماره سریال متوالی نمایش داده می‌شوند تا از ظاهر شدن خطا با همان تصویر جلوگیری شود.قالب نام گذاری، کاراکترهایی هستند که توسط تصویر به علاوه شماره سریال متوالی نمایش داده می‌شوند تا از ظاهر شدن خطا با همان تصویر جلوگیری شود. تصویر نمونه در شکل ۶ نشان‌داده شده‌است.
 
-  <br/>
+<br/>
   
- ##۴.۲ عملکرد.
-  <br/>
+##۴.۲ عملکرد.
+<br/>
   
- ####در ابتدا، کپچا پیش‌پردازش می‌شود، سپس مجموعه داده‌ها وارد مدل شبکه برای آموزش و تنظیم پارامتر می‌شود، و سپس نمونه‌های تست پیش‌بینی می‌شوند. ما تعداد مثبت واقعی (‏TP)‏و تعداد منفی واقعی (‏TN)‏را می‌شماریم و در نهایت نرخ دقت را با توجه به نتایج آماری، (‏TP + TN)acc=TP/‏محاسبه می‌کنیم. نمودار دقت و مقدار اتلاف شبکه عصبی کانولوشن بر روی سه مجموعه داده است که در شکل ۷ - ۹ نشان‌داده شده‌است و نتایج آزمون بر روی هر مجموعه داده نیز در شکل ۱۰ - ۱۲ نشان‌داده شده‌است. می توان از این شکل مشاهده کرد که روش پیشنهادی در این مقاله دارای نرخ تشخیص بالاتر و استحکام بهتر می‌باشد.
+####در ابتدا، کپچا پیش‌پردازش می‌شود، سپس مجموعه داده‌ها وارد مدل شبکه برای آموزش و تنظیم پارامتر می‌شود، و سپس نمونه‌های تست پیش‌بینی می‌شوند. ما تعداد مثبت واقعی (‏TP)‏و تعداد منفی واقعی (‏TN)‏را می‌شماریم و در نهایت نرخ دقت را با توجه به نتایج آماری، (‏TP + TN)acc=TP/‏محاسبه می‌کنیم. نمودار دقت و مقدار اتلاف شبکه عصبی کانولوشن بر روی سه مجموعه داده است که در شکل ۷ - ۹ نشان‌داده شده‌است و نتایج آزمون بر روی هر مجموعه داده نیز در شکل ۱۰ - ۱۲ نشان‌داده شده‌است. می توان از این شکل مشاهده کرد که روش پیشنهادی در این مقاله دارای نرخ تشخیص بالاتر و استحکام بهتر می‌باشد.
 برای CAPTCHA که حاوی اطلاعات تداخل پیچیده یا چسبندگی‌ها است، شناسایی روش‌های سنتی مبتنی بر جداسازی تصویر دشوار است و جداسازی اطلاعات کاراکترها را از بین می‌برد و باعث ایجاد خطا در جمع‌آوری می‌شود. با فن‌آوری یادگیری عمیق انتها به انتها، پیش‌بینی نتیجه از انتهای ورودی به انتهای خروجی وجود خواهد داشت. خطای پیش بینی منتقل شده و در هر لایه از شبکه تنظیم می شود تا زمانی که نتیجه مورد انتظار بدست آید.
-
-  <br/>
+<br/>
   
   <p align="center">
       <img src="fig4.png" />
@@ -274,8 +271,8 @@
  
 #### در هر لایه از شبکه تا رسیدن به نتیجه مورد انتظار ادامه دارد. با معرفی این معماری شبکه خودآموزی به شناخت CAPTCHA، مرحله تقسیم‌بندی کاراکتر می‌تواند حذف شود و عملیات پیش‌پردازش می‌تواند با توجه به پیچیدگی تداخل در نمونه آموزشی انتخاب شود، به طوری که اطلاعات ویژگی بین کاراکترها را بهتر برجسته و حفظ کند.
 به منظور بررسی بیشتر عملکرد روش پیشنهادی در این مقاله، جدول ۲ نرخ‌های تشخیص روش‌های یادگیری عمیق مختلف را تحت سه کد تایید مختلف نشان می‌دهد، از جمله روش‌هایی مانند AlexNet ، VGG، GoogleNet و ResNet. همانطور که از شکل مشاهده می‌شود، نرخ تشخیص روش پیشنهادی برای CNKI CAPTCHA به ترتیب برابر با ۲.۰۵ %، ۲.۴۲ %، ۱.۶۶ % و ۰.۲۴ % بیشتر از AxNet، VGG16 - ، GoogleNet و ResNet می‌باشد.
-
 <br/>
+  
 <p align="center">
       <img src="fig7.png" />
      
@@ -317,27 +314,20 @@
 </p>
 
 ##۵. نتیجه‌گیری
-
-
 <br/>
-
- 
-
-
+  
 #### در این مقاله یک روش شبکه عصبی کانولوشن براساس اتلاف کانونی برای تشخیص کپچا ارائه شده‌است. تابع اتلاف کانونی برای حل مساله عدم تعادل نمونه‌های مثبت و منفی و نمونه‌های سخت و آسان معرفی شده‌است. در ابتدا، پیش‌پردازش مانند خاکستری کردن، دودویی کردن، حذف نویز، قطعه‌بندی و برچسب زدن انجام می‌شود و سپس یک مدل شبکه عصبی ساده با استفاده از کتابخانه Keras ساخته می‌شود. علاوه بر این، یک مدل شبکه عصبی انتها به انتها برای کپچا پیچیده با چسبندگی بالا و پیکسل های مداخله گر بیشتر ساخته شده‌است. نتایج آزمون بر روی سه مجموعه داده مختلف CAPTCHA نشان می‌دهد که روش پیشنهادی نسبت به روش‌های سنتی دارای مزایای خاصی بوده و دارای نرخ تشخیص، استحکام و قابلیت تعمیم خوبی می‌باشد. در آینده، ما انواع بیشتری از تشخیص کپچا را مطالعه خواهیم کرد.
 <br/>
+  
 ##در دسترس بودن داده‌ها.
-
-
-
 <br/> 
 
-
-####داده‌های مورد استفاده برای تایید یافته‌های این پژوهش در این مقاله آورده شده‌است.
+#### داده‌های مورد استفاده برای تایید یافته‌های این پژوهش در این مقاله آورده شده‌است.
 <br/>
 
-##تضاد منافع
+## تضاد منافع
 <br/>
+  
 ####نویسندگان معتقدند که هیچ گونه تضاد منافع در خصوص انتشار این مقاله وجود ندارد.
 <br/>
 
@@ -347,14 +337,7 @@
 <br/>
 
 #### این کار توسط بنیاد علوم طبیعی ملی چین (‏۶۱۹۷۶۱۹۸)‏، پروژه کلیدی تحقیقات علوم طبیعی برای کالج‌ها و دانشگاه Anhui Province (‏KJ۲۰۱۹A۰۷۲۶)‏، بنیاد تحقیقات علمی سطح بالا برای معرفی استعداد دانشگاه Hefei Normal (‏۲۰۲۰ rcj۴۴)‏، و آزمایشگاه Hefei Normal  از تجزیه و تحلیل کلان داده و پروژه کاربردی باز پشتیبانی شد.
-
-
-
 <br/> 
-
-
-
-
 
 ## منابع
 <br/>
@@ -368,29 +351,53 @@
  [3] L. Lizhao, L. Jian, D. Yaomei, X. Huarong, Y. Huayi, and Z. Shunzhi, “Design and implementation of verification code identification based on anisotropic heat kernel,” China Communications, vol. 13, no. 1, pp. 100–112, 2016.<br/> 
  
  [4] P. Wang, H. Gao, Z. Shi, Z. Yuan, and J. Hu, “Simple and easy: transfer learning-based attacks to text CAPTCHA,” IEEE Access, vol. 8, pp. 59044–59058, 2020.
+ 
  [5] P. Wang, H. Gao, Q. Rao, S. Luo, Z. Yuan, and Z. Shi, “A security analysis of CAPTCHAS with large character sets,” IEEE Transactions on Dependable and Secure Computing, p. 1, 2020.
- [6] Y. H. Shen, R. G. Ji, D. L. Cao, and M. Wang, “Hacking Chinese touclick CAPTCHA by multiscale corner structure model with fast pattern matching,” Proceedings of the ACM International Conference on Multimedia, pp. 853–856, 2014. 
+ [6] Y. H. Shen, R. G. Ji, D. L. Cao, and M. Wang, “Hacking Chinese touclick CAPTCHA by multiscale corner structure model with fast pattern matching,” Proceedings of the ACM International Conference on Multimedia, pp. 853–856, 2014.
+ 
 [7] M. Belk, C. Fidas, P. Germanakos, and G. Samaras, “Do human cognitive differences in information processing affect preference and performance of CAPTCHA?” International Journal of Human-Computer Studies, vol. 84, pp. 1–18, 2015.
+
  [8] V. P. Singh and P. Pal, “Survey of different types of CAPTCHA,” International Journal of Computer Science and Information Technologies, vol. 5, no. 2, pp. 2242–2245, 2014.
+ 
  [9] P. Lupkowski and M. . Urbanski, “SemCAPTCHA—user friendly alternative for OCR-based CAPTCHA systems,” in Proceedings of the 2008 International Multiconference on Computer Science & Information Technology, pp. 325–329, IEEE, Wisia, Poland, October 2008. 
+ 
 [10] P. Golle and N. Ducheneaut, “Keeping bots out of online games,” in Proceedings of the Advances in Computer Entertainment Technology, pp. 262– 265, DBLP, Valencia, Spain, June 2005. 
+
 [11] K. Chellapilla and P. Y. Simard, “Using machine learning to break visual human interaction proofs (HIPs),” Advances in Neural Information Processing Systems, pp. 265–272, 2004.
- [12] J. Yan and A. S. El Ahmad, “Breaking visual CAPTCHAs with naive pattern recognition algorithms,” in Proceedings of the 23rd Annual Computer Security Applications Conference, pp. 
+
+[12] J. Yan and A. S. El Ahmad, “Breaking visual CAPTCHAs with naive pattern recognition algorithms,” in Proceedings of the 23rd Annual Computer Security Applications Conference, pp. 
+ 
 279–291, Miami Beach, FL, USA, December 2007.
+
  [13] J. Yan and A. S. El Ahmad, “A low-cost attack on a Microsoft CAPTCHA,” in Proceedings of the ACM Conference on Computer & Communications Security, pp. 543-544, Alexandria, Virginia USA, October 2008.
+ 
  [14] E. Bursztein, M. Martin, and J. Mitchell, “Text-based CAPTCHA strengthsand weaknesses,” in Proceedings of the 18th ACM conference on Computer and communications se curity, pp. 125–138, Chicago, IL, USA, October 2011.
+ 
  [15] H. Gao, W. Wang, J. Qi, X. Wang, X. Liu, and J. Yan, “-e robustness of hollow CAPTCHAs,” in Proceedings of the 2013 ACM SIGSAC conference on Computer & communications security, pp. 1075–1086, Berlin, Germany, November 2013.
+ 
  [16] H. Gao, J. Yan, F. Cao et al., “A simple generic attack on text captchas,” in Proceedings of the Network & Distributed System Security Symposium, pp. 220–232, San Diego, CA, USA, February 2016.
+ 
  [17] K. Qing and R. Zhang, “A multi-label neural network approach to solving connected CAPTCHAs,” in Proceedings of the 2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR), pp. 1313–1317, IEEE Computer Society, Kyoto, Japan, November 2017.
+ 
  [18] B. Shi, X. Bai, and C. Yao, “An end-to-end trainable neural network for image-based sequence recognition and its ap plication to scene text recognition,” IEEE Transactions on Pattern Analysis & Machine Intelligence, vol. 39, no. 11, pp. 2298–2304, 2016. 
+ 
 [19] F.-L. Du, J.-X. Li, Z. Yang, P. Chen, B. Wang, and J. Zhang, “CAPTCHA recognition based on faster R-CNN,” Intelligent Computing ;eories and Application, pp. 597–605, 2017.
+
  [20] D. Lin, F. Lin, Y. Lv, F. Cai, and D. Cao, “Chinese character CAPTCHA recognition and performance estimation via deep neural network,” Neurocomputing, vol. 288, pp. 11–19, 2018. 
+ 
 [21] F. H. Alqahtani and F. A. Alsulaiman, “Is image-based CAPTCHA secure against attacks based on machine learning? an experimental study,” Computers & Security, vol. 88, 2019.
+
+
  [22] H. Yu, S. Xiao, Z. Yu, Y. Li, and Y. Zhang, “ImCAPTCHA: imperceptible CAPTCHA based on cursor trajectories,” IEEE Consumer Electronics Magazine, vol. 9, no. 1, pp. 74–82, 2020.
+ 
  [23] J. Wang, J. Qin, J. Qin, X. Xiang, Y. Tan, and N. Pan, “CAPTCHA recognition based on deep convolutional neural network,” Mathematical Biosciences and Engineering, vol. 16, no. 5, pp. 5851–5861, 2019.
+ 
  [24] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” Proceedings of the Advances in Neural In- Formation Processing Systems, pp. 1097–1105, 2012. 
+ 
 [25] C. Funk and Y. Liu, “Symmetry reCAPTCHA,” in Proceedings of the 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 5165–5174, IEEE, Las Vegas, NV, USA, June 2016. 
+
 [26] M. Osadchy, J. Hernandez-Castro, S. Gibson, O. Dunkelman, and D. Perez-Cabo, “No bot expects the deep CAPTCHA! ´ introducing immutable adversarial examples, with applications to CAPTCHA generation,” IEEE TranInformation Forensics and Security, vol. 12, no. 11, pp. 2640–2653, 2017.
+
  [27] J. Chen, X. Luo, Y. Liu, J. Wang, and Y. Ma, “Selective learning confusion class for text-based CAPTCHA recognition,” IEEE Access, vol. 7, pp. 22246–22259, 2019. [28] T. Y. Lin, P. Goyal, R. Girshick, K. He, and P. Doll´ar, “Focal loss for dense object detection,” IEEE Transactions on Pattern Analysis & Machine Intelligence, vol. 99, pp. 2999–3007, 2017.
 
 
