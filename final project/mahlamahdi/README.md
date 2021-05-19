@@ -31,7 +31,7 @@ image processing class - 992
 </ul>
 </div>
 
-<div>
+<div dir="rtl">
  پاک کردن command window و صفحه نمایش و بسته نمودن پنجره ها
  </div>
  
