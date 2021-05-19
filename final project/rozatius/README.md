@@ -485,4 +485,13 @@ figure;bar(lbl,nft);title('Bar');ylabel('number');saveas(gcf,"Barchart.png")
   <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد نویز درشت</h3>
 </p>
 
+---
+
+<p align="center">
+
+<img width="800" height="300" src="analysis/bar.png">
+  
+  <h3 align="center"> مقایسه متدهای مختلف استفاده شده در ایجاد کپچا</h3>
+</p>
+
 
