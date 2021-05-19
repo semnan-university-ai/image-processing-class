@@ -98,3 +98,45 @@ captcha_image = insert_line(captcha_image, height ,width);
 captcha_image = imresize(captcha_image, [height width]);
 
 ````
+<div>
+ ذخیره کپجای های تولید شده در پوشه result و تشخیص OCR از روی هم کپچای تغییر یافته و هم کپچای بدون تغییر </br>
+ 
+ </div>
+
+````
+str = sprintf('%d ', j);
+image = ['result\' str '.png'];
+image2 = ['result2\' str '.png'];
+figure(1);
+imwrite(captcha_image,image)
+imwrite(captcha_image2,image);
+resulu_o=ocr(captcha_image);
+result_Ocr = resulu_o.Text;
+resulu_o2=ocr(captcha_image2);
+result_Ocr2 = resulu_o2.Text;
+````
+<div>
+ نمایش کپچا و از کار خواسته شده است تا حدس خود را از کپچا وارد نماید.</br>
+ 
+ <h6> ذخیره نتایج در آرایه سلولی تعریف شده در بالا</h6>
+ </div>
+
+````
+figure(1);
+imshow(im2bw(captcha_image, 0.3));
+figure(2);
+imshow(im2bw(captcha_image2, 0.3));
+disp(num2str(j));
+HumanGuess = input('What do you guess? ' , 's');
+
+result(j+1,1) ={j};
+result(j+1,2)= {captcha_image2};
+result(j+1,3)= {resulu_o2};
+result(j+1,4) ={captcha_image};
+result(j+1,5) ={result_Ocr};
+result(j+1,6) ={HumanGuess};
+
+
+end
+save('result.mat','result');
+````
