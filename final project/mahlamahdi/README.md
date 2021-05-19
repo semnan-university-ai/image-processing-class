@@ -44,6 +44,7 @@ clear;
 استفاده از متغیر Result برای ذخیره نمودن 150 عکس خروجی و تعیین فیلد های زیر:
  
 </div>
+
  ````
  result = cell(150,6);
 result(1,:)={'Number','Captcha not modify','OCR1','Captcha','OCR','HumanGuess'};
