@@ -82,6 +82,8 @@ captcha_image2 = alphabet(:,:,captcha_alphabet(1,1));
  
 اعمال یکسری توابع به نام های rotate،medfilt2،noiseو insert_line  به کپچای تولید شده به منظور تشخیص سخت تر OCR متلب.
  
+ </div>
+ 
  ````
  
  for i = 2 : alphabet_count
