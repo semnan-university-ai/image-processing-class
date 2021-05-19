@@ -143,12 +143,12 @@ save('result.mat','result');
 <hr>
 <hr>
 
-<h2> توابع استفاده شده در کد</h2>
+<center><h2> توابع استفاده شده در کد</h2></center>
 
 <hr>
 <hr>
 <div dir="rtl">
- #### get_alphabet
+ <h3> get_alphabet</h3>
  توسط این تابع تصاویر مورد نیاز کپچای تولید می شوند
  </div>
 
