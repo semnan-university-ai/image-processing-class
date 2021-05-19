@@ -78,5 +78,21 @@ captcha_image = alphabet(:,:,captcha_alphabet(1,1));
 captcha_image2 = alphabet(:,:,captcha_alphabet(1,1));
 
 ````
+<div dir="rtl">
  
+اعمال یکسری توابع به نام های rotate،medfilt2،noiseو insert_line  به کپچای تولید شده به منظور تشخیص سخت تر OCR متلب.
  
+ ````
+ 
+ for i = 2 : alphabet_count
+    captcha_image = [ captcha_image alphabet(:,:,captcha_alphabet(1,i)) ];
+    captcha_image2 = [ captcha_image2 alphabet(:,:,captcha_alphabet(1,i)) ];
+     [m ,n ] = size(captcha_image);
+    captcha_image = rotate(captcha_image, m,n);  
+end
+%captcha_image = medfilt2(captcha_image);
+captcha_image = noise(captcha_image);
+captcha_image = insert_line(captcha_image, height ,width);
+captcha_image = imresize(captcha_image, [height width]);
+
+````
