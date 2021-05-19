@@ -143,7 +143,7 @@ save('result.mat','result');
 <hr>
 <hr>
 
-<center><h2> توابع استفاده شده در کد</h2></center>
+<center><h2 dir="rtl"> توابع استفاده شده در کد</h2></center>
 
 <hr>
 <hr>
