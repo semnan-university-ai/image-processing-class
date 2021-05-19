@@ -98,7 +98,7 @@ captcha_image = insert_line(captcha_image, height ,width);
 captcha_image = imresize(captcha_image, [height width]);
 
 ````
-<div>
+<div dir="rtl">
  ذخیره کپجای های تولید شده در پوشه result و تشخیص OCR از روی هم کپچای تغییر یافته و هم کپچای بدون تغییر </br>
  
  </div>
@@ -115,7 +115,7 @@ result_Ocr = resulu_o.Text;
 resulu_o2=ocr(captcha_image2);
 result_Ocr2 = resulu_o2.Text;
 ````
-<div>
+<div dir="rtl">
  نمایش کپچا و از کار خواسته شده است تا حدس خود را از کپچا وارد نماید.</br>
  
  <h6> ذخیره نتایج در آرایه سلولی تعریف شده در بالا</h6>
