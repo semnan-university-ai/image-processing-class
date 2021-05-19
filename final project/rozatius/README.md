@@ -338,18 +338,151 @@ end
 <p align="center">
   <img width="1000" height="1000" src="analysis/100000-R.jpg">
   
-  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع </h3>
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد جابجایی عمودی تصادفی</h3>
 </p>
 
 <div dir="rtl">
+	
+###	بررسی کد اصلی برنامه 
 </div>
 
 ~~~matlab
+clc;close all;clear;
 
+rocr = zeros(1,150,'logical');
+
+%load chacters 0-9
+numbers=loadData('data',1);
+
+%create chaptcha
+image_path = 'output\';
+[~, message, messageid] = rmdir(image_path, 's');
+[status, msg, msgID] = mkdir(image_path);
+rng(100)
+for i = 1:150
+    [txtCaptcha,imgCaptcha] = createCaptcha(numbers,4,true,true,true,true,true,true); %create
+    
+    %detection by ocr
+    [textocr,ocrreault,ocrimg] = ocrDetect(txtCaptcha, imgCaptcha);
+    rocr(i) = ocrreault;
+
+    imwrite(imgCaptcha, image_path+string(i)+'-('+txtCaptcha+').png'); %save in image folder
+    %imwrite(ocrimg, image_path+string(i)+'-('+txtCaptcha+')R.png'); %save in image folder
+    
+    subplot(15,10,i),imshow(imgCaptcha,'Interpolation','bilinear'),title(txtCaptcha); %show 150 captcha
+    %subplot(15,10,i),imshow(ocrimg,'Interpolation','bilinear'),title(txtCaptcha+'->'+textocr); %show 150 captcha
+end
+set(gcf,'units','pixels','position', [0 0 1000 1000]);
+exportgraphics(gcf,"result.jpg",'Resolution',300);
+
+%analysis 
+lbl = categorical({'Not detected','detected'});
+nft=[sum(rocr == 0) , sum(rocr == 1)];
+figure;bar(lbl,nft);title('Bar');ylabel('number');saveas(gcf,"Barchart.png")
 ~~~
 <div dir="rtl">
 </div>
 
 ~~~matlab
+rocr = zeros(1,150,'logical');
 
+%load chacters 0-9
+numbers=loadData('data',1);
 ~~~
+
+<div dir="rtl">
+</div>
+
+~~~matlab
+image_path = 'output\';
+[~, message, messageid] = rmdir(image_path, 's');
+[status, msg, msgID] = mkdir(image_path);
+rng(100)
+~~~
+
+<div dir="rtl">
+</div>
+
+~~~matlab
+for i = 1:150
+    [txtCaptcha,imgCaptcha] = createCaptcha(numbers,4,true,true,true,true,true,true); %create
+    
+    %detection by ocr
+    [textocr,ocrreault,ocrimg] = ocrDetect(txtCaptcha, imgCaptcha);
+    rocr(i) = ocrreault;
+
+    imwrite(imgCaptcha, image_path+string(i)+'-('+txtCaptcha+').png'); %save in image folder
+    %imwrite(ocrimg, image_path+string(i)+'-('+txtCaptcha+')R.png'); %save in image folder
+    
+    subplot(15,10,i),imshow(imgCaptcha,'Interpolation','bilinear'),title(txtCaptcha); %show 150 captcha
+    %subplot(15,10,i),imshow(ocrimg,'Interpolation','bilinear'),title(txtCaptcha+'->'+textocr); %show 150 captcha
+end
+set(gcf,'units','pixels','position', [0 0 1000 1000]);
+exportgraphics(gcf,"result.jpg",'Resolution',300);
+~~~
+<div dir="rtl">
+</div>
+
+~~~matlab
+lbl = categorical({'Not detected','detected'});
+nft=[sum(rocr == 0) , sum(rocr == 1)];
+figure;bar(lbl,nft);title('Bar');ylabel('number');saveas(gcf,"Barchart.png")
+~~~
+
+<p align="center">
+<img width="400" height="400" src="analysis/000000-R.jpg">
+<img width="400" height="400" src="analysis/000000-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع بدون اعمال متدی</h3>
+</p>
+
+---
+<p align="center">
+<img width="400" height="400" src="analysis/100000-R.jpg">
+<img width="400" height="400" src="analysis/100000-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد جابجایی عمودی تصادفی</h3>
+</p>
+
+---
+<p align="center">
+<img width="400" height="400" src="analysis/010000-R.jpg">
+<img width="400" height="400" src="analysis/010000-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد چرخش</h3>
+</p>
+
+---
+<p align="center">
+<img width="400" height="400" src="analysis/001000-R.jpg">
+<img width="400" height="400" src="analysis/001000-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد تغییر شکل</h3>
+</p>
+
+---
+<p align="center">
+<img width="400" height="400" src="analysis/000100-R.jpg">
+<img width="400" height="400" src="analysis/000100-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد رسم خطوط  تقریبا افقی</h3>
+</p>
+
+---
+<p align="center">
+<img width="400" height="400" src="analysis/000010-R.jpg">
+<img width="400" height="400" src="analysis/000010-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد نویز ریز</h3>
+</p>
+
+---
+
+<p align="center">
+<img width="400" height="400" src="analysis/000001-R.jpg">
+<img width="400" height="400" src="analysis/000001-B.png">
+  
+  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد نویز درشت</h3>
+</p>
+
+
