@@ -310,6 +310,10 @@ end
   <h3 align="center">بخشی از 150 تصویر تولید شده</h3>
 </p>
  
- 
+ <p align="center">
+<img width="800" height="800" src="Result2/b.PNG">
+  
+  <h3 align="center">بخشی از نتایج ذخیره شده در آرایه Result</h3>
+</p>
  
 </div>
