@@ -30,10 +30,12 @@ image processing class - 992
 
 </ul>
 </div>
+
 <div>
  پاک کردن command window و صفحه نمایش و بسته نمودن پنجره ها
  </div>
-```
+ 
+````
 clc;
 close all;
 clear;
