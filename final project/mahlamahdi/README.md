@@ -305,7 +305,7 @@ end
 <div dir="rtl">
  <h3> نمایش خروجی</h3>
  <p align="center">
-<img width="800" height="800" src="Result2/a.png">
+<img width="800" height="800" src="Result2/a.PNG">
   
   <h3 align="center">بخشی از 150 تصویر تولید شده</h3>
 </p>
