@@ -305,10 +305,9 @@ end
 <div dir="rtl">
  <h3> نمایش خروجی</h3>
  <p align="center">
-<img width="400" height="400" src="analysis/000010-R.jpg">
-<img width="400" height="400" src="analysis/000010-B.png">
+<img width="800" height="800" src="Result2/a.png">
   
-  <h3 align="center">خروجی ۱۵۰ تصویر کپجا ایجاد شده توسط این تابع برای متد نویز ریز</h3>
+  <h3 align="center">بخشی از 150 تصویر تولید شده</h3>
 </p>
  
  
