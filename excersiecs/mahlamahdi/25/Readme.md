@@ -100,7 +100,7 @@ Wi (x، y) یک تابع وزنی است که احتمال پیکسل برای �
   </div>
 
 <div>
-  <h3>منابع</h3>
+  <h3 dir="rtl">منابع</h3>
   
   [1]  S.G. Huang, L. Zhang, P.P. Wang, and H.W. Han, "A CAPTCHA Recognition Algorithm Based on Holistic Verification," in 2011 First International Conference on Instrumentation, Measurement, Computer, Communication and Control, Beijing, China, 2011, pp. 525-528.</br>
   [2]  H.D. Truong, C.F. Turner, and C.C. Zou, "iCAPTCHA: The Next Generation of CAPTCHA Designed to Defend against 3rd Party Human Attacks," in 2011 IEEE International Conference on Communications (ICC), Kyoto, Japan, 2011, pp. 1-6.</br>
