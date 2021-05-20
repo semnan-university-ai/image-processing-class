@@ -84,11 +84,11 @@ and George Samaras1
  
  
  
-![fig.2](Fig.%202.jpg)
+![fig.2](Fig.%202.JPG)
  
  
  
-![fig.3](Fig. 3.JPG)
+![fig.3](Fig.%203.JPG)
  
  
  <div dir="rtl">
