@@ -214,7 +214,7 @@ end`
 
 <div dir ="rtl">
  
-*   در این قسمت،تصویر مورد نظر را که در فایل image ذخیره شده است را فراخوانی می کنیم.سپس با تابعocrResults توجه می شویم که آیا ocr می تواند   کپچا را تشخیص دهد یانه! . <br/>
+*   در این قسمت،تصویر مورد نظر را که در فایل image ذخیره شده است را فراخوانی می کنیم.سپس با تابعocrResults متوجه می شویم که آیا ocr می تواند   کپچا را تشخیص دهد یانه! . <br/>
 
 </div>
 
@@ -244,12 +244,12 @@ test   = imread('C.jpg');
     
     
 
-out1=![out](tash false.JPG)
+out1=![out](orctestimage/tash false.JPG)
 
-out2=![out](ta.JPG)
+out2=![out](orctestimage/ta.JPG)
 
-out3=![out](tc.JPG )
+out3=![out](orctestimage/tc.JPG )
 
-out4=![out](t2.JPG)
+out4=![out](orctestimage/t2.JPG)
 
 
