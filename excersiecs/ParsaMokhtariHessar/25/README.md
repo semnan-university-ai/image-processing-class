@@ -1,6 +1,13 @@
 # مطالعه تاثير شناخت انساني  بر مكانيسم هاي تشخيص متن و تصوير كپچا
 ### چکیده
 
+Marios Belk1
+, Panagiotis Germanakos1
+, Christos Fidas1
+, George Spanoudis2
+,
+and George Samaras1
+
 <div dir="rtl">
 
  این مقاله تاثیر تفاوت های فردی در شناخت انسانی بر عملکرد مصرف کننده در ماموریت های کپچا است .
@@ -77,7 +84,7 @@
  
  
  
-![fig.2](Fig. 2.JPG)
+![fig.2](Fig. 2.jpg)
  
  
  
