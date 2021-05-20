@@ -81,11 +81,17 @@ angle = 0;
 captcha_image_r = Create_Captcha_Image(alphabet_count, captcha_alphabet, image_count, alphabet, method, MTD, height, width);
 ```
 
+<div dir="rtl">
+در مرحله بعد برای سخت تر کردن کپچا، به آن نویز اضافه می کنیم. می توانیم از نویز های poisson،gaussian، salt & pepper و speckle استفاده کنیم که در اینجا، ما از نویز فلفل و نمک با شدت 0.2 استفاده کردیم: 
+</div>
 
-
-
+```
 Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
 captcha_image_r = imnoise(captcha_image_r,Noise{3},.2);
+```
+<div dir="rtl">
+در مرحله بعد، می خواهیم خطوط را برای سخت تر کردن کپچا اضافه کنیم.
+</div>
 
 LineWidth = 1;
 
@@ -379,12 +385,62 @@ captcha_image_r = imresize(captcha_image_r, [height width]);
 end
 ```
 
+****
+****
+****
+****
+****
 
+<div dir="rtl">
+  
+  # معرفی تابع Line_Draw.m
+</div>
 
+<div dir="rtl">
+  
+  #### این تابع، تصویر، طول و عرض و ضخامت خط را دریافت می کند: 
+</div>
 
+```
+function captcha_image_r = Line_Draw(captcha_image_r, width, height, LineWidth)
+```
 
+<div dir="rtl">
+  
+  #### با استفاده از دستور insertShape، می توانیم خط یا دایره و یا اشکال مختلف را ایجاد کرده و به کپچا اضافه کنیم. برای خط از پارامتر های x1، x2، y1 و y2 استفاده می کنیم. برای دایره نیز از پارامتر های x و y که مرکز دایره هستند و r که شعاع دایره است استفاده می کنیم. می توانیم رنگ خطوط و دایره ها را به انتخاب تغییر دهیم:
+</div>
 
+```
+captcha_image_r = insertShape(captcha_image_r,'Line',[1 50 width 100],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[1 150 width 50],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[1 100 width 100],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[1 80 width 150],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[30 1 80 height],'LineWidth',LineWidth, 'color','green');
+captcha_image_r = insertShape(captcha_image_r,'Line',[100 1 150 height],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[200 1 70 height],'LineWidth',LineWidth, 'color','green');
+captcha_image_r = insertShape(captcha_image_r,'Line',[250 1 300 height],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[300 1 400 height],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Line',[width 1 370 height],'LineWidth',LineWidth, 'color','yellow');
 
+captcha_image_r = insertShape(captcha_image_r,'Circle',[100 100 70],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Circle',[300 100 70],'LineWidth',LineWidth, 'color','yellow');
+captcha_image_r = insertShape(captcha_image_r,'Circle',[400 100 70],'LineWidth',LineWidth, 'color','yellow');
+```
 
+<div dir="rtl">
+  
+  #### پس از اجرای کد بالا، تصویر رنگی خواهیم داشت. برای تبدیل تصویر رنگی به تصویر خاکسترری، از دستور زیر استفاده می کنیم: 
+</div>
+
+```
+captcha_image_r = rgb2gray(captcha_image_r);
+end
+```
+
+****
+****
+****
+****
+****
 
 
