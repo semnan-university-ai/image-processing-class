@@ -210,9 +210,10 @@ end
  تصاویر ابتدا با شماره حلقه ذخیره می شوند و سپس در فایل جداگانه به صورت دستی با نامی که با چشم توسط انسان خوانده می شود ذخیره می شود.
 </div>
  
- ```ruby
- 
-![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/excersiecs/afsaneh427726/19/kap19.jpg)
+ <div dir="rtl">
+ کپچا با اعمال نویزspeckle 
+</div>
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AFXWV.png)
 ***
 
 
