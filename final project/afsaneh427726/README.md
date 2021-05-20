@@ -211,6 +211,8 @@ end
 </div>
  
  <div dir="rtl">
+ 
+ 
  کپچا با اعمال نویزspeckle 
 </div>
 
