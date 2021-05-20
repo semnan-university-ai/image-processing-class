@@ -35,5 +35,11 @@
   <h2 >II.شناسایی CAPTCHA توسط مدل پیشنهادی احتمال
 </h2>
 در این بخش ، روش الگوی احتمال  برای شناسایی captcha نشان داده شده است.
+  
+  <p align="center">
+<img width="400" height="400" src="Result/a.PNG">
+  
+  <h3 align="center">شکل 1. نمودار جریان پیش پردازش</h3>
+</p>
 </div>
              
