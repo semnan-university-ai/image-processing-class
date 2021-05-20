@@ -108,3 +108,33 @@ end
 ````
 captcha_numbers = randi([0 9],[1  numbers_count]);
 ````
+<div dir="rtl">
+  4. یک تصویر به عرض 1 کاراکتر و برابر با مشخصات تصاویر موجود ایجاد میکنیم
+</div>
+
+````
+captcha_image = zeros(size(numbers(:,1,1)));
+````
+<div dir="rtl">
+  5. در يك حلقه به تعداد اعداد ورودي تصاوير انتخاب شده در كنار يكديگر قرار مي گيرند
+</div>
+
+````
+for i = 1 : numbers_count
+	captcha_image = [ captcha_image numbers(:,:,captcha_numbers(1,i)+1) ];
+end
+````
+<div dir="rtl">
+  6. تصویر ایجاد شده را به اندازه های ورودی تابع تغییر می دهیم
+</div>
+
+````
+captcha_image = imresize(captcha_image, [height width]);
+````
+<div dir="rtl">
+  7. تصویر نهایی را به سیاه و سفید تبدیل می کنیم
+</div>
+
+````
+captcha_image=im2bw(captcha_image,0.3);
+````
