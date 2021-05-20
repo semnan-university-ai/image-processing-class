@@ -28,6 +28,7 @@ clear;
  <div dir="rtl">
 ابتدای اندازه سایز تصویر را از ورودی دریافت می کنیم.
  </div>
+ 
  ```ruby
 width = input('vared kon tool tasvir ra:');
 height = input('vared kon arz tasvir ra:');
