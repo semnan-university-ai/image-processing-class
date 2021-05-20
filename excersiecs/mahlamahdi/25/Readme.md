@@ -94,3 +94,23 @@ Wi (x، y) یک تابع وزنی است که احتمال پیکسل برای �
 <div dir="rtl">
   در آزمایشات ، ما بیش از دو هزار مورد captcha را آزمایش کرده ایم. چهار تا هفت عدد در هر تصویر captcha پنهان شده است. ما به طور تصادفی 100 مورد برای ایجاد ماژول احتمال به دست آوردیم ، همانطور که در شکل 5 نشان داده شده است. شکل 6 در این مطالعه چارچوب تشخیص captcha را نشان می دهد. از آنجا که می خواهیم تعداد را به طور موثر تشخیص دهیم ، از برخی روشهای پردازش تصویر برای تقسیم اعداد در تصاویر captcha استفاده می شود. ما برای محاسبه شباهت بین مجموعه های آموزشی و مجموعه تست ها از معادله تطبیق ، مانند eqn. (4) استفاده کردیم و عدد تطبیق را در هر مورد بدست آورده ایم. نتیجه آزمایشی در شکل 7 نشان داده شده است. در آزمایش ، ارزیابی کمی نشان می دهد که روش تشخیص پیشنهادی به طور متوسط به دقت  81.05٪ برای بیش از دو هزار تصویر کپچا رسیده است.
   </div>
+  
+  <div>
+  در این مطالعه ، سعی داریم امنیت سیستم captcha را برای یک اداره حمل و نقل در تایوان بررسی کنیم. خطوط و نقاط نویز زیادی در تصاویر کپچای تست وجود دارد و چندین عدد هدف بوسیله نویز با هم همپوشانی دارند یا بوسیله نویزها  از هم جدا می شوند. به منظور تجزیه و تحلیل این تصاویر captcha ، ما چارچوب الگوی احتمال را برای شناسایی اعداد هدف در همه موارد captcha پیشنهاد کردیم. با توجه به نتیجه آزمایش ، ما می توانیم دریابیم که خطر سیستم captcha برای این مدیریت حمل و نقل ممکن است با روش پیشنهادی تشخیص captcha وجود داشته باشد. ما ممکن است چند پیشنهاد برای این اداره حمل و نقل ارائه دهیم تا سیستم captcha آنها را تقویت کند.
+  </div>
+
+<div>
+  <h3>منابع</h3>
+  
+  [1]  S.G. Huang, L. Zhang, P.P. Wang, and H.W. Han, "A CAPTCHA Recognition Algorithm Based on Holistic Verification," in 2011 First International Conference on Instrumentation, Measurement, Computer, Communication and Control, Beijing, China, 2011, pp. 525-528.</br>
+  [2]  H.D. Truong, C.F. Turner, and C.C. Zou, "iCAPTCHA: The Next Generation of CAPTCHA Designed to Defend against 3rd Party Human Attacks," in 2011 IEEE International Conference on Communications (ICC), Kyoto, Japan, 2011, pp. 1-6.</br>
+  [3]  A.S. El Ahmad, J. Yan, and W.Y. Ng, "CAPTCHA Design: Color, Usability, and Security," IEEE Internet Computing, vol. 16, no. 1, pp. 44-51, Mar. 2012.</br>
+  [4]  J. Yan and A.S. EL Ahmad, "CAPTCHA Security: A Case Study," IEEE Security & Privacy, vol. 7, no. 4, pp. 22-28, Aug. 2009.</br>
+  [5]  A. Chandavale and A. Sapkal, "An Improved Adaptive Noise Reduction for Secured CAPTCHA," in 2011 4th International Conference on Emerging Trends in Engineering and Technology (ICETET), Port Louis, Mauritius, 2011, pp. 1217.</br>
+  [6]  H.C. Gao, W. Wang, and Y. Gan, "Divide and Conquer: An Efficient Attack on Yahoo! CAPTCHA," in 2012 IEEE 11th International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom), Liverpool, U.K., 2012, pp. 9-16. </br>
+  [7]  P.E. Ng and K.K. Ma, "A switching median filter with boundary discriminative noise detection for extremely corrupted images," IEEE Trans. on Image Processing, vol. 15, no. 6, pp. 1506-1516, June 2006. </br>
+  [8]  H.L. Eng and K.K. Ma, "Noise adaptive soft-switching median filter," IEEE Trans. on Image Processing, vol. 10, no. 2, pp. 242-251, Feb. 2001. </br>
+  [9]  R.C. Gonzalez and R.E. Woods, Digital Image Processing, Third ed. Pearson / Prentice Hall, 2008. 
+ 
+ 
+  </div>
