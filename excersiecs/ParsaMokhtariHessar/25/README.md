@@ -1,5 +1,5 @@
+
 # مطالعه تاثير شناخت انساني  بر مكانيسم هاي تشخيص متن و تصوير كپچا
-### چکیده
 
 Marios Belk1
 , Panagiotis Germanakos1
@@ -7,6 +7,10 @@ Marios Belk1
 , George Spanoudis2
 ,
 and George Samaras1
+
+### چکیده
+
+
 
 <div dir="rtl">
 
