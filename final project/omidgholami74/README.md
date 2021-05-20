@@ -388,8 +388,9 @@ function [coord_x_old,coord_y_old]=transform_backward(coord_x_new,coord_y_new,R0
 <div dir="rtl">
  <h3> movepixels</h3>
  
-مختصات x وy تبدیل میکند این تابع پکیسل ها را از یک عکسدو بعدی به </div>
-
+مختصات x وy  این تابع پکیسل ها را از یک عکس دو بعدی به </div>
+تبدیل میکند
+. این فایل یک تابع کمکی برای تابع فیلتر Spherize است.
 ````
 function Iout=movepixels(I,Tx,Ty)
 % This function MOVEPIXELS, will (backwards) translate the pixels 
