@@ -704,3 +704,133 @@ image_type = '.png';
 imwrite(captcha_image_r, strcat(save_adress,Alphabet_Selected,image_type));
 end
 ```
+****
+****
+****
+****
+****
+
+<div dir="rtl">
+  
+  # معرفی تابع ocr_150_image.m
+</div>
+
+<div dir="rtl">
+  
+  ####  با استفاده از این تابع، می توانیم تابع ocr را روی 150 تصویر اعمال کنیم. 
+</div>
+
+<div dir="rtl">
+  
+  ####  تصاویر را از پوشه خوانده و آن ها را درون متغیری به نام address ذخیره می  کنیم. در ادامه، save_adress نیز آدرسی است که می خواهیم تصویر خروجی را در آن ذخیره کنید: 
+</div>
+
+```
+clc;
+close all;
+clear;
+
+address = 'C:\Users\kam\Desktop\New folder (4)\Save image\';
+save_adress = 'C:/Users/kam/Desktop/New folder (4)/Save image/Save_Filtered_image/';
+```
+
+<div dir="rtl">
+  
+  ####  متغیر های alphabet_count،  width و height نیز مانند قبل تعریف شده اند:  
+</div>
+
+```
+alphabet_count = 4;
+width = 512;
+height = 256;
+```
+<div dir="rtl">
+  
+  ####  در این قسمت، چرخش را بر روی تصاویر اعمال می کنیم: 
+</div>
+
+```
+method = {'nearest', 'bilinear', 'bicubic'};
+MTD=3;
+angle = 0;
+```
+
+<div dir="rtl">
+  
+  #### با استفاده از دستور dir فایل ها را خوانده و در متغیر D ذخیره می کنیم:  
+</div>
+
+```
+D = dir(address);
+```
+
+<div dir="rtl">
+  
+  #### از متغیر image_count برای شمارش حروف استفاده می کنیم. متغیر image_name نام تصاویر کپچا را ذخیره می کند و می توانیم از متغیر  Txt_Pred برای بررسی پیش بینی تابع استفاده کنیم. متغیر Correct_Ocr_Prediction برای این تعریف شده است که هر زمانی که تابع ما توانست تشخیص درستی داشته باشد، یک عدد به آن اضافه شود:
+</div>
+
+```
+image_count = 1;
+image_name = cell(1,150);
+Txt_Pred = cell(1,150);
+
+Correct_Ocr_Prediction = 0;
+```
+
+<div dir="rtl">
+  
+  #### به طور خلاصه، حلقه زیر، نام کپچا را جدا کرده و پس از اعمال فیلتر بر روی آن، تابع ocr را روی  آن اجرا کرده و در نهایت، بررسی می کند که آیا این تابع عملکرد خوبی داشته است یا خیر: 
+</div>
+
+
+```
+for i=1 : size(D,1)
+    Name = D(i).name;
+    find = strfind(Name, '.png');
+    empty = isempty(find);
+    num = isnumeric(find);
+    if (empty == 0) && (num == 1)
+        Image_Name = strsplit(Name,'.'); 
+        image_name{image_count} = Image_Name{1};
+        
+        img = imread(strcat(address,Name));
+        
+        NR_captcha_image_r = Filter_Captcah_Image(height, width, alphabet_count, method, img,Filter_size);
+       
+        bw = .5;
+        Img = im2bw(NR_captcha_image_r, bw);
+        
+%         image_type = '.png';
+%         imwrite(Img, strcat(save_adress,Image_Name{1},image_type));
+        
+        txt = ocr(Img);
+        TXT = txt.Text;
+        
+        Strtxt = '';
+        for s=1:numel(TXT)
+            Strtxt = strcat(Strtxt,TXT(s));
+        end
+        
+        Txt_Pred{image_count} = Strtxt;
+        
+        display(image_count)
+        
+        image_count = image_count + 1;
+        
+        if strcmpi(Strtxt,Image_Name{1})
+            Correct_Ocr_Prediction = Correct_Ocr_Prediction+1;
+        end
+    end
+end
+```
+
+<div dir="rtl">
+  
+  #### در پایان، با استفاده از کد زیر، می توانیم درصد تشخیص درست ocr را بدست آوریم:  
+</div>
+
+```
+Correct_Percent = 100*(Correct_Ocr_Prediction/150);
+display('Correct_Percent (%): ')
+display(Correct_Percent)
+```
