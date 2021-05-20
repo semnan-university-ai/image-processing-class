@@ -217,4 +217,24 @@ end
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AFXWV.png)
 ***
 
+ <div dir="rtl">
+ کپچا با اعمال نویز فلفل نمکی  
+</div>
+
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AJYIUM.png)
+***
+
+ <div dir="rtl">
+ کپچا با اعمال فیلتر میانگین  
+</div>
+
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/ATIM.png)
+***
+
+ <div dir="rtl">
+ کپچا با کشیدن خط روی کپچا  
+</div>
+
+![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/ANMB.png)
+***
 
