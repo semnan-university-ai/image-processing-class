@@ -1,4 +1,5 @@
 <div dir="rtl">
+  
 # ابتدا با فایلexr_19_modify.m  شروع می کنیم 
 <br/>
 
@@ -30,6 +31,7 @@ height = 256;
 
 ****
 <div dir="rtl">
+  
   # معرفی تابع Read_Alphabet.m
 </div>
 
