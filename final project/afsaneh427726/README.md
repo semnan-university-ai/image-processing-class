@@ -210,25 +210,26 @@ end
  تصاویر ابتدا با شماره حلقه ذخیره می شوند و سپس در فایل جداگانه به صورت دستی با نامی که با چشم توسط انسان خوانده می شود ذخیره می شود.
 </div>
  
- <div dir="rtl">
+
  
  
- کپچا با اعمال نویزspeckle 
-</div>
+ >کپچا با اعمال نویزspeckle 
+  
+
 
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AFXWV.png)
 ***
 
- <div dir="rtl">
- کپچا با اعمال نویز فلفل نمکی  
-</div>
+ >کپچا با اعمال نویز فلفل نمکی
+   
+
 
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AJYIUM.png)
 ***
 
- <div dir="rtl">
- کپچا با اعمال فیلتر میانگین  
-</div>
+ > کپچا با اعمال فیلتر میانگین
+  
+
 
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/ATIM.png)
 ***
