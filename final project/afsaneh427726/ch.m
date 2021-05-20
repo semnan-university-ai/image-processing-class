@@ -1,0 +1,31 @@
+function [a] = ch(m)
+alphabet(:,:,1) = dlmread('C:\Users\as\Desktop\alphabet\A.txt');
+alphabet(:,:,2) = dlmread('C:\Users\as\Desktop\alphabet\B.txt');
+alphabet(:,:,3) = dlmread('C:\Users\as\Desktop\alphabet\C.txt');
+alphabet(:,:,4) = dlmread('C:\Users\as\Desktop\alphabet\D.txt');
+alphabet(:,:,5) = dlmread('C:\Users\as\Desktop\alphabet\E.txt');
+alphabet(:,:,6) = dlmread('C:\Users\as\Desktop\alphabet\F.txt');
+alphabet(:,:,7) = dlmread('C:\Users\as\Desktop\alphabet\G.txt');
+alphabet(:,:,8) = dlmread('C:\Users\as\Desktop\alphabet\H.txt');
+alphabet(:,:,9) = dlmread('C:\Users\as\Desktop\alphabet\I.txt');
+alphabet(:,:,10) = dlmread('C:\Users\as\Desktop\alphabet\J.txt');
+alphabet(:,:,11) = dlmread('C:\Users\as\Desktop\alphabet\K.txt');
+alphabet(:,:,12) = dlmread('C:\Users\as\Desktop\alphabet\L.txt');
+alphabet(:,:,13) = dlmread('C:\Users\as\Desktop\alphabet\M.txt');
+alphabet(:,:,14) = dlmread('C:\Users\as\Desktop\alphabet\N.txt');
+alphabet(:,:,15) = dlmread('C:\Users\as\Desktop\alphabet\O.txt');
+alphabet(:,:,16) = dlmread('C:\Users\as\Desktop\alphabet\P.txt');
+alphabet(:,:,17) = dlmread('C:\Users\as\Desktop\alphabet\Q.txt');
+alphabet(:,:,18) = dlmread('C:\Users\as\Desktop\alphabet\R.txt');
+alphabet(:,:,19) = dlmread('C:\Users\as\Desktop\alphabet\S.txt');
+alphabet(:,:,20) = dlmread('C:\Users\as\Desktop\alphabet\T.txt');
+alphabet(:,:,21) = dlmread('C:\Users\as\Desktop\alphabet\U.txt');
+alphabet(:,:,22) = dlmread('C:\Users\as\Desktop\alphabet\V.txt');
+alphabet(:,:,23) = dlmread('C:\Users\as\Desktop\alphabet\W.txt');
+alphabet(:,:,24) = dlmread('C:\Users\as\Desktop\alphabet\X.txt');
+alphabet(:,:,25) = dlmread('C:\Users\as\Desktop\alphabet\Y.txt');
+alphabet(:,:,26) = dlmread('C:\Users\as\Desktop\alphabet\Z.txt');
+alphabet = uint8(alphabet);
+a=alphabet(:,:,m);
+
+end
