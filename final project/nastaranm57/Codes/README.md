@@ -26,6 +26,17 @@ width = 512;
 height = 256;
 ```
 
+<div dir="rtl">
+در مرحله بعد تابع Read_Alphabet را اعمال می کنیم تا حروف ما درون متغیر alphabet ذخیره شوند و تعداد حروف و اسامی آن ها را استخراج کنیم:
+</div>
+
+```
+[image_name, image_count, alphabet] = Read_Alphabet(address);
+```
+
+
+
+
 
 
 
@@ -174,19 +185,46 @@ image_count = image_count - 1;
 alphabet = uint8(alphabet);
 ```
 
+****
+****
+****
+****
+****
 
+<div dir="rtl">
+  
+  # معرفی تابع unique_random_num_captcha.m
+</div>
 
+<div dir="rtl">
+  
+  #### این تابع تعداد حروف الفبا و تعداد تصاویر را دریافت می کند: 
+</div>
 
+```
+function captcha_alphabet = unique_random_num_captcha(alphabet_count, image_count)
+```
 
+<div dir="rtl">
+  
+  #### با استفاده از دستور randperm تعدادی عدد تصادفی غیر تکراری تولید می کنیم و متغیر هایی که این دستور دریافت می کند، تعداد تصاویر و تعداد حروف الفبا هستند 
+</div>
 
+```
+captcha_alphabet = [randperm(image_count,alphabet_count)];
+```
 
+<div dir="rtl">
+  
+  ####  قطعه کد زیر، حروف را به uint8 تبدیل می کند و آن را درون متغیر captcha_alphabet ذخیره می کند: 
+</div>
 
+```
+captcha_alphabet = uint8(captcha_alphabet);
+```
 
-
-
-
-
-
-
-
-
+****
+****
+****
+****
+****
