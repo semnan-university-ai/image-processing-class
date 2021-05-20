@@ -90,12 +90,18 @@ Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
 captcha_image_r = imnoise(captcha_image_r,Noise{3},.2);
 ```
 <div dir="rtl">
-در مرحله بعد، می خواهیم خطوط را برای سخت تر کردن کپچا اضافه کنیم.
+در مرحله بعد، می خواهیم خطوطی را برای سخت تر کردن کپچا به آن اضافه کنیم. ضخامت خط را با استفاده از متغیر LineWidth مشخص می کنیم. تابع Line_Draw نیز خطوط را به تصویر اضافه می کند:
 </div>
 
+```
 LineWidth = 1;
 
 captcha_image_r = Line_Draw(captcha_image_r, width, height, LineWidth);
+```
+
+<div dir="rtl">
+پس از اضافه کردن خطوط، روی تصویر کپچا یک فیلتر اعمال می کنیم. در ابتدا اندازه فیلتر را با متغیر Filter_size مشخص می کنیم. 
+</div>
 
 Filter_size = 13;
 NR_captcha_image_r = Filter_Captcah_Image(height, width, alphabet_count, method, captcha_image_r, Filter_size);
@@ -442,5 +448,74 @@ end
 ****
 ****
 ****
+
+<div dir="rtl">
+  
+  # معرفی تابع Filter_Captcah_Image.m
+</div>
+
+<div dir="rtl">
+  
+  #### این تابع مقادیر height، width، alphabet_count، method، captcha_image_r و Filter_size را دریافت می کند: 
+</div>
+
+```
+function NR_captcha_image_r = Filter_Captcah_Image(height, width, alphabet_count, method, captcha_image_r,Filter_size)
+```
+
+<div dir="rtl">
+  
+  #### ابتدا یک ماتریس خالی ایجاد کرده و اندازه آن را طوری تغییر می دهیم که حروف بعد از وارد شدن به آن، به همدیگر نچسبند. به طور مثال اگر حروف j و i کنار هم قرار گیرند، تابع ocr آن ها را h تشخیص می دهد و ما نمی خواهیم درصد تشخیص این تابع کم تر شود؛ به همین خاطر، بینشان 50 تا فضای خالی ایجاد می کنیم. در ادامه، برای تقیم بندی و جدا سازی حروف کپچا، از دستور زیر استفاده می کنیم. این کار برای این صورت می گیرد تا اثر چرخش تصویر را خنثی کند تا بتوانیم فیلتر را روی آن اعمال کنیم. با استفاده از یک حلقه و دستور  imrotate این کار را انجام می دهیم و در پایان حلقه، چرخش را به سر جای اولش برمی گردانیم:
+</div>
+
+```
+Captcha_image = zeros(height+50, width+(alphabet_count*50));
+slice_image = width/alphabet_count;
+X=0;
+for i=1:alphabet_count
+    if rem(i,2)==0
+        angle = 9;
+    else
+        angle = -10;
+    end
+    Captcha_image(25:height+24,((slice_image*i)-(slice_image-1))+X:(slice_image*i)+X) = imrotate(captcha_image_r(:,(slice_image*i)-(slice_image-1):slice_image*i),-(i+angle),'crop', method{1});
+    X = X+50;
+end
+```
+
+<div dir="rtl">
+  
+  #### در پایان تصویر را تبدیل به uint8 می کنیم :
+</div>
+
+```
+Captcha_image = uint8(Captcha_image);
+```
+
+<div dir="rtl">
+  
+  #### در پایان، برای محو کردن تصویر می توانید  یکی از فیلترهای زیر را از حالت کامنت خارج کرده و از آن استفاده کنید. به دلیل اینکه فیلتر گوسین نتیجه بهتری داشت، ازین فیلتر استفاده کردیم:
+</div>
+
+```
+NR_captcha_image_r = imgaussfilt(Captcha_image,4);
+
+% NR_captcha_image_r = medfilt2(NR_captcha_image_r,[Filter_size,Filter_size]);
+% NR_captcha_image_r = medfilt2(NR_captcha_image_r,[Filter_size-4,Filter_size-4]);
+% NR_captcha_image_r = medfilt2(NR_captcha_image_r,[5,5]);
+end
+```
+
+****
+****
+****
+****
+****
+
+<div dir="rtl">
+  
+  # معرفی تابع Filter_Captcah_Image.m
+</div>
+
 
 
