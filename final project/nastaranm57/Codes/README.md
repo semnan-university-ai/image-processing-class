@@ -549,8 +549,110 @@ end
 
 <div dir="rtl">
   
-  # معرفی تابع Filter_Captcah_Image.m
+  # معرفی تابع exr_19_produce_150_captcha_image.m
+</div>
+
+<div dir="rtl">
+  
+  #### برای تولید 150 تصویر کپچا، از این تابع استفاده می کنیم. در مرحله اول، آدرس پوشه ای که تصاویر در آنجا قرار دارند را درون یک متغیر به نام address ذخیره می کنیم:
 </div>
 
 
 
+```
+clc;
+close all;
+clear;
+
+address = 'C:/Users/kam/Desktop/New folder (4)/';
+```
+
+<div dir="rtl">
+  
+  #### آدرس مکانی که می خواهیم 150 تصویر را در آنجا ذخیره کنیم را نیز درون متغیری به نام save_adress قرار می دهیم:
+</div>
+
+```
+save_adress = 'C:\Users\kam\Desktop\New folder (4)\Save image\';
+```
+
+<div dir="rtl">
+  
+  #### متغیر های alphabet_count، width و height مانند گذشته تعریف می شوند:
+</div>
+
+```
+alphabet_count = 4;
+width = 512;
+height = 256;
+```
+
+<div dir="rtl">
+  
+  #### تایع Read_Alphabet نیز فایل ها را می خواند و در alphabet ذخیره می کند:
+</div>
+
+```
+[image_name,image_count, alphabet] = Read_Alphabet(address);
+```
+
+
+```
+for j=1:150
+    Create_150_Captcha_Image(alphabet, alphabet_count, image_name, image_count, width, height, save_adress)
+end
+```
+
+****
+****
+****
+****
+****
+
+<div dir="rtl">
+  
+  # معرفی تابع Create_150_Captcha_Image.m
+</div>
+
+function Create_150_Captcha_Image(alphabet, alphabet_count, image_name, image_count, width, height, save_adress)
+Consecutive_numbers = 1;
+while Consecutive_numbers == 1
+    captcha_alphabet = unique_random_num_captcha(alphabet_count, image_count);
+    for r=1:alphabet_count-1
+        if abs(captcha_alphabet(r+1) - captcha_alphabet(r)) == 1
+            break
+        else
+            Consecutive_numbers = 0;
+        end
+    end
+end
+
+method = {'nearest', 'bilinear', 'bicubic'};
+MTD=3;
+angle = 0;
+
+captcha_image_r = Create_Captcha_Image(alphabet_count, captcha_alphabet, image_count, alphabet, method, MTD, height, width);
+
+Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
+captcha_image_r = imnoise(captcha_image_r,Noise{3},.2);
+
+LineWidth = 1;
+captcha_image_r = Line_Draw(captcha_image_r, width, height, LineWidth);
+
+
+alphabet_selected = cell(1,size(captcha_alphabet,2));
+
+for j=1:size(captcha_alphabet,2)
+    N = captcha_alphabet(j);
+    alphabet_selected{1,j} = image_name{1,N};
+end
+
+Alphabet_Selected = '';
+
+for k=1:size(captcha_alphabet,2)
+    Alphabet_Selected = strcat(Alphabet_Selected,alphabet_selected{1,k});
+end
+
+image_type = '.png';
+imwrite(captcha_image_r, strcat(save_adress,Alphabet_Selected,image_type));
+end
