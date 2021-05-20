@@ -1,7 +1,7 @@
 <div dir="rtl">
   <p align="center">
-  <h2 align="center">مطالعه ای در مورد تشخیص Captcha
-</h2>
+  <h1 align="center">مطالعه ای در مورد تشخیص Captcha
+</h1>
   </p> 
   </hr>
 </div>
@@ -15,8 +15,8 @@
 </div>
 
 <div dir="rtl">
-  <h3 >کلمات کلیدی:
-</h3>
+  <h4 >کلمات کلیدی:
+</h4>
   شناسایی، احتمال، امنیت، پردازش تصویر
 </div>
 
