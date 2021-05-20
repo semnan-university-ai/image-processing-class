@@ -233,9 +233,9 @@ end
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/ATIM.png)
 ***
 
- <div dir="rtl">
- کپچا با کشیدن خط روی کپچا  
-</div>
+ 
+ >کپچا با کشیدن خط روی کپچا  
+
 
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/ANMB.png)
 ***
