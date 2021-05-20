@@ -213,6 +213,7 @@ end
  <div dir="rtl">
  کپچا با اعمال نویزspeckle 
 </div>
+
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/afsaneh427726/AFXWV.png)
 ***
 
