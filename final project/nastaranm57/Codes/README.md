@@ -66,10 +66,6 @@ end
 ```
 
 <div dir="rtl">
-در ادامه، یک حلقه تعریف می کنیم و شرط ادامه آن را به صورت زیر تعریف می کنیم:
-</div>
-
-<div dir="rtl">
 راه دیگر سخت تر کردن کپچا این است که حروف الفبا را چرخش دهیم. برای این کار، ما سه روش در اختیار داریم:nearest، bilinear و bicubic.
   اگر مقدار MTD را برابر 3 قرار دهیم، به این معنی است که از متد سوم استفاده می کنیم.
 </div>
@@ -83,6 +79,10 @@ MTD=3;
 angle = 0;
 
 captcha_image_r = Create_Captcha_Image(alphabet_count, captcha_alphabet, image_count, alphabet, method, MTD, height, width);
+```
+
+
+
 
 Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
 captcha_image_r = imnoise(captcha_image_r,Noise{3},.2);
