@@ -46,7 +46,7 @@ numbers = uint8(numbers);
 ````
 
 <div dir="rtl">
-  3. در یک حلقه 15 تایی تابع مربوط به ایجاد کپچا را فراخوانی کرده و خروجی در متغییری قرار  می گیرد. و در تهایت تصویر تولید شده در فایل در مسیر دلخواه ذخیره می گردد.
+  3. در یک حلقه 150 تایی تابع مربوط به ایجاد کپچا را فراخوانی کرده و خروجی در متغییری قرار  می گیرد. و در تهایت تصویر تولید شده در فایل در مسیر دلخواه ذخیره می گردد.
 </div>
 
 ````
@@ -55,4 +55,56 @@ for i=1:150
     imwrite(captcha_image,['c:\captcha\',num2str(i),'.png']);
 end
 ````
+### توضیح تابع captcha_image=creatCAP
 
+````
+function [ captcha_image ] = creatCAP( numbers,numbers_count,width,height)
+
+numbers = uint8(numbers);
+for i=1:10
+temp=moj(numbers,i);
+    numbers(:,:,i)=temp(:,:);
+end
+captcha_numbers = randi([0 9],[1  numbers_count]);
+captcha_image = zeros(size(numbers(:,1,1)));
+
+for i = 1 : numbers_count
+	captcha_image = [ captcha_image numbers(:,:,captcha_numbers(1,i)+1) ];
+end
+
+captcha_image = imresize(captcha_image, [height width]);
+captcha_image=im2bw(captcha_image,0.3);
+end
+
+
+````
+
+<div dir="rtl">
+1. تابع داری 4 ورودی می باشد:
+    1- لیست شماره های خوانده شده
+    2- تعداد ارقام مورد نظر جهت درجدر کپچا
+    3- ارتفاع فایل خروجی
+    4- طول فایل خروجی
+</div>
+
+````
+function [ captcha_image ] = creatCAP( numbers,numbers_count,width,height)
+````
+<div dir="rtl">
+2. در یک جلقه 10 تایی کلیه تصاویر در یک تابع دیگر که تغییر شمل حروف را انجام میدهد فراخوانی شده وجایگزین تصویر قبلی می شود.
+</div>
+
+````
+for i=1:10
+temp=moj(numbers,i);
+    numbers(:,:,i)=temp(:,:);
+end
+````
+
+<div dir="rtl">
+  3. به تعداد عدد تصادفی بین 0 تا 9 ایجاد شده و در یک متغییر قرار می گیرد
+</div>
+
+````
+captcha_numbers = randi([0 9],[1  numbers_count]);
+````
