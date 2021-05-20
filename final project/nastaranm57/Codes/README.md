@@ -65,6 +65,14 @@ while Consecutive_numbers == 1
 end
 ```
 
+<div dir="rtl">
+در ادامه، یک حلقه تعریف می کنیم و شرط ادامه آن را به صورت زیر تعریف می کنیم:
+</div>
+
+<div dir="rtl">
+راه دیگر سخت تر کردن کپچا این است که حروف الفبا را چرخش دهیم. برای این کار، ما سه روش در اختیار داریم:nearest، bilinear و bicubic.
+  اگر مقدار MTD را برابر 3 قرار دهیم، به این معنی است که از متد سوم استفاده می کنیم.
+</div>
 
 
 alphabet_size = size(alphabet(:,:,1));
@@ -110,6 +118,7 @@ imshow(img)
 ****
 ****
 ****
+
 <div dir="rtl">
   
   # معرفی تابع Read_Alphabet.m
@@ -293,3 +302,89 @@ captcha_alphabet = uint8(captcha_alphabet);
 ****
 ****
 ****
+
+<div dir="rtl">
+  
+  # معرفی تابع Create_Captcha_Image.m
+</div>
+
+<div dir="rtl">
+  
+  ####  ورودی های این تابع عبارتند از: alphabet_count، captcha_alphabet، image_count، alphabet، method، MTD، height و width: 
+</div>
+
+```
+function captcha_image_r = Create_Captcha_Image(alphabet_count, captcha_alphabet, image_count, alphabet, method, MTD, height, width)
+```
+
+
+
+captcha_image_r = zeros(25,25*alphabet_count);
+
+<div dir="rtl">
+  
+  #### حلقه ای از 1 تا 4 ایجاد می کنیم: 
+</div>
+
+```
+for i = 1 : alphabet_count
+```
+
+<div dir="rtl">
+  
+  #### برای اینکه بررسی کنیم که بازه اعداد بین 1 تا 26 است از قطعه کد زیر استفاده می کنیم: 
+</div>
+
+```
+    if captcha_alphabet(1,i) < 1
+        captcha_alphabet(1,i) = 1;
+    end
+    if captcha_alphabet(1,i) > image_count
+        captcha_alphabet(1,i) = image_count;
+    end
+```
+ <div dir="rtl">
+  
+  #### برای چرخش، ابتدا اندیس های زوج و فرد را جدا کرده و زوج ها را با 9 درجه و فرد ها را با زاویه -10 درجه استفاده می کنیم: 
+</div>
+ 
+```
+    if rem(i,2) == 0
+        angle = 9;
+    else
+        angle = -10;
+    end
+```
+    
+<div dir="rtl">
+  
+  #### دستور زیر، حروف الفبای انتخاب شده را با استفاده از تابع imrotate و با زاویه i+angle چرخش داده و آن ها را درون متغیر captcha_image_r ذخیره می کند: 
+</div>
+
+```
+    captcha_image_r(:,(25*i)-24:25*i) = imrotate(alphabet(:,:,captcha_alphabet(1,i)),i+angle,'crop',method{MTD});
+end
+```
+
+    
+<div dir="rtl">
+  
+  #### در نهایت تصویر را به uint8 تبدیل کرده و سایز تصویر را به 256 در 512 تغییر می دهیم تا تابع ocr بهتر بتواند تصویر را بخواند: 
+</div>
+
+```
+captcha_image_r = uint8(captcha_image_r);
+
+captcha_image_r = imresize(captcha_image_r, [height width]);
+end
+```
+
+
+
+
+
+
+
+
+
+
