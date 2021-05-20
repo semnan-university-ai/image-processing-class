@@ -201,8 +201,11 @@ p=0.154) نشان داده می شود که این بعد شناخی شاید ت
 مکانیسم تشخیص عکس با استفاده از نرم افزار متن باز قابل دسترسی که عکس های پریشان شده کاراکتر های رندم را تولید می نمود توسعه داده شد.
 بیشتر از آن،  ما از نرم افزار Microsoft ASIRRA (Animal Specis Image recognition for restricting access) به عنوان مکانیسم کپچا تشخیص تصویر که تصاویر را تولید کرده و از شرکت کنندگان می خواهد  که تصاویر مناسب را که به یک گروه خاص تعلق دارند را انتخاب کنند(برای مثلا تصاویری را که گربه ها را در میان سگ ها به تصویر می کشد را انتخاب کنید.)
 شکل 2 و شکل 3 بترتیب مکانیسم های کپچا های متنی و تصویری استفاده شده در این تحقیق را به تصویر می کشند.
-![fig.2](Fig. 2.JPG)
-![fig.3](Fig. 3.JPG)
+
+ ![fig.2](Fig. 2.JPG)
+
+ ![fig.3](Fig. 3.JPG)
+
  هر دو اسکریپت سمت مشتری و سمت سرور بگونه ای طراحی شدند که رفتار کاربر را در هنگام تعامل با مکانیسم های کپچا نظارت کنند . بطور خاص ، زمان کل (بهینگی) تعداد کل سعی ها (تاثیر)  مورد نیاز برای موفقیت در چالش کپچادر سمت مشتری با استفاده از امکان لوگ گیری برمبنای مرورگر که به محض نشان دادن چالش شروع به گرفتن زمان می نمود تا زمانی که  آنها بصورت موفقیت آمیز ماموریت کپچا را کامل نموده بودند. نظارت شد .
  برای احراز هویت کاربر  از آنجایی که وب سایت برای دادن دسترسی به محتوای درس به احراز هویت کاربر نیاز داشت ،وب سایت از نام کاربری شرکت کنندگان نیز استفاده می نمود
  جلسه های کنترل شده آزمایشگاهی نیز به منظور یافتن عوامل هوشی کاربران(سرعت پردازش، توجه کنترل شده و ظرفیت حافظه در حال فعالیت) در طول مدت تحقیق  بوسیله یکسری تست برگزار می شد.
@@ -273,43 +276,62 @@ p=0.154) نشان داده می شود که این بعد شناخی شاید ت
 
 مراجع
  </div>
+ 
+ 
 <div direction='rtl'>
  1. von Ahn, L., Blum, M., Langford, J.: Telling Humans and Computers Apart
 Automatically. Communications of the ACM 47, 56–60 (2004)
+ <br />
 2. von Ahn, L., Maurer, B., McMillen, C., Abraham, D., Blum, M.: reCAPTCHA: HumanBased Character Recognition via Web Security Measures. Science 321(5895), 1465–1468
 (2008)
+  <br />
 3. Elson, J., Douceur, J., Howell, J., Saul, J.: Asirra: A CAPTCHA that Exploits InterestAligned Manual Image Categorization. In: 14th ACM Conference on Computer and
 Communications Security, pp. 366–374. ACM Press, New York (2007)
+  <br />
 4. Vikram, S., Fan, Y., Gu, G.: SEMAGE: a New Image-based Two-factor CAPTCHA. In:
 27th ACM Conference on Computer Security Applications, pp. 237–246. ACM Press,
 New York (2011)
+  <br />
 5. Fidas, C., Voyiatzis, A., Avouris, N.: On the Necessity of User-friendly CAPTCHA. In:
 29th ACM Conference on Human Factors in Computing Systems, pp. 2623–2626. ACM
 Press, New York (2011)
+  <br />
 6. Bursztein, E., Bethard, S., Fabry, C., Mitchell, J.C., Jurafsky, D.: How Good are Humans
 at Solving CAPTCHAs? A Large Scale Evaluation. In: IEEE International Symposium on
 Security and Privacy, pp. 399–413. IEEE Press, Washington (2010)
+  <br />
 7. Yan, J., El Ahmad, A.S.: Usability of CAPTCHAs or Usability Issues in CAPTCHA
 Design. In: 4th ACM Symposium on Usable Privacy and Security, pp. 44–52. ACM Press,
 New York (2008)
+  <br />
 8. Hernandez-Castro, C., Ribagorda, A.: Pitfalls in CAPTCHA Design and Implementation:
 The Math CAPTCHA, A Case Study. J. Computers and Security 29, 141–157 (2010)
+  <br />
 9. Demetriou, A., Spanoudis, G., Shayer, S., Mouyi, A., Kazi, S., Platsidou, M.: Cycles in
 Speed-Working Memory-G Relations: Towards a Developmental-Differential Theory of
 the Mind. J. Intelligence 41, 34–50 (2013)
+  <br />
 10. Hunt, E.B.: Human Intelligence. Cambridge University Press, New York (2011)
+  <br />
 11. Demetriou, A., Spanoudis, G., Mouyi, A.: Educating the Developing Mind: Towards an
 Overarching Paradigm. J. Educational Psychology Review 23(4), 601–663 (2011)
+  <br />
 12. MacLeod, C.M.: Half a Century of Research on the Stroop Effect: An Integrative review.
 J. Psychological Bulletin 109, 163–203 (1991)
+  <br />
 13. Posner, M.I., Raicle, M.E.: Images of Mind. Scientific American Library, New York
 (1997)
+  <br />
 14. Stroop, J.R.: Studies of Interference in Serial Verbal Reactions. J. Experimental
 Psychology 18, 643–662 (1935)
+  <br />
 15. Baddeley, A.: Working Memory: Theories, Models and Controversies. Annual Review of
 Psychology 63, 1–29 (2012)
+  <br />
 16. Baddeley, A.: Working Memory. J. Science 255(5044), 556–559 (1992)
+  <br />
 17. Bursztein, E., Martin, M., Mitchell, J.: Text-based CAPTCHA Strengths and Weaknesses.
 In: 18th ACM International Conference on Computer and Communications Security, pp.
 125–138. ACM Press, New York (2011) 
+  <br />
 </div>
