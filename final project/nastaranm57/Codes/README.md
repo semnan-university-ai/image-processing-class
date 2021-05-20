@@ -147,10 +147,18 @@ imshow(img)
 با اجرای برنامه بالا، خروجی های زیر حاص می شود:
 </div>
 
-![khorooji](02918.jpg)
-![khorooji](02919.jpg)
-![khorooji](02920.jpg)
-![khorooji](02917.jpg)
+<p align="center">
+      <img src="02918.jpg" />
+</p>
+<p align="center">
+      <img src="02919.jpg" />
+</p>
+<p align="center">
+      <img src="02920.jpg" />
+</p>
+<p align="center">
+      <img src="02917.jpg" />
+</p>
 
 ****
 ****
