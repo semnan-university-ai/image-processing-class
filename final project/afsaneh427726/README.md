@@ -37,8 +37,9 @@ mkdir 'captcha'
 for i=1 :150
 ```
 <div dir="rtl">
-مقدار تعداد حروف کپچابه صورت رندوم انتخاب می شود. 
+ تعداد حروف کپچابه صورت رندوم انتخاب می شود. 
  </div>
+ 
  ```ruby
  alphabet_count=randi([4,6]);     
 k=zeros(height ,width);
