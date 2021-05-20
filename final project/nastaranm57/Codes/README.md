@@ -596,6 +596,10 @@ height = 256;
 [image_name,image_count, alphabet] = Read_Alphabet(address);
 ```
 
+<div dir="rtl">
+  
+  #### با استفاده از تابع Create_150_Captcha_Image، 150 تصویر کپچا تولید شده و در آدرس مورد نظرمان ذخیره می شود:
+</div>
 
 ```
 for j=1:150
@@ -614,6 +618,12 @@ end
   # معرفی تابع Create_150_Captcha_Image.m
 </div>
 
+<div dir="rtl">
+  
+  #### در این قسمت، یک بردار 4 تایی بدون تکرار و غیر متوالی تولید می شود:
+</div>
+
+```
 function Create_150_Captcha_Image(alphabet, alphabet_count, image_name, image_count, width, height, save_adress)
 Consecutive_numbers = 1;
 while Consecutive_numbers == 1
@@ -626,7 +636,15 @@ while Consecutive_numbers == 1
         end
     end
 end
+```
 
+<div dir="rtl">
+  
+  #### در ادامه، چرخش، نویز و خطوط بر روی تصاویر اعمال می شوند:
+</div>
+
+
+```
 method = {'nearest', 'bilinear', 'bicubic'};
 MTD=3;
 angle = 0;
@@ -638,21 +656,51 @@ captcha_image_r = imnoise(captcha_image_r,Noise{3},.2);
 
 LineWidth = 1;
 captcha_image_r = Line_Draw(captcha_image_r, width, height, LineWidth);
+```
 
+<div dir="rtl">
+  
+  #### در صورت سوال نوشته شده بود که برچسب گذاری تصاویر را خودمان انجام دهیم، اما این کار کمی زمان بر است. برای صرفه جویی در وقت، ابتدا سایز کپچا را استخراج کرده و سپس با استفاده ازین اطلاعات، یک سلول به بعاد 1 تا اندازه سایز کپچا ایجاد می کنیم و آن را درون متغیر قرار می دهیم:
+</div>
 
+```
 alphabet_selected = cell(1,size(captcha_alphabet,2));
+```
 
+<div dir="rtl">
+  
+  #### در مرحله بعد، یک حلقه ایجاد کرده و مقادیر captcha_alphabet را درون متغیر N ذخیره می کنیم . سپس حروف مربوط به آن اندیس را گرفته و درون متغیر alphabet_selected قرار می دهیم:
+</div>
+
+
+```
 for j=1:size(captcha_alphabet,2)
     N = captcha_alphabet(j);
     alphabet_selected{1,j} = image_name{1,N};
 end
+```
 
+<div dir="rtl">
+  
+  ####  برای تبدیل سلول به رشته، از دستور strcat استفاده می کنیم:
+</div>
+
+
+```
 Alphabet_Selected = '';
 
 for k=1:size(captcha_alphabet,2)
     Alphabet_Selected = strcat(Alphabet_Selected,alphabet_selected{1,k});
 end
+```
 
+<div dir="rtl">
+  
+  #### با استفاده از دستور imwrite، تصویر را در آدرس مورد نظرمان و با فرمت تعیین شده در متغیر image_type ذخیره می کنیم:
+</div>
+
+```
 image_type = '.png';
 imwrite(captcha_image_r, strcat(save_adress,Alphabet_Selected,image_type));
 end
+```
