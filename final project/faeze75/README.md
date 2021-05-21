@@ -81,7 +81,7 @@ position();
  </div>
 
 ````
-name=input('what do you saw?','s');
+name=input('what do you see?','s');
 print('-dpng',name);
 ocr(finalImage)
 
