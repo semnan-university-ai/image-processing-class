@@ -8,7 +8,7 @@ finalImage=rotation(al,alphabet);
 finalImage= imnoise(finalImage,'salt & pepper',0.1);
 imshow(finalImage);
 position();
-name=input('what do you saw?','s');
+name=input('what do you see?','s');
 print('-dpng',name);
 ocr(finalImage)
 end
