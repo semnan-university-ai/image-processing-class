@@ -181,5 +181,4 @@ end
 * github id : faeze75
 * Email :faezehfereydonian@gmail.com
 * Type : rozane
-# image-processing-class
-image processing class - 992
+
