@@ -173,14 +173,10 @@ end
 ````
 
 
-</div>
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/faeze75/captha/vxfv.jpg)
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/faeze75/captha/vxdx.jpg)
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/faeze75/captha/hdse.jpg) 
 ![alt text](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/faeze75/ocr.png.jpg)
-###Student Info :
-* Full name : faezeh fereydonian
-* github id : faeze75
-* Email :faezehfereydonian@gmail.com
-* Type : rozane
 
+
+</div>
