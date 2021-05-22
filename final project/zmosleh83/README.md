@@ -1,14 +1,12 @@
 # image-processing-class
 image processing class - 992
 
-
-####  <br />برسی کد
-</div>
+<div dir="rtl">
+  
+##### کد برنامه :<br />
 ~~~matlab
+	
 function [outText,outImage] = Captcha(matrixData,numberChar,move,rotate,destortion)
-%CREATECAPTCHA Summary of this function goes here
-%   Detailed explanation goes here
-%defullt values for parameter
 if nargin<3
   move = true;
   rotate = true;
