@@ -2,10 +2,10 @@
 image processing class - 992
 
 
-#### برسی کد
+####  <br />برسی کد
 </div>
 ~~~matlab
-+function [outText,outImage] = Captcha(matrixData,numberChar,move,rotate,destortion)
+function [outText,outImage] = Captcha(matrixData,numberChar,move,rotate,destortion)
 %CREATECAPTCHA Summary of this function goes here
 %   Detailed explanation goes here
 %defullt values for parameter
