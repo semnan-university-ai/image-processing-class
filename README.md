@@ -1,23 +1,42 @@
-﻿# **This project is for captcha production and testing by MATLAB ocr function**
+# image-processing-class
+image processing class - 992
 
-##### This project consists of several parts as follows :
+## Information
+* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
 
-
-1. 1- ex10.m:
-This file contains instructions for making and measuring captcha changes such as size, rotation, noise
-This is done using the randomChange function
-In addition to random changes to the generated captcha, randomChange can store it in the system. 
-
-2. ocrTest.m:
-This file was written to test captcha detection by the MATLAB ocr function 
----
-#####  There are two folders in this project
-* simple_capcha: They have simple captcha
-* complex_capcha: have captcha with complexity 
-
-##### The project has two data sets
-* num1: The numbers in this database are 8 x 8 bits and have low quality.
-* num2: The numbers in this dataset are 128 x 128 and have a high quality.
----
-
-* CAPTCHA, is online software for generating questions and tests that humans can easily answer, but computers are currently unable to detect and answer.
+### Student List :
+* Reza Azizvand - [Github Profile](https://github.com/RaAr7)
+* Afsane Bagheri - [Github Profile](https://github.com/afsaneh427726)
+* Vajihe Heydari - [Github Profile](https://github.com/vajihe7)
+* omid gholami - [Github Profile](https://github.com/omidgholami74)
+* nastaran malekpour - [Github Profile](https://github.com/nastaranm57)
+* mahla hatami - [Github Profile](https://github.com/mahlamahdi)
+* mahdi elhaminejad - [Github Profile](https://github.com/mahdielhami)
+* amir rozati - [Github Profile](https://github.com/rozatius)
+* Homayon Toosy - [Github Profile](https://github.com/Homayontoosy)
+* javad kahnouji - [Github Profile](https://github.com/kahnoujavad)
+* maryam safaiyan - [Github Profile](https://github.com/safaiyan)
+* sahar feizabadi - [Github Profile](https://github.com/ssaharrf1375)
+* Zahra Mosleh - [Github Profile](https://github.com/zmosleh83)
+* Mohammad Taheranpour - [Github Profile](https://github.com/Mohammad-t-t)
+* Ehsan Majidigi - [Github Profile](https://github.com/EhsanMajidigithub)
+* hossein ommati - [Github Profile](https://github.com/ho88)
+* Mahdie Moradi - [Github Profile](https://github.com/mahdiyemoradi)
+* Alireza Chaji - [Github Profile](https://github.com/alirezachaji)
+* faezeh Fereydonian - [Github Profile](https://github.com/faeze75)
+* mohammadhosein azad del - [Github Profile](https://github.com/mohammadhoseinazad)
+* alireza karam - [Github Profile](https://github.com/alireza-k74)
+* sajad edalatimajd - [Github Profile](https://github.com/sajad-beep)
+* Elias Nazeriye - [Github Profile](https://github.com/elias-nazeriye)
+* Parsa Mokhtari - [Github Profile](https://github.com/ParsaMokhtariHessar)
+* Mahsa Falahati - [Github Profile](https://github.com/mahsa3399)
+* dalile rashidi - [Github Profile](https://github.com/dalile512)
+* Fatemeh Seyfi - [Github Profile](https://github.com/FatemehSeyfi)
+* Hadi Arokh - [Github Profile](https://github.com/hadiadokh)
+* arman ariamehr - [Github Profile](https://github.com/arman-ariamehr)
+* pedram moniri - [Github Profile](https://github.com/pedrammoniri)
+* mariya toofan - [Github Profile](https://github.com/mariyatoofan)
+* Ebrahim Norouzi - [Github Profile](https://github.com/E-Norouzi)
+* mohammadreza roshany - [Github Profile](https://github.com/Rezaroshany76)
+* Mehdi Asghari - [Github Profile](https://github.com/mehdi-asghari)
