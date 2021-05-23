@@ -1,29 +1,16 @@
-numbers_count = input('number of letter/digit : ');
-width = input('width : ');
-height = input('height : ');
-
-total = 150;
-
-data = cell(total,4);
-
-for amount = 1 : total
-    [captcha_image , captcha_name] = create_captcha(numbers_count);
-    captcha_image = change_captcha(captcha_image , width , height);
-    
-    number_test = sprintf('%03d',amount);
-    address = ['captchas\' number_test '.png'];
-    imwrite(captcha_image,address);
-    
-    ocr_result = ocr(captcha_image);
-    ocr_text = ocr_result.Text;
-    
-    imshow(captcha_image);
-    human_text = input('what do you see : ' , 's');
-    
-    data{amount , 1} = number_test;
-    data{amount , 2} = captcha_name(1 : numbers_count);
-    data{amount , 3} = ocr_text;
-    data{amount , 4} = human_text;
+function pic=join_char(pic,alphabet,height,width,n)
+for i=1:n
+   r=randi(270);
+   m=size(imbinarize(captcha_rotate(alphabet(:,:,i),r)));
+   mm=zeros(m(1),m(2));
+   mm=imbinarize(captcha_rotate(alphabet(:,:,i),r));
+   mm=imresize(mm,[floor(height) floor(width/n)]);
+   h=size(mm);
+   for j=1:h(1)
+       for k=1:h(2)
+           c=(i-1)*h(2)+k;
+           pic(j,c)=mm(j,k);         
+       end
+   end
+end  
 end
-
-create_excel(data);
