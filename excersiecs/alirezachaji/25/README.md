@@ -240,11 +240,11 @@
 ***
 
 
-Dataset | Arithmetic operation CAPTCHAs | Simple character recognition CAPTCHAs | Character matching CAPTCHAs |
-------- | ----------------------------- | ------------------------------------- | --------------------------- |
-Training              7840                           7840                                162000
-Validation            1960                           1960                                 18000
-Testing               5000                           5000                                 5000
+|Dataset | Arithmetic operation CAPTCHAs | Simple character recognition CAPTCHAs | Character matching CAPTCHAs |
+|:---:| :---:| :---: | :---:|
+|Training |             7840    |                       7840   |                             162000 |
+|Validation|            1960   |                        1960    |                             18000 |
+|Testing    |           5000  |                         5000     |                            5000 |
 
 <div dir="rtl">
   
@@ -287,17 +287,18 @@ Testing               5000                           5000                       
 
 </div>
 
+<p align="center">
 
+|                Model                            | Accuracy (%) | 
+|:---: | :---: | 
+|LeNet+bidirectional LSTMs  |                             97.8   |                     
+|LeNet+bidirectional GRUs   |                            97.5    |             
+|VGG16+bidirectional LSTMs  |                             98.9   |     
+|VGG16+bidirectional GRUs   |                             98.4   |
+|       NCNs                |                             100.0  |
+|The convolutional part of NCNs+bidirectional GRUs  |     100.0  |
 
-                Model                            | Accuracy (%) | 
------------------------------------------------- | ------------ | 
-LeNet+bidirectional LSTMs                               97.8                        
-LeNet+bidirectional GRUs                                97.5                  
-VGG16+bidirectional LSTMs                               98.9         
-VGG16+bidirectional GRUs                                98.4
-       NCNs                                             100.0
-The convolutional part of NCNs+bidirectional GRUs       100.0
-
+</p>
 
 دقت مدل حاصله توسط شبکه های عصبی  کپچا و سایر شبکه عصبی کانولوشن ها به اضافه ماژول های دو طرفه در جدول فوق نشان داده شده است. همانند کپچا برای به دست آوردن دقت بالاتر در سایر شبکه عصبی کانولوشن ها به اضافه ماژول های دو طرفه آنها با تکرار بیشتر از شبکه های عصبی  کپچا آموزش داده شدند. از نتایج تجربی می توان دریافت که شبکه های عصبی  کپچا بیشترین دقت را در کپچا های تشخیص حرف و رقم ساده داشتند و همچنین عملکرد قسمت کانولوشن شبکه های عصبی  کپچا از سایر شبکه عصبی کانولوشن ها بهتر بود. علاوه بر این، به استثنای شبکه های عصبی  کپچا و بخش پیوندی شبکه های عصبی  کپچا به اضافه واحد بازگرداننده دروازه ای دو طرفه که بالاترین دقت (100٪) را داشتند، مدل هایی که با استفاده از حافظه کوتاه مدت طولانی دو جهته ارزیابی شدند عملکرد بهتری نسبت به واحد بازگرداننده دروازه ای دو طرفه داشتند. علت این امر را می توان در اینکه حافظه کوتاه مدت طولانی دو جهته از پارامترهای بیشتری نسبت به واحد بازگرداننده دروازه ای دو جهته سود می برند و می توانند اطلاعات در کپچا را بسیار بهتر از واحد بازگرداننده دروازه ای دو طرفه یاد بگیرند.
 
@@ -307,11 +308,14 @@ The convolutional part of NCNs+bidirectional GRUs       100.0
 
 </div>
 
+<p align="center">
 
-Model       | The convolutional part of NCNs | The improved convolutional structure | NCNs  |
------------ | ------------------------------ | ------------------------------------ | ----- |
-Accuracy (%)              43.4                                78.4                    99.2
 
+|Model       | The convolutional part of NCNs | The improved convolutional structure | NCNs  |
+|:---: | :---: | :---: | :---: |
+|Accuracy (%)  |            43.4       |                         78.4     |               99.2 |
+
+</p>
 
 ***
 
