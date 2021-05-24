@@ -47,4 +47,4 @@ for p=1:1
 end
 
 
-ocr(captcha_image)
+%ocr(captcha_image)
