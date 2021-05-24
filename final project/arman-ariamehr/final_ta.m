@@ -2,7 +2,11 @@ numbers_count = input('number of letter/digit : ');
 width = input('width : ');
 height = input('height : ');
 
+<<<<<<< HEAD
 total = 3;
+=======
+total = 150;
+>>>>>>> parent of c9e55075 (پروژه پایانی)
 
 data = cell(total,4);
 
