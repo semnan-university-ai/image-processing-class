@@ -1,23 +1,11 @@
-# image-processing-class
-image processing class - 992
-
-## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
-
-### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
 
  
  
-## پروژه ی دانشجویان گروه 2 
+## پروژه ی دانشجویان گروه  2 
  
  
  
- ****توضیح کدهای پروژه
+ ****  توضیح کدهای پروژه
 ![image](https://user-images.githubusercontent.com/79846870/119413364-ed2b7b00-bc99-11eb-9af8-602852adf406.png)
 
 
