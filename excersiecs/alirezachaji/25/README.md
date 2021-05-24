@@ -154,7 +154,7 @@
 ***
 
 <p align="center">
-  <img src="https://github.com/semnan-university-ai/image-processing-class/blob/86ecefc685908d9a07e6a1ef426f9ed4f4fd4b99/excersiecs/alirezachaji/25/images/fig6.JPG">
+  <img src="https://github.com/semnan-university-ai/image-processing-class/blob/61ccca8c5e2206271ce9bebe997396f5fea202de/excersiecs/alirezachaji/25/images/fig6.JPG">
 </p>
 
 <div dir="rtl">
@@ -165,7 +165,7 @@
   
 ***
 <p align="center">
-  <img src="https://github.com/semnan-university-ai/image-processing-class/blob/86ecefc685908d9a07e6a1ef426f9ed4f4fd4b99/excersiecs/alirezachaji/25/images/fig7.JPG">
+  <img src="https://github.com/semnan-university-ai/image-processing-class/blob/61ccca8c5e2206271ce9bebe997396f5fea202de/excersiecs/alirezachaji/25/images/fig7.JPG">
 </p>
 
 <div dir="rtl">
