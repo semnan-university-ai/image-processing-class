@@ -54,6 +54,8 @@ Load_data
   
   تعريف ocr
   
+تشخيص و فراخواني فايل مورد نظر و تشخيص اينكه تصوير را ocr ايا شناسايي ميكند يا خير 
+  
 </div>
 
 ![تعريف ocr](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/4.jpg)
