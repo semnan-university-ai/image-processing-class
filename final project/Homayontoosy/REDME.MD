@@ -14,3 +14,12 @@ Load_data
     
 
 ![load_data](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/1.jpg)
+
+<br/>
+
+<div dir="rtl">
+  
+   بررسي برنامه اصلي 
+  
+    </div>
+    
