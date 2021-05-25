@@ -465,3 +465,53 @@ filter_cap_img_r = imgaussfilt(Cap_img,5);
 end
  ```
 
+<div dir="rtl">
+معرفی تابع ex19_150Cap.m
+</div>
+
+<div dir="rtl">
+  
+ برای تولید 150 تصویر کپچا، از این تابع استفاده می کنیم. در مرحله اول، آدرس پوشه ای که تصاویر در آنجا قرار دارند را درون یک متغیر به نام address ذخیره می کنیم:
+</div>
+
+```ruby
+clc;
+close all;
+clear;
+address = 'C:\Program Files\Polyspace\R2019b\bin\prj\';
+```
+<div dir="rtl">
+آدرس مکانی که می خواهیم 150 تصویر را در آنجا ذخیره کنیم را نیز درون متغیری به نام save_address قرار می دهیم:
+</div>
+
+```ruby
+save_address = 'C:\Program Files\Polyspace\R2019b\bin\prj\Saveimg\';
+
+```
+<div dir="rtl">
+متغیر های alph_count، wi و he مانند گذشته تعریف می شوند:
+</div>
+
+```ruby
+alph_count = 5;
+wi = 512;
+he = 256;
+```
+
+<div dir="rtl">
+تایع Read_Alpha نیز فایل ها را می خواند و در alph ذخیره می کند:
+</div>
+
+```ruby
+[img_name,img_count, alph] = Read_Alpha(address);
+```
+
+<div dir="rtl">
+با استفاده از تابع Create_150_Cap_Img،150 تصویر کپچا تولید شده و در آدرس مورد نظرمان ذخیره می شود:
+</div>
+
+```ruby
+for j=1:150
+    Create_150_Cap_Img(alph, alph_count, img_name, img_count, wi, he, save_address)
+end
+```
