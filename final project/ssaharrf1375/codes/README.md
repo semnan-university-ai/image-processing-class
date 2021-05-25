@@ -143,11 +143,10 @@ imshowpair(cap_img_r,im2bw(filter_cap_img_r, bw),'montage');
 با اجرای برنامه بالا، خروجی های زیر حاص می شود
 </div>
 
-```ruby
+
 
 ![1](https://user-images.githubusercontent.com/57560004/119554948-86e64b80-bdb2-11eb-84d6-f910e8d17241.jpg)
 
-```
 
 <br>
 
