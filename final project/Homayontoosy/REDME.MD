@@ -21,10 +21,16 @@ Load_data
   
    بررسي برنامه اصلي 
   
-  تعريف متغيري براي چرخش كپچا بصورت رندوم 
+  تعريف متغيري براي چرخش كپچا بصورت رندوم
+  <br/>
   تعريف حلقه for براي چرخش و دوران و نويز
+  <br/>
+  
   تعريف كد براي تعداد تصادفي حروف
+
+  
 </div>
+
     
 
 ![برنامه اصلي](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/2.jpg)
