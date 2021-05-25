@@ -371,6 +371,50 @@ end
 ```
 
 <div dir="rtl">
+معرفی تابع LineDraw.m
+</div>
+
+<div dir="rtl">
+این تابع، تصویر، طول و عرض و ضخامت خط را دریافت می کند
+</div>
+
+```ruby
+function cap_img_r = LineDraw(cap_img_r, wi, he, LineWi)
+```
+
+<div dir="rtl">
+با استفاده از دستور insertShape، می توانیم خط یا دایره و یا اشکال مختلف را ایجاد کرده و به کپچا اضافه کنیم. برای خط از پارامتر های x1، x2، y1 و y2 استفاده می کنیم. برای دایره نیز از پارامتر های x و y که مرکز دایره هستند و r که شعاع دایره است استفاده می کنیم. می توانیم رنگ خطوط و دایره ها را به انتخاب تغییر دهیم
+</div>
+
+```ruby
+cap_img_r = insertShape(cap_img_r,'Line',[1 50 wi 100],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[1 150 wi 50],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[1 100 wi 100],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[1 80 wi 150],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[30 1 80 he],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[100 1 150 he],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[200 1 70 he],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[250 1 300 he],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[300 1 400 he],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Line',[wi 1 370 he],'LineWidth',LineWi, 'color','white');
+
+cap_img_r = insertShape(cap_img_r,'Circle',[100 100 70],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Circle',[300 100 70],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Circle',[400 100 70],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Circle',[450 200 80],'LineWidth',LineWi, 'color','white');
+cap_img_r = insertShape(cap_img_r,'Circle',[500 150 80],'LineWidth',LineWi, 'color','blue');
+cap_img_r = insertShape(cap_img_r,'Circle',[200 100 80],'LineWidth',LineWi, 'color','blue');
+```
+
+<div dir="rtl">
+پس از اجرای کد بالا، تصویر رنگی خواهیم داشت. برای تبدیل تصویر رنگی به تصویر خاکستری، از دستور زیر استفاده می کنیم
+</div>
+
+```ruby
+cap_img_r = rgb2gray(cap_img_r);
+```
+
+<div dir="rtl">
 
 </div>
 
