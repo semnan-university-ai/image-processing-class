@@ -23,3 +23,5 @@ Load_data
   
 </div>
     
+
+![برنامه اصلي](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/2.jpg)
