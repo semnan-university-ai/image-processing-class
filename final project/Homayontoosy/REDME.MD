@@ -12,5 +12,9 @@
 Load_data 
 </div>
     
-
+<p align="center">
+      <img src="pic.jpg" />
+     <br> شكل 2) برخي از كلمات كپچا<br/>
+    </p>
+ 
 
