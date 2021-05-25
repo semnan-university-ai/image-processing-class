@@ -33,3 +33,7 @@ Load_data
     
 
 ![برنامه اصلي](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/2.jpg)
+
+![برنامه اصلي](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/3.jpg)
+
+
