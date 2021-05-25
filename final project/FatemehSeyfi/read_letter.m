@@ -1,0 +1,30 @@
+function [alphabet] = read_letter()
+alphabet(:,:,1) = dlmread("..\Final\alphabet\A.txt");
+alphabet(:,:,2) = dlmread("..\Final\alphabet\B.txt");
+alphabet(:,:,3) = dlmread("..\Final\alphabet\C.txt");
+alphabet(:,:,4) = dlmread("..\Final\alphabet\D.txt");
+alphabet(:,:,5) = dlmread("..\Final\alphabet\E.txt");
+alphabet(:,:,6) = dlmread("..\Final\alphabet\F.txt");
+alphabet(:,:,7) = dlmread("..\Final\alphabet\G.txt");
+alphabet(:,:,8) = dlmread("..\Final\alphabet\H.txt");
+alphabet(:,:,9) = dlmread("..\Final\alphabet\I.txt");
+alphabet(:,:,10) = dlmread("..\Final\alphabet\J.txt");
+alphabet(:,:,11) = dlmread("..\Final\alphabet\K.txt");
+alphabet(:,:,12) = dlmread("..\Final\alphabet\L.txt");
+alphabet(:,:,13) = dlmread("..\Final\alphabet\M.txt");
+alphabet(:,:,14) = dlmread("..\Final\alphabet\N.txt");
+alphabet(:,:,15) = dlmread("..\Final\alphabet\O.txt");
+alphabet(:,:,16) = dlmread("..\Final\alphabet\P.txt");
+alphabet(:,:,17) = dlmread("..\Final\alphabet\Q.txt");
+alphabet(:,:,18) = dlmread("..\Final\alphabet\R.txt");
+alphabet(:,:,19) = dlmread("..\Final\alphabet\S.txt");
+alphabet(:,:,20) = dlmread("..\Final\alphabet\T.txt");
+alphabet(:,:,21) = dlmread("..\Final\alphabet\U.txt");
+alphabet(:,:,22) = dlmread("..\Final\alphabet\V.txt");
+alphabet(:,:,23) = dlmread("..\Final\alphabet\W.txt");
+alphabet(:,:,24) = dlmread("..\Final\alphabet\X.txt");
+alphabet(:,:,25) = dlmread("..\Final\alphabet\Y.txt");
+alphabet(:,:,26) = dlmread("..\Final\alphabet\Z.txt");
+alphabet = uint8(alphabet);
+end
+
