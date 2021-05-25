@@ -47,6 +47,8 @@ Load_data
   
 </div>
 
+![نويز نمك و فلفل](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/5.jpg)
+
 <div dir="rtl">
   
   تعريف ocr
