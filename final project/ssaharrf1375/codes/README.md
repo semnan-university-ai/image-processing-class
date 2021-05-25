@@ -515,3 +515,89 @@ for j=1:150
     Create_150_Cap_Img(alph, alph_count, img_name, img_count, wi, he, save_address)
 end
 ```
+
+<div dir="rtl">
+معرفی تابع Create_150_Cap_Img.m
+</div>
+
+<div dir="rtl">
+در این قسمت، یک بردار 5 تایی بدون تکرار و غیر متوالی تولید می شود:
+</div>
+
+```ruby
+function Create_150_Cap_Img(alph, alph_count, img_name, img_count, wi, he, save_address)
+Consecutive_num = 1;
+while Consecutive_num == 1
+    cap_alph = RandomNum(alph_count, img_count);
+    for r=1:alph_count-1
+        if abs(cap_alph(r+1) - cap_alph(r)) == 1
+            break
+        else
+            Consecutive_num = 0;
+        end
+    end
+end
+```
+
+<div dir="rtl">
+ در ادامه، چرخش، نویز و خطوط بر روی تصاویر اعمال می شوند:
+</div>
+
+
+```ruby
+method = {'nearest', 'bilinear', 'bicubic'};
+MTD=3;
+angle = 0;
+ 
+cap_img_r = Create_Cap_Img(alph_count, cap_alph, img_count, alph, method, MTD, he, wi);
+ 
+Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
+cap_img_r = imnoise(cap_img_r,Noise{3},.2);
+ 
+LineWi = 1;
+cap_img_r = LineDraw(cap_img_r, wi, he, LineWi);
+```
+
+<div dir="rtl">
+در صورت سوال نوشته شده بود که برچسب گذاری تصاویر را خودمان انجام دهیم، اما این کار کمی زمان بر است. برای صرفه جویی در وقت، ابتدا سایز کپچا را استخراج کرده و سپس با استفاده ازین اطلاعات، یک سلول به ابعاد 1 تا اندازه سایز کپچا ایجاد می کنیم و آن را درون متغیر قرار می دهیم:
+</div>
+
+```ruby
+alph_selected = cell(1,size(cap_alph,2));
+```
+
+<div dir="rtl">
+در مرحله بعد، یک حلقه ایجاد کرده و مقادیر cap_alph را درون متغیر N ذخیره می کنیم . سپس حروف مربوط به آن اندیس را گرفته و درون متغیر alph_selected قرار می دهیم:
+</div>
+
+
+```ruby
+for j=1:size(cap_alph,2)
+    N = cap_alph(j);
+    alph_selected{1,j} = img_name{1,N};
+end
+```
+
+<div dir="rtl">
+برای تبدیل سلول به رشته، از دستور strcat استفاده می کنیم:
+</div>
+
+```ruby
+Alph_Selected = '';
+ 
+for k=1:size(cap_alph,2)
+    Alph_Selected = strcat(Alph_Selected,alph_selected{1,k});
+end 
+```
+
+<div dir="rtl">
+ با استفاده از دستور imwrite، تصویر را در آدرس مورد نظرمان و با فرمت تعیین شده در متغیر img_type ذخیره می کنیم:
+</div>
+
+```ruby
+img_type = '.png';
+imwrite(cap_img_r, strcat(save_address,Alph_Selected,img_type));
+end
+```
+
+![2](https://user-images.githubusercontent.com/57560004/119558936-46d59780-bdb7-11eb-97f9-f58176324bf1.jpg)
