@@ -47,3 +47,10 @@ Load_data
   
 </div>
 
+<div dir="rtl">
+  
+  تعريف ocr
+  
+</div>
+
+![تعريف ocr](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/4.jpg)
