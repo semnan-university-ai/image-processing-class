@@ -414,9 +414,54 @@ cap_img_r = rgb2gray(cap_img_r);
 ```
 
 <div dir="rtl">
-
+  
+این تابع مقادیر he، wi، alph_count، method، cap_img_r و Filter_size را دریافت می کند: 
 </div>
 
 ```ruby
+function filter_cap_img_r = Filter_Cap_Img(he, wi, alph_count, method, cap_img_r,Filter_size)
+Cap_img = zeros(he+50, wi+(alph_count*50));
+ ```
 
-```
+<div dir="rtl">
+  
+ابتدا یک ماتریس خالی ایجاد کرده و اندازه آن را طوری تغییر می دهیم که حروف بعد از وارد شدن به آن، به همدیگر نچسبند. به طور مثال اگر حروف j و i کنار هم قرار گیرند، تابع ocr آن ها را h تشخیص می دهد و ما نمی خواهیم درصد تشخیص این تابع کم تر شود؛ به همین خاطر، بینشان 50 تا فضای خالی ایجاد می کنیم. در ادامه، برای تقسیم بندی و جدا سازی حروف کپچا، از دستور زیر استفاده می کنیم. این کار برای این صورت می گیرد تا اثر چرخش تصویر را خنثی کند تا بتوانیم فیلتر را روی آن اعمال کنیم. با استفاده از یک حلقه و دستور  imrotate این کار را انجام می دهیم و در پایان حلقه، چرخش را به سر جای اولش برمی گردانیم:
+</div>
+
+```ruby
+Cap_img = zeros(he+50, wi+(alph_count*50));
+slice_img = wi/alph_count;
+X=0;
+for i=1:alph_count
+    if rem(i,2)==0
+        angle = 9;
+    else
+        angle = -10;
+    end
+    Cap_img(25:he+24,((slice_img*i)-(slice_img-1))+X:(slice_img*i)+X) = imrotate(cap_img_r(:,(slice_img*i)-(slice_img-1):slice_img*i),-(i+angle),'crop', method{1});
+    X = X+50;
+end
+ ```
+
+<div dir="rtl">
+  
+در ادامه تصویر را تبدیل به uint8 می کنیم :
+</div>
+
+```ruby
+Cap_img = uint8(Cap_img);
+ ```
+
+<div dir="rtl">
+  
+در پایان، برای محو کردن تصویر می توانید  یکی از فیلترهای زیر را از حالت کامنت خارج کرده و از آن استفاده کنید. به دلیل اینکه فیلتر گوسین نتیجه بهتری داشت، ازین فیلتر استفاده کردیم:
+</div>
+
+```ruby
+filter_cap_img_r = imgaussfilt(Cap_img,5);
+% filter_cap_img_r = medfilt2(filter_cap_img_r,[Filter_size,Filter_size]);
+% filter_cap_img_r = medfilt2(filter_cap_img_r,[Filter_size-4,Filter_size-4]);
+% filter_cap_img_r = medfilt2(filter_cap_img_r,[5,5]);
+end
+ ```
+
