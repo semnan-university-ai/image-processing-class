@@ -57,7 +57,7 @@ Load_data
 
 ![تعريف ocr](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/4.jpg)
 
-
+</div>
 
 <div dir="rtl">
   [كپچا](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/6.jpg)
