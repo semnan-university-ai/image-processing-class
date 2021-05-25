@@ -42,6 +42,6 @@ alphabet(:,:,24) = dlmread('..\ALPHABET\X.txt');
 alphabet(:,:,25) = dlmread('..\ALPHABET\Y.txt');
 alphabet(:,:,26) = dlmread('..\ALPHABET\Z.txt');
 
- alphabet = uint8(alphabet);
+alphabet = uint8(alphabet);
   
-  </div>
+</div>
