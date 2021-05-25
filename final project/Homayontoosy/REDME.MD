@@ -60,5 +60,5 @@ Load_data
 <br/>
 
 
-  [كپچا](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/6.jpg)
+ ![كپچا](https://github.com/semnan-university-ai/image-processing-class/blob/main/final%20project/Homayontoosy/screen/6.jpg)
 
