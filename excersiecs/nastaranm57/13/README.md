@@ -1,7 +1,6 @@
 <div dir="rtl">
 با تشکر از آقای "سید احمد داوود موسوی" که فایل و توضیحات کامل این سوال رو در اختیار من گذاشتن
 </div>
-@arman-ariamehr
 
 <div dir="rtl">
 جواب سوال 13:
@@ -48,7 +47,7 @@ amount = input('چه تعداد تصویر نویز دار می خواهید؟:'
 
 ```
 chart = zeros(1,amount);
-for i = 1 : amount 
+for i = 1 : amount
     percent = rand;
     noise = imnoise(image , 'salt & pepper' , percent);
     avg = mean(mean(noise));
@@ -76,4 +75,3 @@ t=readtable('C:\Users\PC\Desktop\1.csv');
 </div>
 
 ![khorooji](02582.jpg)
-

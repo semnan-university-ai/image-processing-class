@@ -3,9 +3,9 @@
 <br />
 </div>
 
+---
 
-***
->CODE
+> CODE
 
 <div dir="rtl">
 با فایل ex19شروع می کنیم
@@ -143,17 +143,13 @@ imshowpair(cap_img_r,im2bw(filter_cap_img_r, bw),'montage');
 با اجرای برنامه بالا، خروجی های زیر حاص می شود
 </div>
 
-
-
 ![1](https://user-images.githubusercontent.com/57560004/119554948-86e64b80-bdb2-11eb-84d6-f910e8d17241.jpg)
-
 
 <br>
 
 <div dir="rtl">
 # معرفی تابع Read_Alpha.m
 </div>
-
 
 <div dir="rtl">
 این تابع، پارامتر address را می گیرد و سه پارامتر برمی گرداند:
@@ -421,7 +417,7 @@ cap_img_r = rgb2gray(cap_img_r);
 ```ruby
 function filter_cap_img_r = Filter_Cap_Img(he, wi, alph_count, method, cap_img_r,Filter_size)
 Cap_img = zeros(he+50, wi+(alph_count*50));
- ```
+```
 
 <div dir="rtl">
   
@@ -441,7 +437,7 @@ for i=1:alph_count
     Cap_img(25:he+24,((slice_img*i)-(slice_img-1))+X:(slice_img*i)+X) = imrotate(cap_img_r(:,(slice_img*i)-(slice_img-1):slice_img*i),-(i+angle),'crop', method{1});
     X = X+50;
 end
- ```
+```
 
 <div dir="rtl">
   
@@ -450,7 +446,7 @@ end
 
 ```ruby
 Cap_img = uint8(Cap_img);
- ```
+```
 
 <div dir="rtl">
   
@@ -463,7 +459,7 @@ filter_cap_img_r = imgaussfilt(Cap_img,5);
 % filter_cap_img_r = medfilt2(filter_cap_img_r,[Filter_size-4,Filter_size-4]);
 % filter_cap_img_r = medfilt2(filter_cap_img_r,[5,5]);
 end
- ```
+```
 
 <div dir="rtl">
 معرفی تابع ex19_150Cap.m
@@ -480,6 +476,7 @@ close all;
 clear;
 address = 'C:\Program Files\Polyspace\R2019b\bin\prj\';
 ```
+
 <div dir="rtl">
 آدرس مکانی که می خواهیم 150 تصویر را در آنجا ذخیره کنیم را نیز درون متغیری به نام save_address قرار می دهیم:
 </div>
@@ -488,6 +485,7 @@ address = 'C:\Program Files\Polyspace\R2019b\bin\prj\';
 save_address = 'C:\Program Files\Polyspace\R2019b\bin\prj\Saveimg\';
 
 ```
+
 <div dir="rtl">
 متغیر های alph_count، wi و he مانند گذشته تعریف می شوند:
 </div>
@@ -543,17 +541,16 @@ end
  در ادامه، چرخش، نویز و خطوط بر روی تصاویر اعمال می شوند:
 </div>
 
-
 ```ruby
 method = {'nearest', 'bilinear', 'bicubic'};
 MTD=3;
 angle = 0;
- 
+
 cap_img_r = Create_Cap_Img(alph_count, cap_alph, img_count, alph, method, MTD, he, wi);
- 
+
 Noise = {'poisson', 'gaussian', 'salt & pepper', 'speckle'};
 cap_img_r = imnoise(cap_img_r,Noise{3},.2);
- 
+
 LineWi = 1;
 cap_img_r = LineDraw(cap_img_r, wi, he, LineWi);
 ```
@@ -570,7 +567,6 @@ alph_selected = cell(1,size(cap_alph,2));
 در مرحله بعد، یک حلقه ایجاد کرده و مقادیر cap_alph را درون متغیر N ذخیره می کنیم . سپس حروف مربوط به آن اندیس را گرفته و درون متغیر alph_selected قرار می دهیم:
 </div>
 
-
 ```ruby
 for j=1:size(cap_alph,2)
     N = cap_alph(j);
@@ -584,10 +580,10 @@ end
 
 ```ruby
 Alph_Selected = '';
- 
+
 for k=1:size(cap_alph,2)
     Alph_Selected = strcat(Alph_Selected,alph_selected{1,k});
-end 
+end
 ```
 
 <div dir="rtl">
@@ -619,6 +615,7 @@ clear;
 address = 'C:\Program Files\Polyspace\R2019b\bin\prj\SaveImg\';
 save_address = 'C:\Program Files\Polyspace\R2019b\bin\prj\SaveAdd\';
 ```
+
 <div dir="rtl">
 متغیر های alph_count،  wi و he نیز مانند قبل تعریف شده اند:  
 </div>
@@ -628,6 +625,7 @@ alph_count = 5;
 wi = 512;
 he = 256;
 ```
+
 <div dir="rtl">
 در این قسمت، چرخش را بر روی تصاویر اعمال می کنیم: 
 </div>
@@ -655,7 +653,7 @@ D = dir(address);
 img_count = 1;
 img_name = cell(1,150);
 Txt_Pred = cell(1,150);
- 
+
 COP = 0;
 ```
 
@@ -670,33 +668,33 @@ for i=1 : size(D,1)
     empty = isempty(find);
     num = isnumeric(find);
     if (empty == 0) && (num == 1)
-        Img_Name = strsplit(Name,'.'); 
+        Img_Name = strsplit(Name,'.');
         img_name{img_count} = Img_Name{1};
-        
+
         img = imread(strcat(address,Name));
-        
+
         filter_cap_img_r = Filter_Cap_Img(he, wi, alph_count, method, img,Filter_size);
-       
+
         bw = .5;
         Img = imbinarize(filter_cap_img_r, bw);
-        
+
 %         img_type = '.png';
 %         imwrite(Img, strcat(save_address,Img_Name{1},img_type));
-        
+
         txt = ocr(Img);
         TXT = txt.Text;
-        
+
         Strtxt = '';
         for s=1:numel(TXT)
             Strtxt = strcat(Strtxt,TXT(s));
         end
-        
+
         Txt_Pred{img_count} = Strtxt;
-        
+
         display(img_count)
-        
+
         img_count = img_count + 1;
-        
+
         if strcmpi(Strtxt,Img_Name{1})
             COP = COP+1;
         end
@@ -713,8 +711,5 @@ Correct_Percent = 100*(COP/150);
 disp('Correct_Percent (%): ')
 disp(Correct_Percent)
 ```
-
-
-
 
 ![2](https://user-images.githubusercontent.com/57560004/119558936-46d59780-bdb7-11eb-97f9-f58176324bf1.jpg)

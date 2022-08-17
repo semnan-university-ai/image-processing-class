@@ -1,7 +1,6 @@
 <div dir="rtl">
  با تشکر از آقای علیرضا چاجی 
 </div>
-@Alireza Chaji
 
 <div dir="rtl">
 جواب سوال 24:

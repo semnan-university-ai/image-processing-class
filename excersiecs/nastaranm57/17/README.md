@@ -42,7 +42,7 @@ blueChannel = rgbImage(:, :, 3);
 desiredColor = [0, 0, 0]; % meshki
 redChannel(binaryImage) = desiredColor(1);
 greenChannel(binaryImage) = desiredColor(2);
-blueChannel(binaryImage) = desiredColor(3);  
+blueChannel(binaryImage) = desiredColor(3);
 rgbImage = cat(3, redChannel, greenChannel, blueChannel);     % kanal haye rangi motefavet ra be ham motasel kon.
 subplot(2, 2, 3);
 imshow(rgbImage);
@@ -58,8 +58,6 @@ title('Image with color inside the mask region', 'FontSize', 30);    % tasvir ra
 <div dir="rtl">
 در تکنیک دوم،از مختصات تصویر کمک می گیریم. با تشکر از آقای امید غلامی برای ارائه کد و توضیحات درباره تکنیک دوم این سوال:
 </div>
-
-@omidgholami74
 
 ```
 addpath("../../../benchmark/");

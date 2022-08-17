@@ -1,18 +1,18 @@
 # image-processing-class
+
 image processing class - 992
 
 ## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+
+- ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+- ##### TA : Amir Shokri - [Contact](mailto:amirsh.nll@gmail.com)
 
 ### Student Info :
-* Full name : Parsa Mokhtari Hessar
-* github id : @ParsaMokhtariHessar
-* Email : parsamokhtarihessar@gmail.com
-* Type : Roozane
+
+- Full name : Parsa Mokhtari Hessar
+- github id : @ParsaMokhtariHessar
 
 ### تابع اصلی
-
 
 <div dir="rtl">
  با پاک کردن صفحه از شلوغ شدن کمند ویندو جلو گیری می کند.
@@ -28,12 +28,9 @@ clear;
 سیستم طراحی شده توسط جناب شکری برای خواندن کاراکتر ها زیاد قابل مقیاس دادن نبود برای همین سیستمی با استفاده از حلقه برای خواندن کاراکتر ها طراحی شد که مقیاس پذیری آن بیشتر است . بگفته برنامه نویسان حرفه ای هرگاه شما در کد نویسی خود کپی پیست زیاد انجام می دهید بهتر است روش خود را عوض کنید.
 </div>
 
-
-
 <div dir="rtl">
 در این جا این خط کد کاراکتر ها را می گیرد و در یک آرایه بصورت خود کار ذخیره می کند
 </div>
-
 
 ```
 myFolder = '..\..\excersiecs\arman-ariamehr\19\alphabet\';
@@ -45,14 +42,14 @@ for k = 1 : length(theFiles)
     fullFileName = fullfile(theFiles(k).folder, baseFileName);
     fprintf(1, 'Now reading %s\n', fullFileName);
     % Now do whatever you want with this file name,
-    image = dlmread(fullFileName);    
+    image = dlmread(fullFileName);
     alphabet(:,:,k)=image(:,:);
 end
 ```
+
 <div dir="rtl">
 برای جلوگیری از مشکلات مربوط به نوع داده های مختلف کد زیر کاراکتر ها را به اینتیجر هشت بیتی(uint8) تبدیل می کند.
 </div>
-
 
 ```
 alphabet = uint8(alphabet);
@@ -97,7 +94,6 @@ for p=1:150
 الگوریتم سر هم نمودن آقای شکری بدلیل بازگشتی بودن آن و استفاده از حالت قبلی کپچا از مرتبه O(n^2) بود ولی ما با از پیش تعیین نمودن متغییر آن را به O(n) کاهش دادیم. 
 </div>
 
-
 ```
     %made your algorithem more efficeiet
 ```
@@ -113,7 +109,6 @@ for p=1:150
 <div dir="rtl">
  از آنجایی که طول و عرض هر کاراکتر به ازای هر حرف گرفته می شود. ما برای متناسب تعیین نمودن سایز اینیشالایز(Initialize) کپچا عرض را ضرب در تعداد تعیین شده حروف کپچا می نماییم 
 </div>
-
 
 ```
     captcha_image = zeros(Alphabet_Height,Alphabet_Width*alphabet_count);
@@ -221,6 +216,7 @@ end
 %ocr(captcha_image)
 
 ```
+
 ### تابع تست OCR
 
 <div dir="rtl">
@@ -250,7 +246,7 @@ Fals=0;
 ```
 for k = 1 : length(theFiles)
     baseFileName = theFiles(k).name;
-    
+
     fullFileName = fullfile(theFiles(k).folder, baseFileName);
     [folder, baseFileNameNoExt, extension] = fileparts(fullFileName);
     fprintf(1, 'Now reading %s\n', fullFileName);
@@ -261,7 +257,7 @@ for k = 1 : length(theFiles)
 تصویر را از فایل می خوانیم
 </div>
 
-```    
+```
     image = imread(fullFileName);
 ```
 
@@ -309,10 +305,10 @@ for k = 1 : length(theFiles)
 end
 
 ```
-    
+
 <div dir="rtl">
 سپس تعداد درست ها، نادرست ها و درصد درست ها از تعداد کل را محاسبه کرده و نمایش می دهیم. 
-</div>    
+</div>
 
 ```
 disp("True : "+Tru+", False : "+Fals+", Accuracy : %"+Tru/(Tru+Fals)*100);
@@ -346,7 +342,6 @@ True : 0, False : 150, Accuracy : %0
 این تابع عکسی را می گیرد دو عدد بین صفر و یک که نمایانگر نسبت کل تعداد پیکسل های تغییر داده شده به کل پیکسل ها و  نسبت پیکسل های تغییر داده شده سفید به کل پیکسل های تغییر داده شده را نیز دریافت می کند و نویز را به تصویر اعمال می کند.
 </div>
 
-
 ```
 function imageNoisy = CustomSaltAndPepper(image,a,b)
 % create the noise --------------------------------------------------------
@@ -370,7 +365,6 @@ end
  قبل از توضیح خط رندم بایستی تابعی را که یک خط برای ما رسم می کند را توضیح داد.
 </div>
 
-
 <div dir="rtl">
 این کد با استفاده از معادله خط و یک حلقه؛ کل صفحه را پیمایش کرده و برای ما یک خط با ضرایبxوy  و عرض از مبداb رسم می کند.
 </div>
@@ -380,15 +374,15 @@ function image = Line(image,threshhold,x,y,b)
 [width,height]=size(image);
         for i=1:width
             for j=1:height
-                z = i*(x)+j*(y)-b; 
+                z = i*(x)+j*(y)-b;
                 if z <= 100+threshhold && z>=100-threshhold
                     if image == 255
-                        image(i,j) = 0;                   
+                        image(i,j) = 0;
                     else
-                        image(i,j) = 255 ;                  
-                    end                   
-                end         
-            end   
+                        image(i,j) = 255 ;
+                    end
+                end
+            end
         end
 end
 ```
@@ -397,13 +391,12 @@ end
 این تابع با استفاده از تابع خط تعداد خط های درخواست شده (n)را گرفته  و  ضرایب و عرض از مبدا را هم می گیرد اما آنها را برای هر چه رندم تر شدن نیز بصورت رندم تغییر می دهد. 
 </div>
 
-
 ```
 function image = RandLine(image,threshhold,x,y,b,n)
 
-    for i=1:ceil(rand*n) 
+    for i=1:ceil(rand*n)
         image=Line(image,threshhold,randi([-x x ]),randi([-y y ]),randi([-b b]));
-    end 
+    end
 
 end
 
@@ -415,48 +408,47 @@ end
 این تابع نیز بصورت کامل در تمرین 8 دانشجو توضیح داده شده ولی در کل یک زاویه از ما گرفته و تصویر را به اندازه زاویه دوران می دهد. در تابع اصلی زاویه فراخوانی این تابع بصورت رندم انتخاب می شود که باعث می شود با زوایایی مختلف حروف دوران پیدا کنند و خواندن آنها سخت تر شود. 
 </div>
 
-
 ```
 function C = Rotation(img,angle)
 
-[rowsi,colsi]= size(img); 
+[rowsi,colsi]= size(img);
 
 % put angle  in degrees
 
-rads=2*pi*angle/360;  
+rads=2*pi*angle/360;
 
 %calculating array dimesions such that  rotated image gets fit in it exactly.
 % we are using absolute so that we get  positve value in any case ie.,any quadrant.
 
- %rowsf=ceil(rowsi*abs(cos(rads))+colsi*abs(sin(rads)));                      
+ %rowsf=ceil(rowsi*abs(cos(rads))+colsi*abs(sin(rads)));
  %colsf=ceil(rowsi*abs(sin(rads))+colsi*abs(cos(rads)));
 
- rowsf=rowsi;                      
+ rowsf=rowsi;
  colsf=colsi;
 
 % define an array withcalculated dimensionsand fill the array  with zeros ie.,black
 C=uint8(zeros([rowsf colsf]));
 
 %calculating center of original and final image
-xo=ceil(rowsi/2);                                                            
+xo=ceil(rowsi/2);
 yo=ceil(colsi/2);
 
 midx=ceil((size(C,1))/2);
 midy=ceil((size(C,2))/2);
 
-% in this loop we calculate corresponding coordinates of pixel of A 
+% in this loop we calculate corresponding coordinates of pixel of A
 % for each pixel of C, and its intensity will be  assigned after checking
 % weather it lie in the bound of A (original image)
 for i=1:size(C,1)
-    for j=1:size(C,2)                                                       
+    for j=1:size(C,2)
 
-         x= (i-midx)*cos(rads)+(j-midy)*sin(rads);                                       
-         y= -(i-midx)*sin(rads)+(j-midy)*cos(rads);                             
+         x= (i-midx)*cos(rads)+(j-midy)*sin(rads);
+         y= -(i-midx)*sin(rads)+(j-midy)*cos(rads);
          x=round(x)+xo;
          y=round(y)+yo;
 
-         if (x>=1 && y>=1 && x<=size(img,1) &&  y<=size(img,2) ) 
-              C(i,j,:)=img(x,y,:);  
+         if (x>=1 && y>=1 && x<=size(img,1) &&  y<=size(img,2) )
+              C(i,j,:)=img(x,y,:);
          end
 
     end
@@ -464,13 +456,12 @@ end
 
 end
 ```
-### توابع شکل های رندم
 
+### توابع شکل های رندم
 
 <div dir="rtl">
 این تابع رندم سازی های بسیار ی را نیاز دارد . از خود شکل گرفته تا مرکز آن ، اندازه آن . می توانیم بصورت دلخواه ضخامت یا تو خالی یا توپر بودن آن را نیز رندم سازی کنیم که دانشجو به علت بیش از حد پیچیده شدن از آن خودداری نموده.
 </div>
-
 
 <div dir="rtl">
 .این تابع تصویر  و تعداد شکل های در خواستی و ماکزیمم شعاع یا ضلع آنها را می گیرد
@@ -542,9 +533,8 @@ end
 دستور Switch در یک حلقه شروع به فعالیت کرده و یکی یکی شکل ها را رسم می کند.
 </div>
 
-
 ```
-for k=1 : NumberOfShapes 
+for k=1 : NumberOfShapes
     switch Shapes(1,k)
 ```
 
@@ -552,14 +542,14 @@ for k=1 : NumberOfShapes
 اگر مربع در آمده باشد با مختصات و ضلع رندم مربع رسم می کند.
 </div>
 
-```            
+```
         case 0
             %square
                 for i=1 : width
                     for j=1 : height
                         pri = [abs(p(1,1,k)-i)  abs(p(1,2,k)-j) ];
                         z = max(pri);
-                        if  r(k)-t <= z  && z <= r(k)+t 
+                        if  r(k)-t <= z  && z <= r(k)+t
                             image(i, j) = 255;
                         end
                     end
@@ -570,7 +560,6 @@ for k=1 : NumberOfShapes
 مستطیل رسم می کند. که رندم است و طول آن دو برابر عرض آن می باشد.
 </div>
 
-
 ```
         case 1
             %rectangle
@@ -578,7 +567,7 @@ for k=1 : NumberOfShapes
                     for j=1 : height
                         pri=[abs(p(1,1,k)-i)  0.5*abs(p(1,2,k)-j)];
                         z= max(pri);
-                        if  r(k)-t <= z  && z <= r(k)+t 
+                        if  r(k)-t <= z  && z <= r(k)+t
                             image(i, j) = 255;
                         end
                     end
@@ -589,14 +578,13 @@ for k=1 : NumberOfShapes
 یک لوزی رسم میکند .
 </div>
 
-
-```           
+```
         case 2
             %Rhombus
                 for i=1 : width
                     for j=1 : height
                         z=abs(p(1,1,k)-i)+ 1.68*abs(p(1,2,k)-j);
-                        if r(k)-t <= z  && z <= r(k)+t 
+                        if r(k)-t <= z  && z <= r(k)+t
                             image(i, j) = 255;
                         end
                     end
@@ -607,7 +595,7 @@ for k=1 : NumberOfShapes
 یک دایره رسم می کند. که بنابر طراحی برخی مواقع تو پر و برخی مواقع تو خالی است.
 </div>
 
-```       
+```
         case 3
               %Circle
                 for i=1 : width
@@ -624,9 +612,8 @@ for k=1 : NumberOfShapes
 یک مثلث رسم می کند.
 </div>
 
-
-```            
-        case 4 
+```
+        case 4
             %Triangle
             x0=p(1,1,k);
             y0=p(1,2,k);
@@ -635,7 +622,7 @@ for k=1 : NumberOfShapes
                 for y=1 : height
                       pri=[abs(x+(y-y0)/t0-x0) abs(x-(y-y0)/t0-x0) abs(x-x0+r)] ;
                       z=max(pri);
-                    if r(k)-t <= z && z <= r(k)+t 
+                    if r(k)-t <= z && z <= r(k)+t
                         image(x, y) = 255;
                     end
                 end
@@ -649,5 +636,3 @@ end
 <div dir="rtl">
 پایان.
 </div>
-
-

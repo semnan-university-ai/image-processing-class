@@ -1,8 +1,6 @@
 #### tamrin 10 code:
 
-
 ```
-%thank's to @armsn-ariamehr
 %tashkil safhe siah
 img = zeros(25 , 125);
 %ijad adad tasadofi aval va gereftan tasvir adad aval
@@ -97,11 +95,12 @@ img = zeros(25 , 125);
     else
         p = dlmread('C:\Users\Nakisa™\Documents\GitHub\image-processing-class\excersiecs\safaiyan\10\digit\9.txt');
     end
-  %gozashtan 4 adad dar tasvir va namayesh  
+  %gozashtan 4 adad dar tasvir va namayesh
 img = [m n o p];
 imshow(img);
 
 ```
+
 <div dir="rtl">
     
      -در خط اول ابتدا یک صفحه سیاه ایجاد کردیم
@@ -117,5 +116,4 @@ imshow(img);
 ![khorooji](result.jpg)
 
 <div dir="rtl">
-با تشکر از @arman-ariamehr
 </div>

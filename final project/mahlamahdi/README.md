@@ -1,15 +1,18 @@
 # image-processing-class
+
 image processing class - 992
 
 ## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+
+- ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+- ##### TA : Amir Shokri - [Contact](mailto:amirsh.nll@gmail.com)
 
 ### Student Info :
-* Full name : ---
-* github id : ---
-* Email : ---
-* Type : ---
+
+- Full name : ---
+- github id : ---
+- Email : ---
+- Type : ---
 
 <div dir="rtl">
  
@@ -53,10 +56,11 @@ clear;
  
 </div>
 
- ````
- result = cell(150,6);
+```
+result = cell(150,6);
 result(1,:)={'Number','Captcha not modify','OCR1','Captcha','OCR','HumanGuess'};
-````
+```
+
  <div dir="rtl">
 تعداد کاراکتر های تصویر کپچا اعدادی بین 4 تا 6 مشخص می شود. اندازه تصویر خروجی کپچا نیز بر این اساس تعیین می شود.<br>
  captcha_image2 نیز برای مشخص کردن کپچای بدون تغییر می باشد.</br>
@@ -77,33 +81,34 @@ captcha_image = zeros(size(alphabet(:,:,1)));
 captcha_image = alphabet(:,:,captcha_alphabet(1,1));
 captcha_image2 = alphabet(:,:,captcha_alphabet(1,1));
 
-````
+```
 <div dir="rtl">
- 
+
 اعمال یکسری توابع به نام های rotate،medfilt2،noiseو insert_line  به کپچای تولید شده به منظور تشخیص سخت تر OCR متلب.
- 
+
  </div>
- 
- ````
- 
- for i = 2 : alphabet_count
-    captcha_image = [ captcha_image alphabet(:,:,captcha_alphabet(1,i)) ];
-    captcha_image2 = [ captcha_image2 alphabet(:,:,captcha_alphabet(1,i)) ];
-     [m ,n ] = size(captcha_image);
-    captcha_image = rotate(captcha_image, m,n);  
+
+```
+
+for i = 2 : alphabet_count
+captcha_image = [ captcha_image alphabet(:,:,captcha_alphabet(1,i)) ];
+captcha_image2 = [ captcha_image2 alphabet(:,:,captcha_alphabet(1,i)) ];
+[m ,n ] = size(captcha_image);
+captcha_image = rotate(captcha_image, m,n);  
 end
 %captcha_image = medfilt2(captcha_image);
 captcha_image = noise(captcha_image);
 captcha_image = insert_line(captcha_image, height ,width);
 captcha_image = imresize(captcha_image, [height width]);
 
-````
+```
 <div dir="rtl">
  ذخیره کپجای های تولید شده در پوشه result و تشخیص OCR از روی هم کپچای تغییر یافته و هم کپچای بدون تغییر </br>
- 
+
  </div>
 
-````
+```
+
 str = sprintf('%d ', j);
 image = ['result\' str '.png'];
 image2 = ['result2\' str '.png'];
@@ -114,14 +119,16 @@ resulu_o=ocr(captcha_image);
 result_Ocr = resulu_o.Text;
 resulu_o2=ocr(captcha_image2);
 result_Ocr2 = resulu_o2.Text;
-````
+
+```
 <div dir="rtl">
  نمایش کپچا و از کار خواسته شده است تا حدس خود را از کپچا وارد نماید.</br>
- 
+
  <h6> ذخیره نتایج در آرایه سلولی تعریف شده در بالا</h6>
  </div>
 
-````
+```
+
 figure(1);
 imshow(im2bw(captcha_image, 0.3));
 figure(2);
@@ -136,10 +143,10 @@ result(j+1,4) ={captcha_image};
 result(j+1,5) ={result_Ocr};
 result(j+1,6) ={HumanGuess};
 
-
 end
 save('result.mat','result');
-````
+
+```
 <hr>
 <hr>
 
@@ -152,7 +159,8 @@ save('result.mat','result');
  توسط این تابع تصاویر مورد نیاز کپچای تولید می شوند
  </div>
 
-````
+```
+
 function [alphabet] = get_alphabet()
 alphabet(:,:,1) = dlmread("alphabet\A.txt");
 alphabet(:,:,2) = dlmread("alphabet\B.txt");
@@ -220,100 +228,105 @@ alphabet(:,:,63) = dlmread("alphabet\9.txt");
 alphabet = uint8(alphabet);
 end
 
-````
+```
 
 <div dir="rtl">
  <h3> rotate</h3>
 چرخش تصویر توسط این تابع و دوباره تنظیم نمودن اندازه آن
 </div>
 
-````
+```
+
 function captcha_image = rotate(captcha_image, m ,n)
 M = randi([179 , 181]);
 captcha_image = imrotate(captcha_image,M);
 captcha_image = imresize(captcha_image, [m n]);
 end
 
-````
+```
 
 <div dir="rtl">
  <h3> noise</h3>
- 
+
  ایجاد نویز فلفل نمکی روی تصویر توسط این تابع
 </div>
 
-````
+```
+
 function captcha_image = noise(captcha_image)
 captcha_image = imnoise(captcha_image , 'salt & pepper' , 0.05);
 end
 
-````
+```
 
 
 <div dir="rtl">
  <h3> noise</h3>
- 
+
  ایجاد خط های تصادفی </div>
 
-````
+```
+
 function image = insert_line(image, m ,n)
 M = randi([4,6]);
 for i=1:M
-    size=randi([50 , 200]);
-    p = max(size);
-    mm= randi([10, m-p]);
-    nn= randi([10, n-p]);
-    start=[mm,nn];
-    
+size=randi([50 , 200]);
+p = max(size);
+mm= randi([10, m-p]);
+nn= randi([10, n-p]);
+start=[mm,nn];
+
 y=start(1)+size;
 for x =round(size/2) : size-1
-    image(start(1)+1,start(2)+x)=255;
-    y=y-1;
+image(start(1)+1,start(2)+x)=255;
+y=y-1;
 end
 end
 M = randi([4,6]);
 for i=1:M
-    size=randi([50 , 200]);
-    p = max(size);
-    mm= randi([10, m-p]);
-    nn= randi([10, n-p]);
-    start=[mm,nn];
-    
+size=randi([50 , 200]);
+p = max(size);
+mm= randi([10, m-p]);
+nn= randi([10, n-p]);
+start=[mm,nn];
+
 y=start(1)+size;
 for x =1 : round(size/2)
-  image(start(1)+x,start(2)+x)=255;
-    y=y-1;
+image(start(1)+x,start(2)+x)=255;
+y=y-1;
 end
 end
 M = randi([4,6]);
 for i=1:M
-    size=randi([50 , 200]);
-    p = max(size);
-    mm= randi([10, m-p]);
-    nn= randi([10, n-p]);
-    start=[mm,nn];
-    
+size=randi([50 , 200]);
+p = max(size);
+mm= randi([10, m-p]);
+nn= randi([10, n-p]);
+start=[mm,nn];
+
 y=start(1)+size;
 for x =1 : round(size/2)
-  image(y,start(2)+x)=255;
-    y=y-1;
+image(y,start(2)+x)=255;
+y=y-1;
 end
 end
 end
-````
+
+```
 
 <div dir="rtl">
  <h3> نمایش خروجی</h3>
  <p align="center">
 <img width="800" height="800" src="Result2/a.PNG">
-  
+
   <h3 align="center">بخشی از 150 تصویر تولید شده</h3>
 </p>
- 
+
  <p align="center">
 <img width="800" height="800" src="Result2/b.PNG">
-  
+
   <h3 align="center">بخشی از نتایج ذخیره شده در آرایه Result</h3>
 </p>
- 
+
 </div>
+```

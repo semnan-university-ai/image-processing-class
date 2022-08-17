@@ -1,12 +1,13 @@
 # image-processing-class
+
 image processing class - 992
 
 ## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+
+- ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+- ##### TA : Amir Shokri - [Contact](mailto:amirsh.nll@gmail.com)
 
 ### Student Info :
-* Full name : homayon toosy
-* github id : homayontoosy
-* Email : homayon.toosy@gmail.com
-* Type : rozane
+
+- Full name : homayon toosy
+- github id : homayontoosy

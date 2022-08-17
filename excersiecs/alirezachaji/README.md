@@ -1,12 +1,13 @@
 # image-processing-class
+
 image processing class - 992
 
 ## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+
+- ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+- ##### TA : Amir Shokri - [Contact](mailto:amirsh.nll@gmail.com)
 
 ### Student Info :
-* Full name : Alireza Chaji
-* github id : alirezachaji
-* Email : alirezachaji@protonmail.com
-* Type : Shabaneh
+
+- Full name : Alireza Chaji
+- github id : alirezachaji

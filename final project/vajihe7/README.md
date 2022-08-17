@@ -1,12 +1,13 @@
 # image-processing-class
+
 image processing class - 992
 
 ## Information
-* ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
-* ##### TA : Amir Shokri - [Contact](mailto:amirshokri@semnan.ac.ir)
+
+- ##### Teacher: Dr. Farzin Yaghmaee - [Contact](mailto:f_yaghmaee@semnan.ac.ir)
+- ##### TA : Amir Shokri - [Contact](mailto:amirsh.nll@gmail.com)
 
 ### Student Info :
-* Full name : vajihe heydari
-* github id :vajihe75
-* Email : heydarivajihe1996@gmail.com
-* Type : roozane
+
+- Full name : vajihe heydari
+- github id :vajihe75

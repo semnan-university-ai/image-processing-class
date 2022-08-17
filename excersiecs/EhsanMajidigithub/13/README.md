@@ -12,4 +12,3 @@
 <div dir="rtl">
 با تشکر از آقای "سید احمد داوود موسوی و خانم نسترن ملک پور" 
 </div>
-@arman-ariamehr,@nastaranm57 
